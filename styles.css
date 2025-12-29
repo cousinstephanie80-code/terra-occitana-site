@@ -522,74 +522,122 @@ footer{
   to{ opacity:1; transform: translateY(0); }
 }
 
-/* ==================== */
-/* PACK HAUT DE GAMME MOBILE */
-/* ==================== */
+/* ============================================== */
+/* PACK ESTHÉTIQUE "HAUT DE GAMME" (MOBILE)     */
+/* ============================================== */
 
-/* 1. HEADER & LOGO ÉPURÉS */
-/* On supprime l'effet "boîte" autour du logo pour qu'il se fonde dans le décor */
-.brand-link {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-}
+@media(max-width:900px){
 
-.brand-logo {
-    /* On agrandit un peu le logo */
-    max-height: 95px;
-    width: auto;
-    /* Indispensable : rend le fond du logo transparent pour ne garder que le dessin */
+  /* 1. HEADER & LOGO : Aérien */
+  header {
+    background: rgba(246, 242, 236, 0.85); /* Plus de transparence */
+    backdrop-filter: blur(15px); /* Flou plus intense (effet verre dépoli luxe) */
+    border-bottom: 1px solid rgba(46, 63, 54, 0.05); /* Bordure quasi invisible */
+  }
+
+  .nav {
+    padding: 10px 0; /* Un peu plus d'espace en haut/bas */
+  }
+
+  .brand-logo {
+    max-height: 85px; /* Taille généreuse */
+    /* L'astuce magique : fond le blanc du JPEG dans la couleur du menu */
     mix-blend-mode: multiply; 
-    /* Si votre image a un bord gris dessiné dessus, on peut essayer de le rogner un peu : */
-    /* transform: scale(1.1); */ 
-}
+    filter: contrast(1.05); /* Légère accentuation pour la netteté */
+  }
 
-/* 2. TYPOGRAPHIE "LUXE" */
-/* Plus d'espace entre les lignes, polices plus fines */
-.hero-title {
-    font-weight: 500; /* Moins gras = plus élégant */
+  /* 2. TYPOGRAPHIE : Élégance et Rythme */
+  .hero-title {
+    font-size: 40px; /* Un peu plus petit pour ne pas écraser l'écran */
     line-height: 1.15;
-    letter-spacing: -0.5px; /* Resserre légèrement les lettres pour le style "Magazine" */
-}
+    font-weight: 600;
+    color: var(--terracotta);
+    margin-bottom: 20px;
+  }
 
-.signature {
-    font-size: 13px;
+  .signature {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 2px; /* Espacement large pour les petits textes (code du luxe) */
+    letter-spacing: 3px; /* Espacement très large = Luxe */
     opacity: 0.6;
-    margin-bottom: 24px;
-}
+    margin-bottom: 20px;
+  }
 
-/* 3. CARTES "VERRE & LUMIÈRE" (Services) */
-/* Au lieu de blocs plats, on crée un effet de profondeur subtil */
-.editorial-card {
-    background: linear-gradient(145deg, #ffffff, #fdfbf7); /* Dégradé très léger */
-    border: 1px solid rgba(184, 107, 75, 0.15); /* Bordure Terracotta très fine */
-    box-shadow: 0 10px 30px -5px rgba(46, 63, 54, 0.08); /* Ombre portée douce et large */
-    border-radius: 16px; /* Arrondis plus doux */
-    padding: 40px 30px; /* BEAUCOUP plus d'espace intérieur */
-}
+  .lead {
+    font-size: 16px;
+    line-height: 1.8; /* Plus d'espace entre les lignes de texte */
+    opacity: 0.85;
+    font-weight: 300; /* Texte plus fin */
+  }
 
-.editorial-card h3 {
-    font-size: 26px;
-    margin-bottom: 12px;
-    color: var(--terracotta); /* Titre en couleur pour le rythme */
-}
-
-/* 4. BOUTONS RAFFINÉS */
-.btn-primary {
-    background: var(--terracotta);
-    border: none;
-    box-shadow: 0 10px 20px rgba(184, 107, 75, 0.3); /* Ombre lumineuse colorée */
-    letter-spacing: 0.5px;
-    padding: 16px 28px;
+  /* 3. BOUTONS : Raffinement */
+  .btn-primary {
+    width: 100%; /* Pleine largeur sur mobile pour l'impact */
+    padding: 18px;
+    border-radius: 12px; /* Coins un peu moins ronds (plus moderne) */
+    box-shadow: 0 15px 30px rgba(184, 107, 75, 0.25); /* Ombre colorée diffuse */
     font-size: 15px;
-}
+    margin-bottom: 12px;
+  }
 
-.btn-secondary {
+  .btn-secondary {
+    width: 100%;
+    padding: 18px;
+    border-radius: 12px;
     background: transparent;
-    border: 1px solid var(--ink); /* Bordure fine noire/verte */
+    border: 1px solid rgba(46, 63, 54, 0.2);
+  }
+
+  /* 4. CARTES SERVICES : Effet "Carte de visite" */
+  .editorial-card {
+    background: #fff;
+    border: none; /* On enlève la bordure dure */
+    /* Ombre très douce et étalée */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04); 
+    border-radius: 16px;
+    padding: 35px 25px;
+    margin-bottom: 20px;
+    text-align: left; /* Alignement gauche fait plus chic que centré */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Petite ligne décorative en haut de chaque carte */
+  .editorial-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--terracotta), transparent);
+    opacity: 0.5;
+  }
+
+  .editorial-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
     color: var(--ink);
-    box-shadow: none;
+  }
+
+  .editorial-card p {
+    font-size: 15px;
+    opacity: 0.7;
+    line-height: 1.6;
+  }
+  
+  /* Mise en avant de la carte du milieu (Premium) */
+  .editorial-card.highlight {
+    background: #faf7f1; /* Fond très légèrement teinté */
+    border: 1px solid rgba(184, 107, 75, 0.1);
+  }
+
+  /* 5. SECTEURS GÉOGRAPHIQUES */
+  .reassurance {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255, 0.6);
+    margin-top: 30px;
+  }
 }
