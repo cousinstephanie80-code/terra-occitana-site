@@ -123,27 +123,29 @@ header{
   display:grid;
   grid-template-columns:1.1fr .9fr;
   gap:48px;
-  align-items:center;
+  align-items:stretch; /* Changé de center à stretch pour que les colonnes aient la même hauteur */
 }
 
-.hero-text h1{
+/* Nouveau style pour le titre principal */
+.hero-title{
   font-family:"Cormorant Garamond", serif;
-  font-size:46px;
+  font-size:54px; /* Plus grand */
+  font-weight: 700; /* Plus gras */
   line-height:1.1;
-  margin:0 0 12px;
-  color: var(--ink);
+  margin:0 0 16px;
+  color: var(--terracotta); /* Couleur terracotta pour la visibilité */
 }
 
 .signature{
   font-style:italic;
-  opacity:.75;
-  margin-bottom:24px;
-  color: var(--terracotta);
+  opacity:.8;
+  margin-bottom:20px;
+  font-weight: 500;
 }
 
 .lead{
   margin-bottom:28px;
-  font-size: 1.05rem;
+  font-size: 18px; /* Un peu plus grand pour l'équilibre */
 }
 
 .btn-primary{
@@ -154,30 +156,32 @@ header{
   border-radius:999px;
   font-weight:500;
   margin-bottom:8px;
-  border: none;
-  cursor: pointer;
+  transition: opacity 0.3s;
 }
 
 .btn-primary:hover{
-  background: #a35d40;
+  opacity:.9;
 }
 
 .reassurance{
-  font-size:13px;
+  font-size:14px;
   opacity:.7;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
+/* Correction de l'image */
 .hero-image{
   border-radius:28px;
   overflow:hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  height: 100%; /* Prend toute la hauteur disponible */
+  min-height: 450px; /* Sécurité si le texte est court */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05); /* Ajout d'une petite ombre légère pour le style */
 }
 
 .hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* L'image remplit le cadre sans être déformée (elle sera rognée si besoin) */
 }
 
 /* ================= SECTIONS ================= */
