@@ -521,3 +521,75 @@ footer{
   from{ opacity:0; transform: translateY(-10px); }
   to{ opacity:1; transform: translateY(0); }
 }
+
+/* ==================== */
+/* PACK HAUT DE GAMME MOBILE */
+/* ==================== */
+
+/* 1. HEADER & LOGO ÉPURÉS */
+/* On supprime l'effet "boîte" autour du logo pour qu'il se fonde dans le décor */
+.brand-link {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.brand-logo {
+    /* On agrandit un peu le logo */
+    max-height: 95px;
+    width: auto;
+    /* Indispensable : rend le fond du logo transparent pour ne garder que le dessin */
+    mix-blend-mode: multiply; 
+    /* Si votre image a un bord gris dessiné dessus, on peut essayer de le rogner un peu : */
+    /* transform: scale(1.1); */ 
+}
+
+/* 2. TYPOGRAPHIE "LUXE" */
+/* Plus d'espace entre les lignes, polices plus fines */
+.hero-title {
+    font-weight: 500; /* Moins gras = plus élégant */
+    line-height: 1.15;
+    letter-spacing: -0.5px; /* Resserre légèrement les lettres pour le style "Magazine" */
+}
+
+.signature {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espacement large pour les petits textes (code du luxe) */
+    opacity: 0.6;
+    margin-bottom: 24px;
+}
+
+/* 3. CARTES "VERRE & LUMIÈRE" (Services) */
+/* Au lieu de blocs plats, on crée un effet de profondeur subtil */
+.editorial-card {
+    background: linear-gradient(145deg, #ffffff, #fdfbf7); /* Dégradé très léger */
+    border: 1px solid rgba(184, 107, 75, 0.15); /* Bordure Terracotta très fine */
+    box-shadow: 0 10px 30px -5px rgba(46, 63, 54, 0.08); /* Ombre portée douce et large */
+    border-radius: 16px; /* Arrondis plus doux */
+    padding: 40px 30px; /* BEAUCOUP plus d'espace intérieur */
+}
+
+.editorial-card h3 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: var(--terracotta); /* Titre en couleur pour le rythme */
+}
+
+/* 4. BOUTONS RAFFINÉS */
+.btn-primary {
+    background: var(--terracotta);
+    border: none;
+    box-shadow: 0 10px 20px rgba(184, 107, 75, 0.3); /* Ombre lumineuse colorée */
+    letter-spacing: 0.5px;
+    padding: 16px 28px;
+    font-size: 15px;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--ink); /* Bordure fine noire/verte */
+    color: var(--ink);
+    box-shadow: none;
+}
