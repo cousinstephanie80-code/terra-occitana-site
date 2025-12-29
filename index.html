@@ -18,10 +18,10 @@
       <a href="#accueil">Accueil</a>
       <a href="#proprietaires">Formules Propriétaires</a>
       <a href="#voyageurs">Expérience Voyageurs</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn-primary-small">Contact</a>
     </nav>
 
-    <button class="burger" id="burger">
+    <button class="burger" id="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -78,7 +78,7 @@
           </ul>
         </div>
 
-        <div class="card" style="border: 2px solid var(--terracotta);">
+        <div class="card premium-card">
           <h3 style="color:var(--terracotta)">Formule Premium ✨</h3>
           <p>La tranquillité totale.</p>
           <hr style="border:0; border-top:1px solid var(--line); margin:15px 0;">
@@ -146,19 +146,37 @@
 
   <section class="section soft" id="contact">
     <div class="container narrow">
-      <h2>Parlons de votre projet dans l'Hérault</h2>
-      <p>Propriétaire d'une villa, d'un appartement ou d'un mas ? Contactez-nous pour une étude personnalisée.</p>
+      <h2>Parlons de votre projet</h2>
+      <p>Propriétaire ou futur propriétaire ? Contactez-nous pour une étude personnalisée.</p>
 
-      <div class="contact-actions">
-        <a href="tel:+33672448865" class="btn-primary">📞 06 72 44 88 65</a>
-        <a href="mailto:conciergerie.terraoccitana@gmail.com" class="btn-secondary">✉️ Envoyer un email</a>
+      <form class="contact-form" action="https://formspree.io/f/TON_ID_FORMSPREE" method="POST">
+        <div class="form-group">
+          <label for="name">Votre Nom</label>
+          <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Votre Email</label>
+          <input type="email" id="email" name="email" placeholder="jean@exemple.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Votre message / Type de bien</label>
+          <textarea id="message" name="message" rows="5" placeholder="Bonjour, je possède un appartement à Sète et je souhaiterais..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary full-width">Envoyer ma demande</button>
+      </form>
+      <div class="contact-info-direct">
+        <p>Ou directement par téléphone : <a href="tel:+33672448865"><strong>06 72 44 88 65</strong></a></p>
+        <p><small>📍 Zone d'intervention : Hérault (Sète, Mèze, Montpellier alentours...)</small></p>
       </div>
-      
-      <br>
-      <p class="reassurance">
-        📍 Zone d'intervention : Hérault<br>
-        <small>Devis gratuit et sans engagement.</small>
-      </p>
+
     </div>
   </section>
 
