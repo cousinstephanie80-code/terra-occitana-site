@@ -2,9 +2,13 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Terra Occitana — Conciergerie St-André-de-Sangonis & Cap d'Agde</title>
+  <title>Terra Occitana — Conciergerie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Terra Occitana, conciergerie entre Terre et Mer : Saint-André-de-Sangonis, Cap d'Agde, Grau d'Agde et Marseillan Plage. Intendance, entretien et accueil voyageurs." />
+  <meta name="description" content="Terra Occitana, conciergerie locale entre Vallée de l’Hérault et Littoral Agathois. Intendance, accueil voyageurs et suivi de votre bien." />
+
+  <!-- IMPORTANT : base GitHub Pages -->
+  <base href="/terra-occitana-site/">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -14,19 +18,19 @@
   <div class="container nav">
 
     <div class="brand">
-      <a href="index.html#accueil" class="brand-link" aria-label="Terra Occitana - Retour accueil">
-        <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo" />
+      <a href="index.html" class="brand-link" aria-label="Terra Occitana - Accueil">
+        <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
       </a>
     </div>
 
     <nav class="menu" aria-label="Navigation principale">
-      <a href="index.html#accueil">Accueil</a>
+      <a href="index.html">Accueil</a>
       <a href="proprietaires.html">Propriétaires & services</a>
-      <a href="index.html#voyageurs">Expérience voyageurs</a>
-      <a href="index.html#contact" class="btn-nav">Contact</a>
+      <a href="#voyageurs">Expérience voyageurs</a>
+      <a href="#contact" class="btn-nav">Contact</a>
     </nav>
 
-    <button class="burger" id="burger" aria-label="Ouvrir le menu">
+    <button class="burger" id="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
 
@@ -35,6 +39,7 @@
 
 <main id="accueil">
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container hero-grid">
 
@@ -42,13 +47,15 @@
         <p class="signature">Entre Garrigue et Méditerranée</p>
 
         <h1 class="hero-title">
-          Prendre soin de votre bien.<br />
+          Prendre soin de votre bien.<br>
           Simplement.
         </h1>
 
         <p class="lead">
-          Une présence locale, discrète et fiable, pour veiller sur votre propriété tout au long de l’année.<br />
-          Accueil des voyageurs, intendance, entretien, suivi. <span class="muted">L’essentiel, maîtrisé.</span>
+          Une présence locale, discrète et fiable,
+          pour veiller sur votre propriété tout au long de l’année.<br>
+          Accueil des voyageurs, intendance, entretien, suivi.
+          <span class="muted">L’essentiel, maîtrisé.</span>
         </p>
 
         <div class="hero-actions">
@@ -63,38 +70,41 @@
         </div>
       </div>
 
-      <div class="hero-media" aria-label="Aperçus de propriétés et lieux">
-        <div class="slide" style="background-image:url('images/photo1.jpg');"></div>
-        <div class="slide" style="background-image:url('images/photo2.jpg');"></div>
-        <div class="slide" style="background-image:url('images/photo3.jpg');"></div>
-        <div class="slide" style="background-image:url('images/photo4.jpg');"></div>
-        <div class="hero-vignette" aria-hidden="true"></div>
+      <!-- VISUEL HERO (tes images) -->
+      <div class="hero-media">
+        <div class="slide" style="background-image:url('images/photo1.jpg')"></div>
+        <div class="slide" style="background-image:url('images/photo2.jpg')"></div>
+        <div class="slide" style="background-image:url('images/photo3.jpg')"></div>
+        <div class="slide" style="background-image:url('images/photo4.jpg')"></div>
+        <div class="hero-vignette"></div>
       </div>
 
     </div>
   </section>
 
+  <!-- PARTENAIRE LOCAL -->
   <section class="section soft">
     <div class="container narrow">
       <h2>Un partenaire local</h2>
 
       <p class="luxe-paragraph">
-        Chaque propriété a son histoire.<br />
+        Chaque propriété a son histoire.<br>
         Chaque propriétaire ses exigences.
       </p>
 
       <p class="luxe-paragraph">
-        Nous assurons une continuité sereine, avec un interlocuteur unique,
-        présent sur le terrain.
+        Nous assurons une continuité sereine,
+        avec un interlocuteur unique, présent sur le terrain.
       </p>
 
       <p class="transition">
-        Une mobilité maîtrisée de Saint-André-de-Sangonis jusqu’au littoral, pour une réactivité constante.
+        Une relation de confiance commence par une présence constante.
       </p>
     </div>
   </section>
 
-  <section class="section services-editorial" id="proprietaires">
+  <!-- SERVICES (aperçu) -->
+  <section class="section services-editorial">
     <div class="container">
 
       <h2 class="editorial-title">
@@ -109,60 +119,53 @@
 
         <div class="editorial-card">
           <h3>Accueil & départs</h3>
-          <p>
-            Des arrivées fluides.<br />
-            Des départs soignés.
-          </p>
+          <p>Des arrivées fluides. Des départs soignés.</p>
         </div>
 
         <div class="editorial-card highlight">
           <h3>Intendance</h3>
-          <p>
-            Entretien du logement.<br />
-            Contrôle régulier.<br />
-            Présence attentive.
-          </p>
+          <p>Entretien du logement. Contrôle régulier. Présence attentive.</p>
         </div>
 
         <div class="editorial-card">
           <h3>Services ponctuels</h3>
-          <p>
-            Passages.<br />
-            Interventions ciblées.<br />
-            Suivi discret.
-          </p>
+          <p>Passages. Interventions ciblées. Suivi discret.</p>
         </div>
 
       </div>
 
-      <p class="editorial-signature">
-        Une relation de confiance commence par une présence constante.
-      </p>
+      <div style="margin-top:40px;">
+        <a href="proprietaires.html" class="btn-secondary">
+          Voir le détail des services
+        </a>
+      </div>
 
     </div>
   </section>
 
+  <!-- EXPERIENCE VOYAGEURS -->
   <section class="section soft" id="voyageurs">
     <div class="container hero-grid">
+
       <div class="hero-text">
         <h2>Une expérience fluide</h2>
 
         <p class="lead">
-          Des arrivées simples. Un logement impeccable.
+          Des arrivées simples.<br>
+          Un logement impeccable.<br>
           Une présence rassurante, sans intrusion.
-        </p>
-
-        <p class="luxe-note">
-          Des attentions peuvent être prévues sur demande, selon votre style et vos usages.
         </p>
       </div>
 
-      <div class="hero-media hero-media--alt" aria-label="Détails séjour"></div>
+      <div class="hero-media hero-media--alt"></div>
+
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="container narrow">
+
       <h2>Un projet, une question</h2>
 
       <p class="lead">
@@ -176,6 +179,7 @@
       </div>
 
       <p class="reassurance">Nous vous répondons personnellement.</p>
+
     </div>
   </section>
 
