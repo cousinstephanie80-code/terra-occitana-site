@@ -284,4 +284,17 @@ footer{
     display:block;
   }
 
+/* Ajout pour le tableau des prix */
+.card ul li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Pour que les images remplissent bien leur cadre */
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
