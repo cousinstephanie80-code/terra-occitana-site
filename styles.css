@@ -220,19 +220,65 @@ header{
   margin-top:14px;
 }
 
-/* Image hero */
-.hero-media{
-  border-radius:28px;
-  overflow:hidden;
-  min-height: 520px;
-  box-shadow: var(--shadow);
+/* ================= CARROUSEL HERO ================= */
 
-  background-image: url("images/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* Le cadre principal qui contient les images */
+.hero-media {
+  position: relative; /* Indispensable pour que les images se superposent bien */
+  border-radius: 28px;
+  overflow: hidden;   /* Coupe tout ce qui dépasse du cadre */
+  min-height: 520px;  /* Hauteur sur ordinateur */
+  box-shadow: var(--shadow);
+  background: #f6f2ec; /* Couleur de fond de sécurité */
 }
 
+/* Le style commun à toutes les diapositives */
+.slide {
+  position: absolute; /* Place les images les unes sur les autres */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;    /* L'image remplit tout l'espace */
+  background-position: center;
+  opacity: 0; /* Caché par défaut */
+  
+  /* Lancement de l'animation : 12 secondes au total, en boucle */
+  animation: fadeSlide 12s infinite; 
+}
+
+/* --- TIMING (Réglage pour 3 images) --- */
+
+/* Image 1 : commence tout de suite */
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+/* Image 2 : commence après 4 secondes */
+.slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+/* Image 3 : commence après 8 secondes */
+.slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+/* --- L'ANIMATION (Fondu + Zoom lent "Effet Ken Burns") --- */
+@keyframes fadeSlide {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; transform: scale(1); }     /* Apparition rapide */
+  33%  { opacity: 1; transform: scale(1.05); }  /* Reste visible 4s en zoomant légèrement */
+  43%  { opacity: 0; }                          /* Disparition */
+  100% { opacity: 0; }
+}
+
+/* --- AJUSTEMENT MOBILE --- */
+@media(max-width:900px){
+  .hero-media{
+    min-height: 320px; /* Moins haut sur téléphone */
+  }
+}
 .hero-media--alt{
   min-height: 360px;
   background-image: url("images/details.jpg");
