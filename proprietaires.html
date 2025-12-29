@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Propriétaires & services — Terra Occitana</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Services de conciergerie et intendance Terra Occitana dans l’Hérault : accueil voyageurs, intendance, entretien, contrôle et prestations à la carte.">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Services de conciergerie et intendance Terra Occitana dans l’Hérault : accueil voyageurs, intendance, entretien, contrôle et prestations à la carte." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
 <header>
   <div class="container nav">
+
     <div class="brand">
-      <a href="index.html#accueil" class="brand-link" aria-label="Terra Occitana">
-        <span class="brand-top">Conciergerie</span>
-        <span class="brand-main">Terra Occitana</span>
+      <a href="index.html#accueil" class="brand-link" aria-label="Terra Occitana - Retour accueil">
+        <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo" />
       </a>
     </div>
 
-    <nav class="menu">
+    <nav class="menu" aria-label="Navigation principale">
       <a href="index.html#accueil">Accueil</a>
       <a href="proprietaires.html" aria-current="page">Propriétaires & services</a>
       <a href="index.html#voyageurs">Expérience voyageurs</a>
       <a href="index.html#contact" class="btn-nav">Contact</a>
     </nav>
 
-    <button class="burger" id="burger" aria-label="Menu">
+    <button class="burger" id="burger" aria-label="Ouvrir le menu">
       <span></span><span></span><span></span>
     </button>
+
   </div>
 </header>
 
@@ -39,12 +40,13 @@
     <div class="container hero-grid">
 
       <div class="hero-text">
-        <p class="signature">Une présence locale, attentive et discrète.</p>
+        <p class="signature">Une présence locale, attentive et discrète</p>
+
         <h1 class="hero-title">Propriétaires & services</h1>
 
         <p class="lead">
-          Vous louez (ou vous allez louer) et vous cherchez un relais fiable dans l’Hérault ?
-          Terra Occitana s’occupe de l’essentiel : <strong>accueil, intendance, entretien et suivi du logement</strong>.
+          Une organisation simple, une continuité sereine, un interlocuteur unique.
+          Nous veillons sur votre bien et sur la qualité du séjour, sans bruit, sans pression.
         </p>
 
         <div class="hero-actions">
@@ -52,64 +54,74 @@
           <a href="#services" class="btn-secondary">Voir les services</a>
         </div>
 
-        <p class="reassurance">Sans engagement • Réponse simple et humaine</p>
+        <div class="geo">
+          <span>Vallée de l’Hérault</span>
+          <span class="dot">•</span>
+          <span>Littoral Agathois</span>
+        </div>
       </div>
 
       <div class="page-hero-card">
         <h3>Ce que vous gagnez</h3>
-        <ul class="list">
-          <li>✅ Un relais sur place</li>
-          <li>✅ Un logement suivi et entretenu</li>
-          <li>✅ Des voyageurs bien accompagnés</li>
-          <li>✅ Une relation claire, sans pression</li>
+        <ul class="plain-list">
+          <li>Un relais sur place</li>
+          <li>Un logement suivi avec attention</li>
+          <li>Des arrivées fluides et des départs soignés</li>
+          <li>Une relation claire, au bon rythme</li>
         </ul>
       </div>
 
     </div>
   </section>
 
-  <!-- SERVICES (style éditorial cohérent) -->
-  <section class="section services-editorial" id="services">
+  <!-- SERVICES (style premium comme ton image 2) -->
+  <section class="section services-premium" id="services">
     <div class="container">
-      <h2 class="editorial-title">Nos services <span>selon votre besoin</span></h2>
-      <p class="editorial-intro">À la carte ou avec un accompagnement complet.</p>
 
-      <div class="editorial-cards">
-        <div class="editorial-card">
-          <h3>Accueil & Départs</h3>
-          <p>
-            Check-in, remise des clés,<br>
-            informations pratiques,<br>
-            check-out soigné.
-          </p>
-        </div>
+      <header class="premium-head">
+        <h2 class="premium-title">Nos services</h2>
+        <div class="premium-sub">premium</div>
+      </header>
 
-        <div class="editorial-card highlight">
-          <h3>Intendance premium</h3>
-          <p>
-            Entretien du logement,<br>
-            suivi attentif,<br>
-            contrôle & assistance voyageurs.
-          </p>
-        </div>
+      <div class="premium-grid">
 
-        <div class="editorial-card">
-          <h3>À la carte</h3>
+        <article class="premium-item">
+          <div class="premium-num">1.</div>
+          <h3>Accueil & départs</h3>
           <p>
-            Dépannage, passage,<br>
-            état des lieux,<br>
-            interventions ponctuelles.
+            Des arrivées fluides, des départs soignés.
+            Remise des clés, informations essentielles, check-out clair et serein.
           </p>
-        </div>
+        </article>
+
+        <article class="premium-item">
+          <div class="premium-num">2.</div>
+          <h3>Intendance</h3>
+          <p>
+            Entretien du logement, contrôle régulier, suivi discret.
+            Une continuité maîtrisée, tout au long de l’année.
+          </p>
+        </article>
+
+        <article class="premium-item">
+          <div class="premium-num">3.</div>
+          <h3>Services ponctuels</h3>
+          <p>
+            Passages, interventions ciblées, coordination si besoin.
+            Simple, cadré, sans lourdeur.
+          </p>
+        </article>
+
       </div>
 
-      <p class="editorial-signature">
-        Une relation de confiance commence par une présence attentive.
+      <p class="premium-signature">
+        Une relation de confiance commence par une présence constante.
       </p>
+
     </div>
   </section>
 
-  <!-- DÉTAILS (cards plus concrètes, mais toujours premium) -->
+  <!-- DÉTAILS -->
   <section class="section soft">
     <div class="container">
       <h2>Ce que nous faisons, concrètement</h2>
@@ -117,17 +129,17 @@
       <div class="columns">
         <div class="card">
           <h3>Accueil voyageurs</h3>
-          <p>Arrivées et départs, explications du logement, conseils utiles, premières impressions soignées.</p>
+          <p>Arrivées et départs, explications essentielles, consignes claires, première impression soignée.</p>
         </div>
 
         <div class="card">
           <h3>Entretien & suivi</h3>
-          <p>Ménage, contrôle, petites vérifications, suivi du niveau de qualité (et de la tranquillité).</p>
+          <p>Entretien, contrôle, vérifications simples, maintien du niveau de qualité sur la durée.</p>
         </div>
 
         <div class="card">
           <h3>Relais & imprévus</h3>
-          <p>Coordination, dépannage, gestion des aléas, avec un contact simple et rassurant.</p>
+          <p>Coordination et solutions rapides quand c’est nécessaire, avec un contact discret et efficace.</p>
         </div>
       </div>
     </div>
@@ -136,49 +148,50 @@
   <!-- PROCESS -->
   <section class="section">
     <div class="container narrow">
-      <h2>Comment ça se passe ?</h2>
+      <h2>Comment ça se passe</h2>
 
       <div class="steps">
         <div class="step">
           <div class="step-badge">1</div>
           <div class="step-content">
             <h3>Premier échange</h3>
-            <p>Vous nous décrivez votre bien, votre fréquence de location et votre niveau d’attente.</p>
+            <p>Vous nous décrivez votre bien, votre rythme, et vos attentes.</p>
           </div>
         </div>
 
         <div class="step">
           <div class="step-badge">2</div>
           <div class="step-content">
-            <h3>Proposition sur-mesure</h3>
-            <p>On vous propose une organisation claire : prestations, rythme, points de contrôle.</p>
+            <h3>Organisation</h3>
+            <p>Nous définissons une organisation claire : prestations, points de contrôle, modalités.</p>
           </div>
         </div>
 
         <div class="step">
           <div class="step-badge">3</div>
           <div class="step-content">
-            <h3>Mise en place simple</h3>
-            <p>Clés, consignes, contacts utiles — tout est cadré, sans lourdeur.</p>
+            <h3>Mise en place</h3>
+            <p>Clés, consignes, contacts utiles : tout est simple, cadré, sans lourdeur.</p>
           </div>
         </div>
 
         <div class="step">
           <div class="step-badge">4</div>
           <div class="step-content">
-            <h3>Suivi & tranquillité</h3>
-            <p>Vous gardez une visibilité, et nous gérons au quotidien avec discrétion.</p>
+            <h3>Continuité</h3>
+            <p>Nous assurons le suivi au quotidien, et vous gardez une visibilité sereine.</p>
           </div>
         </div>
       </div>
 
       <div class="cta-strip">
-        <div>
-          <strong>Une question avant de vous lancer ?</strong><br>
-          On vous répond simplement, sans engagement.
+        <div class="cta-strip-text">
+          <strong>Une question avant de vous lancer&nbsp;?</strong><br />
+          Nous vous répondons simplement, au bon rythme.
         </div>
         <a class="btn-primary" href="index.html#contact">Contact</a>
       </div>
+
     </div>
   </section>
 
@@ -186,9 +199,9 @@
   <section class="section soft">
     <div class="container narrow">
       <h2>Zone d’intervention</h2>
-      <p>
-        Hérault : Sète, Mèze, Montpellier et alentours (selon distance / organisation).
-        Si vous hésitez, dites-nous où se situe le bien : on vous répond rapidement.
+      <p class="lead" style="margin-bottom:0;">
+        Vallée de l’Hérault et littoral Agathois.
+        Selon l’organisation, nous étudions aussi les secteurs proches.
       </p>
     </div>
   </section>
@@ -201,28 +214,28 @@
       <div class="faq">
         <details>
           <summary>Est-ce que je peux choisir uniquement certains services ?</summary>
-          <p>Oui. Vous pouvez partir sur une formule simple ou des prestations ponctuelles “à la carte”.</p>
+          <p>Oui. Nous pouvons démarrer simplement, ou avancer par étapes, selon vos besoins.</p>
         </details>
 
         <details>
           <summary>Est-ce que vous gérez les imprévus ?</summary>
-          <p>Oui, dans la mesure du raisonnable : relais sur place, coordination, et solutions rapides quand c’est nécessaire.</p>
+          <p>Oui, dans la mesure du raisonnable : relais, coordination et solution rapide quand c’est nécessaire.</p>
         </details>
 
         <details>
           <summary>Comment se passe la remise des clés ?</summary>
-          <p>On s’adapte à votre configuration (boîte à clés, remise en main propre, consignes). L’objectif : simple et sécurisé.</p>
+          <p>Selon votre configuration : remise en main propre, boîte à clés, consignes. L’objectif : simple et sécurisé.</p>
         </details>
 
         <details>
-          <summary>Vous faites aussi des petites attentions voyageurs ?</summary>
-          <p>Oui, sur demande : accueil soigné, informations locales, touches personnalisées selon votre style.</p>
+          <summary>Vous faites aussi des attentions voyageurs ?</summary>
+          <p>Oui, sur demande : accueil soigné, informations utiles, touches discrètes selon votre style.</p>
         </details>
       </div>
 
       <div class="contact-actions" style="margin-top:26px;">
         <a href="tel:+33672448865" class="btn-primary">Appeler</a>
-        <a href="mailto:conciergerie.terraoccitana@gmail.com" class="btn-secondary">Écrire un email</a>
+        <a href="mailto:conciergerie.terraoccitana@gmail.com" class="btn-secondary">Écrire</a>
       </div>
 
       <p class="reassurance">Nous vous répondons personnellement.</p>
@@ -233,10 +246,11 @@
 
 <footer>
   <div class="container footer">
-    <p><strong>Conciergerie Terra Occitana</strong></p>
-    <p>📍 Hérault</p>
-    <p>📞 06 72 44 88 65</p>
-    <p>✉️ conciergerie.terraoccitana@gmail.com</p>
+    <p><strong>Terra Occitana</strong></p>
+    <p>Conciergerie</p>
+    <p>Vallée de l’Hérault — Littoral Agathois</p>
+    <p>06 72 44 88 65</p>
+    <p>conciergerie.terraoccitana@gmail.com</p>
   </div>
 </footer>
 
