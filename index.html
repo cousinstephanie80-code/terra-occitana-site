@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Terra Occitana — Conciergerie & Intendance dans l’Hérault</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Terra Occitana, conciergerie locale et discrète dans l’Hérault. Prendre soin de votre bien, naturellement.">
+  <meta name="description" content="Terra Occitana, conciergerie locale et intendance dans l’Hérault. Présence attentive, accueil voyageurs, entretien et suivi du bien.">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,13 +12,18 @@
 
 <header>
   <div class="container nav">
-    <div class="logo">Terra Occitana</div>
+    <div class="brand">
+      <a href="#accueil" class="brand-link" aria-label="Terra Occitana">
+        <span class="brand-top">Conciergerie</span>
+        <span class="brand-main">Terra Occitana</span>
+      </a>
+    </div>
 
     <nav class="menu">
       <a href="#accueil">Accueil</a>
       <a href="#proprietaires">Propriétaires & services</a>
       <a href="#voyageurs">Expérience voyageurs</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn-nav">Contact</a>
     </nav>
 
     <button class="burger" id="burger" aria-label="Menu">
@@ -29,140 +34,89 @@
 
 <main id="accueil">
 
-  <!-- HERO — VARIANTE PLUS LUXE (image plein cadre en fond) -->
-  <section class="hero hero--luxe">
-    <div class="container hero-inner">
-      <div class="hero-card">
-        <p class="hero-eyebrow">Conciergerie privée • Intendance • Hérault</p>
+  <!-- HERO (2 colonnes) -->
+  <section class="hero">
+    <div class="container hero-grid">
 
-        <h1 class="hero-title">Terra Occitana</h1>
+      <div class="hero-text">
+        <p class="signature">Entre Garrigue et Méditerranée, votre sérénité assurée.</p>
 
-        <p class="signature">Prendre soin de votre bien, naturellement.</p>
+        <h1 class="hero-title">Prendre soin de votre bien, naturellement.</h1>
 
         <p class="lead">
-          <strong>Votre bien, entre de bonnes mains.</strong><br>
-          Accueil, ménage, suivi des voyageurs et optimisation de votre location — avec une présence locale, attentive et discrète.
+          Présence locale, attentive et discrète pour gérer l’essentiel :
+          <strong>accueil des voyageurs, intendance, entretien et suivi du logement</strong>.
         </p>
 
         <div class="hero-actions">
-          <a href="#contact" class="btn-primary">Échanger simplement</a>
+          <a href="#contact" class="btn-primary">Votre bien, entre de bonnes mains</a>
           <a href="#proprietaires" class="btn-secondary">Découvrir nos services</a>
         </div>
 
-        <p class="reassurance">Sans engagement • Une réponse simple, humaine • À votre rythme</p>
+        <p class="reassurance">Sans engagement • Une réponse simple, humaine • Hérault</p>
       </div>
+
+      <!-- Image hero en background cover (remplit toujours parfaitement) -->
+      <div class="hero-media" aria-label="Intérieur lumineux"></div>
+
     </div>
   </section>
 
-  <!-- IDENTIFICATION -->
   <section class="section soft">
     <div class="container narrow">
-      <h2>Vous êtes propriétaire et…</h2>
+      <h2>Plus qu'une conciergerie, un partenaire local</h2>
       <ul class="list">
-        <li>Vous souhaitez louer sereinement.</li>
-        <li>Vous n’êtes pas toujours sur place.</li>
-        <li>Vous manquez de temps.</li>
-        <li>Vous cherchez un relais local de confiance.</li>
+        <li>🌿 <strong>Sérénité :</strong> un relais sur place, réactif et discret.</li>
+        <li>🧹 <strong>Soin du bien :</strong> entretien, contrôle, suivi et petites attentions.</li>
+        <li>🤝 <strong>Confiance :</strong> un interlocuteur unique, une relation simple.</li>
       </ul>
-
-      <p class="transition">
-        Chaque propriété a son histoire, chaque propriétaire ses attentes.
-      </p>
+      <p class="transition">Parce que chaque bien mérite une attention particulière.</p>
     </div>
   </section>
 
-  <!-- POURQUOI -->
   <section class="section" id="proprietaires">
     <div class="container">
-      <h2>Pourquoi choisir Terra Occitana ?</h2>
+      <h2>Nos services, selon votre besoin</h2>
+      <p>À la carte ou avec un accompagnement complet.</p>
 
       <div class="columns">
         <div class="card">
-          <h3>Gestion de A à Z</h3>
-          <p>
-            Accueil, ménage et communication voyageurs.<br>
-            Vous n’avez rien à gérer.
-          </p>
+          <h3>Accueil & Départs</h3>
+          <p>Check-in, remise des clés, informations pratiques, check-out.</p>
+        </div>
+
+        <div class="card premium-card">
+          <h3>Intendance Premium ✨</h3>
+          <p>Entretien, suivi du logement, contrôle et assistance voyageurs.</p>
         </div>
 
         <div class="card">
-          <h3>Ancrage local</h3>
-          <p>
-            Une présence attentive dans l’Hérault,<br>
-            proche de votre bien.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Location optimisée</h3>
-          <p>
-            Une gestion pensée pour votre tranquillité<br>
-            et la valeur de votre bien.
-          </p>
+          <h3>À la carte</h3>
+          <p>Dépannage, passage, état des lieux, interventions ponctuelles.</p>
         </div>
       </div>
 
-      <p class="transition">
-        Parce que chaque bien mérite une attention particulière.
-      </p>
+      <p class="transition">Une relation de confiance commence par une présence attentive.</p>
     </div>
   </section>
 
-  <!-- OFFRE -->
-  <section class="section soft">
-    <div class="container narrow">
-      <h2>Des solutions simples et flexibles</h2>
-      <p>
-        Formule Classique, Premium ou prestations à la carte.<br>
-        Vous choisissez le niveau d’accompagnement qui vous correspond.
-      </p>
+  <section class="section soft" id="voyageurs">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h2>Une expérience voyageurs soignée</h2>
+        <p class="lead">Des arrivées fluides, un logement impeccable, et une présence rassurante.</p>
+        <ul class="list">
+          <li>✨ <strong>Accueil chaleureux :</strong> infos locales, bonnes adresses.</li>
+          <li>🧺 <strong>Petites attentions :</strong> sur demande, selon votre style.</li>
+          <li>🛠️ <strong>Assistance :</strong> gestion des imprévus et relais sur place.</li>
+        </ul>
+      </div>
 
-      <a href="#contact" class="btn-secondary">Demander une étude</a>
-      <p class="reassurance">À votre rythme.</p>
+      <div class="hero-media hero-media--alt" aria-label="Détails séjour"></div>
     </div>
   </section>
 
-  <!-- FISCALITÉ -->
-  <section class="section">
-    <div class="container narrow">
-      <h2>Le saviez-vous ?</h2>
-
-      <p>
-        Les services de conciergerie Terra Occitana sont déductibles de vos revenus locatifs
-        (LMNP ou revenus fonciers).
-      </p>
-
-      <p class="example">
-        <strong>Exemple concret :</strong><br>
-        10 000 € de revenus locatifs<br>
-        2 000 € de frais de conciergerie<br>
-        → imposition sur 8 000 €
-      </p>
-
-      <p>
-        Vous réduisez votre impôt tout en gagnant en tranquillité.
-      </p>
-    </div>
-  </section>
-
-  <!-- IDENTITÉ -->
-  <section class="section identity" id="voyageurs">
-    <div class="container narrow">
-      <p class="identity-text">Une conciergerie locale, attentive et discrète.<br>
-      Ici, dans l’Hérault.</p>
-
-      <blockquote>
-        Un service soigné, local et flexible pour accompagner propriétaires et voyageurs.
-      </blockquote>
-
-      <p class="transition">
-        Une relation de confiance commence par une présence attentive.
-      </p>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section contact" id="contact">
+  <section class="section" id="contact">
     <div class="container narrow">
       <h2>Une question, un projet, une hésitation ?</h2>
       <p>Nous prenons le temps de vous répondre.</p>
@@ -180,6 +134,7 @@
 
 <footer>
   <div class="container footer">
+    <p><strong>Conciergerie Terra Occitana</strong></p>
     <p>📍 Hérault</p>
     <p>📞 06 72 44 88 65</p>
     <p>✉️ conciergerie.terraoccitana@gmail.com</p>

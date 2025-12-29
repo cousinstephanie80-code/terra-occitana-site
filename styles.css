@@ -8,9 +8,8 @@
   --line:rgba(46,63,54,.15);
   --white:#ffffff;
 
-  /* micro-ajustement “luxe” */
-  --shadow: 0 22px 50px rgba(0,0,0,0.10);
-  --shadow-soft: 0 12px 30px rgba(0,0,0,0.08);
+  --shadow: 0 22px 50px rgba(0,0,0,0.08);
+  --shadow-soft: 0 12px 30px rgba(0,0,0,0.06);
 }
 
 *{box-sizing:border-box}
@@ -63,13 +62,28 @@ header{
   position:relative;
 }
 
-.logo{
-  font-family:"Cormorant Garamond", serif;
-  font-size:24px;            /* micro-ajustement */
-  font-weight:700;
-  letter-spacing:.4px;
+/* Brand top-left : "Conciergerie" + "Terra Occitana" */
+.brand-link{
+  display:flex;
+  flex-direction:column;
+  line-height:1.05;
 }
 
+.brand-top{
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:11px;
+  opacity:.75;
+}
+
+.brand-main{
+  font-family:"Cormorant Garamond", serif;
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:.3px;
+}
+
+/* menu */
 .menu{
   display:flex;
   gap:24px;
@@ -80,6 +94,16 @@ header{
 .menu a{ opacity:.85; }
 .menu a:hover{ opacity:1; color:var(--terracotta); }
 
+.btn-nav{
+  background: var(--terracotta);
+  color: #fff !important;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 500;
+  opacity: 1 !important;
+}
+
+/* burger */
 .burger{
   display:none;
   background:none;
@@ -132,83 +156,53 @@ header{
   transform: translateY(-1px);
 }
 
-/* ================= HERO (VARIANTE LUXE) ================= */
+/* ================= HERO ================= */
 
 .hero{
-  padding:90px 0;
+  padding:80px 0;
 }
 
-.hero--luxe{
-  position:relative;
-  min-height: 560px;
-  display:flex;
-  align-items:center;
-
-  /* IMAGE HERO EN FOND, plein cadre */
-  background-image:
-    linear-gradient(90deg, rgba(246,242,236,0.96) 0%, rgba(246,242,236,0.90) 46%, rgba(246,242,236,0.20) 78%),
-    url("images/hero.jpg");
-  background-size: cover;
-  background-position: right center;
-  background-repeat: no-repeat;
-  border-bottom: 1px solid rgba(46,63,54,.08);
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap:48px;
+  align-items:stretch;
 }
 
-.hero-inner{
-  width:100%;
-  display:flex;
-  justify-content:flex-start;
+.hero-text{
+  padding-top: 10px;
 }
 
-.hero-card{
-  max-width: 640px;
-  background: rgba(255,255,255,0.72);
-  border: 1px solid rgba(255,255,255,0.80);
-  border-radius: 28px;
-  padding: 34px 32px;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
-}
-
-.hero-eyebrow{
-  text-transform: uppercase;
-  letter-spacing: 2.2px;
-  font-size: 12px;
-  opacity: 0.85;
-  margin: 0 0 14px;
+.signature{
+  font-style:italic;
+  opacity:.82;
+  margin:0 0 18px;
+  font-weight:500;
 }
 
 .hero-title{
   font-family:"Cormorant Garamond", serif;
-  font-size: clamp(44px, 6vw, 76px);
-  font-weight: 700;
-  line-height: 1.02;
-  margin: 0 0 14px;
+  font-size: clamp(42px, 5vw, 66px);
+  font-weight:700;
+  line-height:1.05;
+  margin:0 0 16px;
   color: var(--terracotta);
-  position: relative;
 }
 
-/* micro-luxe : petit “trait” discret sous le titre */
+/* micro-ajustement luxe : petit trait */
 .hero-title::after{
   content:"";
   display:block;
-  width: 88px;
-  height: 2px;
-  margin-top: 12px;
+  width:88px;
+  height:2px;
+  margin-top:12px;
   background: rgba(184,107,75,0.55);
   border-radius: 99px;
 }
 
-.signature{
-  font-style: italic;
-  opacity:.82;
-  margin: 14px 0 16px;
-  font-weight: 500;
-}
-
 .lead{
-  margin: 0 0 22px;
-  font-size: 18px;
+  margin:0 0 22px;
+  font-size:18px;
 }
 
 .hero-actions{
@@ -220,8 +214,26 @@ header{
 
 .reassurance{
   font-size:14px;
-  opacity:.75;
-  margin-top: 14px;
+  opacity:.72;
+  margin-top:14px;
+}
+
+/* IMPORTANT : image hero qui remplit 100% de la place */
+.hero-media{
+  border-radius:28px;
+  overflow:hidden;
+  min-height: 520px;
+  box-shadow: var(--shadow);
+
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-media--alt{
+  min-height: 360px;
+  background-image: url("images/details.jpg");
 }
 
 /* ================= SECTIONS ================= */
@@ -253,7 +265,6 @@ header{
   margin-bottom:12px;
 }
 
-/* micro-ajustement texte “signature” de sections */
 .transition{
   margin-top: 26px;
   opacity: 0.78;
@@ -289,31 +300,12 @@ header{
   font-size: 1.4rem;
 }
 
-/* ================= EXAMPLE ================= */
-
-.example{
+.premium-card{
+  border: 2px solid rgba(184,107,75,0.45);
   background: white;
-  padding:24px;
-  border-radius:20px;
-  margin:24px 0;
-  border-left: 4px solid var(--terracotta);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
 }
 
-/* ================= IDENTITY / CONTACT ================= */
-
-.identity-text{
-  font-size: 18px;
-  opacity: 0.92;
-}
-
-blockquote{
-  margin: 18px 0 0;
-  padding: 18px 18px;
-  background: rgba(255,255,255,0.65);
-  border-left: 3px solid rgba(184,107,75,0.55);
-  border-radius: 14px;
-}
+/* ================= CONTACT ================= */
 
 .contact-actions{
   display:flex;
@@ -341,6 +333,7 @@ footer{
 /* ================= RESPONSIVE ================= */
 
 @media(max-width:900px){
+
   .container{ padding:0 20px; }
 
   .menu{
@@ -370,24 +363,23 @@ footer{
 
   .burger{ display:block; }
 
-  /* HERO mobile : on centre et on garde l’image bien visible */
-  .hero--luxe{
-    min-height: 560px;
-    background-image:
-      linear-gradient(180deg, rgba(246,242,236,0.94) 0%, rgba(246,242,236,0.78) 55%, rgba(246,242,236,0.40) 100%),
-      url("images/hero.jpg");
-    background-position: center;
-    padding: 70px 0;
+  .hero-grid{
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: left;
   }
 
-  .hero-card{
-    padding: 28px 22px;
-    border-radius: 24px;
+  .hero-media{
+    min-height: 320px;
   }
 
-  .columns{ grid-template-columns:1fr; }
+  .columns{
+    grid-template-columns: 1fr;
+  }
 
-  .section{ padding: 60px 0; }
+  .section{
+    padding: 60px 0;
+  }
 }
 
 @keyframes fadeIn{
