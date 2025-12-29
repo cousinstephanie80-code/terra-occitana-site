@@ -67,30 +67,26 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:16px 0;
+  padding:8px 0; /* Un peu moins de marge car le logo est grand */
   position:relative;
 }
 
-/* Brand top-left */
+/* --- MODIFICATION POUR LE LOGO --- */
 .brand-link{
   display:flex;
-  flex-direction:column;
-  line-height:1.05;
+  align-items:center;
+  line-height:1;
 }
 
-.brand-top{
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:11px;
-  opacity:.75;
+.brand-logo{
+  max-height: 90px; /* Règle la taille du logo ici */
+  width: auto;
+  display: block;
+  
+  /* Astuce : rend le carré blanc du JPG "transparent" visuellement */
+  mix-blend-mode: multiply; 
 }
-
-.brand-main{
-  font-family:"Cormorant Garamond", serif;
-  font-size:26px;
-  font-weight:700;
-  letter-spacing:.3px;
-}
+/* -------------------------------- */
 
 .menu{
   display:flex;
