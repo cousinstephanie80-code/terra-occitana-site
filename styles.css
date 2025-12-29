@@ -11,7 +11,6 @@
   --shadow: 0 22px 50px rgba(0,0,0,0.08);
   --shadow-soft: 0 12px 30px rgba(0,0,0,0.06);
 
-  /* ivoire “papier” */
   --paper:#faf7f1;
   --forest:#3d5a49;
   --forest-line: rgba(61, 90, 73, 0.65);
@@ -24,11 +23,8 @@ html{ scroll-behavior:smooth; }
 body{
   margin:0;
   font-family:Inter, system-ui, sans-serif;
-  
-  /* MODIFICATION : Dégradé subtil pour réchauffer le fond global */
   background-color: var(--bg);
   background-image: linear-gradient(to bottom, #fdfbf7 0%, #f4efe8 100%);
-  
   color:var(--ink);
   line-height:1.7;
 }
@@ -67,11 +63,10 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:8px 0; /* Un peu moins de marge car le logo est grand */
+  padding:8px 0;
   position:relative;
 }
 
-/* --- MODIFICATION POUR LE LOGO --- */
 .brand-link{
   display:flex;
   align-items:center;
@@ -79,14 +74,11 @@ header{
 }
 
 .brand-logo{
-  max-height: 90px; /* Règle la taille du logo ici */
+  max-height: 90px;
   width: auto;
   display: block;
-  
-  /* Astuce : rend le carré blanc du JPG "transparent" visuellement */
-  mix-blend-mode: multiply; 
+  mix-blend-mode: multiply;
 }
-/* -------------------------------- */
 
 .menu{
   display:flex;
@@ -162,7 +154,7 @@ header{
 /* ================= HERO ================= */
 
 .hero{
-  padding:80px 0;
+  padding:84px 0 78px;
 }
 
 .hero-grid{
@@ -173,14 +165,16 @@ header{
 }
 
 .hero-text{
-  padding-top: 10px;
+  padding-top: 8px;
 }
 
 .signature{
-  font-style:italic;
-  opacity:.82;
-  margin:0 0 18px;
-  font-weight:500;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: .68;
+  margin: 0 0 18px;
 }
 
 .hero-title{
@@ -188,7 +182,7 @@ header{
   font-size: clamp(42px, 5vw, 66px);
   font-weight:700;
   line-height:1.05;
-  margin:0 0 16px;
+  margin:0 0 18px;
   color: var(--terracotta);
 }
 
@@ -197,7 +191,7 @@ header{
   display:block;
   width:88px;
   height:2px;
-  margin-top:12px;
+  margin-top:14px;
   background: rgba(184,107,75,0.55);
   border-radius: 99px;
 }
@@ -207,6 +201,10 @@ header{
   font-size:18px;
 }
 
+.muted{
+  opacity: .82;
+}
+
 .hero-actions{
   display:flex;
   gap:12px;
@@ -214,74 +212,79 @@ header{
   margin-top: 14px;
 }
 
-.reassurance{
-  font-size:14px;
-  opacity:.72;
-  margin-top:14px;
+.geo{
+  margin-top: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(46,63,54,.12);
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(10px);
+  font-size: 13px;
+  opacity: .85;
+}
+
+.geo .dot{
+  opacity: .5;
 }
 
 /* ================= CARROUSEL HERO ================= */
 
-/* Le cadre principal qui contient les images */
 .hero-media {
-  position: relative; /* Indispensable pour que les images se superposent bien */
+  position: relative;
   border-radius: 28px;
-  overflow: hidden;   /* Coupe tout ce qui dépasse du cadre */
-  min-height: 520px;  /* Hauteur sur ordinateur */
+  overflow: hidden;
+  min-height: 520px;
   box-shadow: var(--shadow);
-  background: #f6f2ec; /* Couleur de fond de sécurité */
+  background: #f6f2ec;
 }
 
-/* Le style commun à toutes les diapositives */
+/* voile “luxe” pour calmer les images */
+.hero-vignette{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(1200px 700px at 20% 20%, rgba(250,247,241,0.0), rgba(250,247,241,0.12) 60%, rgba(46,63,54,0.10) 100%),
+    linear-gradient(to top, rgba(46,63,54,0.16), rgba(46,63,54,0.00) 45%);
+  mix-blend-mode: multiply;
+}
+
 .slide {
-  position: absolute; /* Place les images les unes sur les autres */
-  top: 0;
-  left: 0;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;    /* L'image remplit tout l'espace */
+  background-size: cover;
   background-position: center;
-  opacity: 0; /* Caché par défaut */
-  
-  /* Lancement de l'animation : 12 secondes au total, en boucle */
-  animation: fadeSlide 12s infinite; 
+  opacity: 0;
+  animation: fadeSlide 16s infinite; /* 4 images -> 16s */
 }
 
-/* --- TIMING (Réglage pour 3 images) --- */
+/* Timing pour 4 images */
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 4s; }
+.slide:nth-child(3) { animation-delay: 8s; }
+.slide:nth-child(4) { animation-delay: 12s; }
 
-/* Image 1 : commence tout de suite */
-.slide:nth-child(1) {
-  animation-delay: 0s;
-}
-
-/* Image 2 : commence après 4 secondes */
-.slide:nth-child(2) {
-  animation-delay: 4s;
-}
-
-/* Image 3 : commence après 8 secondes */
-.slide:nth-child(3) {
-  animation-delay: 8s;
-}
-
-/* --- L'ANIMATION (Fondu + Zoom lent "Effet Ken Burns") --- */
+/* Fondu + léger Ken Burns */
 @keyframes fadeSlide {
-  0%   { opacity: 0; }
-  10%  { opacity: 1; transform: scale(1); }     /* Apparition rapide */
-  33%  { opacity: 1; transform: scale(1.05); }  /* Reste visible 4s en zoomant légèrement */
-  43%  { opacity: 0; }                          /* Disparition */
-  100% { opacity: 0; }
+  0%   { opacity: 0; transform: scale(1); }
+  8%   { opacity: 1; transform: scale(1); }
+  25%  { opacity: 1; transform: scale(1.05); }
+  33%  { opacity: 0; transform: scale(1.05); }
+  100% { opacity: 0; transform: scale(1.05); }
 }
 
-/* --- AJUSTEMENT MOBILE --- */
-@media(max-width:900px){
-  .hero-media{
-    min-height: 320px; /* Moins haut sur téléphone */
-  }
-}
 .hero-media--alt{
   min-height: 360px;
   background-image: url("images/details.jpg");
+  background-size: cover !important;
+  background-position: center !important;
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
 }
 
 /* ================= SECTIONS ================= */
@@ -303,14 +306,16 @@ header{
   line-height: 1.2;
 }
 
-.list{
-  list-style:none;
-  padding:0;
-  margin:24px 0;
+.luxe-paragraph{
+  margin: 0 0 18px;
+  font-size: 17px;
+  opacity: .92;
 }
 
-.list li{
-  margin-bottom:12px;
+.luxe-note{
+  margin: 10px 0 0;
+  font-size: 15px;
+  opacity: .78;
 }
 
 .transition{
@@ -357,7 +362,7 @@ header{
 }
 
 .editorial-card{
-  border: 1.6px solid var(--forest-line);
+  border: 1.6px solid rgba(61, 90, 73, 0.35);
   border-radius: 22px;
   padding: 34px 26px;
   text-align: center;
@@ -368,7 +373,7 @@ header{
 .editorial-card h3{
   font-family: "Cormorant Garamond", serif;
   font-size: 30px;
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   color: var(--forest);
   font-weight: 600;
 }
@@ -382,7 +387,9 @@ header{
 
 /* carte mise en avant */
 .editorial-card.highlight{
-  border-color: rgba(184,107,75,0.65);
+  border-color: rgba(184,107,75,0.55);
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(10px);
 }
 
 .editorial-signature{
@@ -400,6 +407,12 @@ header{
   margin-top: 18px;
 }
 
+.reassurance{
+  font-size:14px;
+  opacity:.72;
+  margin-top:18px;
+}
+
 /* ================= FOOTER ================= */
 
 footer{
@@ -411,9 +424,19 @@ footer{
 
 .footer{
   display:flex;
-  gap:32px;
+  gap:18px;
   flex-wrap:wrap;
   justify-content: center;
+  text-align:center;
+}
+
+.footer p{
+  margin: 0;
+  opacity: .88;
+}
+
+.footer p strong{
+  opacity: 1;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -421,6 +444,22 @@ footer{
 @media(max-width:900px){
 
   .container{ padding:0 20px; }
+
+  header {
+    background: rgba(246, 242, 236, 0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(46, 63, 54, 0.05);
+  }
+
+  .nav {
+    padding: 10px 0;
+  }
+
+  .brand-logo {
+    max-height: 85px;
+    mix-blend-mode: multiply;
+    filter: contrast(1.05);
+  }
 
   .menu{
     display:none;
@@ -455,8 +494,51 @@ footer{
     text-align: left;
   }
 
+  .hero-title{
+    font-size: 40px;
+    line-height: 1.12;
+    font-weight: 650;
+  }
+
+  .signature{
+    font-size: 11px;
+    letter-spacing: 3px;
+    opacity: 0.6;
+    margin-bottom: 18px;
+  }
+
+  .lead{
+    font-size:16px;
+    line-height:1.85;
+    opacity:.88;
+    font-weight:300;
+  }
+
   .hero-media{
     min-height: 320px;
+  }
+
+  .hero-actions{
+    gap: 10px;
+  }
+
+  .btn-primary,
+  .btn-secondary{
+    width:100%;
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .btn-secondary{
+    background: transparent;
+    border: 1px solid rgba(46, 63, 54, 0.2);
+  }
+
+  .geo{
+    width: fit-content;
+    max-width: 100%;
+    font-size: 12.5px;
+    padding: 10px 12px;
   }
 
   .editorial-title{
@@ -475,205 +557,70 @@ footer{
     gap: 18px;
   }
 
+  .editorial-card{
+    background: #fff;
+    border: none;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+    border-radius: 16px;
+    padding: 34px 24px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .editorial-card::before{
+    content:"";
+    position:absolute;
+    top:0; left:0;
+    width:100%;
+    height:4px;
+    background: linear-gradient(90deg, rgba(184,107,75,0.8), transparent);
+    opacity: 0.5;
+  }
+
+  .editorial-card h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .editorial-card p{
+    opacity: .74;
+    line-height: 1.65;
+  }
+
+  .editorial-card.highlight{
+    background: #faf7f1;
+    border: 1px solid rgba(184, 107, 75, 0.10);
+  }
+
   .section{
     padding: 60px 0;
   }
 
-  /* --- AJOUTS POUR RÉCHAUFFER LE MOBILE --- */
-
-  /* Donne du relief aux cartes de services */
-  .editorial-card {
-    background: rgba(255,255,255,0.6);
-    backdrop-filter: blur(5px);
-    border-color: rgba(61, 90, 73, 0.15);
-    box-shadow: 0 8px 20px rgba(46,63,54,0.06);
-    margin-bottom: 12px;
-  }
-  
-  /* Met en valeur la carte "Premium" */
-  .editorial-card.highlight {
-    background: #fff;
-    border: 1px solid var(--terracotta);
-    box-shadow: 0 10px 25px rgba(184,107,75,0.12);
+  .hero-media--alt{
+    min-height: 250px;
   }
 
-  /* Ligne décorative sous les titres H2 sur mobile */
-  .section h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: var(--terracotta);
-    opacity: 0.4;
-    margin-top: 10px;
-    border-radius: 10px;
+  .footer{
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 20px;
   }
-  
-  /* Réchauffe les sections "Soft" (fonds alternés) */
-  .section.soft {
-    background: #efe9e1; 
-    border-top: 1px solid rgba(255,255,255,0.5);
-    border-bottom: 1px solid rgba(255,255,255,0.5);
+
+  .footer p{
+    font-size: 14px;
+    opacity: 0.82;
+  }
+
+  .footer p:first-child{
+    font-size: 16px;
+    margin-bottom: 8px;
+    opacity: 1;
   }
 }
 
 @keyframes fadeIn{
   from{ opacity:0; transform: translateY(-10px); }
   to{ opacity:1; transform: translateY(0); }
-}
-
-/* ============================================== */
-/* PACK ESTHÉTIQUE "HAUT DE GAMME" (MOBILE)     */
-/* ============================================== */
-
-@media(max-width:900px){
-
-  /* 1. HEADER & LOGO : Aérien */
-  header {
-    background: rgba(246, 242, 236, 0.85); /* Plus de transparence */
-    backdrop-filter: blur(15px); /* Flou plus intense (effet verre dépoli luxe) */
-    border-bottom: 1px solid rgba(46, 63, 54, 0.05); /* Bordure quasi invisible */
-  }
-
-  .nav {
-    padding: 10px 0; /* Un peu plus d'espace en haut/bas */
-  }
-
-  .brand-logo {
-    max-height: 85px; /* Taille généreuse */
-    /* L'astuce magique : fond le blanc du JPEG dans la couleur du menu */
-    mix-blend-mode: multiply; 
-    filter: contrast(1.05); /* Légère accentuation pour la netteté */
-  }
-
-  /* 2. TYPOGRAPHIE : Élégance et Rythme */
-  .hero-title {
-    font-size: 40px; /* Un peu plus petit pour ne pas écraser l'écran */
-    line-height: 1.15;
-    font-weight: 600;
-    color: var(--terracotta);
-    margin-bottom: 20px;
-  }
-
-  .signature {
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 3px; /* Espacement très large = Luxe */
-    opacity: 0.6;
-    margin-bottom: 20px;
-  }
-
-  .lead {
-    font-size: 16px;
-    line-height: 1.8; /* Plus d'espace entre les lignes de texte */
-    opacity: 0.85;
-    font-weight: 300; /* Texte plus fin */
-  }
-
-  /* 3. BOUTONS : Raffinement */
-  .btn-primary {
-    width: 100%; /* Pleine largeur sur mobile pour l'impact */
-    padding: 18px;
-    border-radius: 12px; /* Coins un peu moins ronds (plus moderne) */
-    box-shadow: 0 15px 30px rgba(184, 107, 75, 0.25); /* Ombre colorée diffuse */
-    font-size: 15px;
-    margin-bottom: 12px;
-  }
-
-  .btn-secondary {
-    width: 100%;
-    padding: 18px;
-    border-radius: 12px;
-    background: transparent;
-    border: 1px solid rgba(46, 63, 54, 0.2);
-  }
-
-  /* 4. CARTES SERVICES : Effet "Carte de visite" */
-  .editorial-card {
-    background: #fff;
-    border: none; /* On enlève la bordure dure */
-    /* Ombre très douce et étalée */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04); 
-    border-radius: 16px;
-    padding: 35px 25px;
-    margin-bottom: 20px;
-    text-align: left; /* Alignement gauche fait plus chic que centré */
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* Petite ligne décorative en haut de chaque carte */
-  .editorial-card::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--terracotta), transparent);
-    opacity: 0.5;
-  }
-
-  .editorial-card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: var(--ink);
-  }
-
-  .editorial-card p {
-    font-size: 15px;
-    opacity: 0.7;
-    line-height: 1.6;
-  }
-  
-  /* Mise en avant de la carte du milieu (Premium) */
-  .editorial-card.highlight {
-    background: #faf7f1; /* Fond très légèrement teinté */
-    border: 1px solid rgba(184, 107, 75, 0.1);
-  }
-
-  /* 5. SECTEURS GÉOGRAPHIQUES */
-  .reassurance {
-    background: rgba(255, 255, 255, 0.5);
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255, 0.6);
-    margin-top: 30px;
-  }
-}
-/* ========================================= */
-/* CORRECTIFS FINAUX (MOBILE & IMAGES)       */
-/* ========================================= */
-
-/* 1. RÉPARATION DE L'IMAGE "EXPÉRIENCE VOYAGEURS" */
-/* On lui redonne ses propriétés de redimensionnement qui avaient sauté */
-.hero-media--alt {
-  background-size: cover !important;
-  background-position: center !important;
-  /* On réduit la hauteur sur mobile pour que ce soit plus joli (format panoramique) */
-  min-height: 250px; 
-}
-
-/* 2. RÉDUCTION DES ESPACES DANS LE FOOTER (CONTACT BAS) */
-@media(max-width:900px){
-  
-  .footer {
-    display: flex;
-    flex-direction: column; /* Empile les éléments verticalement */
-    gap: 8px; /* Espace beaucoup plus petit (8px au lieu de 32px) */
-    padding-bottom: 20px; /* Un peu d'air en bas de l'écran */
-  }
-
-  .footer p {
-    margin: 0; /* Supprime les marges par défaut des paragraphes */
-    font-size: 14px; /* Taille de texte lisible et fine */
-    opacity: 0.8;
-  }
-  
-  /* Optionnel : Met le nom de la conciergerie un peu plus gros */
-  .footer p:first-child {
-    font-size: 16px;
-    margin-bottom: 8px; /* Un petit espace supplémentaire après le titre */
-    opacity: 1;
-  }
 }

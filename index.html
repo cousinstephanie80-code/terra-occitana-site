@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Terra Occitana — Conciergerie St-André-de-Sangonis & Cap d'Agde</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Terra Occitana, votre conciergerie entre Terre et Mer : Saint-André-de-Sangonis, Cap d'Agde, Grau d'Agde et Marseillan Plage. Intendance, ménage et accueil voyageurs.">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Terra Occitana, conciergerie entre Terre et Mer : Saint-André-de-Sangonis, Cap d'Agde, Grau d'Agde et Marseillan Plage. Intendance, entretien et accueil voyageurs." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
 <header>
   <div class="container nav">
-    
+
     <div class="brand">
       <a href="#accueil" class="brand-link" aria-label="Terra Occitana - Retour accueil">
-        <img src="images/logo.jpg" alt="Conciergerie Terra Occitana" class="brand-logo">
+        <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo" />
       </a>
     </div>
 
-    <nav class="menu">
+    <nav class="menu" aria-label="Navigation principale">
       <a href="#accueil">Accueil</a>
       <a href="#proprietaires">Propriétaires & services</a>
       <a href="#voyageurs">Expérience voyageurs</a>
       <a href="#contact" class="btn-nav">Contact</a>
     </nav>
 
-    <button class="burger" id="burger" aria-label="Menu">
+    <button class="burger" id="burger" aria-label="Ouvrir le menu">
       <span></span><span></span><span></span>
     </button>
-    
-  </div> </header><main id="accueil">
 
+  </div>
+</header>
+
+<main id="accueil">
+
+  <!-- HERO -->
   <section class="hero">
     <div class="container hero-grid">
 
       <div class="hero-text">
-        <p class="signature">Entre Garrigue et Méditerranée, votre sérénité assurée.</p>
+        <p class="signature">Entre Garrigue et Méditerranée</p>
 
-        <h1 class="hero-title">Prendre soin de votre bien, naturellement.</h1>
+        <h1 class="hero-title">
+          Prendre soin de votre bien.<br />
+          Simplement.
+        </h1>
 
         <p class="lead">
-          Présence locale, attentive et discrète pour gérer l’essentiel :
-          <strong>accueil des voyageurs, intendance, entretien et suivi du logement</strong>.
+          Une présence locale, discrète et fiable, pour veiller sur votre propriété tout au long de l’année.<br />
+          Accueil des voyageurs, intendance, entretien, suivi. <span class="muted">L’essentiel, maîtrisé.</span>
         </p>
 
         <div class="hero-actions">
@@ -50,35 +57,48 @@
           <a href="#proprietaires" class="btn-secondary">Découvrir nos services</a>
         </div>
 
-        <div class="reassurance" style="margin-top:24px; font-size:15px; line-height:1.6;">
-          <p style="margin:0 0 4px;">📍 <strong>Vallée de l'Hérault :</strong> Saint-André-de-Sangonis & environs</p>
-          <p style="margin:0;">🌊 <strong>Littoral :</strong> Cap d'Agde, Grau d'Agde, Marseillan Plage</p>
+        <div class="geo">
+          <span>Vallée de l’Hérault</span>
+          <span class="dot">•</span>
+          <span>Littoral Agathois</span>
         </div>
       </div>
 
-     <div class="hero-media">
-        <div class="slide" style="background-image: url('images/photo1.jpg');"></div>
-        
-        <div class="slide" style="background-image: url('images/photo2.jpg');"></div>
-        
-        <div class="slide" style="background-image: url('images/photo3.jpg');"></div>
-<div class="slide" style="background-image: url('images/photo4.jpg');"></div>
+      <div class="hero-media" aria-label="Aperçus de propriétés et lieux">
+        <div class="slide" style="background-image:url('images/photo1.jpg');"></div>
+        <div class="slide" style="background-image:url('images/photo2.jpg');"></div>
+        <div class="slide" style="background-image:url('images/photo3.jpg');"></div>
+        <div class="slide" style="background-image:url('images/photo4.jpg');"></div>
+
+        <!-- voile luxe (léger) -->
+        <div class="hero-vignette" aria-hidden="true"></div>
+      </div>
 
     </div>
   </section>
 
+  <!-- PARTENAIRE LOCAL -->
   <section class="section soft">
     <div class="container narrow">
-      <h2>Plus qu'une conciergerie, un partenaire local</h2>
-      <ul class="list">
-        <li>🌿 <strong>Sérénité :</strong> un relais sur place, qui connaît parfaitement le secteur.</li>
-        <li>🧹 <strong>Soin du bien :</strong> entretien, contrôle, suivi et petites attentions.</li>
-        <li>🤝 <strong>Confiance :</strong> un interlocuteur unique pour une relation simple.</li>
-      </ul>
-      <p class="transition">Une mobilité maîtrisée de Saint-André jusqu'au littoral Agathois, pour une réactivité totale.</p>
+      <h2>Un partenaire local</h2>
+
+      <p class="luxe-paragraph">
+        Chaque propriété a son histoire.<br />
+        Chaque propriétaire ses exigences.
+      </p>
+
+      <p class="luxe-paragraph">
+        Nous assurons une continuité sereine, avec un interlocuteur unique,
+        présent sur le terrain.
+      </p>
+
+      <p class="transition">
+        Une mobilité maîtrisée de Saint-André-de-Sangonis jusqu’au littoral, pour une réactivité constante.
+      </p>
     </div>
   </section>
 
+  <!-- SERVICES -->
   <section class="section services-editorial" id="proprietaires">
     <div class="container">
 
@@ -87,71 +107,79 @@
       </h2>
 
       <p class="editorial-intro">
-        À la carte ou avec un accompagnement complet.
+        À la carte ou en accompagnement complet.
       </p>
 
       <div class="editorial-cards">
 
         <div class="editorial-card">
-          <h3>Accueil & Départs</h3>
+          <h3>Accueil & départs</h3>
           <p>
-            Check-in, remise des clés,<br>
-            informations pratiques,<br>
-            check-out soigné.
+            Des arrivées fluides.<br />
+            Des départs soignés.
           </p>
         </div>
 
         <div class="editorial-card highlight">
-          <h3>Intendance premium</h3>
+          <h3>Intendance</h3>
           <p>
-            Entretien du logement,<br>
-            suivi attentif,<br>
-            contrôle & assistance voyageurs.
+            Entretien du logement.<br />
+            Contrôle régulier.<br />
+            Présence attentive.
           </p>
         </div>
 
         <div class="editorial-card">
-          <h3>À la carte</h3>
+          <h3>Services ponctuels</h3>
           <p>
-            Dépannage, passage,<br>
-            état des lieux,<br>
-            interventions ponctuelles.
+            Passages.<br />
+            Interventions ciblées.<br />
+            Suivi discret.
           </p>
         </div>
 
       </div>
 
       <p class="editorial-signature">
-        Une relation de confiance commence par une présence attentive.
+        Une relation de confiance commence par une présence constante.
       </p>
 
     </div>
   </section>
 
+  <!-- EXPERIENCE VOYAGEURS -->
   <section class="section soft" id="voyageurs">
     <div class="container hero-grid">
       <div class="hero-text">
-        <h2>Une expérience voyageurs soignée</h2>
-        <p class="lead">Des arrivées fluides, un logement impeccable, et une présence rassurante.</p>
-        <ul class="list">
-          <li>✨ <strong>Accueil chaleureux :</strong> infos locales, bonnes adresses du coin.</li>
-          <li>🧺 <strong>Petites attentions :</strong> sur demande, selon votre style.</li>
-          <li>🛠️ <strong>Assistance :</strong> gestion des imprévus et relais sur place.</li>
-        </ul>
+        <h2>Une expérience fluide</h2>
+
+        <p class="lead">
+          Des arrivées simples. Un logement impeccable.
+          Une présence rassurante, sans intrusion.
+        </p>
+
+        <p class="luxe-note">
+          Des attentions peuvent être prévues sur demande, selon votre style et vos usages.
+        </p>
       </div>
 
       <div class="hero-media hero-media--alt" aria-label="Détails séjour"></div>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="container narrow">
-      <h2>Une question, un projet sur le secteur ?</h2>
-      <p>Que votre bien soit situé dans les terres ou en bord de mer, nous prenons le temps de vous répondre.</p>
+      <h2>Un projet, une question</h2>
+
+      <p class="lead">
+        Que votre bien soit situé dans les terres ou en bord de mer,
+        nous prenons le temps de vous répondre.
+      </p>
 
       <div class="contact-actions">
         <a href="tel:+33672448865" class="btn-primary">Appeler</a>
-        <a href="mailto:conciergerie.terraoccitana@gmail.com" class="btn-secondary">Écrire un email</a>
+        <a href="mailto:conciergerie.terraoccitana@gmail.com" class="btn-secondary">Écrire</a>
       </div>
 
       <p class="reassurance">Nous vous répondons personnellement.</p>
@@ -162,10 +190,11 @@
 
 <footer>
   <div class="container footer">
-    <p><strong>Conciergerie Terra Occitana</strong></p>
-    <p>📍 St-André-de-Sangonis — Agde — Marseillan</p>
-    <p>📞 06 72 44 88 65</p>
-    <p>✉️ conciergerie.terraoccitana@gmail.com</p>
+    <p><strong>Terra Occitana</strong></p>
+    <p>Conciergerie</p>
+    <p>Vallée de l’Hérault — Littoral Agathois</p>
+    <p>06 72 44 88 65</p>
+    <p>conciergerie.terraoccitana@gmail.com</p>
   </div>
 </footer>
 
