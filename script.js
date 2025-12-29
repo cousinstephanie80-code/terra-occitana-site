@@ -1,6 +1,10 @@
-(function () {
-  const nav = document.querySelector(".nav");
-  const btn = document.querySelector(".hamburger");
-  if (!nav || !btn) return;
-  btn.addEventListener("click", () => nav.classList.toggle("open"));
-})();
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.getElementById("burger");
+  const menu = document.querySelector(".menu");
+
+  if (!burger || !menu) return;
+
+  burger.addEventListener("click", function () {
+    menu.classList.toggle("open");
+  });
+});
