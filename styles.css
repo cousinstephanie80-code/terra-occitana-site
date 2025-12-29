@@ -10,6 +10,11 @@
 
   --shadow: 0 22px 50px rgba(0,0,0,0.08);
   --shadow-soft: 0 12px 30px rgba(0,0,0,0.06);
+
+  /* ivoire “papier” (style 2e image) */
+  --paper:#faf7f1;
+  --forest:#3d5a49;
+  --forest-line: rgba(61, 90, 73, 0.65);
 }
 
 *{box-sizing:border-box}
@@ -62,7 +67,7 @@ header{
   position:relative;
 }
 
-/* Brand top-left : "Conciergerie" + "Terra Occitana" */
+/* Brand top-left */
 .brand-link{
   display:flex;
   flex-direction:column;
@@ -83,7 +88,6 @@ header{
   letter-spacing:.3px;
 }
 
-/* menu */
 .menu{
   display:flex;
   gap:24px;
@@ -103,7 +107,6 @@ header{
   opacity: 1 !important;
 }
 
-/* burger */
 .burger{
   display:none;
   background:none;
@@ -189,7 +192,6 @@ header{
   color: var(--terracotta);
 }
 
-/* micro-ajustement luxe : petit trait */
 .hero-title::after{
   content:"";
   display:block;
@@ -218,7 +220,7 @@ header{
   margin-top:14px;
 }
 
-/* IMPORTANT : image hero qui remplit 100% de la place */
+/* Image hero (remplit parfaitement) */
 .hero-media{
   border-radius:28px;
   overflow:hidden;
@@ -271,38 +273,76 @@ header{
   font-style: italic;
 }
 
-/* ================= COLUMNS ================= */
+/* ================= SERVICES – STYLE ÉDITORIAL (comme ta 2e image) ================= */
 
-.columns{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:32px;
-  margin-top:40px;
+.services-editorial{
+  background: var(--paper);
+  border-bottom: none;
 }
 
-.card{
-  padding:28px;
-  border-radius:22px;
-  background:rgba(255,255,255,.72);
-  border: 1px solid rgba(255,255,255,0.85);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover{
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-soft);
-}
-
-.card h3{
+.editorial-title{
   font-family:"Cormorant Garamond", serif;
-  margin: 0 0 10px 0;
-  font-size: 1.4rem;
+  font-size: 46px;
+  margin: 0 0 10px;
+  color: var(--forest);
+  letter-spacing: 0.3px;
 }
 
-.premium-card{
-  border: 2px solid rgba(184,107,75,0.45);
-  background: white;
+.editorial-title span{
+  font-family:"Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 34px;
+  font-style: italic;
+  margin-left: 10px;
+  opacity: .9;
+  color: var(--forest);
+}
+
+.editorial-intro{
+  margin: 0 0 56px;
+  font-size: 16px;
+  opacity: .86;
+}
+
+.editorial-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+}
+
+.editorial-card{
+  border: 1.6px solid var(--forest-line);
+  border-radius: 22px;
+  padding: 34px 26px;
+  text-align: center;
+  background: transparent;
+  box-shadow: none;
+}
+
+.editorial-card h3{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  margin: 0 0 18px;
+  color: var(--forest);
+  font-weight: 600;
+}
+
+.editorial-card p{
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0;
+  opacity: .95;
+}
+
+/* carte mise en avant (discrète, pas “tape-à-l’œil”) */
+.editorial-card.highlight{
+  border-color: rgba(184,107,75,0.65);
+}
+
+.editorial-signature{
+  margin-top: 52px;
+  font-style: italic;
+  opacity: .72;
 }
 
 /* ================= CONTACT ================= */
@@ -373,8 +413,20 @@ footer{
     min-height: 320px;
   }
 
-  .columns{
+  .editorial-title{
+    font-size: 38px;
+  }
+
+  .editorial-title span{
+    display:block;
+    margin-left: 0;
+    margin-top: 6px;
+    font-size: 28px;
+  }
+
+  .editorial-cards{
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .section{
