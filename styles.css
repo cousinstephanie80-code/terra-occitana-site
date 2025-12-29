@@ -641,3 +641,39 @@ footer{
     margin-top: 30px;
   }
 }
+/* ========================================= */
+/* CORRECTIFS FINAUX (MOBILE & IMAGES)       */
+/* ========================================= */
+
+/* 1. RÉPARATION DE L'IMAGE "EXPÉRIENCE VOYAGEURS" */
+/* On lui redonne ses propriétés de redimensionnement qui avaient sauté */
+.hero-media--alt {
+  background-size: cover !important;
+  background-position: center !important;
+  /* On réduit la hauteur sur mobile pour que ce soit plus joli (format panoramique) */
+  min-height: 250px; 
+}
+
+/* 2. RÉDUCTION DES ESPACES DANS LE FOOTER (CONTACT BAS) */
+@media(max-width:900px){
+  
+  .footer {
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    gap: 8px; /* Espace beaucoup plus petit (8px au lieu de 32px) */
+    padding-bottom: 20px; /* Un peu d'air en bas de l'écran */
+  }
+
+  .footer p {
+    margin: 0; /* Supprime les marges par défaut des paragraphes */
+    font-size: 14px; /* Taille de texte lisible et fine */
+    opacity: 0.8;
+  }
+  
+  /* Optionnel : Met le nom de la conciergerie un peu plus gros */
+  .footer p:first-child {
+    font-size: 16px;
+    margin-bottom: 8px; /* Un petit espace supplémentaire après le titre */
+    opacity: 1;
+  }
+}
