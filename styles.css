@@ -11,7 +11,7 @@
   --shadow: 0 22px 50px rgba(0,0,0,0.08);
   --shadow-soft: 0 12px 30px rgba(0,0,0,0.06);
 
-  /* ivoire “papier” (style 2e image) */
+  /* ivoire “papier” */
   --paper:#faf7f1;
   --forest:#3d5a49;
   --forest-line: rgba(61, 90, 73, 0.65);
@@ -24,7 +24,11 @@ html{ scroll-behavior:smooth; }
 body{
   margin:0;
   font-family:Inter, system-ui, sans-serif;
-  background:var(--bg);
+  
+  /* MODIFICATION : Dégradé subtil pour réchauffer le fond global */
+  background-color: var(--bg);
+  background-image: linear-gradient(to bottom, #fdfbf7 0%, #f4efe8 100%);
+  
   color:var(--ink);
   line-height:1.7;
 }
@@ -220,7 +224,7 @@ header{
   margin-top:14px;
 }
 
-/* Image hero (remplit parfaitement) */
+/* Image hero */
 .hero-media{
   border-radius:28px;
   overflow:hidden;
@@ -273,7 +277,7 @@ header{
   font-style: italic;
 }
 
-/* ================= SERVICES – STYLE ÉDITORIAL (comme ta 2e image) ================= */
+/* ================= SERVICES – STYLE ÉDITORIAL ================= */
 
 .services-editorial{
   background: var(--paper);
@@ -334,7 +338,7 @@ header{
   opacity: .95;
 }
 
-/* carte mise en avant (discrète, pas “tape-à-l’œil”) */
+/* carte mise en avant */
 .editorial-card.highlight{
   border-color: rgba(184,107,75,0.65);
 }
@@ -431,6 +435,43 @@ footer{
 
   .section{
     padding: 60px 0;
+  }
+
+  /* --- AJOUTS POUR RÉCHAUFFER LE MOBILE --- */
+
+  /* Donne du relief aux cartes de services */
+  .editorial-card {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+    border-color: rgba(61, 90, 73, 0.15);
+    box-shadow: 0 8px 20px rgba(46,63,54,0.06);
+    margin-bottom: 12px;
+  }
+  
+  /* Met en valeur la carte "Premium" */
+  .editorial-card.highlight {
+    background: #fff;
+    border: 1px solid var(--terracotta);
+    box-shadow: 0 10px 25px rgba(184,107,75,0.12);
+  }
+
+  /* Ligne décorative sous les titres H2 sur mobile */
+  .section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--terracotta);
+    opacity: 0.4;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  /* Réchauffe les sections "Soft" (fonds alternés) */
+  .section.soft {
+    background: #efe9e1; 
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.5);
   }
 }
 
