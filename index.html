@@ -4,33 +4,30 @@
   <meta charset="UTF-8" />
   <title>Terra Occitana — Conciergerie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Terra Occitana, conciergerie locale entre Vallée de l’Hérault et Littoral Agathois. Intendance, accueil voyageurs et suivi de votre bien." />
-
-  <!-- IMPORTANT : base GitHub Pages -->
-  <base href="/terra-occitana-site/">
+  <meta name="description" content="Terra Occitana, conciergerie privée entre Vallée de l’Hérault et Littoral. Intendance, accueil voyageurs et services sur mesure." />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<header>
-  <div class="container nav">
+<header class="site-header">
+  <div class="header-inner">
 
     <div class="brand">
       <a href="index.html" class="brand-link" aria-label="Terra Occitana - Accueil">
-        <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
+        <img src="images/logo.jpg" alt="Conciergerie Terra Occitana" class="brand-logo">
       </a>
     </div>
 
-    <nav class="menu" aria-label="Navigation principale">
-      <a href="index.html">Accueil</a>
-      <a href="proprietaires.html">Propriétaires & services</a>
-      <a href="#voyageurs">Expérience voyageurs</a>
-      <a href="#contact" class="btn-nav">Contact</a>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <a href="contact.html">Contact</a>
+      <a href="proprietaires.html">Propriétaire</a>
+      <a href="services.html">Nos services</a>
+      <a href="voyageurs.html">Expériences voyageurs</a>
     </nav>
 
-    <button class="burger" id="burger" aria-label="Menu">
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
       <span></span><span></span><span></span>
     </button>
 
@@ -39,156 +36,162 @@
 
 <main id="accueil">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
+<section class="hero-banner" aria-label="Bannière principale">
+  <div class="hero-slider" data-hero-slider>
 
-      <div class="hero-text">
-        <p class="signature">Entre Garrigue et Méditerranée</p>
+    <div class="hero-slide is-active" style="background-image:url('images/hero-salagou.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero-littoral-mediterranee.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero-port-marseillan.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero-village-occitan.jpg')"></div>
 
-        <h1 class="hero-title">
-          Prendre soin de votre bien.<br>
-          Simplement.
-        </h1>
+    <div class="hero-overlay"></div>
 
-        <p class="lead">
-          Une présence locale, discrète et fiable,
-          pour veiller sur votre propriété tout au long de l’année.<br>
-          Accueil des voyageurs, intendance, entretien, suivi.
-          <span class="muted">L’essentiel, maîtrisé.</span>
+    <div class="container hero-content reveal">
+      <p class="hero-kicker">
+        Conciergerie privée • Vallée de l’Hérault • Littoral
+      </p>
+
+      <h1 class="hero-headline">
+        Terra Occitana
+        <span>
+          Une présence locale, discrète et exigeante<br>
+          pour votre propriété.
+        </span>
+      </h1>
+    </div>
+
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container narrow reveal">
+
+    <h2>Un partenaire local</h2>
+
+    <p class="luxe-paragraph">
+      Chaque propriété a son histoire.<br>
+      Chaque propriétaire ses exigences.
+    </p>
+
+    <p class="luxe-paragraph">
+      Nous assurons une continuité sereine, avec un interlocuteur unique,
+      présent sur le terrain.
+    </p>
+
+    <p class="transition">
+      Une relation de confiance commence par une présence constante.
+    </p>
+
+  </div>
+</section>
+
+<section class="section services-premium" id="services">
+  <div class="container">
+
+    <div class="premium-head reveal">
+      <h2 class="premium-title">NOS SERVICES</h2>
+    </div>
+
+    <div class="premium-grid reveal">
+
+      <article class="premium-item">
+        <div class="premium-num">1.</div>
+        <h3>Accueil & départ</h3>
+        <p>
+          Arrivées fluides, départs impeccables.
+          Accueil personnalisé, présentation du lieu et check-out soigné.
         </p>
+      </article>
 
-        <div class="hero-actions">
-          <a href="#contact" class="btn-primary">Votre bien, entre de bonnes mains</a>
-          <a href="proprietaires.html" class="btn-secondary">Découvrir nos services</a>
-        </div>
-
-        <div class="geo">
-          <span>Vallée de l’Hérault</span>
-          <span class="dot">•</span>
-          <span>Littoral Agathois</span>
-        </div>
-      </div>
-
-      <!-- VISUEL HERO (tes images) -->
-      <div class="hero-media">
-        <div class="slide" style="background-image:url('images/photo1.jpg')"></div>
-        <div class="slide" style="background-image:url('images/photo2.jpg')"></div>
-        <div class="slide" style="background-image:url('images/photo3.jpg')"></div>
-        <div class="slide" style="background-image:url('images/photo4.jpg')"></div>
-        <div class="hero-vignette"></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PARTENAIRE LOCAL -->
-  <section class="section soft">
-    <div class="container narrow">
-      <h2>Un partenaire local</h2>
-
-      <p class="luxe-paragraph">
-        Chaque propriété a son histoire.<br>
-        Chaque propriétaire ses exigences.
-      </p>
-
-      <p class="luxe-paragraph">
-        Nous assurons une continuité sereine,
-        avec un interlocuteur unique, présent sur le terrain.
-      </p>
-
-      <p class="transition">
-        Une relation de confiance commence par une présence constante.
-      </p>
-    </div>
-  </section>
-
-  <!-- SERVICES (aperçu) -->
-  <section class="section services-editorial">
-    <div class="container">
-
-      <h2 class="editorial-title">
-        Nos services <span>selon votre besoin</span>
-      </h2>
-
-      <p class="editorial-intro">
-        À la carte ou en accompagnement complet.
-      </p>
-
-      <div class="editorial-cards">
-
-        <div class="editorial-card">
-          <h3>Accueil & départs</h3>
-          <p>Des arrivées fluides. Des départs soignés.</p>
-        </div>
-
-        <div class="editorial-card highlight">
-          <h3>Intendance</h3>
-          <p>Entretien du logement. Contrôle régulier. Présence attentive.</p>
-        </div>
-
-        <div class="editorial-card">
-          <h3>Services ponctuels</h3>
-          <p>Passages. Interventions ciblées. Suivi discret.</p>
-        </div>
-
-      </div>
-
-      <div style="margin-top:40px;">
-        <a href="proprietaires.html" class="btn-secondary">
-          Voir le détail des services
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- EXPERIENCE VOYAGEURS -->
-  <section class="section soft" id="voyageurs">
-    <div class="container hero-grid">
-
-      <div class="hero-text">
-        <h2>Une expérience fluide</h2>
-
-        <p class="lead">
-          Des arrivées simples.<br>
-          Un logement impeccable.<br>
-          Une présence rassurante, sans intrusion.
+      <article class="premium-item">
+        <div class="premium-num">2.</div>
+        <h3>Intendance</h3>
+        <p>
+          Votre propriété, parfaitement tenue.
+          Passages réguliers, contrôles qualité, coordination et suivi discret.
         </p>
-      </div>
+      </article>
 
-      <div class="hero-media hero-media--alt"></div>
+      <article class="premium-item">
+        <div class="premium-num">3.</div>
+        <h3>Services ponctuels</h3>
+        <p>
+          À la demande, sans compromis.
+          Dépannage, courses, linge, mise en place… avec la même exigence.
+        </p>
+      </article>
 
     </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="container narrow">
+    <div class="premium-signature-block reveal">
+      <h4>Prestations signature</h4>
+      <ul>
+        <li>Anniversaire de mariage : mise en scène, bougies, décoration</li>
+        <li>Demande en mariage : ambiance, pétales, message personnalisé</li>
+        <li>Panier de produits locaux : olives, vins, douceurs du Sud</li>
+        <li>Champagne & petites attentions</li>
+      </ul>
+    </div>
 
-      <h2>Un projet, une question</h2>
+    <div class="premium-cta reveal">
+      <a href="services.html" class="btn-secondary">Voir le détail des services</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container hero-grid reveal">
+
+    <div class="hero-text">
+      <h2>Une expérience fluide</h2>
 
       <p class="lead">
-        Que votre bien soit situé dans les terres ou en bord de mer,
-        nous prenons le temps de vous répondre.
+        Des arrivées simples.<br>
+        Un logement impeccable.<br>
+        Une présence rassurante, sans intrusion.
       </p>
 
-      <div class="contact-actions">
-        <a href="tel:+33672448865" class="btn-primary">Appeler</a>
-        <a href="mailto:conciergerie.terraoccitana@gmail.com" class="btn-secondary">Écrire</a>
-      </div>
-
-      <p class="reassurance">Nous vous répondons personnellement.</p>
-
+      <a href="voyageurs.html" class="btn-secondary">
+        Découvrir l’expérience voyageurs
+      </a>
     </div>
-  </section>
+
+    <div class="hero-media hero-media--alt"></div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow reveal">
+
+    <h2>Un projet, une question</h2>
+
+    <p class="lead">
+      Que votre bien soit situé dans les terres ou en bord de mer,
+      nous prenons le temps de vous répondre.
+    </p>
+
+    <div class="contact-actions">
+      <a href="contact.html" class="btn-primary">Accéder au contact</a>
+      <a href="mailto:conciergerie.terraoccitana@gmail.com" class="btn-secondary">
+        Écrire directement
+      </a>
+    </div>
+
+    <p class="reassurance">
+      Nous vous répondons personnellement.
+    </p>
+
+  </div>
+</section>
 
 </main>
 
 <footer>
   <div class="container footer">
     <p><strong>Terra Occitana</strong></p>
-    <p>Conciergerie</p>
+    <p>Conciergerie privée</p>
     <p>Vallée de l’Hérault — Littoral Agathois</p>
     <p>06 72 44 88 65</p>
     <p>conciergerie.terraoccitana@gmail.com</p>
