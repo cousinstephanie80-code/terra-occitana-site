@@ -3,8 +3,324 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Étude de Potentiel • Terra Occitana</title>
+  <title>Étude de potentiel • Terra Occitana</title>
+  <meta name="description" content="Recevez une projection simple du potentiel de votre bien selon nos collections. Une base claire pour échanger sereinement." />
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ===== ÉTUDE — LUXE ÉPURÉ (2 COLONNES) ===== */
+    .brand-logo{ height: 60px; }
+    @media (max-width: 900px){ .brand-logo{ height: 54px; } }
+
+    .study-hero{
+      position: relative;
+      padding: 92px 0 68px;
+      background:
+        radial-gradient(1200px 520px at 50% -50px, rgba(184,107,75,0.16) 0%, rgba(184,107,75,0) 60%),
+        radial-gradient(900px 380px at 15% 20%, rgba(85,107,47,0.10) 0%, rgba(85,107,47,0) 55%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg-cream) 60%, #ffffff 100%);
+      overflow: hidden;
+      text-align: center;
+    }
+    .study-hero::before{
+      content:"";
+      position:absolute;
+      inset:-60px -60px auto -60px;
+      height: 240px;
+      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.08), transparent);
+      transform: rotate(-6deg);
+      pointer-events:none;
+      opacity:.85;
+    }
+
+    .study-kicker{
+      display:inline-block;
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--terracotta);
+      margin-bottom: 14px;
+    }
+    .study-title{
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      color: var(--vin-olive);
+      font-size: clamp(2.2rem, 4.8vw, 3.7rem);
+      line-height: 1.08;
+      margin: 0 0 16px 0;
+    }
+    .study-sub{
+      max-width: 920px;
+      margin: 0 auto;
+      font-size: clamp(1rem, 1.15vw, 1.12rem);
+      opacity: .86;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+    .study-note{
+      max-width: 880px;
+      margin: 18px auto 0;
+      font-size: .92rem;
+      opacity: .70;
+      font-style: italic;
+      line-height: 1.65;
+    }
+
+    /* Cadre d’intro */
+    .study-frame{
+      padding: 55px 0 0;
+      background: #fff;
+    }
+    .frame-card{
+      max-width: 1040px;
+      margin: 0 auto;
+      background: var(--bg-cream);
+      border: 1px solid rgba(184,107,75,0.14);
+      padding: 34px 34px 30px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .frame-card::after{
+      content:"";
+      position:absolute;
+      inset:auto -40px -60px -40px;
+      height: 140px;
+      background: radial-gradient(closest-side, rgba(212,175,55,0.09), transparent 70%);
+      pointer-events:none;
+    }
+    .frame-card p{
+      margin: 0 auto;
+      max-width: 900px;
+      font-weight: 300;
+      opacity: .86;
+      line-height: 1.8;
+    }
+
+    /* 2 colonnes (outil) */
+    .study-tool{
+      padding: 54px 0 85px;
+      background: #fff;
+    }
+    .study-grid{
+      max-width: 1040px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .panel{
+      background: var(--bg-cream);
+      border: 1px solid rgba(184,107,75,0.14);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .panel::before{
+      content:"";
+      position:absolute;
+      inset: 0 auto 0 0;
+      width: 3px;
+      background: linear-gradient(180deg, rgba(184,107,75,0.92), rgba(184,107,75,0.18));
+      opacity: .95;
+    }
+
+    .panel h2{
+      margin: 0 0 8px 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      color: var(--vin-olive);
+      font-size: 1.7rem;
+      line-height: 1.15;
+    }
+    .panel p{
+      margin: 0 0 18px 0;
+      font-weight: 300;
+      opacity: .82;
+      line-height: 1.7;
+    }
+
+    /* Petites sections */
+    .block{
+      background: #fff;
+      border: 1px solid rgba(184,107,75,0.12);
+      padding: 18px;
+      margin-top: 14px;
+    }
+    .block-title{
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .76rem;
+      font-weight: 600;
+      color: var(--terracotta);
+      margin: 0 0 10px 0;
+    }
+
+    .pricing-mode-selector{
+      display:flex;
+      gap:10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .mode-btn{
+      border:1px solid rgba(184,107,75,0.22);
+      background:#fff;
+      padding:10px 12px;
+      border-radius: 999px;
+      cursor:pointer;
+      font-weight:500;
+      opacity:.85;
+    }
+    .mode-btn.active{
+      border-color: rgba(184,107,75,0.55);
+      color: var(--terracotta);
+      opacity: 1;
+    }
+
+    /* Packs */
+    .pack-selector{
+      display:grid;
+      gap: 10px;
+    }
+    .pack-btn{
+      border:1px solid rgba(184,107,75,0.14);
+      background:#fff;
+      padding: 14px 14px 12px;
+      cursor:pointer;
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      gap: 12px;
+    }
+    .pack-btn.active{
+      border-color: rgba(184,107,75,0.45);
+      box-shadow: 0 10px 30px rgba(46,63,54,.06);
+    }
+    .pack-name{
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+    .pack-detail{
+      opacity: .70;
+      font-weight: 300;
+      font-size: .95rem;
+    }
+
+    /* Ticket résultat */
+    .result-ticket{
+      margin-top: 14px;
+      background:#fff;
+      border:1px solid rgba(184,107,75,0.14);
+      overflow:hidden;
+      box-shadow: 0 14px 45px rgba(46,63,54,.06);
+    }
+    .ticket-header{
+      padding: 14px 16px;
+      border-bottom:1px solid rgba(184,107,75,0.10);
+      background:#fff;
+    }
+    .ticket-h-title{
+      margin:0;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-size: .82rem;
+      opacity: .9;
+    }
+    .ticket-body{
+      padding: 16px;
+    }
+
+    .t-section{
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(184,107,75,0.10);
+    }
+    .t-section:last-child{ border-bottom: none; }
+
+    .t-title{
+      display:block;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-size: .75rem;
+      opacity: .72;
+      margin-bottom: 10px;
+    }
+
+    .t-row{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      padding: 7px 0;
+      line-height: 1.55;
+      font-weight: 300;
+      opacity: .90;
+    }
+    .t-row strong{ font-weight: 600; }
+
+    .highlight{
+      margin-top: 6px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(184,107,75,0.10);
+      font-weight: 500;
+    }
+
+    .val-positive{ color: var(--vin-olive); font-weight: 600; }
+    .val-negative{ color: #6b2f1a; font-weight: 600; }
+
+    .t-total-box{
+      margin-top: 14px;
+      border: 1px solid rgba(184,107,75,0.14);
+      background: var(--bg-cream);
+      padding: 14px;
+      text-align:center;
+    }
+    .t-total-label{
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-size:.75rem;
+      opacity:.72;
+      margin-bottom: 8px;
+    }
+    .t-total-val{
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: var(--terracotta);
+      line-height: 1.1;
+    }
+    .t-total-note{
+      margin-top: 8px;
+      font-size:.82rem;
+      opacity:.70;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* Form bas */
+    .study-form{
+      padding: 70px 0;
+      background: var(--bg-sand);
+      text-align:center;
+    }
+    .study-form .narrow{
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 980px){
+      .study-grid{ grid-template-columns: 1fr; }
+      .panel{ padding: 22px; }
+    }
+    @media (max-width: 520px){
+      .study-hero{ padding: 82px 0 60px; }
+      .frame-card{ padding: 28px 18px 24px; }
+      .panel{ padding: 20px 16px; }
+      .t-total-val{ font-size: 2rem; }
+    }
+  </style>
 </head>
 
 <body>
@@ -12,76 +328,294 @@
   <header class="site-header">
     <div class="header-inner">
       <div class="brand">
-        <a href="index.html" class="brand-link"><img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo"></a>
+        <a href="index.html" class="brand-link">
+          <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
+        </a>
       </div>
+
       <nav class="menu" id="menu">
         <a href="proprietaires.html">Propriétaires</a>
         <a href="voyageurs.html">L'Expérience</a>
         <a href="offre-sur-mesure.html" class="active">Estimer mes revenus</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <section class="page-header-luxe">
-    <div class="container">
-      <span class="header-kicker">Projection & Stratégie</span>
-      <h1 class="header-title">Estimez le Potentiel de votre Bien</h1>
-      <p class="header-subtitle">
-        Visualisez la rentabilité de chaque séjour en fonction de nos collections de services.<br>
-        Une approche transparente pour valoriser votre patrimoine.
-      </p>
-    </div>
-  </section>
+  <main>
 
-  <section class="section">
-    <div class="calc-container">
+    <!-- HERO -->
+    <section class="study-hero">
+      <div class="container">
+        <span class="study-kicker">Étude de potentiel</span>
+        <h1 class="study-title">Une projection simple, pour y voir clair</h1>
+        <p class="study-sub">
+          Une base claire pour estimer un ordre de grandeur, selon la durée du séjour et la collection choisie.
+          Ensuite, si vous le souhaitez, nous ajustons ensemble selon votre bien et votre standing.
+        </p>
+        <div class="study-note">
+          Montants indicatifs — chaque propriété a son rythme et ses particularités.
+        </div>
+      </div>
+    </section>
 
-      <div class="params-panel">
-        
-        <div class="card-box">
-          <h3 class="card-title">1. Configuration du Séjour</h3>
-          
-          <div class="pricing-mode-selector">
-            <div class="mode-btn active" id="btnModeNight" onclick="setPricingMode('night')">Tarif Nuitée</div>
-            <div class="mode-btn" id="btnModeWeek" onclick="setPricingMode('week')">Tarif Semaine</div>
+    <!-- INTRO -->
+    <section class="study-frame">
+      <div class="container">
+        <div class="frame-card reveal">
+          <p>
+            Nous avons conçu cette page comme une <strong>lecture simple</strong> :
+            vous sélectionnez quelques paramètres, puis vous obtenez une <strong>projection</strong>.
+            L’objectif n’est pas de “simuler”, mais de poser une base pour échanger sereinement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTIL (2 COLONNES) -->
+    <section class="study-tool">
+      <div class="container">
+        <div class="study-grid">
+
+          <!-- COLONNE GAUCHE : PARAMÈTRES -->
+          <aside class="panel reveal">
+            <h2>Paramètres du séjour</h2>
+            <p>Choisissez une base de prix, puis la durée du séjour.</p>
+
+            <div class="block">
+              <div class="block-title">Mode de tarification</div>
+              <div class="pricing-mode-selector">
+                <div class="mode-btn active" id="btnModeNight" onclick="setPricingMode('night')">Tarif nuitée</div>
+                <div class="mode-btn" id="btnModeWeek" onclick="setPricingMode('week')">Tarif semaine</div>
+              </div>
+
+              <div style="margin-bottom:18px;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+                  <span id="labelPriceText" style="font-weight:500;">Valeur de la nuitée</span>
+                  <span style="font-family:'Cormorant Garamond'; font-size:1.3rem; color:var(--terracotta); font-weight:700;">
+                    <span id="lblPrice">100</span> €
+                  </span>
+                </div>
+                <input type="range" id="inPrice" min="40" max="600" step="5" value="100" style="width:100%; accent-color:var(--terracotta);">
+              </div>
+
+              <div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+                  <span style="font-weight:500;">Durée du séjour</span>
+                  <span style="font-family:'Cormorant Garamond'; font-size:1.3rem; color:var(--terracotta); font-weight:700;">
+                    <span id="lblDuration">7</span> nuits
+                  </span>
+                </div>
+                <input type="range" id="inDuration" min="2" max="30" step="1" value="7" style="width:100%; accent-color:var(--terracotta);">
+              </div>
+            </div>
+          </aside>
+
+          <!-- COLONNE DROITE : COLLECTION + RÉSULTAT -->
+          <section class="panel reveal">
+            <h2>Votre collection</h2>
+            <p>Choisissez l’accompagnement qui correspond à votre niveau d’implication.</p>
+
+            <div class="block">
+              <div class="block-title">Collections</div>
+              <div class="pack-selector">
+                <div class="pack-btn active" onclick="setPack('serenite')" id="btnSerenite">
+                  <span class="pack-name">SÉRÉNITÉ</span>
+                  <span class="pack-detail">25% (intégral)</span>
+                </div>
+                <div class="pack-btn" onclick="setPack('liberte')" id="btnLiberte">
+                  <span class="pack-name">LIBERTÉ</span>
+                  <span class="pack-detail">forfait (à la carte)</span>
+                </div>
+                <div class="pack-btn" onclick="setPack('intendance')" id="btnIntendance">
+                  <span class="pack-name">INTENDANCE PRIVÉE</span>
+                  <span class="pack-detail">veille & passages</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- RESULTATS -->
+            <div class="result-ticket">
+              <div class="ticket-header">
+                <h3 class="ticket-h-title">Projection (indicative)</h3>
+              </div>
+
+              <div class="ticket-body">
+
+                <div class="t-section">
+                  <span class="t-title">A. Base du séjour</span>
+                  <div class="t-row">
+                    <span>Valeur du séjour (<span id="txtDuration">7</span> nuits)</span>
+                    <span class="val-positive" id="resRent">700 €</span>
+                  </div>
+                  <div class="t-row highlight">
+                    <span><strong>Total estimé</strong></span>
+                    <span class="val-positive" id="resTotalClient">700 €</span>
+                  </div>
+                </div>
+
+                <div class="t-section">
+                  <span class="t-title">B. Cadre d’accompagnement</span>
+                  <div class="t-row">
+                    <span>Honoraires (selon collection)</span>
+                    <span class="val-negative" id="resCom">- 175 €</span>
+                  </div>
+                </div>
+
+                <div class="t-total-box">
+                  <div class="t-total-label">VOTRE ESTIMATION NETTE</div>
+                  <div class="t-total-val" id="resNetOwner">525 €</div>
+                  <div class="t-total-note">
+                    Projection indicative pour vous donner un ordre de grandeur.
+                  </div>
+                </div>
+
+                <button class="btn-primary" style="width:100%; margin-top:14px;"
+                        onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})">
+                  Recevoir cette étude
+                </button>
+
+              </div>
+            </div>
+
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section id="contact-form" class="study-form">
+      <div class="container narrow reveal">
+        <h2 style="font-family:'Cormorant Garamond', serif; font-weight:600; color:var(--vin-olive); margin:0 0 10px;">
+          Vous souhaitez en discuter ?
+        </h2>
+        <p class="luxe-paragraph" style="max-width:720px; margin:0 auto 26px; opacity:.84;">
+          Laissez vos coordonnées : nous reprenons cette projection avec vous,
+          et nous vous orientons vers l’accompagnement le plus juste.
+        </p>
+
+        <form action="mailto:conciergerie.terraoccitana@gmail.com" method="POST" enctype="text/plain"
+              style="max-width:520px; margin:0 auto; text-align:left;">
+          <input type="hidden" name="Sujet" value="Étude de potentiel — Terra Occitana">
+          <textarea name="Projection" id="hiddenSim" style="display:none;"></textarea>
+
+          <div style="margin-bottom:15px;">
+            <label style="display:block; font-size:0.9rem; font-weight:600; margin-bottom:5px;">Votre nom</label>
+            <input type="text" name="Nom" required style="width:100%; padding:12px; border:1px solid #ddd;">
           </div>
-          
+
           <div style="margin-bottom:20px;">
-            <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-              <span id="labelPriceText" style="font-weight:500;">Valeur de la Nuitée</span>
-              <span style="font-family:'Cormorant Garamond'; font-size:1.3rem; color:var(--terracotta); font-weight:700;"><span id="lblPrice">100</span> €</span>
-            </div>
-            <input type="range" id="inPrice" min="40" max="600" step="5" value="100" style="width:100%; accent-color:var(--terracotta);">
+            <label style="display:block; font-size:0.9rem; font-weight:600; margin-bottom:5px;">Email ou téléphone</label>
+            <input type="text" name="Contact" required style="width:100%; padding:12px; border:1px solid #ddd;">
           </div>
 
-          <div>
-            <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-              <span style="font-weight:500;">Durée du Séjour</span>
-              <span style="font-family:'Cormorant Garamond'; font-size:1.3rem; color:var(--terracotta); font-weight:700;"><span id="lblDuration">7</span> nuits</span>
-            </div>
-            <input type="range" id="inDuration" min="2" max="30" step="1" value="7" style="width:100%; accent-color:var(--terracotta);">
-          </div>
-        </div>
+          <button type="submit" class="btn-primary" style="width:100%;">Envoyer</button>
+          <p style="font-size:0.75rem; color:#888; margin-top:10px; text-align:center;">
+            Cela ouvrira votre application de messagerie.
+          </p>
+        </form>
+      </div>
+    </section>
 
-        <div class="card-box">
-          <h3 class="card-title">2. Votre Collection</h3>
-          <div class="pack-selector">
-            <div class="pack-btn active" onclick="setPack('serenite')" id="btnSerenite">
-              <span class="pack-name">SÉRÉNITÉ</span>
-              <span class="pack-detail">25% (Intégral)</span>
-            </div>
-            <div class="pack-btn" onclick="setPack('liberte')" id="btnLiberte">
-              <span class="pack-name">LIBERTÉ</span>
-              <span class="pack-detail">Fixe (À la carte)</span>
-            </div>
-            <div class="pack-btn" onclick="setPack('intendance')" id="btnIntendance">
-              <span class="pack-name">INTENDANCE</span>
-              <span class="pack-detail">Vigilance</span>
-            </div>
-          </div>
-        </div>
+  </main>
 
-        <div class="card-box">
-          <h3 class="ca
+  <footer>
+    <div class="container footer-compact">
+      <div class="footer-info">
+        <strong>Terra Occitana</strong><br>
+        Conciergerie Privée & Intendance • Vallée de l’Hérault<br>
+        06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
+      </div>
+      <div class="footer-links">
+        <a href="#">Mentions Légales</a>
+        <span class="sep">•</span>
+        <a href="#">Confidentialité</a>
+        <span class="sep">•</span>
+        <a href="#">CGV</a>
+      </div>
+      <div class="copyright">© 2025 — Terra Occitana</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    /* ===== CALCUL SIMPLIFIÉ (sans “éléments du séjour”) ===== */
+    let state = { mode: 'night', pack: 'serenite' };
+
+    const inPrice = document.getElementById('inPrice');
+    const inDuration = document.getElementById('inDuration');
+
+    function setPricingMode(mode) {
+      state.mode = mode;
+      document.getElementById('btnModeNight').className = mode === 'night' ? 'mode-btn active' : 'mode-btn';
+      document.getElementById('btnModeWeek').className = mode === 'week' ? 'mode-btn active' : 'mode-btn';
+
+      if (mode === 'week') {
+        document.getElementById('labelPriceText').innerText = "Tarif semaine";
+        inPrice.min = 200; inPrice.max = 2000; inPrice.step = 50; inPrice.value = 500;
+      } else {
+        document.getElementById('labelPriceText').innerText = "Valeur de la nuitée";
+        inPrice.min = 40; inPrice.max = 600; inPrice.step = 5; inPrice.value = 100;
+      }
+      updateCalc();
+    }
+
+    function setPack(packName) {
+      state.pack = packName;
+
+      ['serenite','liberte','intendance'].forEach(p => {
+        const id = 'btn' + p.charAt(0).toUpperCase() + p.slice(1);
+        const el = document.getElementById(id);
+        if (el) el.className = (p === packName) ? 'pack-btn active' : 'pack-btn';
+      });
+
+      updateCalc();
+    }
+
+    function updateCalc() {
+      const rawPrice = parseInt(inPrice.value, 10);
+      const nights = parseInt(inDuration.value, 10);
+
+      const rent = (state.mode === 'week') ? (rawPrice / 7) * nights : rawPrice * nights;
+
+      // Honoraires selon collection
+      let commission = 0;
+      if (state.pack === 'serenite') commission = rent * 0.25;
+      else if (state.pack === 'liberte') commission = 60;       // forfait à la carte (ajustable)
+      else if (state.pack === 'intendance') commission = 0;     // ici on laisse 0, car “veille & passages” se chiffre au cas par cas
+
+      const totalClient = rent;               // plus d’options affichées ici
+      const netOwner = rent - commission;
+
+      // UI
+      document.getElementById('lblPrice').innerText = rawPrice;
+      document.getElementById('lblDuration').innerText = nights;
+      document.getElementById('txtDuration').innerText = nights;
+
+      document.getElementById('resRent').innerText = Math.round(rent) + " €";
+      document.getElementById('resTotalClient').innerText = Math.round(totalClient) + " €";
+      document.getElementById('resCom').innerText = "- " + Math.round(commission) + " €";
+      document.getElementById('resNetOwner').innerText = Math.round(netOwner) + " €";
+
+      // Email
+      document.getElementById('hiddenSim').value =
+        `ÉTUDE DE POTENTIEL — TERRA OCCITANA\n` +
+        `Collection: ${state.pack}\n` +
+        `Durée: ${nights} nuits\n` +
+        `Base séjour: ${Math.round(rent)} €\n` +
+        `Honoraires estimés: ${Math.round(commission)} €\n` +
+        `Estimation nette: ${Math.round(netOwner)} €\n` +
+        `(Projection indicative)`;
+    }
+
+    inPrice.addEventListener('input', updateCalc);
+    inDuration.addEventListener('input', updateCalc);
+    updateCalc();
+  </script>
+
+</body>
+</html>

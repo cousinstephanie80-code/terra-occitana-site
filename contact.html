@@ -3,9 +3,201 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact & Rendez-vous • Terra Occitana</title>
-  <meta name="description" content="Contactez Terra Occitana pour échanger sur votre projet. Formulaire, téléphone ou prise de rendez-vous en ligne." />
+  <title>Contact • Terra Occitana</title>
+  <meta name="description" content="Contactez Terra Occitana : SMS, email ou rendez-vous visio de 30 minutes." />
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ===== CONTACT — 2 COLONNES LUXE DISCRET ===== */
+    .brand-logo{ height: 60px; }
+    @media (max-width: 900px){ .brand-logo{ height: 54px; } }
+
+    .contact-hero{
+      position: relative;
+      padding: 90px 0 65px;
+      background:
+        radial-gradient(1200px 500px at 50% -50px, rgba(184,107,75,0.16) 0%, rgba(184,107,75,0) 60%),
+        radial-gradient(900px 380px at 15% 20%, rgba(85,107,47,0.10) 0%, rgba(85,107,47,0) 55%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg-cream) 60%, #ffffff 100%);
+      overflow: hidden;
+      text-align: center;
+    }
+    .contact-hero::before{
+      content:"";
+      position:absolute;
+      inset:-60px -60px auto -60px;
+      height: 240px;
+      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.08), transparent);
+      transform: rotate(-6deg);
+      pointer-events:none;
+      opacity:.85;
+    }
+    .contact-kicker{
+      display:inline-block;
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--terracotta);
+      margin-bottom: 14px;
+    }
+    .contact-title{
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      color: var(--vin-olive);
+      font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+      line-height: 1.08;
+      margin: 0 0 14px 0;
+    }
+    .contact-sub{
+      max-width: 860px;
+      margin: 0 auto;
+      font-size: clamp(1rem, 1.15vw, 1.12rem);
+      opacity: .86;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .contact-two{
+      padding: 70px 0 85px;
+      background: #fff;
+    }
+
+    .contact-wrap{
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .contact-card{
+      background: var(--bg-cream);
+      border: 1px solid rgba(184,107,75,0.14);
+      padding: 38px;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-card::before{
+      content:"";
+      position:absolute;
+      inset: 0 auto 0 0;
+      width: 3px;
+      background: linear-gradient(180deg, rgba(184,107,75,0.92), rgba(184,107,75,0.18));
+      opacity: .95;
+    }
+
+    .contact-card h2{
+      margin: 0 0 10px 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      color: var(--vin-olive);
+      font-size: 1.8rem;
+      line-height: 1.15;
+    }
+    .contact-card p{
+      margin: 0 0 18px 0;
+      font-weight: 300;
+      opacity: .86;
+      line-height: 1.75;
+    }
+
+    .contact-lines{
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .line{
+      background: #fff;
+      border: 1px solid rgba(184,107,75,0.12);
+      padding: 16px 16px 14px;
+    }
+    .line .label{
+      display:block;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .72rem;
+      font-weight: 600;
+      color: var(--terracotta);
+      margin-bottom: 6px;
+    }
+    .line .value{
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: var(--ink);
+      line-height: 1.25;
+    }
+    .line .sub{
+      margin-top: 6px;
+      font-size: .92rem;
+      opacity: .72;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .cta-row{
+      margin-top: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    /* Bloc Calendly */
+    .cal-card{
+      background: #fff;
+      border: 1px solid rgba(184,107,75,0.14);
+      box-shadow: 0 14px 45px rgba(46,63,54,.06);
+      overflow: hidden;
+    }
+    .cal-head{
+      padding: 18px 20px;
+      background: #fff;
+      border-bottom: 1px solid rgba(184,107,75,0.10);
+    }
+    .cal-head .k{
+      display:block;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .72rem;
+      font-weight: 600;
+      color: var(--terracotta);
+      margin-bottom: 6px;
+    }
+    .cal-head h2{
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      color: var(--vin-olive);
+      font-size: 1.55rem;
+      line-height: 1.2;
+    }
+    .cal-head p{
+      margin: 8px 0 0 0;
+      font-weight: 300;
+      opacity: .82;
+      line-height: 1.65;
+      font-size: .98rem;
+    }
+
+    .cal-embed{
+      width: 100%;
+      height: 760px;
+      border: 0;
+      display: block;
+      background: #fff;
+    }
+
+    @media (max-width: 980px){
+      .contact-wrap{ grid-template-columns: 1fr; }
+      .cal-embed{ height: 720px; }
+    }
+    @media (max-width: 520px){
+      .contact-hero{ padding: 82px 0 60px; }
+      .contact-card{ padding: 30px 18px; }
+      .cal-head{ padding: 16px 16px; }
+      .cal-embed{ height: 680px; }
+    }
+  </style>
 </head>
 
 <body>
@@ -13,120 +205,119 @@
   <header class="site-header">
     <div class="header-inner">
       <div class="brand">
-        <a href="index.html" class="brand-link"><img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo"></a>
+        <a href="index.html" class="brand-link">
+          <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
+        </a>
       </div>
+
       <nav class="menu" id="menu">
         <a href="proprietaires.html">Propriétaires</a>
         <a href="voyageurs.html">L'Expérience</a>
-        <a href="offre-sur-mesure.html" style="color:var(--terracotta);">Estimer mes revenus</a>
+        <a href="offre-sur-mesure.html">Estimer mes revenus</a>
         <a href="contact.html" class="active">Contact</a>
       </nav>
-      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <section class="page-header-luxe">
-    <div class="container">
-      <span class="header-kicker">Échangeons sur votre projet</span>
-      <h1 class="header-title">Nous sommes à votre écoute</h1>
-      <p class="header-subtitle">
-        Une question rapide ? Un projet à nous confier ?<br>
-        Choisissez le mode de communication qui vous convient le mieux.
-      </p>
-    </div>
-  </section>
+  <main>
 
-  <section class="contact-split-section">
-    <div class="container">
-      <div class="contact-grid">
-        
-        <div class="direct-info-box">
-          <div class="info-item">
-            <span class="info-label">Par Téléphone</span>
-            <div class="info-value">06 72 44 88 65</div>
-            <div class="info-sub">Disponibles 7j/7 de 9h à 21h</div>
-          </div>
-
-          <div class="info-item">
-            <span class="info-label">Par Email</span>
-            <div class="info-value">conciergerie.terraoccitana@gmail.com</div>
-            <div class="info-sub">Réponse sous 24h garantie</div>
-          </div>
-
-          <div class="info-item">
-            <span class="info-label">Zone d'intervention</span>
-            <div class="info-value">Vallée de l'Hérault & Littoral</div>
-            <div class="info-sub">Agde, Marseillan, Sète, Lac du Salagou...</div>
-          </div>
-
-          <div style="margin-top:40px; padding-top:20px; border-top:1px solid #eee;">
-            <p style="margin-bottom:10px; font-weight:500;">Vous préférez un échange de vive voix planifié ?</p>
-            <a href="#rendez-vous" class="btn-secondary" style="width:100%;">Réserver un appel (30 min) ↓</a>
-          </div>
-        </div>
-
-        <div class="form-box-clean">
-          <h3 style="margin-bottom:20px; font-size:1.5rem;">Envoyer un message</h3>
-          <form action="mailto:conciergerie.terraoccitana@gmail.com" method="POST" enctype="text/plain">
-            
-            <div style="margin-bottom:20px;">
-              <label style="display:block; font-weight:600; font-size:0.9rem; margin-bottom:5px;">Vos Coordonnées</label>
-              <input type="text" name="Nom_Prenom" placeholder="Nom & Prénom" required style="width:100%; padding:14px; border:1px solid #ddd; background:#fdfbf9;">
-            </div>
-
-            <div style="margin-bottom:20px;">
-              <label style="display:block; font-weight:600; font-size:0.9rem; margin-bottom:5px;">Email ou Téléphone</label>
-              <input type="text" name="Contact" placeholder="Pour vous recontacter" required style="width:100%; padding:14px; border:1px solid #ddd; background:#fdfbf9;">
-            </div>
-
-            <div style="margin-bottom:20px;">
-              <label style="display:block; font-weight:600; font-size:0.9rem; margin-bottom:5px;">Votre demande</label>
-              <textarea name="Message" rows="5" placeholder="Parlez-nous de votre bien..." required style="width:100%; padding:14px; border:1px solid #ddd; background:#fdfbf9; font-family:inherit;"></textarea>
-            </div>
-
-            <button type="submit" class="btn-primary" style="width:100%;">Envoyer le message</button>
-          </form>
-        </div>
-
+    <!-- HERO -->
+    <section class="contact-hero">
+      <div class="container">
+        <span class="contact-kicker">Contact</span>
+        <h1 class="contact-title">Échangeons simplement</h1>
+        <p class="contact-sub">
+          Une question, un projet, une hésitation : nous vous répondons personnellement.
+          Vous pouvez nous écrire (SMS / email) ou réserver un créneau de 30 minutes pour un échange en visio.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="rdv-section-full" id="rendez-vous">
-    <div class="container">
-      
-      <div class="rdv-layout">
-        <div class="rdv-instructions">
-          <div style="text-transform:uppercase; letter-spacing:0.1em; color:var(--terracotta); font-weight:600; margin-bottom:10px;">
-            Espace Propriétaires
-          </div>
-          <h3>Réserver un appel découverte</h3>
-          
-          <p class="luxe-paragraph">
-            <strong>Cher(e) propriétaire,</strong><br>
-            Vous êtes sur le point de réserver un échange privilégié de 30 minutes avec nous. 
-            Ce premier contact est essentiel pour cerner l'âme de votre propriété et comprendre vos attentes.
-          </p>
-          
-          <p style="margin-top:20px; font-weight:600;">Pour que cet échange soit fructueux :</p>
-          
-          <ol class="rdv-list">
-            <li>
-              <strong>Le bon moment :</strong> Privilégiez un environnement calme où nous pourrons discuter sereinement de votre projet.
-            </li>
-            <li>
-              <strong>Vos éléments clés :</strong> Si vous disposez déjà de données (historique, lien d'annonce...), gardez-les à portée de main.
-            </li>
-            <li>
-              <strong>Transparence :</strong> Cet appel vise à valider notre future collaboration. Il ne s'agit pas d'une consultation juridique ou fiscale.
-            </li>
-          </ol>
-          
-          <p style="margin-top:20px; font-style:italic; color:var(--terracotta);">
-            Bien à vous,<br>La conciergerie Terra Occitana
-          </p>
+    <!-- 2 COLONNES -->
+    <section class="contact-two">
+      <div class="container">
+        <div class="contact-wrap">
+
+          <!-- GAUCHE : CONTACT DIRECT -->
+          <aside class="contact-card reveal">
+            <h2>Nous joindre</h2>
+            <p>
+              Le plus simple : un message, quelques lignes, et nous revenons vers vous.
+              Réponse humaine, sans automatisation.
+            </p>
+
+            <div class="contact-lines">
+              <div class="line">
+                <span class="label">SMS / Téléphone</span>
+                <div class="value">06 72 44 88 65</div>
+                <div class="sub">Du lundi au dimanche, 9h — 21h</div>
+              </div>
+
+              <div class="line">
+                <span class="label">Email</span>
+                <div class="value">conciergerie.terraoccitana@gmail.com</div>
+                <div class="sub">Réponse sous 24h (souvent bien avant)</div>
+              </div>
+
+              <div class="line">
+                <span class="label">Zone d’intervention</span>
+                <div class="value">Vallée de l’Hérault & Littoral</div>
+                <div class="sub">Agde • Marseillan • Sète • Salagou…</div>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn-primary" href="offre-sur-mesure.html">Demander une étude</a>
+              <a class="btn-secondary-olive" href="proprietaires.html">Voir nos collections</a>
+            </div>
+          </aside>
+
+          <!-- DROITE : CALENDLY -->
+          <section class="cal-card reveal" aria-label="Réserver un appel visio de 30 minutes">
+            <div class="cal-head">
+              <span class="k">Rendez-vous Propriétaires</span>
+              <h2>Appel visio — 30 minutes</h2>
+              <p>
+                Un échange simple pour comprendre votre bien, votre rythme, et voir si notre accompagnement vous correspond.
+              </p>
+            </div>
+
+            <!-- Calendly embed -->
+            <iframe
+              class="cal-embed"
+              src="VOTRE_LIEN_CALENDLY"
+              title="Calendly — Rendez-vous Propriétaires"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </section>
+
         </div>
+      </div>
+    </section>
 
-        <div class="calendar-wrapper">
-          <div style="padding:20px;">
-            <p style="color:#999; margin-bottom:15px;">Chargement du cal
+  </main>
+
+  <footer>
+    <div class="container footer-compact">
+      <div class="footer-info">
+        <strong>Terra Occitana</strong><br>
+        Conciergerie Privée & Intendance • Vallée de l’Hérault<br>
+        06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
+      </div>
+      <div class="footer-links">
+        <a href="#">Mentions Légales</a>
+        <span class="sep">•</span>
+        <a href="#">Confidentialité</a>
+        <span class="sep">•</span>
+        <a href="#">CGV</a>
+      </div>
+      <div class="copyright">© 2025 — Terra Occitana</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
