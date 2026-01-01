@@ -200,3 +200,23 @@ footer {
   .burger{ display: block; z-index: 51; }
   .hero-banner { height: 70vh; min-height: auto; }
 }
+/* ===== MENU ACTIF — SIGNATURE DISCRÈTE ===== */
+.menu a.active {
+  color: var(--terracotta);
+}
+
+.menu a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--terracotta),
+    transparent
+  );
+  opacity: 0.6;
+}
