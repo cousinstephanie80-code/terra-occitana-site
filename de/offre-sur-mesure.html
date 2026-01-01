@@ -1,26 +1,17 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Étude de potentiel • Terra Occitana</title>
-  <meta name="description" content="Étude de potentiel Terra Occitana : une projection simple, puis un échange pour ajuster selon votre bien et votre standing." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Potential Study • Terra Occitana</title>
+  <meta name="description" content="Terra Occitana potential study: a simple projection, then a call to adjust to your property and your standards." />
+  <link rel="stylesheet" href="../styles.css" />
 
   <style>
-    /* ==========================
-       ÉTUDE — VERSION LUXE ÉPURÉE
-       (alignée index / propriétaires / voyageurs)
-       + Switch langue (même design propriétaires)
-       ========================== */
-
-    /* Petit ajustement logo (cohérent avec propriétaires/voyageurs) */
+    /* Same design as FR + language switch */
     .brand-logo{ height: 60px; }
     @media (max-width: 900px){ .brand-logo{ height: 54px; } }
 
-    /* =========================
-       SWITCH LANGUE (discret)
-       ========================= */
     .lang-switch{
       display: inline-flex;
       gap: 8px;
@@ -120,7 +111,6 @@
       font-style: italic;
     }
 
-    /* TOOL */
     .study-tool{
       padding: 74px 0;
       background: var(--bg-white);
@@ -143,10 +133,7 @@
       pointer-events:none;
     }
 
-    .tool-head{
-      text-align:center;
-      margin-bottom: 28px;
-    }
+    .tool-head{ text-align:center; margin-bottom: 28px; }
     .tool-head h2{
       margin: 0 0 10px 0;
       font-family: 'Cormorant Garamond', serif;
@@ -155,19 +142,8 @@
       font-size: clamp(1.9rem, 3vw, 2.5rem);
       line-height: 1.15;
     }
-    .tool-sep{
-      width: 64px;
-      height: 2px;
-      margin: 16px auto 18px auto;
-      background: var(--terracotta);
-    }
-    .tool-intro{
-      margin: 0 auto;
-      max-width: 860px;
-      opacity: .86;
-      font-weight: 300;
-      line-height: 1.8;
-    }
+    .tool-sep{ width: 64px; height: 2px; margin: 16px auto 18px auto; background: var(--terracotta); }
+    .tool-intro{ margin: 0 auto; max-width: 860px; opacity: .86; font-weight: 300; line-height: 1.8; }
 
     .tool-grid{
       display:grid;
@@ -264,43 +240,14 @@
       line-height: 1.6;
     }
 
-    .controls{
-      display:flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .control{
-      display:flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .control label{
-      font-weight: 600;
-      font-size: .9rem;
-    }
-    .range-row{
-      display:flex;
-      align-items:center;
-      gap: 10px;
-    }
-    input[type="range"]{
-      width:100%;
-      accent-color: var(--terracotta);
-    }
-    .range-val{
-      min-width: 82px;
-      text-align:right;
-      font-weight: 600;
-      color: var(--ink);
-      opacity: .92;
-    }
+    .controls{ display:flex; flex-direction: column; gap: 14px; }
+    .control{ display:flex; flex-direction: column; gap: 6px; }
+    .control label{ font-weight: 600; font-size: .9rem; }
+    .range-row{ display:flex; align-items:center; gap: 10px; }
+    input[type="range"]{ width:100%; accent-color: var(--terracotta); }
+    .range-val{ min-width: 82px; text-align:right; font-weight: 600; color: var(--ink); opacity: .92; }
 
-    .packs{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 6px;
-    }
+    .packs{ display:flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
     .pack-btn{
       border:1px solid rgba(184,107,75,0.18);
       background: #fff;
@@ -311,17 +258,9 @@
       transition: .25s ease;
     }
     .pack-btn:hover{ border-color: rgba(184,107,75,0.35); }
-    .pack-btn.is-active{
-      background: rgba(184,107,75,0.10);
-      border-color: rgba(184,107,75,0.45);
-    }
+    .pack-btn.is-active{ background: rgba(184,107,75,0.10); border-color: rgba(184,107,75,0.45); }
 
-    .mode-row{
-      display:flex;
-      gap: 10px;
-      margin-top: 6px;
-      flex-wrap: wrap;
-    }
+    .mode-row{ display:flex; gap: 10px; margin-top: 6px; flex-wrap: wrap; }
     .mode-btn{
       border:1px solid rgba(85,107,47,0.25);
       background:#fff;
@@ -333,15 +272,9 @@
       color: var(--vin-olive);
     }
     .mode-btn:hover{ border-color: rgba(85,107,47,0.4); }
-    .mode-btn.is-active{
-      background: rgba(85,107,47,0.10);
-      border-color: rgba(85,107,47,0.45);
-    }
+    .mode-btn.is-active{ background: rgba(85,107,47,0.10); border-color: rgba(85,107,47,0.45); }
 
-    /* Responsive */
-    @media (max-width: 980px){
-      .tool-grid{ grid-template-columns: 1fr; }
-    }
+    @media (max-width: 980px){ .tool-grid{ grid-template-columns: 1fr; } }
     @media (max-width: 520px){
       .study-hero{ padding: 82px 0 62px; }
       .tool-card{ padding: 32px 18px; }
@@ -356,22 +289,21 @@
     <div class="header-inner">
       <div class="brand">
         <a href="index.html" class="brand-link">
-          <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
+          <img src="../images/logo.jpg" alt="Terra Occitana" class="brand-logo">
         </a>
       </div>
 
       <nav class="menu" id="menu">
-        <a href="proprietaires.html">Propriétaires</a>
-        <a href="voyageurs.html">L'Expérience</a>
-        <a href="offre-sur-mesure.html" class="active">Étude de potentiel</a>
-        <a href="contact.html">Planifier un échange</a>
+        <a href="proprietaires.html">Owners</a>
+        <a href="voyageurs.html">Guest Experience</a>
+        <a href="offre-sur-mesure.html" class="active">Potential Study</a>
+        <a href="contact.html">Book a call</a>
       </nav>
 
-      <!-- ✅ Switch langue (structure dossiers : FR racine / EN & DE dans dossiers) -->
-      <div class="lang-switch" aria-label="Choix de la langue">
-        <a class="lang-btn active" href="offre-sur-mesure.html" aria-current="page">FR</a>
-        <a class="lang-btn" href="en/offre-sur-mesure.html">EN</a>
-        <a class="lang-btn" href="de/offre-sur-mesure.html">DE</a>
+      <div class="lang-switch" aria-label="Language selection">
+        <a class="lang-btn" href="../offre-sur-mesure.html">FR</a>
+        <a class="lang-btn active" href="offre-sur-mesure.html" aria-current="page">EN</a>
+        <a class="lang-btn" href="../de/offre-sur-mesure.html">DE</a>
       </div>
 
       <button class="burger" id="burger" aria-label="Menu">
@@ -382,61 +314,58 @@
 
   <main>
 
-    <!-- HERO -->
     <section class="study-hero">
       <div class="container">
-        <span class="study-kicker">Étude de potentiel</span>
-        <h1 class="study-title">Une projection simple, pour y voir clair</h1>
+        <span class="study-kicker">Potential Study</span>
+        <h1 class="study-title">A simple projection, to get clarity</h1>
         <p class="study-sub">
-          Une base claire pour estimer un ordre de grandeur, selon la durée du séjour et la collection choisie.
-          Ensuite, si vous le souhaitez, nous ajustons ensemble selon votre bien et votre standing.
+          A clear baseline to estimate an order of magnitude, based on stay length and the selected collection.
+          Then, if you wish, we adjust together to match your property and your standards.
         </p>
         <div class="study-note">
-          Montants indicatifs — chaque propriété a son rythme et ses particularités.
+          Indicative amounts — each property has its own rhythm and specifics.
         </div>
 
         <div class="study-cta" style="margin-top:22px; display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
-          <a class="btn-primary" href="contact.html">Planifier un échange (30 min)</a>
-          <a class="btn-secondary-olive" href="#outil">Faire une simulation</a>
+          <a class="btn-primary" href="contact.html">Book a call (30 min)</a>
+          <a class="btn-secondary-olive" href="#tool">Run a simulation</a>
         </div>
       </div>
     </section>
 
-    <!-- TOOL -->
-    <section class="study-tool" id="outil">
+    <section class="study-tool" id="tool">
       <div class="container">
         <div class="tool-card reveal">
 
           <div class="tool-head">
-            <h2>Simuler un séjour (ordre de grandeur)</h2>
+            <h2>Simulate a stay (order of magnitude)</h2>
             <div class="tool-sep"></div>
             <p class="tool-intro">
-              Choisissez une collection, puis ajustez la durée et le prix du séjour.
-              Nous appliquons ensuite des honoraires indicatifs pour estimer une projection nette.
+              Choose a collection, then adjust duration and stay price.
+              We apply indicative fees to estimate a net projection.
             </p>
           </div>
 
           <section class="tool-grid">
 
-            <!-- CONTROLS -->
             <div class="t-box">
-              <h3 class="t-title"><span class="t-dot"></span> Paramètres</h3>
+              <h3 class="t-title"><span class="t-dot"></span> Settings</h3>
 
               <div class="controls">
 
                 <div class="control">
-                  <label>Moment du séjour</label>
+                  <label>Pricing mode</label>
                   <div class="mode-row">
-                    <button class="mode-btn is-active" id="btnModeNight" type="button">1 nuit</button>
-                    <button class="mode-btn" id="btnModeWeek" type="button">Semaine</button>
+                    <button class="mode-btn is-active" id="btnModeNight" type="button">Per night</button>
+                    <button class="mode-btn" id="btnModeWeek" type="button">Per week</button>
                   </div>
                   <div style="margin-top:10px; font-size:.9rem; opacity:.78; font-weight:300; line-height:1.7;">
-                    Mode sélectionné : <strong id="labelPriceText">Prix par nuit</strong>
+                    Selected mode: <strong id="labelPriceText">Price per night</strong>
                   </div>
                 </div>
 
                 <div class="control">
-                  <label>Prix du séjour <span style="opacity:.65; font-weight:500;">(base voyageurs)</span></label>
+                  <label>Stay price <span style="opacity:.65; font-weight:500;">(guest-facing base)</span></label>
                   <div class="range-row">
                     <input id="inPrice" type="range" min="80" max="2400" step="10" value="700" />
                     <div class="range-val"><span id="lblPrice">700</span> €</div>
@@ -444,66 +373,65 @@
                 </div>
 
                 <div class="control">
-                  <label>Durée <span style="opacity:.65; font-weight:500;">(nuits)</span></label>
+                  <label>Duration <span style="opacity:.65; font-weight:500;">(nights)</span></label>
                   <div class="range-row">
                     <input id="inDuration" type="range" min="1" max="21" step="1" value="3" />
-                    <div class="range-val"><span id="lblDuration">3</span> nuits</div>
+                    <div class="range-val"><span id="lblDuration">3</span> nights</div>
                   </div>
                 </div>
 
                 <div class="control">
                   <label>Collection</label>
                   <div class="packs">
-                    <button class="pack-btn is-active" id="btnSerenite" type="button">Sérénité</button>
-                    <button class="pack-btn" id="btnLiberte" type="button">Liberté</button>
-                    <button class="pack-btn" id="btnIntendance" type="button">Intendance</button>
+                    <button class="pack-btn is-active" id="btnSerenite" type="button">Serenity</button>
+                    <button class="pack-btn" id="btnLiberte" type="button">Freedom</button>
+                    <button class="pack-btn" id="btnIntendance" type="button">Stewardship</button>
                   </div>
                   <div style="margin-top:10px; font-size:.9rem; opacity:.78; font-weight:300; line-height:1.7;">
-                    Les honoraires sont indicatifs et varient selon l’organisation, le standing et le rythme des séjours.
+                    Fees are indicative and vary with organisation, standards, and booking rhythm.
                   </div>
                 </div>
 
               </div>
             </div>
 
-            <!-- RESULTS -->
             <div class="t-box">
               <h3 class="t-title"><span class="t-dot"></span> Projection</h3>
 
               <div class="t-line">
-                <div>Durée</div>
-                <div><strong><span id="txtDuration">3</span> nuits</strong></div>
+                <div>Duration</div>
+                <div><strong><span id="txtDuration">3</span> nights</strong></div>
               </div>
 
               <div class="t-line">
-                <div>Base séjour (voyageurs)</div>
+                <div>Stay base (guests)</div>
                 <div><strong><span id="resRent">700</span></strong></div>
               </div>
 
               <div class="t-line">
-                <div>Total brut</div>
+                <div>Gross total</div>
                 <div><strong><span id="resTotalClient">700</span></strong></div>
               </div>
 
               <div class="t-line">
-                <div>Honoraires estimés</div>
+                <div>Estimated fees</div>
                 <div><strong><span id="resCom">- 175</span></strong></div>
               </div>
 
               <div class="t-total-box">
-                <div class="t-total-label">VOTRE ESTIMATION NETTE</div>
+                <div class="t-total-label">YOUR NET ESTIMATE</div>
                 <div class="t-total-val" id="resNetOwner">525 €</div>
                 <div class="t-total-note">
-                  Projection indicative pour vous donner un ordre de grandeur.
+                  Indicative projection to provide a clear order of magnitude.
                 </div>
               </div>
 
               <div style="margin-top:16px; padding-top:14px; border-top:1px solid rgba(184,107,75,0.12);">
                 <p style="margin:0 0 12px 0; font-weight:300; opacity:.84; line-height:1.75;">
-                  Cette projection prend tout son sens lorsqu’elle est mise en perspective avec votre bien réel
-                  (standing, saisonnalité, usage, contraintes). Un échange suffit pour ajuster — ou parfois réorienter.
+                  This projection becomes truly meaningful when aligned with your real property
+                  (standards, seasonality, personal use, constraints). A short call is enough to refine — and sometimes reframe.
                 </p>
-                <a class="btn-primary" style="width:100%; justify-content:center;" href="contact.html">Planifier un échange (30 min)</a>
+                <a class="btn-primary" style="width:100%; justify-content:center;" href="contact.html">Book a call (30 min)</a>
               </div>
 
             </div>
@@ -520,30 +448,26 @@
     <div class="container footer-compact">
       <div class="footer-info">
         <strong>Terra Occitana</strong><br>
-        Conciergerie Privée & Intendance • Vallée de l’Hérault<br>
-        06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
+        Private Concierge & Stewardship • Vallée de l’Hérault<br>
+        +33 6 72 44 88 65 • conciergerie.terraoccitana@gmail.com
         <div style="margin-top:8px; font-style:italic; opacity:.78;">
-          Une conciergerie humaine. Une organisation solide. À votre rythme.
+          A human concierge. A solid organisation. At your pace.
         </div>
       </div>
       <div class="footer-links">
-        <a href="mentions-legales.html">Mentions Légales</a>
+        <a href="../mentions-legales.html">Legal notice</a>
         <span class="sep">•</span>
-        <a href="confidentialite.html">Confidentialité</a>
+        <a href="../confidentialite.html">Privacy</a>
         <span class="sep">•</span>
-        <a href="cgv.html">CGV</a>
+        <a href="../cgv.html">Terms</a>
       </div>
       <div class="copyright">© 2025 — Terra Occitana</div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 
   <script>
-    /* ==========================
-       SIMULATION — LOGIQUE SIMPLE
-       ========================== */
-
     const inPrice = document.getElementById('inPrice');
     const inDuration = document.getElementById('inDuration');
     const lblPrice = document.getElementById('lblPrice');
@@ -564,7 +488,7 @@
     const resNetOwner = document.getElementById('resNetOwner');
 
     const state = {
-      pack: "Sérénité",
+      pack: "Serenity",
       mode: "night" // night | week
     };
 
@@ -577,14 +501,14 @@
       btn.classList.add('is-active');
     }
 
-    btnSerenite.addEventListener('click', () => { state.pack = "Sérénité"; setActivePack(btnSerenite); updateCalc(); });
-    btnLiberte.addEventListener('click', () => { state.pack = "Liberté"; setActivePack(btnLiberte); updateCalc(); });
-    btnIntendance.addEventListener('click', () => { state.pack = "Intendance"; setActivePack(btnIntendance); updateCalc(); });
+    btnSerenite.addEventListener('click', () => { state.pack = "Serenity"; setActivePack(btnSerenite); updateCalc(); });
+    btnLiberte.addEventListener('click', () => { state.pack = "Freedom"; setActivePack(btnLiberte); updateCalc(); });
+    btnIntendance.addEventListener('click', () => { state.pack = "Stewardship"; setActivePack(btnIntendance); updateCalc(); });
 
     btnModeNight.addEventListener('click', () => {
       state.mode = "night";
       setActiveMode(btnModeNight);
-      labelPriceText.textContent = "Prix par nuit";
+      labelPriceText.textContent = "Price per night";
       inDuration.min = 1; inDuration.max = 21;
       if (+inDuration.value < 1) inDuration.value = 1;
       updateCalc();
@@ -593,16 +517,15 @@
     btnModeWeek.addEventListener('click', () => {
       state.mode = "week";
       setActiveMode(btnModeWeek);
-      labelPriceText.textContent = "Prix semaine";
+      labelPriceText.textContent = "Weekly price";
       inDuration.min = 7; inDuration.max = 21;
       if (+inDuration.value < 7) inDuration.value = 7;
       updateCalc();
     });
 
     function commissionRate(){
-      // indicatif : Sérénité > Liberté > Intendance (plus léger)
-      if (state.pack === "Sérénité") return 0.25;
-      if (state.pack === "Liberté") return 0.20;
+      if (state.pack === "Serenity") return 0.25;
+      if (state.pack === "Freedom") return 0.20;
       return 0.15;
     }
 
@@ -613,7 +536,6 @@
       lblPrice.textContent = price;
       lblDuration.textContent = nights;
 
-      // base séjour : si "week", on considère un prix semaine et on prorate selon la durée
       let rent = price;
       if (state.mode === "week") {
         rent = (price / 7) * nights;

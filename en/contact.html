@@ -1,24 +1,21 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact • Terra Occitana</title>
-  <meta name="description" content="Contactez Terra Occitana : SMS, email ou rendez-vous visio de 30 minutes." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Contact Terra Occitana: text message, email, or a 30-minute video call." />
+  <link rel="stylesheet" href="../styles.css" />
 
   <style>
-    /* ===== CONTACT — 2 COLONNES LUXE DISCRET ===== */
+    /* ===== CONTACT — 2-COLUMN, QUIET LUXE ===== */
     .brand-logo{ height: 60px; }
     @media (max-width: 900px){ .brand-logo{ height: 54px; } }
 
-    /* ===== SWITCH LANGUE (FR/EN/DE) ===== */
+    /* ===== LANGUAGE SWITCH (FR/EN/DE) ===== */
     .lang-switch{
-      display:flex;
-      gap:8px;
-      align-items:center;
-      margin-left: 14px;
-      padding-left: 14px;
+      display:flex; gap:8px; align-items:center;
+      margin-left: 14px; padding-left: 14px;
       border-left: 1px solid rgba(184,107,75,0.18);
     }
     .lang-link{
@@ -99,11 +96,7 @@
       line-height: 1.75;
     }
 
-    .contact-main{
-      background: var(--bg-white);
-      padding: 70px 0;
-    }
-
+    .contact-main{ background: var(--bg-white); padding: 70px 0; }
     .contact-wrap{
       display:grid;
       grid-template-columns: 0.95fr 1.05fr;
@@ -157,8 +150,7 @@
       border: 1px solid rgba(184,107,75,0.12);
     }
     .dot{
-      width: 18px;
-      height: 18px;
+      width: 18px; height: 18px;
       border: 1px solid rgba(184,107,75,0.35);
       border-radius: 999px;
       position: relative;
@@ -188,17 +180,9 @@
       text-decoration: underline;
       text-underline-offset: 3px;
     }
-    .line a:hover{
-      color: var(--terracotta);
-    }
+    .line a:hover{ color: var(--terracotta); }
 
-    .cta-row{
-      margin-top: 22px;
-      display:flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
+    .cta-row{ margin-top: 22px; display:flex; gap: 12px; flex-wrap: wrap; }
     .micro{
       margin-top: 16px;
       font-size: .92rem;
@@ -207,11 +191,7 @@
       line-height: 1.7;
     }
 
-    .cal-card{
-      background: #fff;
-      border: 1px solid rgba(184,107,75,0.14);
-      overflow: hidden;
-    }
+    .cal-card{ background:#fff; border: 1px solid rgba(184,107,75,0.14); overflow:hidden; }
     .cal-head{
       padding: 22px 22px;
       background: var(--bg-cream);
@@ -268,22 +248,22 @@
   <div class="header-inner">
     <div class="brand">
       <a href="index.html" class="brand-link">
-        <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
+        <img src="../images/logo.jpg" alt="Terra Occitana" class="brand-logo">
       </a>
     </div>
 
     <nav class="menu" id="menu">
-      <a href="proprietaires.html">Propriétaires</a>
-      <a href="voyageurs.html">L'Expérience</a>
-      <a href="offre-sur-mesure.html">Étude de potentiel</a>
-      <a href="contact.html" class="active">Planifier un échange</a>
+      <a href="proprietaires.html">Owners</a>
+      <a href="voyageurs.html">Guest Experience</a>
+      <a href="offre-sur-mesure.html">Property Potential</a>
+      <a href="contact.html" class="active">Schedule a call</a>
     </nav>
 
-    <!-- Switch langue -->
-    <div class="lang-switch" aria-label="Choisir la langue">
-      <a class="lang-link active" href="contact.html" lang="fr" aria-current="page">FR</a>
-      <a class="lang-link" href="en/contact.html" lang="en">EN</a>
-      <a class="lang-link" href="de/contact.html" lang="de">DE</a>
+    <!-- Language switch (NO FLAGS) -->
+    <div class="lang-switch" aria-label="Choose language">
+      <a class="lang-link" href="../contact.html" lang="fr">FR</a>
+      <a class="lang-link active" href="contact.html" lang="en" aria-current="page">EN</a>
+      <a class="lang-link" href="../de/contact.html" lang="de">DE</a>
     </div>
 
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -291,13 +271,14 @@
 </header>
 
 <main>
+
   <section class="contact-hero">
     <div class="container">
       <span class="contact-kicker">Contact</span>
-      <h1 class="contact-title">Échanger simplement</h1>
+      <h1 class="contact-title">Let’s connect</h1>
       <p class="contact-sub">
-        Un message, un email, ou un rendez-vous visio : choisissez le format le plus simple pour vous.
-        Nous vous répondons personnellement.
+        A text, an email, or a short video call — choose what feels simplest.
+        We reply personally.
       </p>
     </div>
   </section>
@@ -307,25 +288,25 @@
       <div class="contact-wrap">
 
         <aside class="contact-card reveal">
-          <h2>Nous contacter</h2>
+          <h2>Get in touch</h2>
           <p>
-            Pour une question, un projet, ou un premier échange. Nous privilégions des réponses simples,
-            humaines et sans pression.
+            A question, a project, or a first conversation. We keep things simple,
+            human, and pressure-free.
           </p>
 
           <div class="contact-lines">
             <div class="line">
               <span class="dot" aria-hidden="true"></span>
               <div>
-                <strong>Par SMS</strong>
-                <span>06 72 44 88 65</span>
+                <strong>By text message</strong>
+                <span>+33 6 72 44 88 65</span>
               </div>
             </div>
 
             <div class="line">
               <span class="dot" aria-hidden="true"></span>
               <div>
-                <strong>Par email</strong>
+                <strong>By email</strong>
                 <span><a href="mailto:conciergerie.terraoccitana@gmail.com">conciergerie.terraoccitana@gmail.com</a></span>
               </div>
             </div>
@@ -333,37 +314,37 @@
             <div class="line">
               <span class="dot" aria-hidden="true"></span>
               <div>
-                <strong>Zone</strong>
-                <span>Vallée de l’Hérault • Littoral</span>
+                <strong>Area</strong>
+                <span>Hérault Valley • Coastline</span>
               </div>
             </div>
           </div>
 
           <div class="cta-row">
-            <a class="btn-primary" href="#calendly">Planifier un échange (30 min)</a>
-            <a class="btn-secondary-olive" href="offre-sur-mesure.html">Découvrir l’étude de potentiel</a>
+            <a class="btn-primary" href="#calendly">Schedule a call (30 min)</a>
+            <a class="btn-secondary-olive" href="offre-sur-mesure.html">Discover the potential assessment</a>
           </div>
 
           <div class="micro">
-            Sans engagement. Une réponse simple, humaine. À votre rythme.
+            No commitment. A simple, human reply. At your pace.
           </div>
         </aside>
 
-        <section class="cal-card reveal" id="calendly" aria-label="Réserver un appel visio de 30 minutes">
+        <section class="cal-card reveal" id="calendly" aria-label="Book a 30-minute video call">
           <div class="cal-head">
-            <span class="k">Rendez-vous Propriétaires</span>
-            <h2>Appel visio — 30 minutes</h2>
+            <span class="k">Owner Call</span>
+            <h2>Video call — 30 minutes</h2>
             <p>
-              Un échange simple pour comprendre votre bien, votre rythme, et voir si notre accompagnement vous correspond.
-              <br><strong>Sans engagement.</strong> Sans démarche commerciale.
-              <br>Nous vous dirons simplement si notre accompagnement est pertinent pour vous — ou non.
+              A simple conversation to understand your property, your rhythm, and whether our support fits you.
+              <br><strong>No commitment.</strong> No sales pressure.
+              <br>We’ll simply tell you if our approach is relevant for you — or not.
             </p>
           </div>
 
           <iframe
             class="cal-embed"
             src="VOTRE_LIEN_CALENDLY"
-            title="Calendly — Rendez-vous Propriétaires"
+            title="Calendly — Owner Call"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
@@ -372,29 +353,30 @@
       </div>
     </div>
   </section>
+
 </main>
 
 <footer>
   <div class="container footer-compact">
     <div class="footer-info">
       <strong>Terra Occitana</strong><br>
-      Conciergerie Privée & Intendance • Vallée de l’Hérault<br>
-      06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
+      Private Concierge & Property Care • Hérault Valley<br>
+      +33 6 72 44 88 65 • conciergerie.terraoccitana@gmail.com
       <div style="margin-top:8px; font-style:italic; opacity:.78;">
-        Une conciergerie humaine. Une organisation solide. À votre rythme.
+        Human service. Solid organisation. At your pace.
       </div>
     </div>
     <div class="footer-links">
-      <a href="#">Mentions Légales</a>
+      <a href="#">Legal Notice</a>
       <span class="sep">•</span>
-      <a href="#">Confidentialité</a>
+      <a href="#">Privacy</a>
       <span class="sep">•</span>
-      <a href="#">CGV</a>
+      <a href="#">Terms</a>
     </div>
     <div class="copyright">© 2025 — Terra Occitana</div>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="../script.js"></script>
 </body>
 </html>

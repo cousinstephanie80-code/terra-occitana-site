@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>L'Expérience • Terra Occitana</title>
-  <meta name="description" content="Une expérience fluide et sereine : accueil, séjour, respect des lieux. Une conciergerie familiale, discrète et locale." />
+  <title>Guest Experience • Terra Occitana</title>
+  <meta name="description" content="A smooth, serene stay: arrival, comfort, respect for the home. A discreet, local, family-run concierge service." />
 
   <link rel="stylesheet" href="styles.css" />
 
@@ -12,7 +12,7 @@
     .brand-logo{ height: 60px; }
     @media (max-width: 900px){ .brand-logo{ height: 54px; } }
 
-    /* SWITCH LANGUE — même design que propriétaires */
+    /* LANGUAGE SWITCH — same design as owners */
     .lang-switch{
       display: inline-flex; gap: 8px; align-items: center;
       margin-left: 14px; padding-left: 14px;
@@ -219,22 +219,22 @@
     <div class="header-inner">
       <div class="brand">
         <a href="index.html" class="brand-link">
-          <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
+          <img src="../images/logo.jpg" alt="Terra Occitana" class="brand-logo">
         </a>
       </div>
 
       <nav class="menu" id="menu">
-        <a href="proprietaires.html">Propriétaires</a>
-        <a href="voyageurs.html" class="active">L'Expérience</a>
-        <a href="offre-sur-mesure.html">Étude de potentiel</a>
-        <a href="contact.html">Planifier un échange</a>
+        <a href="proprietaires.html">Owners</a>
+        <a href="voyageurs.html" class="active">Experience</a>
+        <a href="offre-sur-mesure.html">Rental potential</a>
+        <a href="contact.html">Schedule a call</a>
       </nav>
 
-      <!-- ✅ Switch langue — chemins OK (FR racine / EN/DE dossiers) -->
-      <div class="lang-switch" aria-label="Choix de la langue">
-        <a class="lang-btn active" href="voyageurs.html" aria-current="page">FR</a>
-        <a class="lang-btn" href="en/voyageurs.html">EN</a>
-        <a class="lang-btn" href="de/voyageurs.html">DE</a>
+      <!-- ✅ Switch langue — chemins OK depuis /en -->
+      <div class="lang-switch" aria-label="Language selection">
+        <a class="lang-btn" href="../voyageurs.html">FR</a>
+        <a class="lang-btn active" href="voyageurs.html" aria-current="page">EN</a>
+        <a class="lang-btn" href="../de/voyageurs.html">DE</a>
       </div>
 
       <button class="burger" id="burger" aria-label="Menu">
@@ -246,12 +246,12 @@
   <main>
     <section class="experience-hero">
       <div class="container">
-        <span class="experience-kicker">Expérience voyageurs</span>
-        <h1 class="experience-title">Une arrivée simple. Un séjour serein.</h1>
+        <span class="experience-kicker">Guest experience</span>
+        <h1 class="experience-title">A smooth arrival. A serene stay.</h1>
         <p class="experience-sub">
-          Nous assurons un accueil fluide et une présence discrète tout au long du séjour,
-          dans le respect du lieu et de son usage. Sans surenchère, sans protocole figé —
-          simplement ce qu’il faut pour que tout se déroule naturellement.
+          We ensure a seamless check-in and a discreet presence throughout the stay,
+          always respectful of the home and its rhythm. No overdone protocol —
+          simply what’s needed for everything to flow naturally.
         </p>
       </div>
     </section>
@@ -260,57 +260,56 @@
       <div class="container">
         <div class="book-card reveal">
           <div class="book-head">
-            <h2>Ce que nous veillons à préserver, à chaque séjour</h2>
+            <h2>What we protect, every time</h2>
             <div class="book-sep"></div>
             <p class="book-intro">
-              Une expérience réussie tient souvent à des détails simples : clarté, soin, continuité.
-              Nous privilégions une organisation calme et une présence mesurée, pour le confort des voyageurs
-              et la sérénité des propriétaires.
+              A great stay often comes down to simple details: clarity, care, continuity.
+              We keep things calm and well-organised — for guests’ comfort and owners’ peace of mind.
             </p>
           </div>
 
           <div class="book-grid">
             <article class="exp-item">
-              <h3 class="exp-title"><span class="exp-icon"></span> L’arrivée</h3>
-              <p class="exp-phrase">Une prise en charge claire, sans attente ni confusion.</p>
+              <h3 class="exp-title"><span class="exp-icon"></span> Arrival</h3>
+              <p class="exp-phrase">Clear check-in, with no waiting and no confusion.</p>
               <ul class="exp-bullets">
-                <li>Accueil organisé avec ponctualité</li>
-                <li>Présentation simple du logement et de ses usages</li>
+                <li>Punctual, organised welcome</li>
+                <li>Simple guidance on the home and its use</li>
               </ul>
             </article>
 
             <article class="exp-item">
-              <h3 class="exp-title"><span class="exp-icon"></span> Le séjour</h3>
-              <p class="exp-phrase">Un cadre soigné, entretenu avec régularité, pour un séjour sans accroc.</p>
+              <h3 class="exp-title"><span class="exp-icon"></span> The stay</h3>
+              <p class="exp-phrase">A well-prepared, well-kept home — for a smooth, easy stay.</p>
               <ul class="exp-bullets">
-                <li>Logement préparé avec attention</li>
-                <li>Présence discrète en cas de besoin</li>
+                <li>Careful preparation before arrival</li>
+                <li>Discreet support if needed</li>
               </ul>
             </article>
 
             <article class="exp-item">
-              <h3 class="exp-title"><span class="exp-icon"></span> Le respect des lieux</h3>
-              <p class="exp-phrase">Chaque maison est considérée comme habitée à l’année.</p>
+              <h3 class="exp-title"><span class="exp-icon"></span> Respect for the home</h3>
+              <p class="exp-phrase">Each home is treated as if it were lived in year-round.</p>
               <ul class="exp-bullets">
-                <li>Vérifications visuelles essentielles</li>
-                <li>Signalement immédiat en cas d’anomalie</li>
+                <li>Essential visual checks</li>
+                <li>Immediate reporting in case of any issue</li>
               </ul>
             </article>
 
             <article class="exp-item">
-              <h3 class="exp-title"><span class="exp-icon"></span> Le lien humain</h3>
-              <p class="exp-phrase">Une relation simple, cordiale, toujours respectueuse.</p>
+              <h3 class="exp-title"><span class="exp-icon"></span> Human touch</h3>
+              <p class="exp-phrase">Simple, courteous communication — always respectful.</p>
               <ul class="exp-bullets">
-                <li>Communication claire et apaisée</li>
-                <li>Disponibilité mesurée, jamais intrusive</li>
+                <li>Clear, calm messaging</li>
+                <li>Measured availability, never intrusive</li>
               </ul>
             </article>
           </div>
 
           <div class="local-touch">
             <p>
-              Et lorsque le séjour s’y prête, notre ancrage local permet aussi d’orienter vers des adresses de confiance
-              ou de faciliter certaines réservations, <em>toujours avec mesure</em>.
+              And when it fits the stay, our local roots can help recommend trusted places
+              or assist with a few reservations — <em>always with restraint</em>.
             </p>
           </div>
 
@@ -320,15 +319,15 @@
 
     <section class="experience-close">
       <div class="container narrow reveal">
-        <h2 class="close-title">Accueillir, c’est aussi préserver.</h2>
+        <h2 class="close-title">Hosting also means preserving.</h2>
         <div class="separator"></div>
         <p class="close-text">
-          Accueillir des voyageurs, c’est trouver l’équilibre entre confort et respect d’un lieu.
-          Nous veillons à cette continuité avec attention, calme et exigence, pour que chaque séjour se déroule sereinement,
-          et que chaque propriété conserve son âme.
+          Welcoming guests is about balance: comfort, and respect for a home’s spirit.
+          We ensure that continuity with calm, care, and standards — so every stay feels smooth,
+          and every property keeps its soul.
         </p>
-        <a href="contact.html" class="btn-primary">Planifier un échange (30 min)</a>
-        <div class="close-note">Une réponse simple, humaine. Sans engagement. À votre rythme.</div>
+        <a href="contact.html" class="btn-primary">Schedule a call (30 min)</a>
+        <div class="close-note">A simple, human reply. No commitment. At your pace.</div>
       </div>
     </section>
   </main>
@@ -337,16 +336,16 @@
     <div class="container footer-compact">
       <div class="footer-info">
         <strong>Terra Occitana</strong><br>
-        Conciergerie Privée & Intendance • Vallée de l’Hérault<br>
+        Private Concierge & Home Care • Hérault Valley<br>
         06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
         <div style="margin-top:8px; font-style:italic; opacity:.78;">
-          Une conciergerie humaine. Une organisation solide. À votre rythme.
+          A human concierge service. Solid organisation. At your pace.
         </div>
       </div>
       <div class="footer-links">
-        <a href="#">Mentions Légales</a><span class="sep">•</span>
-        <a href="#">Confidentialité</a><span class="sep">•</span>
-        <a href="#">CGV</a>
+        <a href="#">Legal notice</a><span class="sep">•</span>
+        <a href="#">Privacy</a><span class="sep">•</span>
+        <a href="#">Terms</a>
       </div>
       <div class="copyright">© 2025 — Terra Occitana</div>
     </div>

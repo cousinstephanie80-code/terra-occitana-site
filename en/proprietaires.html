@@ -1,21 +1,16 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Propriétaires • Terra Occitana</title>
+  <title>Owners • Terra Occitana</title>
 
-  <meta name="description" content="Offres propriétaires Terra Occitana : Sérénité, Liberté, Intendance Privée. Conciergerie familiale à taille humaine, entre Vallée de l’Hérault et Littoral." />
+  <meta name="description" content="Terra Occitana owner services: Serenity, Freedom, Private Stewardship. A small, family-run concierge between the Hérault Valley and the Coast." />
 
   <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* =========================
-       PROPRIÉTAIRES — LUXE ÉPURÉ
-       Terracotta / Olive / Ivoire / Or patiné
-       ========================= */
-
     :root{
       --ivory: #f6f1ea;
       --paper: #fffaf7;
@@ -27,15 +22,10 @@
       --shadow-soft: 0 10px 35px rgba(46,63,54,.06);
     }
 
-    /* Petit ajustement header logo sur cette page */
     .brand-logo{ height: 60px; }
-    @media (max-width: 900px){
-      .brand-logo{ height: 54px; }
-    }
+    @media (max-width: 900px){ .brand-logo{ height: 54px; } }
 
-    /* =========================
-       SWITCH LANGUE (discret)
-       ========================= */
+    /* LANGUAGE SWITCH (same design) */
     .lang-switch{
       display: inline-flex;
       gap: 8px;
@@ -77,22 +67,11 @@
       opacity: 1;
       pointer-events: none;
     }
-
-    /* mobile : on compacte (sans casser le burger) */
     @media (max-width: 980px){
-      .lang-switch{
-        margin-left: 10px;
-        padding-left: 10px;
-      }
-      .lang-btn{
-        min-width: 34px;
-        height: 26px;
-        padding: 0 9px;
-        font-size: 11px;
-      }
+      .lang-switch{ margin-left: 10px; padding-left: 10px; }
+      .lang-btn{ min-width: 34px; height: 26px; padding: 0 9px; font-size: 11px; }
     }
 
-    /* HERO */
     .owners-hero{
       position: relative;
       padding: 92px 0 68px;
@@ -103,8 +82,6 @@
       overflow: hidden;
       text-align: center;
     }
-
-    /* micro-reflets dorés (très subtil) */
     .owners-hero::before{
       content:"";
       position:absolute;
@@ -125,7 +102,6 @@
       color: var(--terracotta);
       margin-bottom: 14px;
     }
-
     .owners-title{
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
@@ -134,7 +110,6 @@
       line-height: 1.06;
       margin: 0 0 18px 0;
     }
-
     .owners-sub{
       max-width: 840px;
       margin: 0 auto;
@@ -143,7 +118,6 @@
       font-weight: 300;
       line-height: 1.7;
     }
-
     .owners-cta{
       margin-top: 34px;
       display:flex;
@@ -152,12 +126,7 @@
       flex-wrap: wrap;
     }
 
-    /* SECTION INTRO (cadre de travail) */
-    .owners-frame{
-      padding: 68px 0;
-      background: #ffffff;
-    }
-
+    .owners-frame{ padding: 68px 0; background: #ffffff; }
     .frame-card{
       max-width: 980px;
       margin: 0 auto;
@@ -168,7 +137,6 @@
       position: relative;
       overflow:hidden;
     }
-
     .frame-card::after{
       content:"";
       position:absolute;
@@ -177,7 +145,6 @@
       background: radial-gradient(closest-side, rgba(212,175,55,0.10), transparent 70%);
       pointer-events:none;
     }
-
     .frame-title{
       text-align: center;
       font-family: 'Cormorant Garamond', serif;
@@ -186,36 +153,11 @@
       font-size: clamp(1.9rem, 3vw, 2.5rem);
       margin: 0 0 14px 0;
     }
+    .frame-sep{ width: 64px; height: 2px; margin: 18px auto 26px auto; background: var(--terracotta); box-shadow: 0 0 0 1px rgba(212,175,55,0.06); }
+    .frame-text{ margin: 0 auto; max-width: 820px; text-align: center; opacity: .86; font-weight: 300; line-height: 1.8; }
 
-    .frame-sep{
-      width: 64px;
-      height: 2px;
-      margin: 18px auto 26px auto;
-      background: var(--terracotta);
-      box-shadow: 0 0 0 1px rgba(212,175,55,0.06);
-    }
-
-    .frame-text{
-      margin: 0 auto;
-      max-width: 820px;
-      text-align: center;
-      opacity: .86;
-      font-weight: 300;
-      line-height: 1.8;
-    }
-
-    /* OFFRES */
-    .owners-offers{
-      padding: 78px 0 90px;
-      background: var(--sand);
-    }
-
-    .offers-head{
-      text-align:center;
-      max-width: 900px;
-      margin: 0 auto 54px auto;
-    }
-
+    .owners-offers{ padding: 78px 0 90px; background: var(--sand); }
+    .offers-head{ text-align:center; max-width: 900px; margin: 0 auto 54px auto; }
     .offers-head h2{
       font-family: 'Cormorant Garamond', serif;
       font-weight: 500;
@@ -223,21 +165,8 @@
       font-size: clamp(2rem, 3.5vw, 3rem);
       margin: 0 0 12px 0;
     }
-
-    .offers-head p{
-      margin: 0 auto;
-      max-width: 820px;
-      opacity: .82;
-      font-weight: 300;
-      line-height: 1.8;
-    }
-
-    .offers-grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      align-items: stretch;
-    }
+    .offers-head p{ margin: 0 auto; max-width: 820px; opacity: .82; font-weight: 300; line-height: 1.8; }
+    .offers-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: stretch; }
 
     .offer-card{
       background: #ffffff;
@@ -248,8 +177,6 @@
       overflow: hidden;
       min-height: 100%;
     }
-
-    /* filet terracotta + micro doré */
     .offer-card::before{
       content:"";
       position:absolute;
@@ -267,8 +194,6 @@
       pointer-events:none;
       opacity:.7;
     }
-
-    /* Grand chiffre or patiné */
     .offer-number{
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
@@ -276,16 +201,12 @@
       line-height: 1;
       letter-spacing: .02em;
       margin: 0 0 8px 0;
-
       background: linear-gradient(135deg, var(--gold-2), var(--gold-1), var(--gold-2));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-
       opacity: .92;
     }
-
-    /* Titre script */
     .offer-script{
       font-family: 'Mrs Saint Delafield', cursive;
       font-weight: 400;
@@ -294,30 +215,10 @@
       color: var(--terracotta);
       margin: 0 0 18px 0;
     }
+    .offer-body{ font-weight: 300; opacity: .86; line-height: 1.8; margin: 0 0 18px 0; }
+    .offer-note{ margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(184,107,75,0.12); font-size: 0.95rem; opacity: .78; line-height: 1.7; }
 
-    .offer-body{
-      font-weight: 300;
-      opacity: .86;
-      line-height: 1.8;
-      margin: 0 0 18px 0;
-    }
-
-    .offer-note{
-      margin-top: 18px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(184,107,75,0.12);
-      font-size: 0.95rem;
-      opacity: .78;
-      line-height: 1.7;
-    }
-
-    /* SECTION TRANSITION */
-    .owners-transition{
-      padding: 70px 0;
-      background: #ffffff;
-      text-align: center;
-    }
-
+    .owners-transition{ padding: 70px 0; background: #ffffff; text-align: center; }
     .transition-quote{
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
@@ -327,21 +228,9 @@
       margin: 0 auto 10px auto;
       max-width: 880px;
     }
+    .transition-text{ max-width: 820px; margin: 0 auto; opacity: .82; font-weight: 300; line-height: 1.8; }
 
-    .transition-text{
-      max-width: 820px;
-      margin: 0 auto;
-      opacity: .82;
-      font-weight: 300;
-      line-height: 1.8;
-    }
-
-    /* MOMENTS D'EXCEPTION */
-    .owners-exception{
-      padding: 68px 0;
-      background: var(--sand);
-    }
-
+    .owners-exception{ padding: 68px 0; background: var(--sand); }
     .exception-card{
       max-width: 980px;
       margin: 0 auto;
@@ -353,7 +242,6 @@
       overflow: hidden;
       text-align: center;
     }
-
     .exception-card::before{
       content:"";
       position:absolute;
@@ -362,7 +250,6 @@
       background: linear-gradient(180deg, rgba(184,107,75,0.95), rgba(184,107,75,0.25));
       opacity: .9;
     }
-
     .exception-kicker{
       display:inline-block;
       text-transform: uppercase;
@@ -372,7 +259,6 @@
       color: var(--terracotta);
       margin-bottom: 12px;
     }
-
     .exception-title{
       font-family: 'Cormorant Garamond', serif;
       font-weight: 500;
@@ -381,15 +267,7 @@
       margin: 0 0 14px 0;
       line-height: 1.15;
     }
-
-    .exception-text{
-      max-width: 820px;
-      margin: 0 auto 18px auto;
-      font-weight: 300;
-      opacity: .86;
-      line-height: 1.8;
-    }
-
+    .exception-text{ max-width: 820px; margin: 0 auto 18px auto; font-weight: 300; opacity: .86; line-height: 1.8; }
     .exception-list{
       list-style: none;
       padding: 0;
@@ -400,7 +278,6 @@
       gap: 10px 26px;
       text-align: left;
     }
-
     .exception-list li{
       position: relative;
       padding-left: 18px;
@@ -408,7 +285,6 @@
       font-weight: 300;
       line-height: 1.7;
     }
-
     .exception-list li::before{
       content:"✦";
       position:absolute;
@@ -418,16 +294,8 @@
       font-size: .95rem;
       line-height: 1.3;
     }
+    .exception-note{ margin-top: 18px; font-size: .95rem; opacity: .70; font-style: italic; line-height: 1.7; }
 
-    .exception-note{
-      margin-top: 18px;
-      font-size: .95rem;
-      opacity: .70;
-      font-style: italic;
-      line-height: 1.7;
-    }
-
-    /* CTA FINAL */
     .owners-final{
       padding: 78px 0;
       background:
@@ -436,7 +304,6 @@
         var(--ivory);
       text-align:center;
     }
-
     .final-title{
       font-family: 'Cormorant Garamond', serif;
       font-weight: 500;
@@ -444,30 +311,15 @@
       font-size: clamp(2rem, 3.2vw, 2.8rem);
       margin: 0 0 12px 0;
     }
+    .final-sub{ margin: 0 auto 26px auto; max-width: 820px; opacity: .84; font-weight: 300; line-height: 1.8; }
+    .final-reassurance{ margin-top: 14px; font-size: .92rem; opacity: .62; font-style: italic; }
 
-    .final-sub{
-      margin: 0 auto 26px auto;
-      max-width: 820px;
-      opacity: .84;
-      font-weight: 300;
-      line-height: 1.8;
-    }
-
-    .final-reassurance{
-      margin-top: 14px;
-      font-size: .92rem;
-      opacity: .62;
-      font-style: italic;
-    }
-
-    /* Responsive */
     @media (max-width: 980px){
       .offers-grid{ grid-template-columns: 1fr; gap: 18px; }
       .offer-card{ padding: 36px 26px 32px; }
       .offer-number{ font-size: 3.4rem; }
       .exception-list{ grid-template-columns: 1fr; }
     }
-
     @media (max-width: 520px){
       .owners-hero{ padding: 84px 0 58px; }
       .frame-card{ padding: 32px 18px; }
@@ -485,22 +337,22 @@
     <div class="header-inner">
       <div class="brand">
         <a href="index.html" class="brand-link">
-          <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
+          <img src="../images/logo.jpg" alt="Terra Occitana" class="brand-logo">
         </a>
       </div>
 
       <nav class="menu" id="menu">
-        <a href="proprietaires.html" class="active">Propriétaires</a>
-        <a href="voyageurs.html">L'Expérience</a>
-        <a href="offre-sur-mesure.html">Étude de potentiel</a>
-        <a href="contact.html">Planifier un échange</a>
+        <a href="proprietaires.html" class="active">Owners</a>
+        <a href="voyageurs.html">Experience</a>
+        <a href="offre-sur-mesure.html">Rental potential</a>
+        <a href="contact.html">Schedule a call</a>
       </nav>
 
-      <!-- ✅ Switch langue (structure dossiers) -->
-      <div class="lang-switch" aria-label="Choix de la langue">
-        <a class="lang-btn active" href="proprietaires.html" aria-current="page">FR</a>
-        <a class="lang-btn" href="en/proprietaires.html">EN</a>
-        <a class="lang-btn" href="de/proprietaires.html">DE</a>
+      <!-- ✅ Language switch (folder structure) -->
+      <div class="lang-switch" aria-label="Language selection">
+        <a class="lang-btn" href="../proprietaires.html">FR</a>
+        <a class="lang-btn active" href="proprietaires.html" aria-current="page">EN</a>
+        <a class="lang-btn" href="../de/proprietaires.html">DE</a>
       </div>
 
       <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -509,96 +361,89 @@
 
   <main>
 
-    <!-- 1) HERO -->
     <section class="owners-hero">
       <div class="container">
-        <span class="owners-kicker">Espace Propriétaires</span>
-        <h1 class="owners-title">Confier son bien, en toute sérénité</h1>
+        <span class="owners-kicker">Owners area</span>
+        <h1 class="owners-title">Entrust your home — with complete peace of mind</h1>
         <p class="owners-sub">
-          Conciergerie familiale à taille humaine, nous accompagnons volontairement un nombre limité de propriétés
-          entre Vallée de l’Hérault et Littoral, pour préserver une qualité de service irréprochable.
+          A family-run concierge service, deliberately supporting a limited number of properties
+          between the Hérault Valley and the Coast — to preserve an impeccable standard of care.
         </p>
 
         <div class="owners-cta">
-          <a class="btn-primary" href="contact.html">Planifier un échange (30 min)</a>
-          <a class="btn-secondary-olive" href="offre-sur-mesure.html">Découvrir l’étude de potentiel</a>
+          <a class="btn-primary" href="contact.html">Schedule a call (30 min)</a>
+          <a class="btn-secondary-olive" href="offre-sur-mesure.html">Explore the rental potential</a>
         </div>
       </div>
     </section>
 
-    <!-- 2) CADRE -->
     <section class="owners-frame">
       <div class="container">
         <div class="frame-card">
-          <h2 class="frame-title">Notre manière de travailler</h2>
+          <h2 class="frame-title">How we work</h2>
           <div class="frame-sep"></div>
           <p class="frame-text">
-            Nous avons fait le choix d’une conciergerie raisonnée, structurée et organisée.
-            Chaque collaboration repose sur des process clairs, une gestion autonome des séjours
-            et une présence locale attentive — pour des locations fluides, et une tranquillité partagée.
+            We’ve chosen a measured, structured approach.
+            Every collaboration relies on clear processes, autonomous stay management,
+            and attentive local presence — for smooth rentals and shared peace of mind.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- 3) OFFRES -->
     <section class="owners-offers">
       <div class="container">
 
         <div class="offers-head">
-          <h2>Nos Collections</h2>
+          <h2>Our Collections</h2>
           <p>
-            Trois formules, trois besoins distincts : organiser la location, vous relayer sur le terrain,
-            ou veiller sur votre maison tout au long de l’année. Nous vous orientons vers l’accompagnement le plus juste.
+            Three options, three distinct needs: manage rentals end-to-end, support you on the ground,
+            or care for your home throughout the year. We guide you to the most fitting approach.
           </p>
         </div>
 
         <div class="offers-grid">
 
-          <!-- 01 SÉRÉNITÉ -->
           <article class="offer-card">
             <div class="offer-number">01</div>
-            <h3 class="offer-script">Sérénité</h3>
+            <h3 class="offer-script">Serenity</h3>
             <p class="offer-body">
-              Une gestion orchestrée, fluide et maîtrisée.
-              Nous assurons la coordination globale sur le terrain : préparation du logement,
-              gestion des rotations, mise en place des standards hôteliers et suivi des séjours,
-              selon des procédures établies et une organisation rigoureuse.
+              Orchestrated, smooth, and fully controlled.
+              We handle the on-site coordination: home preparation, turnovers,
+              hotel-level standards, and stay follow-up — through established procedures and rigorous organisation.
             </p>
             <p class="offer-note">
-              Cette formule privilégie l’organisation, la méthode et la tranquillité,
-              plutôt qu’une gestion dispersée ou permanente.
+              This collection prioritises organisation, method, and tranquillity —
+              not constant, scattered management.
             </p>
           </article>
 
-          <!-- 02 LIBERTÉ -->
           <article class="offer-card">
             <div class="offer-number">02</div>
-            <h3 class="offer-script">Liberté</h3>
+            <h3 class="offer-script">Freedom</h3>
             <p class="offer-body">
-              L’essentiel, sur-mesure et parfaitement organisé.
-              Pour les propriétaires qui souhaitent conserver la maîtrise de leurs réservations,
-              tout en s’appuyant sur une présence locale fiable et exigeante.
-              Les interventions sont définies à l’avance, selon les besoins réels du bien et le rythme des séjours.
+              The essentials — tailored and perfectly organised.
+              For owners who want to keep control of their bookings,
+              while relying on a dependable, demanding local presence.
+              Interventions are defined in advance, based on the home’s real needs and the rhythm of stays.
             </p>
             <p class="offer-note">
-              La Collection Liberté ne comprend pas la gestion des réservations ni des échanges quotidiens avec les voyageurs.
-              Elle s’inscrit dans une logique d’autonomie et de process clairs.
+              The Freedom Collection does not include booking management or daily guest messaging.
+              It’s designed around autonomy and clear processes.
             </p>
           </article>
 
-          <!-- 03 INTENDANCE PRIVÉE -->
           <article class="offer-card">
             <div class="offer-number">03</div>
-            <h3 class="offer-script">Intendance Privée</h3>
+            <h3 class="offer-script">Private Stewardship</h3>
             <p class="offer-body">
-              Veiller sur votre maison, en votre absence.
-              Des passages planifiés, des contrôles essentiels et une préparation soignée du logement
-              avant votre arrivée, afin que votre maison reste saine, entretenue et prête à vivre à tout moment.
+              Caring for your home while you’re away.
+              Planned visits, essential checks, and careful preparation before your arrival —
+              so your home remains healthy, maintained, and ready to live in at any time.
             </p>
             <p class="offer-note">
-              Exemples d’interventions : visites de contrôle (aération, vérifications visuelles),
-              suivi du courrier/livraisons ponctuelles, préparation “maison ouverte” avant votre venue.
+              Examples: control visits (airing, visual checks), occasional mail/delivery follow-up,
+              “home opened” preparation before you arrive.
             </p>
           </article>
 
@@ -606,58 +451,55 @@
       </div>
     </section>
 
-    <!-- 4) TRANSITION -->
     <section class="owners-transition">
       <div class="container">
-        <p class="transition-quote">« Chaque bien a son rythme. Chaque propriétaire, ses attentes. »</p>
+        <p class="transition-quote">“Every home has its rhythm. Every owner, their expectations.”</p>
         <p class="transition-text">
-          Nous prenons le temps d’échanger afin de définir l’accompagnement le plus juste,
-          en respectant votre niveau d’implication, l’usage réel du bien et l’exigence de standing attendue.
+          We take the time to talk and define the best support —
+          respecting your desired level of involvement, the home’s real use, and the expected standard.
         </p>
       </div>
     </section>
 
-    <!-- 4bis) MOMENTS D'EXCEPTION -->
     <section class="owners-exception">
       <div class="container">
         <div class="exception-card">
-          <span class="exception-kicker">Signature locale</span>
-          <h2 class="exception-title">Une attention particulière, lorsque le moment s’y prête</h2>
+          <span class="exception-kicker">Local signature</span>
+          <h2 class="exception-title">A special touch — when the moment calls for it</h2>
 
           <p class="exception-text">
-            Certains séjours marquent davantage que d’autres : une demande en mariage, un anniversaire important,
-            ou simplement l’envie de vivre un moment différent, le temps de quelques jours.
+            Some stays matter more than others: a proposal, a milestone birthday,
+            or simply the desire to live something different for a few days.
           </p>
 
           <p class="exception-text">
-            Grâce à notre ancrage local et à notre connaissance du territoire, nous pouvons, à la demande,
-            accompagner ces occasions particulières avec discrétion, sens du détail et respect du lieu.
+            Thanks to our local roots and deep knowledge of the area, we can — upon request —
+            support these occasions with discretion, a sense of detail, and respect for the home.
           </p>
 
           <ul class="exception-list">
-            <li>Conseils personnalisés (restaurants, lieux confidentiels, expériences locales)</li>
-            <li>Organisation de surprises simples et élégantes</li>
-            <li>Réservations ponctuelles (restaurants, taxis, prestataires locaux)</li>
-            <li>Recommandations adaptées au rythme du séjour</li>
+            <li>Personalised recommendations (restaurants, discreet spots, local experiences)</li>
+            <li>Simple, elegant surprise arrangements</li>
+            <li>Occasional bookings (restaurants, taxis, local partners)</li>
+            <li>Suggestions adapted to the stay’s rhythm</li>
           </ul>
 
           <div class="exception-note">
-            Ces attentions sont proposées au cas par cas, en cohérence avec le séjour et les souhaits des propriétaires.
+            These touches are offered case by case, in line with the stay and the owners’ wishes.
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 5) CTA FINAL -->
     <section class="owners-final">
       <div class="container">
-        <h2 class="final-title">Un projet, une question, une estimation ?</h2>
+        <h2 class="final-title">A project, a question, an estimate?</h2>
         <p class="final-sub">
-          Une réponse personnelle, sans engagement. Nous regardons votre situation, votre bien,
-          et nous vous proposons un cadre d’accompagnement clair, cohérent et réaliste.
+          A personal reply — no commitment. We look at your situation and your home,
+          and propose a clear, coherent, realistic framework.
         </p>
-        <a class="btn-primary" href="contact.html">Planifier un échange (30 min)</a>
-        <div class="final-reassurance">Une conciergerie humaine. Une organisation solide. À votre rythme.</div>
+        <a class="btn-primary" href="contact.html">Schedule a call (30 min)</a>
+        <div class="final-reassurance">A human concierge service. Solid organisation. At your pace.</div>
       </div>
     </section>
 
@@ -667,19 +509,19 @@
     <div class="container footer-compact">
       <div class="footer-info">
         <strong>Terra Occitana</strong><br>
-        Conciergerie Privée & Intendance • Vallée de l’Hérault<br>
+        Private Concierge & Stewardship • Hérault Valley<br>
         06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
         <div style="margin-top:8px; font-style:italic; opacity:.78;">
-          Une conciergerie humaine. Une organisation solide. À votre rythme.
+          A human concierge service. Solid organisation. At your pace.
         </div>
       </div>
 
       <div class="footer-links">
-        <a href="#">Mentions Légales</a>
+        <a href="#">Legal notice</a>
         <span class="sep">•</span>
-        <a href="#">Confidentialité</a>
+        <a href="#">Privacy</a>
         <span class="sep">•</span>
-        <a href="#">CGV</a>
+        <a href="#">Terms</a>
       </div>
 
       <div class="copyright">© 2025 — Terra Occitana</div>

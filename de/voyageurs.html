@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>L'Expérience • Terra Occitana</title>
-  <meta name="description" content="Une expérience fluide et sereine : accueil, séjour, respect des lieux. Une conciergerie familiale, discrète et locale." />
+  <title>Gästeerlebnis • Terra Occitana</title>
+  <meta name="description" content="Ein reibungsloser, ruhiger Aufenthalt: Anreise, Komfort, Respekt vor dem Haus. Diskreter, lokaler Familien-Concierge." />
 
   <link rel="stylesheet" href="styles.css" />
 
@@ -12,7 +12,6 @@
     .brand-logo{ height: 60px; }
     @media (max-width: 900px){ .brand-logo{ height: 54px; } }
 
-    /* SWITCH LANGUE — même design que propriétaires */
     .lang-switch{
       display: inline-flex; gap: 8px; align-items: center;
       margin-left: 14px; padding-left: 14px;
@@ -219,25 +218,25 @@
     <div class="header-inner">
       <div class="brand">
         <a href="index.html" class="brand-link">
-          <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
+          <img src="../images/logo.jpg" alt="Terra Occitana" class="brand-logo">
         </a>
       </div>
 
       <nav class="menu" id="menu">
-        <a href="proprietaires.html">Propriétaires</a>
-        <a href="voyageurs.html" class="active">L'Expérience</a>
-        <a href="offre-sur-mesure.html">Étude de potentiel</a>
-        <a href="contact.html">Planifier un échange</a>
+        <a href="proprietaires.html">Eigentümer</a>
+        <a href="voyageurs.html" class="active">Erlebnis</a>
+        <a href="offre-sur-mesure.html">Potenzial</a>
+        <a href="contact.html">Gespräch planen</a>
       </nav>
 
-      <!-- ✅ Switch langue — chemins OK (FR racine / EN/DE dossiers) -->
-      <div class="lang-switch" aria-label="Choix de la langue">
-        <a class="lang-btn active" href="voyageurs.html" aria-current="page">FR</a>
-        <a class="lang-btn" href="en/voyageurs.html">EN</a>
-        <a class="lang-btn" href="de/voyageurs.html">DE</a>
+      <!-- ✅ Switch langue — chemins OK depuis /de -->
+      <div class="lang-switch" aria-label="Sprachauswahl">
+        <a class="lang-btn" href="../voyageurs.html">FR</a>
+        <a class="lang-btn" href="../en/voyageurs.html">EN</a>
+        <a class="lang-btn active" href="voyageurs.html" aria-current="page">DE</a>
       </div>
 
-      <button class="burger" id="burger" aria-label="Menu">
+      <button class="burger" id="burger" aria-label="Menü">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -246,12 +245,12 @@
   <main>
     <section class="experience-hero">
       <div class="container">
-        <span class="experience-kicker">Expérience voyageurs</span>
-        <h1 class="experience-title">Une arrivée simple. Un séjour serein.</h1>
+        <span class="experience-kicker">Gästeerlebnis</span>
+        <h1 class="experience-title">Eine einfache Anreise. Ein ruhiger Aufenthalt.</h1>
         <p class="experience-sub">
-          Nous assurons un accueil fluide et une présence discrète tout au long du séjour,
-          dans le respect du lieu et de son usage. Sans surenchère, sans protocole figé —
-          simplement ce qu’il faut pour que tout se déroule naturellement.
+          Wir sorgen für einen reibungslosen Check-in und bleiben während des Aufenthalts diskret erreichbar —
+          stets im Respekt des Hauses und seiner Nutzung. Kein übertriebener Ablauf —
+          einfach das, was nötig ist, damit alles natürlich funktioniert.
         </p>
       </div>
     </section>
@@ -260,57 +259,57 @@
       <div class="container">
         <div class="book-card reveal">
           <div class="book-head">
-            <h2>Ce que nous veillons à préserver, à chaque séjour</h2>
+            <h2>Worauf wir bei jedem Aufenthalt achten</h2>
             <div class="book-sep"></div>
             <p class="book-intro">
-              Une expérience réussie tient souvent à des détails simples : clarté, soin, continuité.
-              Nous privilégions une organisation calme et une présence mesurée, pour le confort des voyageurs
-              et la sérénité des propriétaires.
+              Ein gelungener Aufenthalt hängt oft an einfachen Details: Klarheit, Sorgfalt, Kontinuität.
+              Wir setzen auf ruhige Organisation und eine maßvolle Präsenz — für den Komfort der Gäste
+              und die Gelassenheit der Eigentümer.
             </p>
           </div>
 
           <div class="book-grid">
             <article class="exp-item">
-              <h3 class="exp-title"><span class="exp-icon"></span> L’arrivée</h3>
-              <p class="exp-phrase">Une prise en charge claire, sans attente ni confusion.</p>
+              <h3 class="exp-title"><span class="exp-icon"></span> Anreise</h3>
+              <p class="exp-phrase">Klarer Empfang — ohne Warten, ohne Verwirrung.</p>
               <ul class="exp-bullets">
-                <li>Accueil organisé avec ponctualité</li>
-                <li>Présentation simple du logement et de ses usages</li>
+                <li>Pünktlicher, organisierter Check-in</li>
+                <li>Kurze, einfache Einführung ins Haus</li>
               </ul>
             </article>
 
             <article class="exp-item">
-              <h3 class="exp-title"><span class="exp-icon"></span> Le séjour</h3>
-              <p class="exp-phrase">Un cadre soigné, entretenu avec régularité, pour un séjour sans accroc.</p>
+              <h3 class="exp-title"><span class="exp-icon"></span> Aufenthalt</h3>
+              <p class="exp-phrase">Ein gepflegtes Zuhause — für einen Aufenthalt ohne Reibung.</p>
               <ul class="exp-bullets">
-                <li>Logement préparé avec attention</li>
-                <li>Présence discrète en cas de besoin</li>
+                <li>Sorgfältige Vorbereitung vor der Ankunft</li>
+                <li>Diskrete Unterstützung bei Bedarf</li>
               </ul>
             </article>
 
             <article class="exp-item">
-              <h3 class="exp-title"><span class="exp-icon"></span> Le respect des lieux</h3>
-              <p class="exp-phrase">Chaque maison est considérée comme habitée à l’année.</p>
+              <h3 class="exp-title"><span class="exp-icon"></span> Respekt vor dem Ort</h3>
+              <p class="exp-phrase">Jedes Haus wird behandelt, als wäre es ganzjährig bewohnt.</p>
               <ul class="exp-bullets">
-                <li>Vérifications visuelles essentielles</li>
-                <li>Signalement immédiat en cas d’anomalie</li>
+                <li>Wesentliche Sichtkontrollen</li>
+                <li>Sofortige Meldung bei Unregelmäßigkeiten</li>
               </ul>
             </article>
 
             <article class="exp-item">
-              <h3 class="exp-title"><span class="exp-icon"></span> Le lien humain</h3>
-              <p class="exp-phrase">Une relation simple, cordiale, toujours respectueuse.</p>
+              <h3 class="exp-title"><span class="exp-icon"></span> Menschlicher Kontakt</h3>
+              <p class="exp-phrase">Einfach, freundlich, immer respektvoll.</p>
               <ul class="exp-bullets">
-                <li>Communication claire et apaisée</li>
-                <li>Disponibilité mesurée, jamais intrusive</li>
+                <li>Klare, ruhige Kommunikation</li>
+                <li>Maßvolle Erreichbarkeit, nie aufdringlich</li>
               </ul>
             </article>
           </div>
 
           <div class="local-touch">
             <p>
-              Et lorsque le séjour s’y prête, notre ancrage local permet aussi d’orienter vers des adresses de confiance
-              ou de faciliter certaines réservations, <em>toujours avec mesure</em>.
+              Und wenn es zum Aufenthalt passt, hilft unsere lokale Verankerung mit Empfehlungen
+              oder wenigen Reservierungen — <em>immer mit Zurückhaltung</em>.
             </p>
           </div>
 
@@ -320,15 +319,15 @@
 
     <section class="experience-close">
       <div class="container narrow reveal">
-        <h2 class="close-title">Accueillir, c’est aussi préserver.</h2>
+        <h2 class="close-title">Gastgeben heißt auch bewahren.</h2>
         <div class="separator"></div>
         <p class="close-text">
-          Accueillir des voyageurs, c’est trouver l’équilibre entre confort et respect d’un lieu.
-          Nous veillons à cette continuité avec attention, calme et exigence, pour que chaque séjour se déroule sereinement,
-          et que chaque propriété conserve son âme.
+          Gäste zu empfangen bedeutet, Komfort und Respekt für den Charakter eines Hauses auszubalancieren.
+          Wir achten auf diese Kontinuität mit Ruhe, Sorgfalt und Standards — damit jeder Aufenthalt angenehm verläuft
+          und jede Immobilie ihre Seele behält.
         </p>
-        <a href="contact.html" class="btn-primary">Planifier un échange (30 min)</a>
-        <div class="close-note">Une réponse simple, humaine. Sans engagement. À votre rythme.</div>
+        <a href="contact.html" class="btn-primary">Gespräch planen (30 Min)</a>
+        <div class="close-note">Eine einfache, menschliche Antwort. Ohne Verpflichtung. In Ihrem Tempo.</div>
       </div>
     </section>
   </main>
@@ -337,16 +336,16 @@
     <div class="container footer-compact">
       <div class="footer-info">
         <strong>Terra Occitana</strong><br>
-        Conciergerie Privée & Intendance • Vallée de l’Hérault<br>
+        Private Concierge & Hausbetreuung • Hérault-Tal<br>
         06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
         <div style="margin-top:8px; font-style:italic; opacity:.78;">
-          Une conciergerie humaine. Une organisation solide. À votre rythme.
+          Menschlich. Solide organisiert. In Ihrem Tempo.
         </div>
       </div>
       <div class="footer-links">
-        <a href="#">Mentions Légales</a><span class="sep">•</span>
-        <a href="#">Confidentialité</a><span class="sep">•</span>
-        <a href="#">CGV</a>
+        <a href="#">Impressum</a><span class="sep">•</span>
+        <a href="#">Datenschutz</a><span class="sep">•</span>
+        <a href="#">AGB</a>
       </div>
       <div class="copyright">© 2025 — Terra Occitana</div>
     </div>
