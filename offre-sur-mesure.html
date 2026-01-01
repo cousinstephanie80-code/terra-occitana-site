@@ -4,11 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Étude de potentiel • Terra Occitana</title>
-  <meta name="description" content="Recevez une projection simple du potentiel de votre bien selon nos collections. Une base claire pour échanger sereinement." />
+  <meta name="description" content="Étude de potentiel Terra Occitana : une projection simple, puis un échange pour ajuster selon votre bien et votre standing." />
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* ===== ÉTUDE — LUXE ÉPURÉ (2 COLONNES) ===== */
+    /* ==========================
+       ÉTUDE — VERSION LUXE ÉPURÉE
+       (alignée index / propriétaires / voyageurs)
+       ========================== */
+
+    /* Petit ajustement logo (cohérent avec propriétaires/voyageurs) */
     .brand-logo{ height: 60px; }
     @media (max-width: 900px){ .brand-logo{ height: 54px; } }
 
@@ -51,38 +56,35 @@
       margin: 0 0 16px 0;
     }
     .study-sub{
-      max-width: 920px;
+      max-width: 900px;
       margin: 0 auto;
-      font-size: clamp(1rem, 1.15vw, 1.12rem);
+      font-size: clamp(1rem, 1.15vw, 1.15rem);
       opacity: .86;
       font-weight: 300;
       line-height: 1.75;
     }
     .study-note{
-      max-width: 880px;
-      margin: 18px auto 0;
-      font-size: .92rem;
-      opacity: .70;
+      margin-top: 16px;
+      font-size: .95rem;
+      opacity: .72;
       font-style: italic;
-      line-height: 1.65;
     }
 
-    /* Cadre d’intro */
-    .study-frame{
-      padding: 55px 0 0;
-      background: #fff;
+    /* TOOL */
+    .study-tool{
+      padding: 74px 0;
+      background: var(--bg-white);
     }
-    .frame-card{
-      max-width: 1040px;
+    .tool-card{
+      max-width: 1020px;
       margin: 0 auto;
       background: var(--bg-cream);
       border: 1px solid rgba(184,107,75,0.14);
-      padding: 34px 34px 30px;
+      padding: 46px;
       position: relative;
       overflow: hidden;
-      text-align: center;
     }
-    .frame-card::after{
+    .tool-card::after{
       content:"";
       position:absolute;
       inset:auto -40px -60px -40px;
@@ -90,36 +92,49 @@
       background: radial-gradient(closest-side, rgba(212,175,55,0.09), transparent 70%);
       pointer-events:none;
     }
-    .frame-card p{
+
+    .tool-head{
+      text-align:center;
+      margin-bottom: 28px;
+    }
+    .tool-head h2{
+      margin: 0 0 10px 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      color: var(--vin-olive);
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
+      line-height: 1.15;
+    }
+    .tool-sep{
+      width: 64px;
+      height: 2px;
+      margin: 16px auto 18px auto;
+      background: var(--terracotta);
+    }
+    .tool-intro{
       margin: 0 auto;
-      max-width: 900px;
-      font-weight: 300;
+      max-width: 860px;
       opacity: .86;
+      font-weight: 300;
       line-height: 1.8;
     }
 
-    /* 2 colonnes (outil) */
-    .study-tool{
-      padding: 54px 0 85px;
-      background: #fff;
-    }
-    .study-grid{
-      max-width: 1040px;
-      margin: 0 auto;
-      display: grid;
+    .tool-grid{
+      display:grid;
       grid-template-columns: 1fr 1fr;
-      gap: 22px;
+      gap: 22px 36px;
+      margin-top: 28px;
       align-items: start;
     }
 
-    .panel{
-      background: var(--bg-cream);
-      border: 1px solid rgba(184,107,75,0.14);
-      padding: 28px;
-      position: relative;
-      overflow: hidden;
+    .t-box{
+      background:#fff;
+      border:1px solid rgba(184,107,75,0.12);
+      padding: 26px 22px;
+      position:relative;
+      overflow:hidden;
     }
-    .panel::before{
+    .t-box::before{
       content:"";
       position:absolute;
       inset: 0 auto 0 0;
@@ -128,197 +143,159 @@
       opacity: .95;
     }
 
-    .panel h2{
-      margin: 0 0 8px 0;
+    .t-title{
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
-      color: var(--vin-olive);
-      font-size: 1.7rem;
-      line-height: 1.15;
-    }
-    .panel p{
-      margin: 0 0 18px 0;
-      font-weight: 300;
-      opacity: .82;
-      line-height: 1.7;
-    }
-
-    /* Petites sections */
-    .block{
-      background: #fff;
-      border: 1px solid rgba(184,107,75,0.12);
-      padding: 18px;
-      margin-top: 14px;
-    }
-    .block-title{
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      font-size: .76rem;
-      font-weight: 600;
+      font-size: 1.45rem;
       color: var(--terracotta);
       margin: 0 0 10px 0;
-    }
-
-    .pricing-mode-selector{
+      line-height: 1.1;
       display:flex;
-      gap:10px;
-      margin-bottom: 18px;
-      flex-wrap: wrap;
-    }
-    .mode-btn{
-      border:1px solid rgba(184,107,75,0.22);
-      background:#fff;
-      padding:10px 12px;
-      border-radius: 999px;
-      cursor:pointer;
-      font-weight:500;
-      opacity:.85;
-    }
-    .mode-btn.active{
-      border-color: rgba(184,107,75,0.55);
-      color: var(--terracotta);
-      opacity: 1;
-    }
-
-    /* Packs */
-    .pack-selector{
-      display:grid;
+      align-items:center;
       gap: 10px;
     }
-    .pack-btn{
-      border:1px solid rgba(184,107,75,0.14);
-      background:#fff;
-      padding: 14px 14px 12px;
-      cursor:pointer;
+    .t-dot{
+      width: 18px;
+      height: 18px;
+      border: 1px solid rgba(184,107,75,0.35);
+      border-radius: 999px;
+      position: relative;
+      flex: 0 0 18px;
+    }
+    .t-dot::after{
+      content:"";
+      position:absolute;
+      inset: 4px;
+      border-radius: 999px;
+      background: rgba(184,107,75,0.18);
+    }
+
+    .t-line{
       display:flex;
-      justify-content:space-between;
-      align-items:baseline;
+      justify-content: space-between;
       gap: 12px;
-    }
-    .pack-btn.active{
-      border-color: rgba(184,107,75,0.45);
-      box-shadow: 0 10px 30px rgba(46,63,54,.06);
-    }
-    .pack-name{
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 700;
-      letter-spacing: .06em;
-    }
-    .pack-detail{
-      opacity: .70;
-      font-weight: 300;
-      font-size: .95rem;
-    }
-
-    /* Ticket résultat */
-    .result-ticket{
-      margin-top: 14px;
-      background:#fff;
-      border:1px solid rgba(184,107,75,0.14);
-      overflow:hidden;
-      box-shadow: 0 14px 45px rgba(46,63,54,.06);
-    }
-    .ticket-header{
-      padding: 14px 16px;
-      border-bottom:1px solid rgba(184,107,75,0.10);
-      background:#fff;
-    }
-    .ticket-h-title{
-      margin:0;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      font-size: .82rem;
-      opacity: .9;
-    }
-    .ticket-body{
-      padding: 16px;
-    }
-
-    .t-section{
-      padding: 12px 0;
+      margin: 10px 0;
+      padding-bottom: 10px;
       border-bottom: 1px solid rgba(184,107,75,0.10);
-    }
-    .t-section:last-child{ border-bottom: none; }
-
-    .t-title{
-      display:block;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      font-size: .75rem;
-      opacity: .72;
-      margin-bottom: 10px;
-    }
-
-    .t-row{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      padding: 7px 0;
-      line-height: 1.55;
       font-weight: 300;
-      opacity: .90;
+      opacity:.88;
     }
-    .t-row strong{ font-weight: 600; }
-
-    .highlight{
-      margin-top: 6px;
-      padding-top: 10px;
-      border-top: 1px solid rgba(184,107,75,0.10);
-      font-weight: 500;
-    }
-
-    .val-positive{ color: var(--vin-olive); font-weight: 600; }
-    .val-negative{ color: #6b2f1a; font-weight: 600; }
+    .t-line strong{ font-weight: 600; opacity: 1; }
 
     .t-total-box{
       margin-top: 14px;
+      padding: 16px 14px;
       border: 1px solid rgba(184,107,75,0.14);
-      background: var(--bg-cream);
-      padding: 14px;
-      text-align:center;
+      background: rgba(255,255,255,0.75);
+      text-align: center;
     }
     .t-total-label{
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      font-size:.75rem;
-      opacity:.72;
-      margin-bottom: 8px;
+      font-size: .78rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--vin-olive);
+      opacity: .85;
+      font-weight: 600;
     }
     .t-total-val{
       font-family: 'Cormorant Garamond', serif;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 2.2rem;
       color: var(--terracotta);
+      margin-top: 6px;
       line-height: 1.1;
     }
     .t-total-note{
-      margin-top: 8px;
-      font-size:.82rem;
-      opacity:.70;
+      margin-top: 6px;
+      font-size: .9rem;
+      opacity: .72;
       font-style: italic;
+      font-weight: 300;
       line-height: 1.6;
     }
 
-    /* Form bas */
-    .study-form{
-      padding: 70px 0;
-      background: var(--bg-sand);
-      text-align:center;
+    .controls{
+      display:flex;
+      flex-direction: column;
+      gap: 14px;
     }
-    .study-form .narrow{
-      max-width: 720px;
-      margin: 0 auto;
+    .control{
+      display:flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .control label{
+      font-weight: 600;
+      font-size: .9rem;
+    }
+    .range-row{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+    input[type="range"]{
+      width:100%;
+      accent-color: var(--terracotta);
+    }
+    .range-val{
+      min-width: 82px;
+      text-align:right;
+      font-weight: 600;
+      color: var(--ink);
+      opacity: .92;
     }
 
+    .packs{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .pack-btn{
+      border:1px solid rgba(184,107,75,0.18);
+      background: #fff;
+      padding: 10px 14px;
+      font-size: .85rem;
+      font-weight: 600;
+      cursor:pointer;
+      transition: .25s ease;
+    }
+    .pack-btn:hover{ border-color: rgba(184,107,75,0.35); }
+    .pack-btn.is-active{
+      background: rgba(184,107,75,0.10);
+      border-color: rgba(184,107,75,0.45);
+    }
+
+    .mode-row{
+      display:flex;
+      gap: 10px;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+    .mode-btn{
+      border:1px solid rgba(85,107,47,0.25);
+      background:#fff;
+      padding: 10px 14px;
+      font-size: .85rem;
+      font-weight: 600;
+      cursor:pointer;
+      transition:.25s ease;
+      color: var(--vin-olive);
+    }
+    .mode-btn:hover{ border-color: rgba(85,107,47,0.4); }
+    .mode-btn.is-active{
+      background: rgba(85,107,47,0.10);
+      border-color: rgba(85,107,47,0.45);
+    }
+
+    /* Responsive */
     @media (max-width: 980px){
-      .study-grid{ grid-template-columns: 1fr; }
-      .panel{ padding: 22px; }
+      .tool-grid{ grid-template-columns: 1fr; }
     }
     @media (max-width: 520px){
-      .study-hero{ padding: 82px 0 60px; }
-      .frame-card{ padding: 28px 18px 24px; }
-      .panel{ padding: 20px 16px; }
-      .t-total-val{ font-size: 2rem; }
+      .study-hero{ padding: 82px 0 62px; }
+      .tool-card{ padding: 32px 18px; }
+      .t-box{ padding: 22px 16px; }
     }
   </style>
 </head>
@@ -336,11 +313,13 @@
       <nav class="menu" id="menu">
         <a href="proprietaires.html">Propriétaires</a>
         <a href="voyageurs.html">L'Expérience</a>
-        <a href="offre-sur-mesure.html" class="active">Estimer mes revenus</a>
-        <a href="contact.html">Contact</a>
+        <a href="offre-sur-mesure.html" class="active">Étude de potentiel</a>
+        <a href="contact.html">Planifier un échange</a>
       </nav>
 
-      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -358,165 +337,123 @@
         <div class="study-note">
           Montants indicatifs — chaque propriété a son rythme et ses particularités.
         </div>
-      </div>
-    </section>
 
-    <!-- INTRO -->
-    <section class="study-frame">
-      <div class="container">
-        <div class="frame-card reveal">
-          <p>
-            Nous avons conçu cette page comme une <strong>lecture simple</strong> :
-            vous sélectionnez quelques paramètres, puis vous obtenez une <strong>projection</strong>.
-            L’objectif n’est pas de “simuler”, mais de poser une base pour échanger sereinement.
-          </p>
+        <div class="study-cta" style="margin-top:22px; display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
+          <a class="btn-primary" href="contact.html">Planifier un échange (30 min)</a>
+          <a class="btn-secondary-olive" href="#outil">Faire une simulation</a>
         </div>
       </div>
     </section>
 
-    <!-- OUTIL (2 COLONNES) -->
-    <section class="study-tool">
+    <!-- TOOL -->
+    <section class="study-tool" id="outil">
       <div class="container">
-        <div class="study-grid">
+        <div class="tool-card reveal">
 
-          <!-- COLONNE GAUCHE : PARAMÈTRES -->
-          <aside class="panel reveal">
-            <h2>Paramètres du séjour</h2>
-            <p>Choisissez une base de prix, puis la durée du séjour.</p>
+          <div class="tool-head">
+            <h2>Simuler un séjour (ordre de grandeur)</h2>
+            <div class="tool-sep"></div>
+            <p class="tool-intro">
+              Choisissez une collection, puis ajustez la durée et le prix du séjour.
+              Nous appliquons ensuite des honoraires indicatifs pour estimer une projection nette.
+            </p>
+          </div>
 
-            <div class="block">
-              <div class="block-title">Mode de tarification</div>
-              <div class="pricing-mode-selector">
-                <div class="mode-btn active" id="btnModeNight" onclick="setPricingMode('night')">Tarif nuitée</div>
-                <div class="mode-btn" id="btnModeWeek" onclick="setPricingMode('week')">Tarif semaine</div>
-              </div>
+          <section class="tool-grid">
 
-              <div style="margin-bottom:18px;">
-                <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-                  <span id="labelPriceText" style="font-weight:500;">Valeur de la nuitée</span>
-                  <span style="font-family:'Cormorant Garamond'; font-size:1.3rem; color:var(--terracotta); font-weight:700;">
-                    <span id="lblPrice">100</span> €
-                  </span>
+            <!-- CONTROLS -->
+            <div class="t-box">
+              <h3 class="t-title"><span class="t-dot"></span> Paramètres</h3>
+
+              <div class="controls">
+
+                <div class="control">
+                  <label>Moment du séjour</label>
+                  <div class="mode-row">
+                    <button class="mode-btn is-active" id="btnModeNight" type="button">1 nuit</button>
+                    <button class="mode-btn" id="btnModeWeek" type="button">Semaine</button>
+                  </div>
+                  <div style="margin-top:10px; font-size:.9rem; opacity:.78; font-weight:300; line-height:1.7;">
+                    Mode sélectionné : <strong id="labelPriceText">Prix par nuit</strong>
+                  </div>
                 </div>
-                <input type="range" id="inPrice" min="40" max="600" step="5" value="100" style="width:100%; accent-color:var(--terracotta);">
-              </div>
 
-              <div>
-                <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-                  <span style="font-weight:500;">Durée du séjour</span>
-                  <span style="font-family:'Cormorant Garamond'; font-size:1.3rem; color:var(--terracotta); font-weight:700;">
-                    <span id="lblDuration">7</span> nuits
-                  </span>
+                <div class="control">
+                  <label>Prix du séjour <span style="opacity:.65; font-weight:500;">(base voyageurs)</span></label>
+                  <div class="range-row">
+                    <input id="inPrice" type="range" min="80" max="2400" step="10" value="700" />
+                    <div class="range-val"><span id="lblPrice">700</span> €</div>
+                  </div>
                 </div>
-                <input type="range" id="inDuration" min="2" max="30" step="1" value="7" style="width:100%; accent-color:var(--terracotta);">
+
+                <div class="control">
+                  <label>Durée <span style="opacity:.65; font-weight:500;">(nuits)</span></label>
+                  <div class="range-row">
+                    <input id="inDuration" type="range" min="1" max="21" step="1" value="3" />
+                    <div class="range-val"><span id="lblDuration">3</span> nuits</div>
+                  </div>
+                </div>
+
+                <div class="control">
+                  <label>Collection</label>
+                  <div class="packs">
+                    <button class="pack-btn is-active" id="btnSerenite" type="button">Sérénité</button>
+                    <button class="pack-btn" id="btnLiberte" type="button">Liberté</button>
+                    <button class="pack-btn" id="btnIntendance" type="button">Intendance</button>
+                  </div>
+                  <div style="margin-top:10px; font-size:.9rem; opacity:.78; font-weight:300; line-height:1.7;">
+                    Les honoraires sont indicatifs et varient selon l’organisation, le standing et le rythme des séjours.
+                  </div>
+                </div>
+
               </div>
             </div>
-          </aside>
 
-          <!-- COLONNE DROITE : COLLECTION + RÉSULTAT -->
-          <section class="panel reveal">
-            <h2>Votre collection</h2>
-            <p>Choisissez l’accompagnement qui correspond à votre niveau d’implication.</p>
+            <!-- RESULTS -->
+            <div class="t-box">
+              <h3 class="t-title"><span class="t-dot"></span> Projection</h3>
 
-            <div class="block">
-              <div class="block-title">Collections</div>
-              <div class="pack-selector">
-                <div class="pack-btn active" onclick="setPack('serenite')" id="btnSerenite">
-                  <span class="pack-name">SÉRÉNITÉ</span>
-                  <span class="pack-detail">25% (intégral)</span>
-                </div>
-                <div class="pack-btn" onclick="setPack('liberte')" id="btnLiberte">
-                  <span class="pack-name">LIBERTÉ</span>
-                  <span class="pack-detail">forfait (à la carte)</span>
-                </div>
-                <div class="pack-btn" onclick="setPack('intendance')" id="btnIntendance">
-                  <span class="pack-name">INTENDANCE PRIVÉE</span>
-                  <span class="pack-detail">veille & passages</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- RESULTATS -->
-            <div class="result-ticket">
-              <div class="ticket-header">
-                <h3 class="ticket-h-title">Projection (indicative)</h3>
+              <div class="t-line">
+                <div>Durée</div>
+                <div><strong><span id="txtDuration">3</span> nuits</strong></div>
               </div>
 
-              <div class="ticket-body">
-
-                <div class="t-section">
-                  <span class="t-title">A. Base du séjour</span>
-                  <div class="t-row">
-                    <span>Valeur du séjour (<span id="txtDuration">7</span> nuits)</span>
-                    <span class="val-positive" id="resRent">700 €</span>
-                  </div>
-                  <div class="t-row highlight">
-                    <span><strong>Total estimé</strong></span>
-                    <span class="val-positive" id="resTotalClient">700 €</span>
-                  </div>
-                </div>
-
-                <div class="t-section">
-                  <span class="t-title">B. Cadre d’accompagnement</span>
-                  <div class="t-row">
-                    <span>Honoraires (selon collection)</span>
-                    <span class="val-negative" id="resCom">- 175 €</span>
-                  </div>
-                </div>
-
-                <div class="t-total-box">
-                  <div class="t-total-label">VOTRE ESTIMATION NETTE</div>
-                  <div class="t-total-val" id="resNetOwner">525 €</div>
-                  <div class="t-total-note">
-                    Projection indicative pour vous donner un ordre de grandeur.
-                  </div>
-                </div>
-
-                <button class="btn-primary" style="width:100%; margin-top:14px;"
-                        onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})">
-                  Recevoir cette étude
-                </button>
-
+              <div class="t-line">
+                <div>Base séjour (voyageurs)</div>
+                <div><strong><span id="resRent">700</span></strong></div>
               </div>
+
+              <div class="t-line">
+                <div>Total brut</div>
+                <div><strong><span id="resTotalClient">700</span></strong></div>
+              </div>
+
+              <div class="t-line">
+                <div>Honoraires estimés</div>
+                <div><strong><span id="resCom">- 175</span></strong></div>
+              </div>
+
+              <div class="t-total-box">
+                <div class="t-total-label">VOTRE ESTIMATION NETTE</div>
+                <div class="t-total-val" id="resNetOwner">525 €</div>
+                <div class="t-total-note">
+                  Projection indicative pour vous donner un ordre de grandeur.
+                </div>
+              </div>
+
+              <div style="margin-top:16px; padding-top:14px; border-top:1px solid rgba(184,107,75,0.12);">
+                <p style="margin:0 0 12px 0; font-weight:300; opacity:.84; line-height:1.75;">
+                  Cette projection prend tout son sens lorsqu’elle est mise en perspective avec votre bien réel
+                  (standing, saisonnalité, usage, contraintes). Un échange suffit pour ajuster — ou parfois réorienter.
+                </p>
+                <a class="btn-primary" style="width:100%; justify-content:center;" href="contact.html">Planifier un échange (30 min)</a>
+              </div>
+
             </div>
 
           </section>
 
         </div>
-      </div>
-    </section>
-
-    <!-- FORM -->
-    <section id="contact-form" class="study-form">
-      <div class="container narrow reveal">
-        <h2 style="font-family:'Cormorant Garamond', serif; font-weight:600; color:var(--vin-olive); margin:0 0 10px;">
-          Vous souhaitez en discuter ?
-        </h2>
-        <p class="luxe-paragraph" style="max-width:720px; margin:0 auto 26px; opacity:.84;">
-          Laissez vos coordonnées : nous reprenons cette projection avec vous,
-          et nous vous orientons vers l’accompagnement le plus juste.
-        </p>
-
-        <form action="mailto:conciergerie.terraoccitana@gmail.com" method="POST" enctype="text/plain"
-              style="max-width:520px; margin:0 auto; text-align:left;">
-          <input type="hidden" name="Sujet" value="Étude de potentiel — Terra Occitana">
-          <textarea name="Projection" id="hiddenSim" style="display:none;"></textarea>
-
-          <div style="margin-bottom:15px;">
-            <label style="display:block; font-size:0.9rem; font-weight:600; margin-bottom:5px;">Votre nom</label>
-            <input type="text" name="Nom" required style="width:100%; padding:12px; border:1px solid #ddd;">
-          </div>
-
-          <div style="margin-bottom:20px;">
-            <label style="display:block; font-size:0.9rem; font-weight:600; margin-bottom:5px;">Email ou téléphone</label>
-            <input type="text" name="Contact" required style="width:100%; padding:12px; border:1px solid #ddd;">
-          </div>
-
-          <button type="submit" class="btn-primary" style="width:100%;">Envoyer</button>
-          <p style="font-size:0.75rem; color:#888; margin-top:10px; text-align:center;">
-            Cela ouvrira votre application de messagerie.
-          </p>
-        </form>
       </div>
     </section>
 
@@ -528,6 +465,9 @@
         <strong>Terra Occitana</strong><br>
         Conciergerie Privée & Intendance • Vallée de l’Hérault<br>
         06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
+        <div style="margin-top:8px; font-style:italic; opacity:.78;">
+          Une conciergerie humaine. Une organisation solide. À votre rythme.
+        </div>
       </div>
       <div class="footer-links">
         <a href="#">Mentions Légales</a>
@@ -543,73 +483,99 @@
   <script src="script.js"></script>
 
   <script>
-    /* ===== CALCUL SIMPLIFIÉ (sans “éléments du séjour”) ===== */
-    let state = { mode: 'night', pack: 'serenite' };
+    /* ==========================
+       SIMULATION — LOGIQUE SIMPLE
+       ========================== */
 
     const inPrice = document.getElementById('inPrice');
     const inDuration = document.getElementById('inDuration');
+    const lblPrice = document.getElementById('lblPrice');
+    const lblDuration = document.getElementById('lblDuration');
 
-    function setPricingMode(mode) {
-      state.mode = mode;
-      document.getElementById('btnModeNight').className = mode === 'night' ? 'mode-btn active' : 'mode-btn';
-      document.getElementById('btnModeWeek').className = mode === 'week' ? 'mode-btn active' : 'mode-btn';
+    const btnSerenite = document.getElementById('btnSerenite');
+    const btnLiberte = document.getElementById('btnLiberte');
+    const btnIntendance = document.getElementById('btnIntendance');
 
-      if (mode === 'week') {
-        document.getElementById('labelPriceText').innerText = "Tarif semaine";
-        inPrice.min = 200; inPrice.max = 2000; inPrice.step = 50; inPrice.value = 500;
+    const btnModeNight = document.getElementById('btnModeNight');
+    const btnModeWeek  = document.getElementById('btnModeWeek');
+    const labelPriceText = document.getElementById('labelPriceText');
+
+    const txtDuration = document.getElementById('txtDuration');
+    const resRent = document.getElementById('resRent');
+    const resTotalClient = document.getElementById('resTotalClient');
+    const resCom = document.getElementById('resCom');
+    const resNetOwner = document.getElementById('resNetOwner');
+
+    const state = {
+      pack: "Sérénité",
+      mode: "night" // night | week
+    };
+
+    function setActivePack(btn){
+      [btnSerenite, btnLiberte, btnIntendance].forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+    }
+    function setActiveMode(btn){
+      [btnModeNight, btnModeWeek].forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+    }
+
+    btnSerenite.addEventListener('click', () => { state.pack = "Sérénité"; setActivePack(btnSerenite); updateCalc(); });
+    btnLiberte.addEventListener('click', () => { state.pack = "Liberté"; setActivePack(btnLiberte); updateCalc(); });
+    btnIntendance.addEventListener('click', () => { state.pack = "Intendance"; setActivePack(btnIntendance); updateCalc(); });
+
+    btnModeNight.addEventListener('click', () => {
+      state.mode = "night";
+      setActiveMode(btnModeNight);
+      labelPriceText.textContent = "Prix par nuit";
+      inDuration.min = 1; inDuration.max = 21;
+      if (+inDuration.value < 1) inDuration.value = 1;
+      updateCalc();
+    });
+
+    btnModeWeek.addEventListener('click', () => {
+      state.mode = "week";
+      setActiveMode(btnModeWeek);
+      labelPriceText.textContent = "Prix semaine";
+      inDuration.min = 7; inDuration.max = 21;
+      if (+inDuration.value < 7) inDuration.value = 7;
+      updateCalc();
+    });
+
+    function commissionRate(){
+      // indicatif : Sérénité > Liberté > Intendance (plus léger)
+      if (state.pack === "Sérénité") return 0.25;
+      if (state.pack === "Liberté") return 0.20;
+      return 0.15;
+    }
+
+    function updateCalc(){
+      const price = +inPrice.value;
+      const nights = +inDuration.value;
+
+      lblPrice.textContent = price;
+      lblDuration.textContent = nights;
+
+      // base séjour : si "week", on considère un prix semaine et on prorate selon la durée
+      // (simplement pour donner un ordre de grandeur)
+      let rent = price;
+      if (state.mode === "week") {
+        rent = (price / 7) * nights;
       } else {
-        document.getElementById('labelPriceText').innerText = "Valeur de la nuitée";
-        inPrice.min = 40; inPrice.max = 600; inPrice.step = 5; inPrice.value = 100;
+        rent = price * nights;
       }
-      updateCalc();
-    }
 
-    function setPack(packName) {
-      state.pack = packName;
+      const rate = commissionRate();
+      const totalClient = rent;
+      const commission = totalClient * rate;
+      const netOwner = totalClient - commission;
 
-      ['serenite','liberte','intendance'].forEach(p => {
-        const id = 'btn' + p.charAt(0).toUpperCase() + p.slice(1);
-        const el = document.getElementById(id);
-        if (el) el.className = (p === packName) ? 'pack-btn active' : 'pack-btn';
-      });
-
-      updateCalc();
-    }
-
-    function updateCalc() {
-      const rawPrice = parseInt(inPrice.value, 10);
-      const nights = parseInt(inDuration.value, 10);
-
-      const rent = (state.mode === 'week') ? (rawPrice / 7) * nights : rawPrice * nights;
-
-      // Honoraires selon collection
-      let commission = 0;
-      if (state.pack === 'serenite') commission = rent * 0.25;
-      else if (state.pack === 'liberte') commission = 60;       // forfait à la carte (ajustable)
-      else if (state.pack === 'intendance') commission = 0;     // ici on laisse 0, car “veille & passages” se chiffre au cas par cas
-
-      const totalClient = rent;               // plus d’options affichées ici
-      const netOwner = rent - commission;
-
-      // UI
-      document.getElementById('lblPrice').innerText = rawPrice;
-      document.getElementById('lblDuration').innerText = nights;
       document.getElementById('txtDuration').innerText = nights;
 
       document.getElementById('resRent').innerText = Math.round(rent) + " €";
       document.getElementById('resTotalClient').innerText = Math.round(totalClient) + " €";
       document.getElementById('resCom').innerText = "- " + Math.round(commission) + " €";
       document.getElementById('resNetOwner').innerText = Math.round(netOwner) + " €";
-
-      // Email
-      document.getElementById('hiddenSim').value =
-        `ÉTUDE DE POTENTIEL — TERRA OCCITANA\n` +
-        `Collection: ${state.pack}\n` +
-        `Durée: ${nights} nuits\n` +
-        `Base séjour: ${Math.round(rent)} €\n` +
-        `Honoraires estimés: ${Math.round(commission)} €\n` +
-        `Estimation nette: ${Math.round(netOwner)} €\n` +
-        `(Projection indicative)`;
     }
 
     inPrice.addEventListener('input', updateCalc);

@@ -14,7 +14,7 @@
 
     .contact-hero{
       position: relative;
-      padding: 90px 0 65px;
+      padding: 92px 0 66px;
       background:
         radial-gradient(1200px 500px at 50% -50px, rgba(184,107,75,0.16) 0%, rgba(184,107,75,0) 60%),
         radial-gradient(900px 380px at 15% 20%, rgba(85,107,47,0.10) 0%, rgba(85,107,47,0) 55%),
@@ -32,6 +32,7 @@
       pointer-events:none;
       opacity:.85;
     }
+
     .contact-kicker{
       display:inline-block;
       text-transform: uppercase;
@@ -45,31 +46,32 @@
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
       color: var(--vin-olive);
-      font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+      font-size: clamp(2.2rem, 4.6vw, 3.6rem);
       line-height: 1.08;
       margin: 0 0 14px 0;
     }
     .contact-sub{
       max-width: 860px;
       margin: 0 auto;
-      font-size: clamp(1rem, 1.15vw, 1.12rem);
+      font-size: clamp(1rem, 1.15vw, 1.15rem);
       opacity: .86;
       font-weight: 300;
       line-height: 1.75;
     }
 
-    .contact-two{
-      padding: 70px 0 85px;
-      background: #fff;
+    .contact-main{
+      background: var(--bg-white);
+      padding: 70px 0;
     }
 
     .contact-wrap{
-      display: grid;
-      grid-template-columns: 1fr 1.15fr;
-      gap: 28px;
+      display:grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 26px;
       align-items: start;
     }
 
+    /* Carte gauche */
     .contact-card{
       background: var(--bg-cream);
       border: 1px solid rgba(184,107,75,0.14);
@@ -102,91 +104,114 @@
     }
 
     .contact-lines{
-      display: grid;
-      gap: 14px;
+      display:flex;
+      flex-direction: column;
+      gap: 12px;
       margin-top: 18px;
     }
-
     .line{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      padding: 14px 14px;
       background: #fff;
       border: 1px solid rgba(184,107,75,0.12);
-      padding: 16px 16px 14px;
     }
-    .line .label{
+    .dot{
+      width: 18px;
+      height: 18px;
+      border: 1px solid rgba(184,107,75,0.35);
+      border-radius: 999px;
+      position: relative;
+      flex: 0 0 18px;
+      margin-top: 2px;
+    }
+    .dot::after{
+      content:"";
+      position:absolute;
+      inset: 4px;
+      border-radius: 999px;
+      background: rgba(184,107,75,0.18);
+    }
+    .line strong{
       display:block;
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      font-size: .72rem;
       font-weight: 600;
+      margin-bottom: 2px;
       color: var(--terracotta);
-      margin-bottom: 6px;
     }
-    .line .value{
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      font-size: 1.25rem;
-      color: var(--ink);
-      line-height: 1.25;
-    }
-    .line .sub{
-      margin-top: 6px;
-      font-size: .92rem;
-      opacity: .72;
+    .line span{
       font-weight: 300;
+      opacity: .86;
       line-height: 1.6;
+    }
+    .line a{
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .line a:hover{
+      color: var(--terracotta);
     }
 
     .cta-row{
-      margin-top: 18px;
-      display: grid;
-      gap: 10px;
+      margin-top: 22px;
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    /* Bloc Calendly */
+    .micro{
+      margin-top: 16px;
+      font-size: .92rem;
+      opacity: .65;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    /* Carte Calendly (droite) */
     .cal-card{
       background: #fff;
       border: 1px solid rgba(184,107,75,0.14);
-      box-shadow: 0 14px 45px rgba(46,63,54,.06);
       overflow: hidden;
     }
     .cal-head{
-      padding: 18px 20px;
-      background: #fff;
-      border-bottom: 1px solid rgba(184,107,75,0.10);
+      padding: 22px 22px;
+      background: var(--bg-cream);
+      border-bottom: 1px solid rgba(184,107,75,0.12);
     }
     .cal-head .k{
-      display:block;
+      display:inline-block;
       text-transform: uppercase;
       letter-spacing: .18em;
-      font-size: .72rem;
+      font-size: .76rem;
       font-weight: 600;
       color: var(--terracotta);
-      margin-bottom: 6px;
+      margin-bottom: 10px;
     }
     .cal-head h2{
-      margin: 0;
+      margin: 0 0 10px 0;
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
       color: var(--vin-olive);
-      font-size: 1.55rem;
-      line-height: 1.2;
+      font-size: 1.85rem;
+      line-height: 1.15;
     }
     .cal-head p{
-      margin: 8px 0 0 0;
+      margin: 0;
       font-weight: 300;
-      opacity: .82;
-      line-height: 1.65;
-      font-size: .98rem;
+      opacity: .86;
+      line-height: 1.75;
     }
 
     .cal-embed{
       width: 100%;
       height: 760px;
       border: 0;
-      display: block;
+      display:block;
       background: #fff;
     }
 
+    /* Responsive */
     @media (max-width: 980px){
       .contact-wrap{ grid-template-columns: 1fr; }
       .cal-embed{ height: 720px; }
@@ -213,8 +238,8 @@
       <nav class="menu" id="menu">
         <a href="proprietaires.html">Propriétaires</a>
         <a href="voyageurs.html">L'Expérience</a>
-        <a href="offre-sur-mesure.html">Estimer mes revenus</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="offre-sur-mesure.html">Étude de potentiel</a>
+        <a href="contact.html" class="active">Planifier un échange</a>
       </nav>
 
       <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -227,60 +252,72 @@
     <section class="contact-hero">
       <div class="container">
         <span class="contact-kicker">Contact</span>
-        <h1 class="contact-title">Échangeons simplement</h1>
+        <h1 class="contact-title">Échanger simplement</h1>
         <p class="contact-sub">
-          Une question, un projet, une hésitation : nous vous répondons personnellement.
-          Vous pouvez nous écrire (SMS / email) ou réserver un créneau de 30 minutes pour un échange en visio.
+          Un message, un email, ou un rendez-vous visio : choisissez le format le plus simple pour vous.
+          Nous vous répondons personnellement.
         </p>
       </div>
     </section>
 
-    <!-- 2 COLONNES -->
-    <section class="contact-two">
+    <!-- CONTENU -->
+    <section class="contact-main">
       <div class="container">
         <div class="contact-wrap">
 
-          <!-- GAUCHE : CONTACT DIRECT -->
+          <!-- GAUCHE : INFOS -->
           <aside class="contact-card reveal">
-            <h2>Nous joindre</h2>
+            <h2>Nous contacter</h2>
             <p>
-              Le plus simple : un message, quelques lignes, et nous revenons vers vous.
-              Réponse humaine, sans automatisation.
+              Pour une question, un projet, ou un premier échange. Nous privilégions des réponses simples,
+              humaines et sans pression.
             </p>
 
             <div class="contact-lines">
               <div class="line">
-                <span class="label">SMS / Téléphone</span>
-                <div class="value">06 72 44 88 65</div>
-                <div class="sub">Du lundi au dimanche, 9h — 21h</div>
+                <span class="dot" aria-hidden="true"></span>
+                <div>
+                  <strong>Par SMS</strong>
+                  <span>06 72 44 88 65</span>
+                </div>
               </div>
 
               <div class="line">
-                <span class="label">Email</span>
-                <div class="value">conciergerie.terraoccitana@gmail.com</div>
-                <div class="sub">Réponse sous 24h (souvent bien avant)</div>
+                <span class="dot" aria-hidden="true"></span>
+                <div>
+                  <strong>Par email</strong>
+                  <span><a href="mailto:conciergerie.terraoccitana@gmail.com">conciergerie.terraoccitana@gmail.com</a></span>
+                </div>
               </div>
 
               <div class="line">
-                <span class="label">Zone d’intervention</span>
-                <div class="value">Vallée de l’Hérault & Littoral</div>
-                <div class="sub">Agde • Marseillan • Sète • Salagou…</div>
+                <span class="dot" aria-hidden="true"></span>
+                <div>
+                  <strong>Zone</strong>
+                  <span>Vallée de l’Hérault • Littoral</span>
+                </div>
               </div>
             </div>
 
             <div class="cta-row">
-              <a class="btn-primary" href="offre-sur-mesure.html">Demander une étude</a>
-              <a class="btn-secondary-olive" href="proprietaires.html">Voir nos collections</a>
+              <a class="btn-primary" href="#calendly">Planifier un échange (30 min)</a>
+              <a class="btn-secondary-olive" href="offre-sur-mesure.html">Découvrir l’étude de potentiel</a>
+            </div>
+
+            <div class="micro">
+              Sans engagement. Une réponse simple, humaine. À votre rythme.
             </div>
           </aside>
 
           <!-- DROITE : CALENDLY -->
-          <section class="cal-card reveal" aria-label="Réserver un appel visio de 30 minutes">
+          <section class="cal-card reveal" id="calendly" aria-label="Réserver un appel visio de 30 minutes">
             <div class="cal-head">
               <span class="k">Rendez-vous Propriétaires</span>
               <h2>Appel visio — 30 minutes</h2>
               <p>
                 Un échange simple pour comprendre votre bien, votre rythme, et voir si notre accompagnement vous correspond.
+                <br><strong>Sans engagement.</strong> Sans démarche commerciale.
+                <br>Nous vous dirons simplement si notre accompagnement est pertinent pour vous — ou non.
               </p>
             </div>
 
@@ -306,7 +343,7 @@
         <strong>Terra Occitana</strong><br>
         Conciergerie Privée & Intendance • Vallée de l’Hérault<br>
         06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
-      </div>
+      <div style="margin-top:8px; font-style:italic; opacity:.78;">Une conciergerie humaine. Une organisation solide. À votre rythme.</div></div>
       <div class="footer-links">
         <a href="#">Mentions Légales</a>
         <span class="sep">•</span>

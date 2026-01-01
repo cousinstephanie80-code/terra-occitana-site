@@ -99,10 +99,35 @@ h4 {
 
 /* ================= HEADER ================= */
 .site-header{
-  position: sticky; top: 0; z-index: 100;
-  background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.03);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  /* Ivoire chaud, très léger */
+  background: rgba(255, 250, 247, 0.96);
+  backdrop-filter: blur(10px);
+
+  /* Ombre plus premium */
+  box-shadow: 0 6px 28px rgba(46,63,54,0.06);
 }
+
+/* Micro-filet signature (presque invisible) */
+.site-header::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(184,107,75,0.35),
+    transparent
+  );
+  opacity:0.6;
+}
+
 .header-inner{
   display: flex; align-items: center; justify-content: space-between;
   padding: 10px 32px; max-width: 1400px; margin: 0 auto; height: 70px;
@@ -200,6 +225,7 @@ footer {
   .burger{ display: block; z-index: 51; }
   .hero-banner { height: 70vh; min-height: auto; }
 }
+
 /* ===== MENU ACTIF — SIGNATURE DISCRÈTE ===== */
 .menu a.active {
   color: var(--terracotta);
@@ -219,4 +245,13 @@ footer {
     transparent
   );
   opacity: 0.6;
+}
+
+/* ===== LIEN RDV — REPÈRE DISCRET ===== */
+.menu a[href*="contact"]{
+  color: var(--terracotta);
+  font-weight: 600;
+}
+.menu a[href*="contact"]:hover{
+  opacity: 0.85;
 }
