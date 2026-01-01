@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Étude de Potentiel • Terra Occitana</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <a href="index.html" class="brand-link"><img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo"></a>
+      </div>
+      <nav class="menu" id="menu">
+        <a href="proprietaires.html">Propriétaires</a>
+        <a href="voyageurs.html">Voyageurs</a>
+        <a href="offre-sur-mesure.html" class="active">Estimer mes revenus</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-header-luxe">
+    <div class="container">
+      <span class="header-kicker">Projection & Stratégie</span>
+      <h1 class="header-title">Estimez le Potentiel de votre Bien</h1>
+      <p class="header-subtitle">
+        Visualisez la rentabilité de chaque séjour en fonction de nos collections de services.<br>
+        Une approche transparente pour valoriser votre patrimoine.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="calc-container">
+
+      <div class="params-panel">
+        
+        <div class="card-box">
+          <h3 class="card-title">1. Configuration du Séjour</h3>
+          
+          <div class="pricing-mode-selector">
+            <div class="mode-btn active" id="btnModeNight" onclick="setPricingMode('night')">Tarif Nuitée</div>
+            <div class="mode-btn" id="btnModeWeek" onclick="setPricingMode('week')">Tarif Semaine</div>
+          </div>
+          
+          <div style="margin-bottom:20px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+              <span id="labelPriceText" style="font-weight:500;">Valeur de la Nuitée</span>
+              <span style="font-family:'Cormorant Garamond'; font-size:1.3rem; color:var(--terracotta); font-weight:700;"><span id="lblPrice">100</span> €</span>
+            </div>
+            <input type="range" id="inPrice" min="40" max="600" step="5" value="100" style="width:100%; accent-color:var(--terracotta);">
+          </div>
+
+          <div>
+            <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+              <span style="font-weight:500;">Durée du Séjour</span>
+              <span style="font-family:'Cormorant Garamond'; font-size:1.3rem; color:var(--terracotta); font-weight:700;"><span id="lblDuration">7</span> nuits</span>
+            </div>
+            <input type="range" id="inDuration" min="2" max="30" step="1" value="7" style="width:100%; accent-color:var(--terracotta);">
+          </div>
+        </div>
+
+        <div class="card-box">
+          <h3 class="card-title">2. Votre Collection</h3>
+          <div class="pack-selector">
+            <div class="pack-btn active" onclick="setPack('serenite')" id="btnSerenite">
+              <span class="pack-name">SÉRÉNITÉ</span>
+              <span class="pack-detail">25% (Intégral)</span>
+            </div>
+            <div class="pack-btn" onclick="setPack('liberte')" id="btnLiberte">
+              <span class="pack-name">LIBERTÉ</span>
+              <span class="pack-detail">Fixe (À la carte)</span>
+            </div>
+            <div class="pack-btn" onclick="setPack('intendance')" id="btnIntendance">
+              <span class="pack-name">INTENDANCE</span>
+              <span class="pack-detail">Vigilance</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-box">
+          <h3 class="card-title">3. L'Art de Recevoir (Options)</h3>
+          <p style="font-size:0.9rem; color:#666; margin-bottom:20px; font-style:italic;">
+            Qui règle les frais logistiques ?
+          </p>
+          
+          <div class="smart-service-row active" id="rowCleaning">
+            <div class="ss-header">
+              <label style="cursor:pointer; display:flex; align-items:center;">
+                <input type="checkbox" id="chkCleaning" onchange="updateCalc()" checked style="accent-color:var(--terracotta); width:18px; height:18px;">
+                &nbsp; <span style="font-weight:500;">Mise en Beauté (Ménage)</span>
+              </label>
+              <span style="font-family:'Cormorant Garamond'; font-weight:700;">60 €</span>
+            </div>
+            <div class="payer-selector">
+              <span class="payer-option selected" onclick="setPayer('Cleaning', 'tenant')" id="payCleaningTenant">Réglé par Voyageur</span>
+              <span class="payer-option" onclick="setPayer('Cleaning', 'owner')" id="payCleaningOwner">Offert (Proprio)</span>
+            </div>
+          </div>
+
+          <div class="smart-service-row active" id="rowLinen">
+            <div class="ss-header">
+              <label style="cursor:pointer; display:flex; align-items:center;">
+                <input type="checkbox" id="chkLinen" onchange="updateCalc()" checked style="accent-color:var(--terracotta); width:18px; height:18px;">
+                &nbsp; <span style="font-weight:500;">Linge Hôtelier</span>
+              </label>
+              <span style="font-family:'Cormorant Garamond'; font-weight:700;">25 €</span>
+            </div>
+            <div class="payer-selector">
+              <span class="payer-option selected" onclick="setPayer('Linen', 'tenant')" id="payLinenTenant">Réglé par Voyageur</span>
+              <span class="payer-option" onclick="setPayer('Linen', 'owner')" id="payLinenOwner">Offert (Proprio)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-ticket">
+        <div class="ticket-header">
+          <h3 class="ticket-h-title">Synthèse Financière</h3>
+        </div>
+        <div class="ticket-body">
+          
+          <div class="t-section">
+            <span class="t-title">A. Règlement Voyageur</span>
+            <div class="t-row">
+              <span>Valeur du Séjour (<span id="txtDuration">7</span> nuits)</span>
+              <span class="val-positive" id="resRent">700 €</span>
+            </div>
+            <div id="clientChargesList"></div>
+            <div class="t-row highlight">
+              <span>TOTAL VERSÉ PAR LE VOYAGEUR</span>
+              <span class="val-positive" id="resTotalClient">785 €</span>
+            </div>
+          </div>
+
+          <div class="t-section">
+            <span class="t-title">B. Vos Coûts & Revenus</span>
+            <div class="t-row">
+              <span>Honoraires de Gestion</span>
+              <span class="val-negative" id="resCom">- 175 €</span>
+            </div>
+            <div id="ownerChargesList"></div>
+          </div>
+
+          <div class="t-total-box">
+            <div class="t-total-label">VOTRE REVENU NET</div>
+            <div class="t-total-val" id="resNetOwner">525 €</div>
+            <div class="t-total-note" style="font-size:0.8rem; font-style:italic; color:#888;">Estimation indicative pour ce séjour</div>
+          </div>
+
+          <button class="btn-primary" style="width:100%; margin-top:20px;" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})">
+            Valider cette Étude
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact-form" class="section soft">
+    <div class="container narrow" style="text-align:center;">
+      <h3>Recevoir cette estimation ?</h3>
+      <p class="luxe-paragraph">
+        Entrez vos coordonnées pour que nous puissions en discuter.
+      </p>
+      
+      <form action="mailto:conciergerie.terraoccitana@gmail.com" method="POST" enctype="text/plain" style="max-width:500px; margin:30px auto 0; text-align:left;">
+        <input type="hidden" name="Sujet" value="Nouvelle Estimation Terra Occitana">
+        <textarea name="Details_Estimation" id="hiddenSim" style="display:none;"></textarea>
+        
+        <div style="margin-bottom:15px;">
+          <label style="display:block; font-size:0.9rem; font-weight:600; margin-bottom:5px;">Votre Nom</label>
+          <input type="text" name="Nom" required style="width:100%; padding:12px; border:1px solid #ddd;">
+        </div>
+
+        <div style="margin-bottom:20px;">
+          <label style="display:block; font-size:0.9rem; font-weight:600; margin-bottom:5px;">Votre Email ou Téléphone</label>
+          <input type="text" name="Contact" required style="width:100%; padding:12px; border:1px solid #ddd;">
+        </div>
+        
+        <button type="submit" class="btn-primary" style="width:100%;">Envoyer la demande</button>
+        <p style="font-size:0.75rem; color:#888; margin-top:10px; text-align:center;">
+          Cela ouvrira votre application de messagerie.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Terra Occitana</strong></p>
+      <p>© 2025 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  
+  <script>
+    /* LOGIQUE CALCULATRICE SIMPLIFIÉE POUR INTÉGRATION */
+    const COSTS = { Cleaning: 60, Linen: 25, Welcome: 12, LiberteFixe: 60 };
+    let state = { mode: 'night', pack: 'serenite', payers: { Cleaning: 'tenant', Linen: 'tenant' } };
+
+    const inPrice = document.getElementById('inPrice');
+    const inDuration = document.getElementById('inDuration');
+
+    function setPricingMode(mode) {
+      state.mode = mode;
+      document.getElementById('btnModeNight').className = mode === 'night' ? 'mode-btn active' : 'mode-btn';
+      document.getElementById('btnModeWeek').className = mode === 'week' ? 'mode-btn active' : 'mode-btn';
+      
+      if (mode === 'week') {
+        document.getElementById('labelPriceText').innerText = "Tarif Hebdomadaire";
+        inPrice.min = 200; inPrice.max = 2000; inPrice.step = 50; inPrice.value = 500;
+      } else {
+        document.getElementById('labelPriceText').innerText = "Valeur de la Nuitée";
+        inPrice.min = 40; inPrice.max = 500; inPrice.step = 5; inPrice.value = 100;
+      }
+      updateCalc();
+    }
+
+    function setPack(packName) {
+      state.pack = packName;
+      ['serenite','liberte','intendance'].forEach(p => {
+        document.getElementById('btn'+p.charAt(0).toUpperCase()+p.slice(1)).className = (p === packName) ? 'pack-btn active' : 'pack-btn';
+      });
+      updateCalc();
+    }
+
+    function setPayer(srv, who) {
+      state.payers[srv] = who;
+      document.getElementById('pay'+srv+'Tenant').className = who === 'tenant' ? 'payer-option selected' : 'payer-option';
+      document.getElementById('pay'+srv+'Owner').className = who === 'owner' ? 'payer-option selected' : 'payer-option';
+      updateCalc();
+    }
+
+    function updateCalc() {
+      let rawPrice = parseInt(inPrice.value);
+      let nights = parseInt(inDuration.value);
+      
+      let rent = (state.mode === 'week') ? (rawPrice / 7) * nights : rawPrice * nights;
+
+      document.getElementById('lblPrice').innerText = rawPrice;
+      document.getElementById('lblDuration').innerText = nights;
+      document.getElementById('txtDuration').innerText = nights;
+
+      let clientAddons = 0;
+      let ownerExpenses = 0;
+      let htmlClient = "";
+      let htmlOwner = "";
+      
+      ['Cleaning', 'Linen'].forEach(srv => {
+        const isChecked = document.getElementById('chk'+srv).checked;
+        if (isChecked) {
+          const cost = COSTS[srv];
+          const payer = state.payers[srv];
+          if (payer === 'tenant') {
+            clientAddons += cost;
+            htmlClient += `<div class="t-row sub"><span>+ Option ${srv==='Cleaning'?'Mise en beauté':'Linge'}</span><span class="val-positive">+ ${cost} €</span></div>`;
+          } else {
+            ownerExpenses += cost;
+            htmlOwner += `<div class="t-row sub"><span>Frais ${srv==='Cleaning'?'Mise en beauté':'Linge'} (Offert)</span><span class="val-negative">- ${cost} €</span></div>`;
+          }
+        }
+      });
+
+      let commission = 0;
+      if (state.pack === 'serenite') commission = rent * 0.25;
+      else if (state.pack === 'liberte') commission = COSTS.LiberteFixe;
+
+      const totalClient = rent + clientAddons;
+      const netOwner = rent - commission - ownerExpenses;
+
+      document.getElementById('resRent').innerText = Math.round(rent) + " €";
+      document.getElementById('clientChargesList').innerHTML = htmlClient;
+      document.getElementById('resTotalClient').innerText = Math.round(totalClient) + " €";
+      document.getElementById('resCom').innerText = "- " + Math.round(commission) + " €";
+      document.getElementById('ownerChargesList').innerHTML = htmlOwner;
+      document.getElementById('resNetOwner').innerText = Math.round(netOwner) + " €";
+      
+      document.getElementById('hiddenSim').value = `ESTIMATION TERRA OCCITANA\nPack: ${state.pack}\nNuits: ${nights}\nRevenu Net Est: ${Math.round(netOwner)}€`;
+    }
+
+    inPrice.addEventListener('input', updateCalc);
+    inDuration.addEventListener('input', updateCalc);
+    updateCalc();
+  </script>
+</body>
+</html>

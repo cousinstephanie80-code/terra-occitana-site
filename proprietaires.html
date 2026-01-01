@@ -3,377 +3,181 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Propriétaires • Terra Occitana Conciergerie</title>
-  <meta name="description" content="Conciergerie familiale haut de gamme : services à la carte pour propriétaires, dans un style hôtel 5 étoiles." />
-
-  <!-- IMPORTANT : on utilise la charte de ton index -->
+  <title>Propriétaires • Terra Occitana</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Styles UNIQUEMENT pour cette page (sans modifier styles.css) -->
   <style>
-    /* ==========================
-       PAGE PROPRIÉTAIRES (LIVRE DE SERVICES)
-       ========================== */
-
-    /* On garde l’esprit section + fond alterné de l’index */
-    .owners-intro{
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
-
-    .owners-intro .transition{
-      margin-top: 16px;
-    }
-
-    /* “Livre de services” : 2 colonnes desktop, 1 colonne mobile */
-    .services-book{
-      padding: 90px 0;
-      background: var(--bg);
-    }
-    .services-book.soft{
-      background: var(--paper);
-    }
-
-    .book-grid{
+    /* Par défaut (Mobile) : 1 colonne */
+    .standing-grid {
+      list-style: none;
+      padding: 0;
       display: grid;
-      grid-template-columns: 1fr 1fr;   /* ✅ 2 colonnes desktop */
-      gap: 26px 60px;
-      margin-top: 55px;
-      align-items: start;
+      grid-template-columns: 1fr; 
+      gap: 10px; /* Espace réduit */
     }
 
-    /* Chaque entrée = ligne luxe, pas une carte “app” */
-    .book-item{
-      position: relative;
-      padding: 26px 0 22px;
-      border-top: 1px solid var(--line);
+    /* Sur ordinateur (écran > 768px) : 3 colonnes */
+    @media (min-width: 768px) {
+      .standing-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px; /* Espace réduit par rapport aux 20px d'avant */
+      }
     }
 
-    .book-head{
+    .standing-item {
+      padding: 12px 10px; /* Padding réduit (était 15px) */
+      background: rgba(255,255,255,0.6);
+      border-radius: 2px;
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 10px;
-    }
-
-    /* Icône trait organique */
-    .book-icon{
-      flex: 0 0 auto;
-      width: 22px;
-      height: 22px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--ink);
-      opacity: 0.9;
-      transform: translateY(1px);
-    }
-
-    .book-title{
-      margin: 0;
-      font-size: 1.65rem;
-      line-height: 1.1;
-      color: var(--terracotta); /* titres terracotta comme l’index */
-    }
-
-    .book-lead{
-      margin: 0 0 12px;
-      font-size: 1.02rem;
-      opacity: 0.9;
-      line-height: 1.75;
-    }
-
-    /* Bullets doux, pas “process” */
-    .book-bullets{
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 8px;
-    }
-    .book-bullets li{
-      position: relative;
-      padding-left: 18px;
-      font-size: 0.98rem;
-      opacity: 0.85;
-      line-height: 1.7;
-    }
-    .book-bullets li::before{
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.65em;
-      width: 8px;
-      height: 1px;
-      background: var(--terracotta);
-      opacity: 0.75;
-    }
-
-    /* Hover très discret “hôtel” */
-    .book-item:hover{
-      border-top-color: rgba(184, 107, 75, 0.35);
-    }
-    .book-item:hover .book-icon{
-      color: var(--terracotta);
-    }
-
-    /* CTA bas de page : discret premium */
-    .owners-cta{
-      padding: 90px 0;
-      background: var(--paper);
-      border-top: 1px solid var(--line);
-    }
-    .cta-box{
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-      background: rgba(255,255,255,0.78);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow-soft);
-      padding: 46px 34px;
-    }
-    .cta-box h3{
-      margin: 0 0 12px;
-      font-size: 2rem;
-      color: var(--terracotta);
-    }
-    .cta-box p{
-      margin: 0 0 26px;
-      opacity: 0.85;
-      line-height: 1.8;
-      font-size: 1.05rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px){
-      .book-grid{
-        grid-template-columns: 1fr; /* ✅ 1 colonne mobile */
-        gap: 18px;
-        margin-top: 40px;
-      }
-      .book-item{
-        padding: 22px 0 18px;
-      }
+      gap: 10px;
+      border: 1px solid rgba(184,107,75,0.1);
+      font-size: 0.95rem; /* Texte légèrement affiné */
     }
   </style>
+
 </head>
 
 <body>
 
-  <!-- HEADER (reprend les classes de l’index) -->
   <header class="site-header">
     <div class="header-inner">
-      <!-- Remplace le logo src si besoin -->
-      <a class="brand-link" href="index.html" aria-label="Retour à l'accueil">
-        <img class="brand-logo" src="images/logo.png" alt="Terra Occitana Conciergerie">
-      </a>
-
-      <nav class="menu" id="menu" aria-label="Navigation principale">
-        <a href="index.html#services">Services</a>
-        <a href="proprietaires.html" aria-current="page">Propriétaires</a>
-        <a href="index.html#contact">Contact</a>
+      <div class="brand">
+        <a href="index.html" class="brand-link"><img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo"></a>
+      </div>
+      <nav class="menu" id="menu">
+        <a href="proprietaires.html" class="active" style="color:var(--terracotta);">Propriétaires</a>
+        <a href="voyageurs.html">L'Expérience</a>
+        <a href="offre-sur-mesure.html">Estimer mes revenus</a>
+        <a href="contact.html">Contact</a>
       </nav>
-
-      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="burger" id="burger"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <!-- HERO BANNIÈRE (style index) -->
-  <section class="hero-banner" aria-label="Bannière Propriétaires">
-    <div class="hero-slider" data-hero-slider>
-      <!-- 1 seule slide : on garde la bannière élégante -->
-      <div class="hero-slide is-active" style="background-image:url('images/hero.jpg');"></div>
-    </div>
-    <div class="hero-overlay"></div>
+  <main>
 
-    <div class="hero-content">
-      <div class="hero-kicker">Pour les propriétaires • Conciergerie familiale</div>
-      <h1 class="hero-headline">
-        Confiez-nous votre bien
-        <span>Une prise en charge haut de gamme, discrète et humaine.</span>
-      </h1>
-
-      <div class="contact-actions">
-        <a class="btn-primary" href="#composer">Composer votre prise en charge</a>
-        <a class="btn-secondary" href="#services">Découvrir les services</a>
-      </div>
-
-      <div class="reassurance">1 à 2 personnes • présence locale • exigence constante</div>
-    </div>
-  </section>
-
-  <!-- INTRO (section luxe comme index) -->
-  <section class="section soft owners-intro">
-    <div class="container narrow reveal">
-      <h2>Une conciergerie à la hauteur d’une adresse de charme</h2>
-      <p class="luxe-paragraph">
-        Ici, pas de formule rigide. Nous vous présentons les services, un par un, comme une carte de conciergerie.
-        Vous choisissez ce qui convient à votre bien — et nous orchestrons l’ensemble avec la même exigence, séjour après séjour.
-      </p>
-      <p class="transition">Le luxe, c’est la constance. Et la tranquillité d’esprit.</p>
-    </div>
-  </section>
-
-  <!-- LIVRE DE SERVICES (2 colonnes desktop) -->
-  <section class="services-book" id="services">
-    <div class="container">
-      <div class="narrow reveal">
-        <h2>Le livre de services</h2>
+    <section class="section" style="background: radial-gradient(circle at 50% 0%, #fff8f0 0%, #fffdfa 60%, #ffffff 100%); padding-top: 80px; padding-bottom: 60px; text-align: center;">
+      <div class="container">
+        <span class="header-kicker">Espace Propriétaires</span>
+        <h1 style="color: var(--vin-olive); font-size: clamp(2.5rem, 5vw, 4rem);">Confiez-nous votre clé</h1>
         <p class="luxe-paragraph">
-          Une sélection de services modulables, pensés pour préserver le standing de votre logement et offrir une expérience “hôtel”.
+          Une prise en charge haut de gamme, discrète et humaine.<br>
+          Vous gardez le contrôle, nous cultivons l'excellence.
         </p>
-      </div>
-
-      <div class="book-grid">
-        <!-- 01 -->
-        <article class="book-item reveal">
-          <div class="book-head">
-            <span class="book-icon" aria-hidden="true">
-              <!-- icône organique : clé (trait arrondi) -->
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7.5 14.5a4.5 4.5 0 1 1 3.9 2.2"/>
-                <path d="M11.4 12.7 20 4.2"/>
-                <path d="M18.2 6l1.8 1.8"/>
-                <path d="M16.4 7.8l1.8 1.8"/>
-              </svg>
-            </span>
-            <h3 class="book-title">Arrivées & départs</h3>
-          </div>
-          <p class="book-lead">Des arrivées et des départs fluides, à la hauteur d’une adresse de caractère.</p>
-          <ul class="book-bullets">
-            <li>Un accueil clair, chaleureux et sans approximation</li>
-            <li>Une prise en charge complète, dans le respect de votre logement</li>
-          </ul>
-        </article>
-
-        <!-- 02 -->
-        <article class="book-item reveal">
-          <div class="book-head">
-            <span class="book-icon" aria-hidden="true">
-              <!-- icône organique : bulle -->
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 12a7.5 7.5 0 0 1-7.5 7.5H8l-4 3v-6.2A7.5 7.5 0 0 1 3.5 12 7.5 7.5 0 0 1 11 4.5h1.5A7.5 7.5 0 0 1 20 12Z"/>
-              </svg>
-            </span>
-            <h3 class="book-title">Relation voyageurs</h3>
-          </div>
-          <p class="book-lead">Une présence discrète et rassurante tout au long du séjour.</p>
-          <ul class="book-bullets">
-            <li>Des échanges fluides, professionnels et courtois</li>
-            <li>Une disponibilité appréciée, sans jamais être intrusive</li>
-          </ul>
-        </article>
-
-        <!-- 03 -->
-        <article class="book-item reveal">
-          <div class="book-head">
-            <span class="book-icon" aria-hidden="true">
-              <!-- icône organique : plume/soin -->
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 4c-6 0-10 4-10 10v6l3-3h3c6 0 8-5 8-13Z"/>
-                <path d="M10 14c0-2 2-4 4-4"/>
-              </svg>
-            </span>
-            <h3 class="book-title">Propreté & mise en scène</h3>
-          </div>
-          <p class="book-lead">Un intérieur impeccable, pensé pour accueillir avec élégance et sérénité.</p>
-          <ul class="book-bullets">
-            <li>Une attention particulière portée aux détails et aux finitions</li>
-            <li>Une atmosphère soignée, cohérente avec le standing de votre bien</li>
-          </ul>
-        </article>
-
-        <!-- 04 -->
-        <article class="book-item reveal">
-          <div class="book-head">
-            <span class="book-icon" aria-hidden="true">
-              <!-- icône organique : linge -->
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 6.5a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v14H7v-14Z"/>
-                <path d="M9.2 8.5h5.6"/>
-                <path d="M9.2 11h5.6"/>
-              </svg>
-            </span>
-            <h3 class="book-title">Linge & fraîcheur</h3>
-          </div>
-          <p class="book-lead">Un linge d’une tenue irréprochable, pour une première impression immédiatement haut de gamme.</p>
-          <ul class="book-bullets">
-            <li>Le linge est toujours prêt, frais et parfaitement présenté à l’arrivée</li>
-            <li>Nous veillons à son renouvellement pour préserver élégance et confort</li>
-          </ul>
-        </article>
-
-        <!-- 05 -->
-        <article class="book-item reveal">
-          <div class="book-head">
-            <span class="book-icon" aria-hidden="true">
-              <!-- icône organique : outil -->
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14.7 6.3a4 4 0 0 0-5.6 5.6L4 17v3h3l5.1-5.1a4 4 0 0 0 5.6-5.6l-2.2 2.2-2.1-2.1 2.3-2.1Z"/>
-              </svg>
-            </span>
-            <h3 class="book-title">Intendance du logement</h3>
-          </div>
-          <p class="book-lead">Votre bien suivi avec régularité, pour rester irréprochable au fil des séjours.</p>
-          <ul class="book-bullets">
-            <li>Une vigilance constante sur l’état général du logement</li>
-            <li>Des solutions simples et adaptées en cas de besoin</li>
-          </ul>
-        </article>
-
-        <!-- 06 -->
-        <article class="book-item reveal">
-          <div class="book-head">
-            <span class="book-icon" aria-hidden="true">
-              <!-- icône organique : étoile -->
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 3l2.6 5.6 6.1.6-4.6 4 1.4 6-5.5-3.1-5.5 3.1 1.4-6-4.6-4 6.1-.6L12 3Z"/>
-              </svg>
-            </span>
-            <h3 class="book-title">Services signature (sur demande)</h3>
-          </div>
-          <p class="book-lead">Des attentions choisies qui font toute la différence.</p>
-          <ul class="book-bullets">
-            <li>Mises en place personnalisées selon le profil des voyageurs</li>
-            <li>Une touche supplémentaire pour sublimer l’expérience</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA DISCRET -->
-  <section class="owners-cta" id="composer">
-    <div class="container reveal">
-      <div class="cta-box">
-        <h3>Composer votre prise en charge</h3>
-        <p>
-          Vous choisissez les services. Nous vous proposons une prise en charge sur-mesure, claire, et fidèle au standing de votre bien.
-        </p>
-        <div class="contact-actions">
-          <a class="btn-primary" href="index.html#contact">Composer votre prise en charge</a>
-          <a class="btn-secondary" href="index.html#contact">Échanger 10 minutes</a>
+        <div style="margin-top:30px;">
+          <a class="btn-primary" href="offre-sur-mesure.html">Simuler ma rentabilité</a>
         </div>
-        <div class="reassurance">Réponse rapide • approche humaine • exigence constante</div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER (reprend le style global) -->
-  <footer class="footer">
-    <div class="container">
-      <p><strong>Terra Occitana Conciergerie</strong></p>
-      <p>Conciergerie familiale haut de gamme • Sud de la France</p>
-      <p>© <span id="year"></span> — Tous droits réservés</p>
+    <section class="section bg-white">
+      <div class="container narrow" style="text-align:center;">
+        <h2 style="color: var(--vin-olive);">Nos Collections</h2>
+        <div class="separator"></div>
+        <p class="luxe-paragraph">
+          Chaque propriétaire est unique. Nous avons imaginé trois niveaux d'accompagnement, 
+          de la gestion intégrale à la simple vigilance de votre résidence.
+        </p>
+      </div>
+    </section>
+
+    <section class="section bg-cream">
+      <div class="container">
+        
+        <div class="piliers-grid">
+          
+          <article class="pilier-card">
+            <div class="pilier-number">1.</div>
+            <h3 class="pilier-title">Collection Sérénité</h3>
+            <div style="font-family:'Cormorant Garamond'; color:var(--vin-olive); font-weight:700; margin-bottom:15px;">Gestion Pilotée (20%)</div>
+            <p class="pilier-text">
+              L'alliance parfaite. Nous créons votre annonce et optimisons les revenus (Yield Management). 
+              Sur le terrain, nous gérons l'intendance complète (accueil, ménage, linge). 
+              Côté voyageurs, nous assurons l'assistance technique, vous validez les réservations.
+            </p>
+          </article>
+
+          <article class="pilier-card">
+            <div class="pilier-number">2.</div>
+            <h3 class="pilier-title">Collection Liberté</h3>
+            <div style="font-family:'Cormorant Garamond'; color:var(--vin-olive); font-weight:700; margin-bottom:15px;">À la Carte (Sur Devis)</div>
+            <p class="pilier-text">
+              Vous gardez la main sur votre planning et vos réservations. Nous intervenons uniquement sur le terrain : remises de clés, ménage et blanchisserie à chaque rotation.
+            </p>
+          </article>
+
+          <article class="pilier-card">
+            <div class="pilier-number">3.</div>
+            <h3 class="pilier-title">Intendance Privée</h3>
+            <div style="font-family:'Cormorant Garamond'; color:var(--vin-olive); font-weight:700; margin-bottom:15px;">Vigilance (Abonnement)</div>
+            <p class="pilier-text">
+              Pour les résidences secondaires non louées. Visites de contrôle régulières, aération, relevé de courrier et préparation "Maison ouverte" avant votre venue.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section bg-sand">
+      <div class="container narrow">
+        <h2 style="text-align:center; color:var(--vin-olive);">Le standing Terra Occitana</h2>
+        <div class="separator"></div>
+        <p style="text-align:center; margin-bottom:40px; font-size:1rem; opacity:0.7;">Inclus dans notre Collection Sérénité</p>
+        
+        <ul class="standing-grid">
+          <li class="standing-item">
+            <span style="color:var(--terracotta); font-size:1.2rem;">✦</span> <span style="color:var(--ink);">Filtrage rigoureux des voyageurs</span>
+          </li>
+          <li class="standing-item">
+            <span style="color:var(--terracotta); font-size:1.2rem;">✦</span> <span style="color:var(--ink);">Optimisation tarifaire (Revenus +)</span>
+          </li>
+          <li class="standing-item">
+            <span style="color:var(--terracotta); font-size:1.2rem;">✦</span> <span style="color:var(--ink);">Préparation hôtelière & Ménage</span>
+          </li>
+          <li class="standing-item">
+            <span style="color:var(--terracotta); font-size:1.2rem;">✦</span> <span style="color:var(--ink);">Linge de maison haut de gamme</span>
+          </li>
+          <li class="standing-item">
+            <span style="color:var(--terracotta); font-size:1.2rem;">✦</span> <span style="color:var(--ink);">Arrivée autonome ou personnalisée</span>
+          </li>
+          <li class="standing-item">
+            <span style="color:var(--terracotta); font-size:1.2rem;">✦</span> <span style="color:var(--ink);">Assistance Voyageurs (Urgences)</span>
+          </li>
+        </ul>
+        
+        <div style="text-align:center; margin-top:50px;">
+          <a class="btn-primary" href="offre-sur-mesure.html">Demander une étude</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-compact">
+      <div class="footer-info">
+        <strong>Terra Occitana</strong><br>
+        Conciergerie Privée & Intendance • Vallée de l’Hérault<br>
+        06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
+      </div>
+      <div class="footer-links">
+        <a href="#">Mentions Légales</a>
+        <span class="sep">•</span>
+        <a href="#">Confidentialité</a>
+        <span class="sep">•</span>
+        <a href="#">CGV</a>
+      </div>
+      <div class="copyright">© 2025 — Terra Occitana</div>
     </div>
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    // Année auto (petit confort)
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

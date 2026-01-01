@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L'Expérience Voyageurs • Terra Occitana</title>
+  <meta name="description" content="Découvrez nos standards hôteliers et notre conciergerie privée pour des moments d'exception." />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ==========================
+       STYLE SPÉCIFIQUE : EXPÉRIENCE (STANDARDS & SIGNATURE)
+       ========================== */
+
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 30px rgba(184, 107, 75, 0.08);
+    }
+    .header-inner { padding: 10px 32px; }
+    .brand-logo { height: 60px; }
+
+    /* --- BANDEAU TITRE --- */
+    .page-header-luxe {
+      background: radial-gradient(circle at 50% 0%, #fff8f0 0%, #fffdfa 60%, #ffffff 100%);
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .header-kicker {
+      text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem;
+      color: var(--terracotta); font-weight: 600; margin-bottom: 15px; display: block;
+    }
+    .header-title {
+      font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--ink);
+      line-height: 1.1; margin: 0 0 20px;
+    }
+    .header-subtitle {
+      font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--ink); opacity: 0.8;
+      max-width: 650px; margin: 0 auto; line-height: 1.6;
+    }
+
+    /* --- SECTION STANDARDS (GRID) --- */
+    .standards-section {
+      padding: 60px 0 100px;
+      background: #ffffff;
+    }
+    .standards-intro {
+      text-align: center; max-width: 800px; margin: 0 auto 60px;
+    }
+    .standards-intro h2 { font-size: 2.2rem; margin-bottom: 15px; font-family: 'Cormorant Garamond', serif;}
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .std-card {
+      background: #fffaf7; /* Fond très léger */
+      padding: 40px;
+      border-left: 4px solid var(--terracotta);
+      border-radius: 2px;
+      transition: transform 0.3s ease;
+    }
+    .std-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+    .std-icon { color: var(--terracotta); margin-bottom: 20px; }
+    .std-title {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem;
+      color: var(--ink); margin: 0 0 10px; font-weight: 600;
+    }
+    .std-desc { font-size: 0.95rem; opacity: 0.8; line-height: 1.6; }
+
+    /* --- SECTION SIGNATURE (Le "Wow" effect) --- */
+    .signature-section {
+      background: var(--ink); /* Fond sombre pour le luxe */
+      color: #ffffff;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Un peu de déco subtile en arrière plan */
+    .signature-section::before {
+      content: "✦"; position: absolute; top: -20px; left: 50%; transform: translateX(-50%);
+      font-size: 10rem; color: rgba(255,255,255,0.03);
+    }
+
+    .signature-container {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    
+    .sig-content h2 {
+      font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: #fff;
+      margin-bottom: 20px;
+    }
+    .sig-subtitle {
+      color: var(--terracotta); text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.9rem;
+      margin-bottom: 10px; display: block; font-weight: 600;
+    }
+    .sig-text {
+      font-size: 1.05rem; line-height: 1.7; opacity: 0.9; margin-bottom: 30px; color: #e0e0e0;
+    }
+
+    .sig-list {
+      list-style: none; padding: 0; margin: 0;
+    }
+    .sig-list li {
+      padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; gap: 15px; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem;
+    }
+    .sig-list li:last-child { border-bottom: none; }
+    .sig-icon { color: var(--terracotta); font-size: 1rem; }
+
+    .sig-image-box {
+      border: 1px solid rgba(255,255,255,0.1); padding: 20px;
+      background: rgba(255,255,255,0.02);
+      text-align: center;
+    }
+    .sig-quote {
+      font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem;
+      color: #fff; margin-bottom: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .catalog-grid { grid-template-columns: 1fr; }
+      .signature-container { grid-template-columns: 1fr; }
+      .header-title { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <a href="index.html" class="brand-link">
+          <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
+        </a>
+      </div>
+      <nav class="menu" id="menu">
+        <a href="proprietaires.html">Propriétaires</a>
+        <a href="voyageurs.html" class="active" style="color:var(--terracotta);">L'Expérience</a>
+        <a href="offre-sur-mesure.html">Estimer mes revenus</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-header-luxe">
+    <div class="container">
+      <span class="header-kicker">Hospitalité Haute Couture</span>
+      <h1 class="header-title">Au-delà du simple séjour</h1>
+      <p class="header-subtitle">
+        Nous ne louons pas seulement des murs. Nous orchestrons une expérience de vie.<br>
+        Voici les standards d'excellence appliqués à chacune de nos propriétés.
+      </p>
+    </div>
+  </section>
+
+  <section class="standards-section">
+    <div class="container">
+      
+      <div class="standards-intro">
+        <h2>La Signature "Terra Occitana"</h2>
+        <p class="luxe-paragraph">
+          Pour garantir le standing de votre bien et des avis élogieux, nous appliquons systématiquement ce protocole de qualité hôtelière. C'est notre engagement envers vos locataires.
+        </p>
+      </div>
+
+      <div class="catalog-grid">
+
+        <article class="std-card">
+          <div class="std-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 18h18v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2Z"/><path d="M14 9V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v5"/><path d="M10 9h4"/></svg>
+          </div>
+          <h3 class="std-title">Cuisine "Prête-à-Vivre"</h3>
+          <p class="std-desc">
+            Le confort immédiat. Chaque cuisine est équipée du fond d'épicerie essentiel (huile d'olive, vinaigre, sel, poivre, épices) et d'un kit d'entretien neuf.
+          </p>
+        </article>
+
+        <article class="std-card">
+          <div class="std-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 20v-6h6v6"/><path d="M4 20h16"/><path d="M4 14h16"/><path d="M4 8h16"/></svg>
+          </div>
+          <h3 class="std-title">Linge Hôtelier</h3>
+          <p class="std-desc">
+            Blanchisserie professionnelle uniquement. Draps frais, lits dressés au carré, serviettes moelleuses et tapis de bain pour une sensation 5 étoiles dès l'arrivée.
+          </p>
+        </article>
+
+        <article class="std-card">
+          <div class="std-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8Z"/><path d="M6 1v3"/><path d="M10 1v3"/></svg>
+          </div>
+          <h3 class="std-title">Le Plateau d'Accueil</h3>
+          <p class="std-desc">
+            La touche de bienvenue. Nécessaire à café de qualité, sélection de thés, bouteille d'eau fraîche et produits d'accueil salle de bain.
+          </p>
+        </article>
+
+        <article class="std-card">
+          <div class="std-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="std-title">Hygiène & Contrôle</h3>
+          <p class="std-desc">
+            Au-delà du ménage, nous procédons à une inspection de "Mise en scène" avant chaque arrivée (lumières, aération, vérification technique).
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="signature-section">
+    <div class="container">
+      <div class="signature-container">
+        
+        <div class="sig-content">
+          <span class="sig-subtitle">Service Conciergerie Privée</span>
+          <h2>Moments d'Exception</h2>
+          <p class="sig-text">
+            Parce que vos locataires viennent parfois célébrer les instants les plus précieux de leur vie, 
+            nous nous transformons en créateurs de souvenirs. Une conciergerie intime et discrète pour les moments qui comptent.
+          </p>
+          
+          <ul class="sig-list">
+            <li><span class="sig-icon">✦</span> Demandes en mariage & Fiançailles</li>
+            <li><span class="sig-icon">✦</span> Anniversaires de mariage en toute intimité</li>
+            <li><span class="sig-icon">✦</span> Réservations VIP (Restaurants & Taxis)</li>
+            <li><span class="sig-icon">✦</span> Mises en scène romantiques (Fleurs, Champagne)</li>
+          </ul>
+        </div>
+
+        <div class="sig-image-box">
+          <p class="sig-quote">
+            "Le vrai luxe, c'est de n'avoir à se soucier de rien, <br>surtout lors des moments magiques."
+          </p>
+          <div style="margin-top:30px;">
+            <a href="contact.html" class="btn-primary" style="background:transparent; border:1px solid #fff; color:#fff;">Nous contacter</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Terra Occitana</strong></p>
+      <p>© <span id="year"></span> — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

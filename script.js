@@ -10,18 +10,16 @@
   burger.addEventListener("click", () => {
     const isOpen = menu.classList.toggle("is-open");
     burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    
-    // Animation simple du burger (optionnel si CSS géré)
     burger.classList.toggle("toggle"); 
   });
 
   // Ferme le menu quand on clique sur un lien
   menu.addEventListener("click", (e) => {
-    const link = e.target.closest("a");
-    if (!link) return;
-
-    menu.classList.remove("is-open");
-    burger.setAttribute("aria-expanded", "false");
+    if (e.target.closest("a")) {
+      menu.classList.remove("is-open");
+      burger.setAttribute("aria-expanded", "false");
+      burger.classList.remove("toggle");
+    }
   });
 })();
 
@@ -36,7 +34,7 @@
   if (!slides.length) return;
 
   let currentIndex = 0;
-  const DURATION = 5500;
+  const DURATION = 6000;
   let timer;
 
   function updateSlides() {
@@ -58,7 +56,7 @@
     clearInterval(timer);
   }
 
-  // Pause au survol
+  // Arrêt au survol pour lire le texte tranquille
   slider.addEventListener("mouseenter", stop);
   slider.addEventListener("mouseleave", start);
 
@@ -67,7 +65,7 @@
 })();
 
 /* ===============================
-   SCROLL REVEAL (ANIMATION APPARITION)
+   SCROLL REVEAL (APPARITION)
 ================================ */
 (function () {
   const revealElements = document.querySelectorAll(".reveal");
@@ -76,14 +74,12 @@
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
-        // Une fois apparu, on arrête d'observer (pour ne pas rejouer l'anim)
         observer.unobserve(entry.target);
       }
     });
   }, {
-    root: null,
-    threshold: 0.15, // Déclenche quand 15% de l'élément est visible
-    rootMargin: "0px 0px -50px 0px"
+    threshold: 0.1,
+    rootMargin: "0px 0px -40px 0px"
   });
 
   revealElements.forEach(el => revealObserver.observe(el));

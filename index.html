@@ -2,10 +2,12 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Terra Occitana — Conciergerie</title>
+  <title>Terra Occitana — Conciergerie Privée</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Terra Occitana, conciergerie privée entre Vallée de l’Hérault et Littoral. Intendance, accueil voyageurs et services sur mesure." />
-
+  <meta name="description" content="Terra Occitana, conciergerie privée. Gestion locative haut de gamme et intendance entre Vallée de l’Hérault et Littoral." />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -13,188 +15,180 @@
 
 <header class="site-header">
   <div class="header-inner">
-
     <div class="brand">
-      <a href="index.html" class="brand-link" aria-label="Terra Occitana - Accueil">
-        <img src="images/logo.jpg" alt="Conciergerie Terra Occitana" class="brand-logo">
+      <a href="index.html" class="brand-link" aria-label="Accueil">
+        <img src="images/logo.jpg" alt="Terra Occitana Logo" class="brand-logo">
       </a>
     </div>
 
-    <nav class="menu" id="menu" aria-label="Navigation principale">
+    <nav class="menu" id="menu">
+      <a href="proprietaires.html">Propriétaires</a>
+      <a href="voyageurs.html">L'Expérience</a>
+      <a href="offre-sur-mesure.html" style="color:var(--terracotta);">Estimer mes revenus</a>
       <a href="contact.html">Contact</a>
-      <a href="proprietaires.html">Propriétaire</a>
-      <a href="services.html">Nos services</a>
-      <a href="voyageurs.html">Expériences voyageurs</a>
     </nav>
 
-    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+    <button class="burger" id="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
-
   </div>
 </header>
 
 <main id="accueil">
 
-<section class="hero-banner" aria-label="Bannière principale">
+<section class="hero-banner">
   <div class="hero-slider" data-hero-slider>
-
     <div class="hero-slide is-active" style="background-image:url('images/hero-salagou.jpg')"></div>
     <div class="hero-slide" style="background-image:url('images/hero-littoral-mediterranee.jpg')"></div>
     <div class="hero-slide" style="background-image:url('images/hero-port-marseillan.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('images/hero-village-occitan.jpg')"></div>
-
     <div class="hero-overlay"></div>
 
     <div class="container hero-content reveal">
-      <p class="hero-kicker">
-        Conciergerie privée • Vallée de l’Hérault • Littoral
-      </p>
-
+      <p class="hero-kicker-white">Vallée de l’Hérault • Littoral</p>
       <h1 class="hero-headline">
         Terra Occitana
-        <span>
-          Une présence locale, discrète et exigeante<br>
-          pour votre propriété.
-        </span>
+        <span>Une présence locale, discrète et exigeante pour votre propriété.</span>
       </h1>
+      <div style="margin-top: 30px;">
+        <a href="proprietaires.html" class="btn-primary">Découvrir notre offre</a>
+      </div>
     </div>
-
   </div>
 </section>
 
-<section class="section soft">
+<section class="section bg-white">
   <div class="container narrow reveal">
-
-    <h2>Un partenaire local</h2>
-
-    <p class="luxe-paragraph">
-      Chaque propriété a son histoire.<br>
-      Chaque propriétaire ses exigences.
+    <h2 style="color: var(--vin-olive);">Un partenaire de confiance</h2>
+    <div class="separator"></div> <p class="luxe-paragraph">
+      Chaque propriété a son histoire. Chaque propriétaire ses exigences.
+      Loin des plateformes impersonnelles, nous assurons une continuité sereine 
+      avec un interlocuteur unique, présent sur le terrain.
     </p>
-
-    <p class="luxe-paragraph">
-      Nous assurons une continuité sereine, avec un interlocuteur unique,
-      présent sur le terrain.
+    <p style="margin-top:24px; font-family:'Cormorant Garamond'; font-size:1.4rem; color:var(--terracotta); font-style:italic;">
+      "Votre tranquillité est notre signature."
     </p>
-
-    <p class="transition">
-      Une relation de confiance commence par une présence constante.
-    </p>
-
   </div>
 </section>
 
-<section class="section services-premium" id="services">
-  <div class="container">
-
-    <div class="premium-head reveal">
-      <h2 class="premium-title">NOS SERVICES</h2>
+<section class="section bg-cream">
+  <div class="container reveal">
+    
+    <div style="text-align:center; margin-bottom:40px;">
+      <span class="header-kicker">Notre Histoire</span>
+      <h2 style="color: var(--vin-olive);">Une aventure familiale et locale</h2>
+      <div class="separator"></div>
     </div>
 
-    <div class="premium-grid reveal">
-
-      <article class="premium-item">
-        <div class="premium-num">1.</div>
-        <h3>Accueil & départ</h3>
-        <p>
-          Arrivées fluides, départs impeccables.
-          Accueil personnalisé, présentation du lieu et check-out soigné.
+    <div class="duo-grid">
+      <div>
+        <h3>L'Alliance de la Rigueur et du Cœur</h3>
+        <p class="luxe-paragraph" style="text-align:left;">
+          Terra Occitana, c'est l'histoire d'un coup de foudre pour cette région. Installés ici depuis 2018, nous avons décidé de mettre notre énergie au service des propriétaires qui souhaitent valoriser leur patrimoine sans contrainte.
         </p>
-      </article>
-
-      <article class="premium-item">
-        <div class="premium-num">2.</div>
-        <h3>Intendance</h3>
-        <p>
-          Votre propriété, parfaitement tenue.
-          Passages réguliers, contrôles qualité, coordination et suivi discret.
+        <p class="luxe-paragraph" style="text-align:left;">
+          <strong>Une structure à taille humaine.</strong><br>
+          Contrairement aux grandes agences, nous restons une entreprise familiale. Votre bien n'est pas un numéro. Notre force ? Un duo complémentaire : rigueur technique d'un côté, sens de l'accueil et du détail de l'autre.
         </p>
-      </article>
+        <div class="duo-signature">Les Fondateurs</div>
+      </div>
 
-      <article class="premium-item">
-        <div class="premium-num">3.</div>
-        <h3>Services ponctuels</h3>
-        <p>
-          À la demande, sans compromis.
-          Dépannage, courses, linge, mise en place… avec la même exigence.
-        </p>
-      </article>
-
+      <div style="position: relative;">
+        <div style="position: absolute; top: 15px; left: 15px; width: 100%; height: 100%; border: 1px solid var(--terracotta); z-index: 1;"></div>
+        <div style="position: relative; z-index: 2; width: 100%; height: 400px; background: #ddd; overflow: hidden;">
+          <img src="images/duo-portrait.jpg" alt="Couple fondateurs Terra Occitana" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+      </div>
     </div>
 
-    <div class="premium-signature-block reveal">
-      <h4>Prestations signature</h4>
-      <ul>
-        <li>Anniversaire de mariage : mise en scène, bougies, décoration</li>
-        <li>Demande en mariage : ambiance, pétales, message personnalisé</li>
-        <li>Panier de produits locaux : olives, vins, douceurs du Sud</li>
-        <li>Champagne & petites attentions</li>
-      </ul>
-    </div>
-
-    <div class="premium-cta reveal">
-      <a href="services.html" class="btn-secondary">Voir le détail des services</a>
+    <div style="margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; text-align: center;">
+      <div>
+        <span style="font-size: 1.5rem; color: var(--terracotta);">✦</span>
+        <h4 style="color: var(--vin-olive);">Gestion Familiale</h4>
+        <p style="font-size: 0.9rem; opacity: 0.8;">Un interlocuteur dédié qui connaît votre maison par cœur.</p>
+      </div>
+      <div>
+        <span style="font-size: 1.5rem; color: var(--terracotta);">✦</span>
+        <h4 style="color: var(--vin-olive);">Ancrage Local</h4>
+        <p style="font-size: 0.9rem; opacity: 0.8;">Nous vivons ici. Nous intervenons rapidement.</p>
+      </div>
+      <div>
+        <span style="font-size: 1.5rem; color: var(--terracotta);">✦</span>
+        <h4 style="color: var(--vin-olive);">Transparence</h4>
+        <p style="font-size: 0.9rem; opacity: 0.8;">Communication fluide et tarifs clairs.</p>
+      </div>
     </div>
 
   </div>
 </section>
 
-<section class="section soft">
-  <div class="container hero-grid reveal">
-
-    <div class="hero-text">
-      <h2>Une expérience fluide</h2>
-
-      <p class="lead">
-        Des arrivées simples.<br>
-        Un logement impeccable.<br>
-        Une présence rassurante, sans intrusion.
-      </p>
-
-      <a href="voyageurs.html" class="btn-secondary">
-        Découvrir l’expérience voyageurs
-      </a>
+<section class="section bg-sand">
+  <div class="container reveal">
+    
+    <div style="text-align:center; margin-bottom: 50px;">
+      <h2 style="color: var(--vin-olive);">NOS PILIERS</h2>
+      <div class="separator" style="background:var(--terracotta);"></div>
     </div>
 
-    <div class="hero-media hero-media--alt"></div>
+    <div class="piliers-grid">
+      <article class="pilier-card">
+        <div class="pilier-number">1.</div>
+        <h3 class="pilier-title">Accueil & Départ</h3>
+        <p class="pilier-text">Arrivées fluides, check-out soigné. Nous sommes le premier sourire qui accueille vos hôtes.</p>
+      </article>
+      <article class="pilier-card">
+        <div class="pilier-number">2.</div>
+        <h3 class="pilier-title">Intendance</h3>
+        <p class="pilier-text">Vigilance intempéries, suivi des prestataires. Votre maison vit, même en votre absence.</p>
+      </article>
+      <article class="pilier-card">
+        <div class="pilier-number">3.</div>
+        <h3 class="pilier-title">Mise en beauté</h3>
+        <p class="pilier-text">Un standard hôtelier strict. Linge blanchisserie, propreté 5 étoiles et petites attentions.</p>
+      </article>
+    </div>
+
+    <div style="text-align:center; margin-top: 50px;">
+      <a href="proprietaires.html" class="btn-secondary-olive">VOIR LE DÉTAIL DES SERVICES</a>
+    </div>
 
   </div>
 </section>
 
-<section class="section">
+<section class="section bg-white">
   <div class="container narrow reveal">
-
-    <h2>Un projet, une question</h2>
-
-    <p class="lead">
+    <h2 style="color: var(--vin-olive);">Un projet ? Une question ?</h2>
+    <div class="separator"></div>
+    <p class="luxe-paragraph">
       Que votre bien soit situé dans les terres ou en bord de mer,
-      nous prenons le temps de vous répondre.
+      nous prenons le temps de vous répondre personnellement.
     </p>
-
-    <div class="contact-actions">
-      <a href="contact.html" class="btn-primary">Accéder au contact</a>
-      <a href="mailto:conciergerie.terraoccitana@gmail.com" class="btn-secondary">
-        Écrire directement
-      </a>
+    <div style="margin-top: 30px;">
+      <a href="contact.html" class="btn-primary">Discuter de mon bien</a>
     </div>
-
-    <p class="reassurance">
-      Nous vous répondons personnellement.
-    </p>
-
   </div>
 </section>
 
 </main>
 
 <footer>
-  <div class="container footer">
-    <p><strong>Terra Occitana</strong></p>
-    <p>Conciergerie privée</p>
-    <p>Vallée de l’Hérault — Littoral Agathois</p>
-    <p>06 72 44 88 65</p>
-    <p>conciergerie.terraoccitana@gmail.com</p>
+  <div class="container footer-compact">
+    
+    <div class="footer-info">
+      <strong>Terra Occitana</strong><br>
+      Conciergerie Privée & Intendance • Vallée de l’Hérault<br>
+      06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
+    </div>
+
+    <div class="footer-links">
+      <a href="#">Mentions Légales</a>
+      <span class="sep">•</span>
+      <a href="#">Confidentialité</a>
+      <span class="sep">•</span>
+      <a href="#">CGV</a>
+    </div>
+
+    <div class="copyright">© 2025 — Terra Occitana</div>
+    
   </div>
 </footer>
 

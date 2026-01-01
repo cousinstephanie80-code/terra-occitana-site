@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact & Rendez-vous • Terra Occitana</title>
+  <meta name="description" content="Contactez Terra Occitana pour la gestion de votre bien. Formulaire, téléphone ou prise de rendez-vous en ligne." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <a href="index.html" class="brand-link"><img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo"></a>
+      </div>
+      <nav class="menu" id="menu">
+        <a href="proprietaires.html">Propriétaires</a>
+        <a href="voyageurs.html">Voyageurs</a>
+        <a href="offre-sur-mesure.html" style="color:var(--terracotta);">Estimer mes revenus</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-header-luxe">
+    <div class="container">
+      <span class="header-kicker">Échangeons sur votre projet</span>
+      <h1 class="header-title">Nous sommes à votre écoute</h1>
+      <p class="header-subtitle">
+        Une question rapide ? Un projet à nous confier ?<br>
+        Choisissez le mode de communication qui vous convient le mieux.
+      </p>
+    </div>
+  </section>
+
+  <section class="contact-split-section">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <div class="direct-info-box">
+          <div class="info-item">
+            <span class="info-label">Par Téléphone</span>
+            <div class="info-value">06 72 44 88 65</div>
+            <div class="info-sub">Disponibles 7j/7 de 9h à 21h</div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-label">Par Email</span>
+            <div class="info-value">conciergerie.terraoccitana@gmail.com</div>
+            <div class="info-sub">Réponse sous 24h garantie</div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-label">Zone d'intervention</span>
+            <div class="info-value">Vallée de l'Hérault & Littoral</div>
+            <div class="info-sub">Agde, Marseillan, Sète, Lac du Salagou...</div>
+          </div>
+
+          <div style="margin-top:40px; padding-top:20px; border-top:1px solid #eee;">
+            <p style="margin-bottom:10px; font-weight:500;">Vous préférez un échange de vive voix planifié ?</p>
+            <a href="#rendez-vous" class="btn-secondary" style="width:100%;">Réserver un appel (30 min) ↓</a>
+          </div>
+        </div>
+
+        <div class="form-box-clean">
+          <h3 style="margin-bottom:20px; font-size:1.5rem;">Envoyer un message</h3>
+          <form action="mailto:conciergerie.terraoccitana@gmail.com" method="POST" enctype="text/plain">
+            
+            <div style="margin-bottom:20px;">
+              <label style="display:block; font-weight:600; font-size:0.9rem; margin-bottom:5px;">Vos Coordonnées</label>
+              <input type="text" name="Nom_Prenom" placeholder="Nom & Prénom" required style="width:100%; padding:14px; border:1px solid #ddd; background:#fdfbf9;">
+            </div>
+
+            <div style="margin-bottom:20px;">
+              <label style="display:block; font-weight:600; font-size:0.9rem; margin-bottom:5px;">Email ou Téléphone</label>
+              <input type="text" name="Contact" placeholder="Pour vous recontacter" required style="width:100%; padding:14px; border:1px solid #ddd; background:#fdfbf9;">
+            </div>
+
+            <div style="margin-bottom:20px;">
+              <label style="display:block; font-weight:600; font-size:0.9rem; margin-bottom:5px;">Votre demande</label>
+              <textarea name="Message" rows="5" placeholder="Parlez-nous de votre bien..." required style="width:100%; padding:14px; border:1px solid #ddd; background:#fdfbf9; font-family:inherit;"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width:100%;">Envoyer le message</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="rdv-section-full" id="rendez-vous">
+    <div class="container">
+      
+      <div class="rdv-layout">
+        <div class="rdv-instructions">
+          <div style="text-transform:uppercase; letter-spacing:0.1em; color:var(--terracotta); font-weight:600; margin-bottom:10px;">
+            Espace Propriétaires
+          </div>
+          <h3>Réserver un appel découverte</h3>
+          
+          <p class="luxe-paragraph">
+            <strong>Cher(e) propriétaire,</strong><br>
+            Vous êtes sur le point de réserver un échange privilégié de 30 minutes avec nous. 
+            Ce premier contact est essentiel pour cerner l'âme de votre propriété et comprendre vos attentes.
+          </p>
+          
+          <p style="margin-top:20px; font-weight:600;">Pour que cet échange soit fructueux :</p>
+          
+          <ol class="rdv-list">
+            <li>
+              <strong>Le bon moment :</strong> Privilégiez un environnement calme où nous pourrons discuter sereinement de votre projet.
+            </li>
+            <li>
+              <strong>Vos éléments clés :</strong> Si vous disposez déjà de données (historique, lien d'annonce...), gardez-les à portée de main.
+            </li>
+            <li>
+              <strong>Transparence :</strong> Cet appel vise à valider notre future collaboration. Il ne s'agit pas d'une consultation juridique ou fiscale.
+            </li>
+          </ol>
+          
+          <p style="margin-top:20px; font-style:italic; color:var(--terracotta);">
+            Bien à vous,<br>La conciergerie Terra Occitana
+          </p>
+        </div>
+
+        <div class="calendar-wrapper">
+          <div style="padding:20px;">
+            <p style="color:#999; margin-bottom:15px;">Chargement du calendrier...</p>
+            <a href="https://calendly.com" target="_blank" class="btn-primary">Prendre rendez-vous</a>
+          </div>
+
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Terra Occitana</strong></p>
+      <div class="footer-links">
+        <a href="#">Mentions Légales</a>
+        <a href="#">Politique de Confidentialité</a>
+      </div>
+      <p style="margin-top:20px;">© 2025 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
