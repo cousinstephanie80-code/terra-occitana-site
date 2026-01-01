@@ -3,131 +3,256 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>L'Expérience Voyageurs • Terra Occitana</title>
-  <meta name="description" content="Découvrez nos standards hôteliers et notre conciergerie privée pour des moments d'exception." />
+  <title>L'Expérience • Terra Occitana</title>
+  <meta name="description" content="Une expérience fluide et sereine : accueil, séjour, respect des lieux. Une conciergerie familiale, discrète et locale." />
 
   <link rel="stylesheet" href="styles.css" />
 
   <style>
     /* ==========================
-       STYLE SPÉCIFIQUE : EXPÉRIENCE (STANDARDS & SIGNATURE)
+       VOYAGEURS — VERSION ALIGNÉE INDEX / PROPRIÉTAIRES
+       (sobriété, chaleur, luxe discret)
        ========================== */
 
-    .site-header {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 30px rgba(184, 107, 75, 0.08);
+    /* Petit ajustement logo (cohérent avec propriétaires) */
+    .brand-logo{ height: 60px; }
+    @media (max-width: 900px){
+      .brand-logo{ height: 54px; }
     }
-    .header-inner { padding: 10px 32px; }
-    .brand-logo { height: 60px; }
 
-    /* --- BANDEAU TITRE --- */
-    .page-header-luxe {
-      background: radial-gradient(circle at 50% 0%, #fff8f0 0%, #fffdfa 60%, #ffffff 100%);
-      padding: 80px 0 60px;
+    /* Bandeau haut (même langage que propriétaires) */
+    .experience-hero{
+      position: relative;
+      padding: 90px 0 70px;
+      background:
+        radial-gradient(1200px 500px at 50% -50px, rgba(184,107,75,0.16) 0%, rgba(184,107,75,0) 60%),
+        radial-gradient(900px 380px at 15% 20%, rgba(85,107,47,0.10) 0%, rgba(85,107,47,0) 55%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg-cream) 60%, #ffffff 100%);
+      overflow: hidden;
       text-align: center;
     }
-    .header-kicker {
-      text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem;
-      color: var(--terracotta); font-weight: 600; margin-bottom: 15px; display: block;
-    }
-    .header-title {
-      font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--ink);
-      line-height: 1.1; margin: 0 0 20px;
-    }
-    .header-subtitle {
-      font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--ink); opacity: 0.8;
-      max-width: 650px; margin: 0 auto; line-height: 1.6;
+    .experience-hero::before{
+      content:"";
+      position:absolute;
+      inset:-60px -60px auto -60px;
+      height: 240px;
+      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.08), transparent);
+      transform: rotate(-6deg);
+      pointer-events:none;
+      opacity:.85;
     }
 
-    /* --- SECTION STANDARDS (GRID) --- */
-    .standards-section {
-      padding: 60px 0 100px;
-      background: #ffffff;
+    .experience-kicker{
+      display:inline-block;
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--terracotta);
+      margin-bottom: 14px;
     }
-    .standards-intro {
-      text-align: center; max-width: 800px; margin: 0 auto 60px;
+    .experience-title{
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      color: var(--vin-olive);
+      font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+      line-height: 1.08;
+      margin: 0 0 16px 0;
     }
-    .standards-intro h2 { font-size: 2.2rem; margin-bottom: 15px; font-family: 'Cormorant Garamond', serif;}
+    .experience-sub{
+      max-width: 860px;
+      margin: 0 auto;
+      font-size: clamp(1rem, 1.15vw, 1.15rem);
+      opacity: .86;
+      font-weight: 300;
+      line-height: 1.75;
+    }
 
-    .catalog-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
+    /* “Livre” de l’expérience */
+    .experience-book{
+      background: var(--bg-white);
+      padding: 70px 0;
     }
-
-    .std-card {
-      background: #fffaf7; /* Fond très léger */
-      padding: 40px;
-      border-left: 4px solid var(--terracotta);
-      border-radius: 2px;
-      transition: transform 0.3s ease;
-    }
-    .std-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-
-    .std-icon { color: var(--terracotta); margin-bottom: 20px; }
-    .std-title {
-      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem;
-      color: var(--ink); margin: 0 0 10px; font-weight: 600;
-    }
-    .std-desc { font-size: 0.95rem; opacity: 0.8; line-height: 1.6; }
-
-    /* --- SECTION SIGNATURE (Le "Wow" effect) --- */
-    .signature-section {
-      background: var(--ink); /* Fond sombre pour le luxe */
-      color: #ffffff;
-      padding: 100px 0;
+    .book-card{
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--bg-cream);
+      border: 1px solid rgba(184,107,75,0.14);
+      padding: 46px;
       position: relative;
       overflow: hidden;
     }
-    /* Un peu de déco subtile en arrière plan */
-    .signature-section::before {
-      content: "✦"; position: absolute; top: -20px; left: 50%; transform: translateX(-50%);
-      font-size: 10rem; color: rgba(255,255,255,0.03);
+    .book-card::after{
+      content:"";
+      position:absolute;
+      inset:auto -40px -60px -40px;
+      height: 140px;
+      background: radial-gradient(closest-side, rgba(212,175,55,0.09), transparent 70%);
+      pointer-events:none;
     }
 
-    .signature-container {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    .book-head{
+      text-align: center;
+      margin-bottom: 34px;
     }
-    
-    .sig-content h2 {
-      font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: #fff;
-      margin-bottom: 20px;
+    .book-head h2{
+      margin: 0 0 10px 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      color: var(--vin-olive);
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
+      line-height: 1.15;
     }
-    .sig-subtitle {
-      color: var(--terracotta); text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.9rem;
-      margin-bottom: 10px; display: block; font-weight: 600;
+    .book-sep{
+      width: 64px;
+      height: 2px;
+      margin: 16px auto 18px auto;
+      background: var(--terracotta);
     }
-    .sig-text {
-      font-size: 1.05rem; line-height: 1.7; opacity: 0.9; margin-bottom: 30px; color: #e0e0e0;
+    .book-intro{
+      margin: 0 auto;
+      max-width: 820px;
+      opacity: .86;
+      font-weight: 300;
+      line-height: 1.8;
     }
 
-    .sig-list {
-      list-style: none; padding: 0; margin: 0;
+    .book-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px 36px;
+      margin-top: 30px;
     }
-    .sig-list li {
-      padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
-      display: flex; align-items: center; gap: 15px; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem;
-    }
-    .sig-list li:last-child { border-bottom: none; }
-    .sig-icon { color: var(--terracotta); font-size: 1rem; }
 
-    .sig-image-box {
-      border: 1px solid rgba(255,255,255,0.1); padding: 20px;
-      background: rgba(255,255,255,0.02);
+    .exp-item{
+      background: #fff;
+      border: 1px solid rgba(184,107,75,0.12);
+      padding: 26px 22px;
+      position: relative;
+      overflow: hidden;
+    }
+    .exp-item::before{
+      content:"";
+      position:absolute;
+      inset: 0 auto 0 0;
+      width: 3px;
+      background: linear-gradient(180deg, rgba(184,107,75,0.92), rgba(184,107,75,0.18));
+      opacity: .95;
+    }
+
+    .exp-title{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      margin: 0 0 10px 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.45rem;
+      color: var(--terracotta);
+      line-height: 1.1;
+    }
+
+    .exp-icon{
+      width: 18px;
+      height: 18px;
+      border: 1px solid rgba(184,107,75,0.35);
+      border-radius: 999px;
+      position: relative;
+      flex: 0 0 18px;
+    }
+    .exp-icon::after{
+      content:"";
+      position:absolute;
+      inset: 4px;
+      border-radius: 999px;
+      background: rgba(184,107,75,0.18);
+    }
+
+    .exp-phrase{
+      margin: 0 0 10px 0;
+      font-weight: 300;
+      opacity: .88;
+      line-height: 1.75;
+    }
+
+    .exp-bullets{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .exp-bullets li{
+      position: relative;
+      padding-left: 16px;
+      margin: 8px 0;
+      font-weight: 300;
+      opacity: .84;
+      line-height: 1.7;
+    }
+    .exp-bullets li::before{
+      content:"✦";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: rgba(184,107,75,0.9);
+      font-size: .9rem;
+      line-height: 1.4;
+    }
+
+    /* Micro-bloc “ancrage local” (très discret) */
+    .local-touch{
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(184,107,75,0.12);
       text-align: center;
     }
-    .sig-quote {
-      font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem;
-      color: #fff; margin-bottom: 20px;
+    .local-touch p{
+      margin: 0 auto;
+      max-width: 820px;
+      font-weight: 300;
+      opacity: .82;
+      line-height: 1.8;
+    }
+    .local-touch em{
+      color: var(--terracotta);
+      font-style: italic;
+      opacity: .95;
+    }
+
+    /* Conclusion + CTA */
+    .experience-close{
+      background: var(--bg-sand);
+      padding: 72px 0;
+      text-align: center;
+    }
+    .close-title{
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      color: var(--vin-olive);
+      font-size: clamp(2rem, 3.2vw, 2.8rem);
+      margin: 0 0 12px 0;
+    }
+    .close-text{
+      max-width: 820px;
+      margin: 0 auto 26px auto;
+      font-weight: 300;
+      opacity: .84;
+      line-height: 1.85;
+    }
+    .close-note{
+      margin-top: 14px;
+      font-size: .92rem;
+      opacity: .62;
+      font-style: italic;
     }
 
     /* Responsive */
-    @media (max-width: 900px){
-      .catalog-grid { grid-template-columns: 1fr; }
-      .signature-container { grid-template-columns: 1fr; }
-      .header-title { font-size: 2.2rem; }
+    @media (max-width: 980px){
+      .book-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px){
+      .experience-hero{ padding: 82px 0 62px; }
+      .book-card{ padding: 32px 18px; }
+      .exp-item{ padding: 22px 16px; }
     }
   </style>
 </head>
@@ -141,126 +266,138 @@
           <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
         </a>
       </div>
+
       <nav class="menu" id="menu">
         <a href="proprietaires.html">Propriétaires</a>
         <a href="voyageurs.html" class="active" style="color:var(--terracotta);">L'Expérience</a>
         <a href="offre-sur-mesure.html">Estimer mes revenus</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <section class="page-header-luxe">
-    <div class="container">
-      <span class="header-kicker">Hospitalité Haute Couture</span>
-      <h1 class="header-title">Au-delà du simple séjour</h1>
-      <p class="header-subtitle">
-        Nous ne louons pas seulement des murs. Nous orchestrons une expérience de vie.<br>
-        Voici les standards d'excellence appliqués à chacune de nos propriétés.
-      </p>
-    </div>
-  </section>
+  <main>
 
-  <section class="standards-section">
-    <div class="container">
-      
-      <div class="standards-intro">
-        <h2>La Signature "Terra Occitana"</h2>
-        <p class="luxe-paragraph">
-          Pour garantir le standing de votre bien et des avis élogieux, nous appliquons systématiquement ce protocole de qualité hôtelière. C'est notre engagement envers vos locataires.
+    <!-- HERO -->
+    <section class="experience-hero">
+      <div class="container">
+        <span class="experience-kicker">Expérience voyageurs</span>
+        <h1 class="experience-title">Une arrivée simple. Un séjour serein.</h1>
+        <p class="experience-sub">
+          Nous assurons un accueil fluide et une présence discrète tout au long du séjour,
+          dans le respect du lieu et de son usage. Sans surenchère, sans protocole figé —
+          simplement ce qu’il faut pour que tout se déroule naturellement.
         </p>
       </div>
+    </section>
 
-      <div class="catalog-grid">
-
-        <article class="std-card">
-          <div class="std-icon">
-            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 18h18v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2Z"/><path d="M14 9V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v5"/><path d="M10 9h4"/></svg>
+    <!-- LIVRE DE L'EXPÉRIENCE -->
+    <section class="experience-book">
+      <div class="container">
+        <div class="book-card reveal">
+          <div class="book-head">
+            <h2>Ce que nous veillons à préserver, à chaque séjour</h2>
+            <div class="book-sep"></div>
+            <p class="book-intro">
+              Une expérience réussie tient souvent à des détails simples : clarté, soin, continuité.
+              Nous privilégions une organisation calme et une présence mesurée, pour le confort des voyageurs
+              et la sérénité des propriétaires.
+            </p>
           </div>
-          <h3 class="std-title">Cuisine "Prête-à-Vivre"</h3>
-          <p class="std-desc">
-            Le confort immédiat. Chaque cuisine est équipée du fond d'épicerie essentiel (huile d'olive, vinaigre, sel, poivre, épices) et d'un kit d'entretien neuf.
-          </p>
-        </article>
 
-        <article class="std-card">
-          <div class="std-icon">
-            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 20v-6h6v6"/><path d="M4 20h16"/><path d="M4 14h16"/><path d="M4 8h16"/></svg>
+          <div class="book-grid">
+
+            <article class="exp-item">
+              <h3 class="exp-title"><span class="exp-icon"></span> L’arrivée</h3>
+              <p class="exp-phrase">Une prise en charge claire, sans attente ni confusion.</p>
+              <ul class="exp-bullets">
+                <li>Accueil organisé avec ponctualité</li>
+                <li>Présentation simple du logement et de ses usages</li>
+              </ul>
+            </article>
+
+            <article class="exp-item">
+              <h3 class="exp-title"><span class="exp-icon"></span> Le séjour</h3>
+              <p class="exp-phrase">Un cadre soigné, entretenu avec régularité, pour un séjour sans accroc.</p>
+              <ul class="exp-bullets">
+                <li>Logement préparé avec attention</li>
+                <li>Présence discrète en cas de besoin</li>
+              </ul>
+            </article>
+
+            <article class="exp-item">
+              <h3 class="exp-title"><span class="exp-icon"></span> Le respect des lieux</h3>
+              <p class="exp-phrase">Chaque maison est considérée comme habitée à l’année.</p>
+              <ul class="exp-bullets">
+                <li>Vérifications visuelles essentielles</li>
+                <li>Signalement immédiat en cas d’anomalie</li>
+              </ul>
+            </article>
+
+            <article class="exp-item">
+              <h3 class="exp-title"><span class="exp-icon"></span> Le lien humain</h3>
+              <p class="exp-phrase">Une relation simple, cordiale, toujours respectueuse.</p>
+              <ul class="exp-bullets">
+                <li>Communication claire et apaisée</li>
+                <li>Disponibilité mesurée, jamais intrusive</li>
+              </ul>
+            </article>
+
           </div>
-          <h3 class="std-title">Linge Hôtelier</h3>
-          <p class="std-desc">
-            Blanchisserie professionnelle uniquement. Draps frais, lits dressés au carré, serviettes moelleuses et tapis de bain pour une sensation 5 étoiles dès l'arrivée.
-          </p>
-        </article>
 
-        <article class="std-card">
-          <div class="std-icon">
-            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8Z"/><path d="M6 1v3"/><path d="M10 1v3"/></svg>
+          <!-- Micro mention (très fine) -->
+          <div class="local-touch">
+            <p>
+              Et lorsque le séjour s’y prête, notre ancrage local permet aussi d’orienter vers des adresses de confiance
+              ou de faciliter certaines réservations, <em>toujours avec mesure</em>.
+            </p>
           </div>
-          <h3 class="std-title">Le Plateau d'Accueil</h3>
-          <p class="std-desc">
-            La touche de bienvenue. Nécessaire à café de qualité, sélection de thés, bouteille d'eau fraîche et produits d'accueil salle de bain.
-          </p>
-        </article>
 
-        <article class="std-card">
-          <div class="std-icon">
-            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 class="std-title">Hygiène & Contrôle</h3>
-          <p class="std-desc">
-            Au-delà du ménage, nous procédons à une inspection de "Mise en scène" avant chaque arrivée (lumières, aération, vérification technique).
-          </p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="signature-section">
-    <div class="container">
-      <div class="signature-container">
-        
-        <div class="sig-content">
-          <span class="sig-subtitle">Service Conciergerie Privée</span>
-          <h2>Moments d'Exception</h2>
-          <p class="sig-text">
-            Parce que vos locataires viennent parfois célébrer les instants les plus précieux de leur vie, 
-            nous nous transformons en créateurs de souvenirs. Une conciergerie intime et discrète pour les moments qui comptent.
-          </p>
-          
-          <ul class="sig-list">
-            <li><span class="sig-icon">✦</span> Demandes en mariage & Fiançailles</li>
-            <li><span class="sig-icon">✦</span> Anniversaires de mariage en toute intimité</li>
-            <li><span class="sig-icon">✦</span> Réservations VIP (Restaurants & Taxis)</li>
-            <li><span class="sig-icon">✦</span> Mises en scène romantiques (Fleurs, Champagne)</li>
-          </ul>
         </div>
-
-        <div class="sig-image-box">
-          <p class="sig-quote">
-            "Le vrai luxe, c'est de n'avoir à se soucier de rien, <br>surtout lors des moments magiques."
-          </p>
-          <div style="margin-top:30px;">
-            <a href="contact.html" class="btn-primary" style="background:transparent; border:1px solid #fff; color:#fff;">Nous contacter</a>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer">
-    <div class="container">
-      <p><strong>Terra Occitana</strong></p>
-      <p>© <span id="year"></span> — Tous droits réservés</p>
+    <!-- CONCLUSION + CTA -->
+    <section class="experience-close">
+      <div class="container narrow reveal">
+        <h2 class="close-title">Accueillir, c’est aussi préserver.</h2>
+        <div class="separator"></div>
+        <p class="close-text">
+          Accueillir des voyageurs, c’est trouver l’équilibre entre confort et respect d’un lieu.
+          Nous veillons à cette continuité avec attention, calme et exigence, pour que chaque séjour se déroule sereinement,
+          et que chaque propriété conserve son âme.
+        </p>
+        <a href="contact.html" class="btn-primary">Composer votre prise en charge</a>
+        <div class="close-note">Une réponse simple, humaine. Sans engagement. À votre rythme.</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-compact">
+      <div class="footer-info">
+        <strong>Terra Occitana</strong><br>
+        Conciergerie Privée & Intendance • Vallée de l’Hérault<br>
+        06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
+      </div>
+
+      <div class="footer-links">
+        <a href="#">Mentions Légales</a>
+        <span class="sep">•</span>
+        <a href="#">Confidentialité</a>
+        <span class="sep">•</span>
+        <a href="#">CGV</a>
+      </div>
+
+      <div class="copyright">© 2025 — Terra Occitana</div>
     </div>
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
