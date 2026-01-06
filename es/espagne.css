@@ -1,0 +1,280 @@
+/* =========================================================
+   ESPAGNE — page premium : blocs alternés + encarts luxe
+   (ne modifie pas tes autres pages)
+========================================================= */
+
+:root{
+  --to-olive: #5b6b55;
+  --to-terracotta: #b86b4b;
+  --to-cream: #fbf7f1;
+  --to-sand:  #f6efe6;
+  --to-line: rgba(91, 107, 85, .18);
+  --to-line-soft: rgba(0,0,0,.10);
+}
+
+/* --- Correction couleurs (olive) + respiration globale --- */
+.owners-hero--andalousie .owners-title,
+.owners-hero--andalousie .owners-sub,
+.owners-hero--andalousie .owners-kicker,
+.owners-hero--andalousie .owners-reassurance{
+  color: var(--to-olive);
+}
+
+.owners-hero--andalousie{
+  position: relative;
+  overflow: hidden;
+}
+.owners-hero--andalousie::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(900px 520px at 18% 22%, rgba(184,107,75,.16), transparent 56%),
+    radial-gradient(820px 480px at 86% 18%, rgba(91,107,85,.12), transparent 56%);
+  pointer-events:none;
+}
+.owners-hero--andalousie .owners-sub{
+  max-width: 860px;
+}
+
+/* =========================================================
+   Sections alternées (blocs de couleurs)
+========================================================= */
+.to-section{
+  padding: 86px 0;
+}
+.to-section--cream{
+  background: var(--to-cream);
+}
+.to-section--sand{
+  background: var(--to-sand);
+  border-top: 1px solid rgba(0,0,0,.06);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+.to-stack{
+  display:flex;
+  flex-direction:column;
+  gap: 28px;
+}
+.to-stack--center{
+  align-items:center;
+  text-align:center;
+}
+
+/* Headings premium */
+.to-h2{
+  margin:0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: var(--to-olive);
+  font-size: clamp(38px, 4.2vw, 56px);
+  line-height: 1.06;
+}
+.to-h2--big{
+  font-size: clamp(44px, 4.8vw, 64px);
+}
+
+.to-p{
+  margin:0;
+  color: rgba(91,107,85,.92);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.9;
+  font-size: 16px;
+  max-width: 980px;
+}
+.to-p--muted{ color: rgba(91,107,85,.78); }
+.to-p--small{ font-size: 15px; color: rgba(91,107,85,.84); }
+.to-p--center{ max-width: 980px; }
+
+.to-divider{
+  width: 64px;
+  height: 2px;
+  background: var(--to-terracotta);
+  opacity: .7;
+  margin-top: 18px;
+}
+.to-head{ display:flex; flex-direction:column; gap: 14px; }
+
+/* Petit encart doux */
+.to-soft-card{
+  border: 1px solid var(--to-line-soft);
+  background: rgba(255,255,255,.55);
+  border-radius: 18px;
+  padding: 22px 22px;
+  max-width: 980px;
+}
+
+/* =========================================================
+   Grille encarts (photo 4)
+========================================================= */
+.to-card-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  margin-top: 8px;
+}
+
+.to-mini-card{
+  border: 1px solid rgba(184,107,75,.40);
+  background: rgba(255,255,255,.65);
+  border-radius: 18px;
+  padding: 26px 26px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.06);
+  position: relative;
+}
+
+.to-mini-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width: 4px;
+  border-radius: 18px 0 0 18px;
+  background: rgba(184,107,75,.85);
+}
+
+.to-mini-title{
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: rgba(184,107,75,.95);
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.to-mini-text{
+  color: rgba(91,107,85,.88);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.to-mini-list{
+  margin:0;
+  padding-left: 18px;
+  color: rgba(91,107,85,.84);
+  line-height: 1.9;
+}
+.to-mini-list li{ margin: 6px 0; }
+
+/* =========================================================
+   Grille “Notre soutien” (photo 5) : 3 grandes cartes
+========================================================= */
+.to-offers-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 6px;
+}
+
+.to-offer{
+  border: 1px solid rgba(184,107,75,.35);
+  background: rgba(255,255,255,.66);
+  border-radius: 18px;
+  overflow:hidden;
+  box-shadow: 0 22px 60px rgba(0,0,0,.07);
+  padding: 28px 26px 26px;
+  position: relative;
+}
+
+.to-offer::after{
+  content:"";
+  position:absolute;
+  right:-40px;
+  top:-60px;
+  width: 220px;
+  height: 160px;
+  transform: rotate(-10deg);
+  background: rgba(246,239,230,.90);
+  border: 1px solid rgba(184,107,75,.18);
+}
+
+.to-offer-top{
+  position: relative;
+  z-index: 1;
+  display:flex;
+  flex-direction:column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.to-offer-num{
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 56px;
+  color: rgba(220, 194, 126, .65); /* doré doux */
+  line-height: 1;
+}
+
+.to-offer-script{
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 44px;
+  color: rgba(184,107,75,.92);
+  line-height: 1;
+  margin-top: -6px;
+}
+
+.to-offer-text{
+  position: relative;
+  z-index: 1;
+  margin: 0 0 16px;
+  color: rgba(91,107,85,.90);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.95;
+}
+
+.to-offer-sep{
+  position: relative;
+  z-index: 1;
+  height: 1px;
+  background: rgba(0,0,0,.08);
+  margin: 18px 0;
+}
+
+.to-offer-note{
+  position: relative;
+  z-index: 1;
+  margin:0;
+  color: rgba(91,107,85,.78);
+  line-height: 1.9;
+}
+
+/* =========================================================
+   Citation / respiration
+========================================================= */
+.to-quote{
+  margin:0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: clamp(26px, 2.6vw, 34px);
+  color: rgba(184,107,75,.92);
+  letter-spacing: .01em;
+}
+
+/* CTA row */
+.to-cta-row{ margin-top: 6px; }
+
+/* Footerline */
+.to-footerline{
+  margin-top: 12px;
+  color: rgba(91,107,85,.82);
+  font-style: italic;
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+@media (max-width: 980px){
+  .to-card-grid{ grid-template-columns: 1fr; }
+  .to-offers-grid{ grid-template-columns: 1fr; }
+  .to-section{ padding: 66px 0; }
+}
+
+@media (max-width: 560px){
+  .to-section{ padding: 52px 0; }
+  .to-mini-card, .to-offer{ padding: 22px 18px; }
+  .to-offer-script{ font-size: 40px; }
+}

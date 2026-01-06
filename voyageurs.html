@@ -3,214 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>L'Expérience • Terra Occitana</title>
-  <meta name="description" content="Une expérience fluide et sereine : accueil, séjour, respect des lieux. Une conciergerie familiale, discrète et locale." />
-
-  <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    .brand-logo{ height: 60px; }
-    @media (max-width: 900px){ .brand-logo{ height: 54px; } }
-
-    /* SWITCH LANGUE — même design que propriétaires */
-    .lang-switch{
-      display: inline-flex; gap: 8px; align-items: center;
-      margin-left: 14px; padding-left: 14px;
-      border-left: 1px solid rgba(184,107,75,0.18);
-      white-space: nowrap;
-    }
-    .lang-btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      min-width: 38px; height: 28px; padding: 0 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(184,107,75,0.28);
-      background: rgba(255,255,255,0.7);
-      color: var(--vin-olive);
-      text-decoration: none;
-      font-size: 12px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      font-weight: 500;
-      opacity: .92;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease, opacity .15s ease;
-    }
-    .lang-btn:hover{
-      transform: translateY(-1px);
-      background: rgba(246,241,234,0.9);
-      border-color: rgba(184,107,75,0.42);
-      opacity: 1;
-    }
-    .lang-btn.active{
-      background: rgba(184,107,75,0.14);
-      border-color: rgba(184,107,75,0.55);
-      color: var(--terracotta);
-      opacity: 1;
-      pointer-events: none;
-    }
-    @media (max-width: 980px){
-      .lang-switch{ margin-left: 10px; padding-left: 10px; }
-      .lang-btn{ min-width: 34px; height: 26px; padding: 0 9px; font-size: 11px; }
-    }
-
-    .experience-hero{
-      position: relative;
-      padding: 90px 0 70px;
-      background:
-        radial-gradient(1200px 500px at 50% -50px, rgba(184,107,75,0.16) 0%, rgba(184,107,75,0) 60%),
-        radial-gradient(900px 380px at 15% 20%, rgba(85,107,47,0.10) 0%, rgba(85,107,47,0) 55%),
-        linear-gradient(180deg, #ffffff 0%, var(--bg-cream) 60%, #ffffff 100%);
-      overflow: hidden;
-      text-align: center;
-    }
-    .experience-hero::before{
-      content:"";
-      position:absolute;
-      inset:-60px -60px auto -60px;
-      height: 240px;
-      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.08), transparent);
-      transform: rotate(-6deg);
-      pointer-events:none;
-      opacity:.85;
-    }
-    .experience-kicker{
-      display:inline-block;
-      text-transform: uppercase;
-      letter-spacing: .22em;
-      font-size: .78rem;
-      font-weight: 600;
-      color: var(--terracotta);
-      margin-bottom: 14px;
-    }
-    .experience-title{
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      color: var(--vin-olive);
-      font-size: clamp(2.2rem, 4.6vw, 3.6rem);
-      line-height: 1.08;
-      margin: 0 0 16px 0;
-    }
-    .experience-sub{
-      max-width: 860px;
-      margin: 0 auto;
-      font-size: clamp(1rem, 1.15vw, 1.15rem);
-      opacity: .86;
-      font-weight: 300;
-      line-height: 1.75;
-    }
-
-    .experience-book{ background: var(--bg-white); padding: 70px 0; }
-    .book-card{
-      max-width: 980px; margin: 0 auto;
-      background: var(--bg-cream);
-      border: 1px solid rgba(184,107,75,0.14);
-      padding: 46px;
-      position: relative; overflow: hidden;
-    }
-    .book-card::after{
-      content:"";
-      position:absolute;
-      inset:auto -40px -60px -40px;
-      height: 140px;
-      background: radial-gradient(closest-side, rgba(212,175,55,0.09), transparent 70%);
-      pointer-events:none;
-    }
-    .book-head{ text-align: center; margin-bottom: 34px; }
-    .book-head h2{
-      margin: 0 0 10px 0;
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 500;
-      color: var(--vin-olive);
-      font-size: clamp(1.9rem, 3vw, 2.5rem);
-      line-height: 1.15;
-    }
-    .book-sep{ width: 64px; height: 2px; margin: 16px auto 18px; background: var(--terracotta); }
-    .book-intro{ margin: 0 auto; max-width: 820px; opacity: .86; font-weight: 300; line-height: 1.8; }
-
-    .book-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 22px 36px; margin-top: 30px; }
-
-    .exp-item{
-      background: #fff;
-      border: 1px solid rgba(184,107,75,0.12);
-      padding: 26px 22px;
-      position: relative; overflow: hidden;
-    }
-    .exp-item::before{
-      content:"";
-      position:absolute; inset: 0 auto 0 0;
-      width: 3px;
-      background: linear-gradient(180deg, rgba(184,107,75,0.92), rgba(184,107,75,0.18));
-      opacity: .95;
-    }
-    .exp-title{
-      display:flex; align-items:center; gap: 10px;
-      margin: 0 0 10px 0;
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      font-size: 1.45rem;
-      color: var(--terracotta);
-      line-height: 1.1;
-    }
-    .exp-icon{
-      width: 18px; height: 18px;
-      border: 1px solid rgba(184,107,75,0.35);
-      border-radius: 999px;
-      position: relative; flex: 0 0 18px;
-    }
-    .exp-icon::after{
-      content:"";
-      position:absolute; inset: 4px;
-      border-radius: 999px;
-      background: rgba(184,107,75,0.18);
-    }
-    .exp-phrase{ margin: 0 0 10px 0; font-weight: 300; opacity: .88; line-height: 1.75; }
-    .exp-bullets{ list-style: none; padding: 0; margin: 0; }
-    .exp-bullets li{
-      position: relative;
-      padding-left: 16px;
-      margin: 8px 0;
-      font-weight: 300;
-      opacity: .84;
-      line-height: 1.7;
-    }
-    .exp-bullets li::before{
-      content:"✦";
-      position: absolute; left: 0; top: 0;
-      color: rgba(184,107,75,0.9);
-      font-size: .9rem; line-height: 1.4;
-    }
-
-    .local-touch{
-      margin-top: 28px; padding-top: 22px;
-      border-top: 1px solid rgba(184,107,75,0.12);
-      text-align: center;
-    }
-    .local-touch p{ margin: 0 auto; max-width: 820px; font-weight: 300; opacity: .82; line-height: 1.8; }
-    .local-touch em{ color: var(--terracotta); font-style: italic; opacity: .95; }
-
-    .experience-close{ background: var(--bg-sand); padding: 72px 0; text-align: center; }
-    .close-title{
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 500;
-      color: var(--vin-olive);
-      font-size: clamp(2rem, 3.2vw, 2.8rem);
-      margin: 0 0 12px 0;
-    }
-    .close-text{
-      max-width: 820px;
-      margin: 0 auto 26px auto;
-      font-weight: 300;
-      opacity: .84;
-      line-height: 1.85;
-    }
-    .close-note{ margin-top: 14px; font-size: .92rem; opacity: .62; font-style: italic; }
-
-    @media (max-width: 980px){ .book-grid{ grid-template-columns: 1fr; } }
-    @media (max-width: 520px){
-      .experience-hero{ padding: 82px 0 62px; }
-      .book-card{ padding: 32px 18px; }
-      .exp-item{ padding: 22px 16px; }
-    }
-  </style>
+  <title>L’Expérience • Terra Occitana</title>
+  <meta name="description" content="Expérience voyageurs : arrivée simple, séjour serein. Accueil fluide, propreté irréprochable, attention aux détails." />
+  
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#b86b4b" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Terra Occitana — Conciergerie Privée" />
+  <meta property="og:description" content="Conciergerie familiale entre Vallée de l’Hérault et Littoral." />
+  <meta property="og:image" content="images/logo.jpg" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/voyageurs.page.css" />
 </head>
 
 <body>
@@ -224,23 +29,36 @@
       </div>
 
       <nav class="menu" id="menu">
-        <a href="proprietaires.html">Propriétaires</a>
-        <a href="voyageurs.html" class="active">L'Expérience</a>
-        <a href="offre-sur-mesure.html">Étude de potentiel</a>
-        <a href="contact.html">Planifier un échange</a>
-      </nav>
+  <a href="proprietaires-luxe3.html" style="font-size:0.8rem;">Proprio (Luxe)</a>
+  <a href="proprietaires-mix.html" style="font-size:0.8rem;">Proprio (Mix)</a>
+  
+  <a href="voyageurs.html">L'Expérience</a>
+  <a href="offre-sur-mesure.html">Étude de potentiel</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-      <!-- ✅ Switch langue — chemins OK (FR racine / EN/DE dossiers) -->
-      <div class="lang-switch" aria-label="Choix de la langue">
-        <a class="lang-btn active" href="voyageurs.html" aria-current="page">FR</a>
-        <a class="lang-btn" href="en/voyageurs.html">EN</a>
-        <a class="lang-btn" href="de/voyageurs.html">DE</a>
-      </div>
+    <div aria-label="Choisir la langue" class="lang-switch">
+  <a aria-current="page" class="lang-link active" href="index.html" lang="fr"><span class="txt">FR</span></a>
+  <a class="lang-link" href="en/index.html"><span class="txt">EN</span></a>
+  <a class="lang-link" href="de/index.html"><span class="txt">DE</span></a>
+  <a class="lang-link" href="es/index.html"><span class="txt">ES</span></a>
+</div>
 
-      <button class="burger" id="burger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+<!-- Overlay (nouveau) -->
+<div id="menuOverlay" class="menu-overlay" hidden></div>
+
+<!-- Burger premium (remplace ton bouton actuel) -->
+<button
+  id="burger"
+  class="burger"
+  type="button"
+  aria-label="Ouvrir le menu"
+  aria-controls="menu"
+  aria-expanded="false"
+>
+  <span></span><span></span><span></span>
+</button>
+
   </header>
 
   <main>
@@ -344,14 +162,14 @@
         </div>
       </div>
       <div class="footer-links">
-        <a href="#">Mentions Légales</a><span class="sep">•</span>
-        <a href="#">Confidentialité</a><span class="sep">•</span>
-        <a href="#">CGV</a>
+        <a href="mentions-legales.html">Mentions Légales</a><span class="sep">•</span>
+        <a href="confidentialite.html">Confidentialité</a><span class="sep">•</span>
+        <a href="cgv.html">CGV</a>
       </div>
       <div class="copyright">© 2025 — Terra Occitana</div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

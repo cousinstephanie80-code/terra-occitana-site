@@ -1,153 +1,159 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Terra Occitana — Conciergerie Privée</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Terra Occitana, conciergerie familiale et locale entre Vallée de l’Hérault et Littoral. Gestion raisonnée et autonome des locations." />
-
-  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
+<meta charset="utf-8"/>
+<title>Terra Occitana — Conciergerie Privée</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Conciergerie familiale entre Vallée de l’Hérault et Littoral. Gestion soignée, présence locale, sérénité assurée." name="description"/>
+<meta content="index,follow" name="robots"/>
+<meta content="#b86b4b" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Terra Occitana — Conciergerie Privée" property="og:title"/>
+<meta content="Conciergerie familiale entre Vallée de l’Hérault et Littoral." property="og:description"/>
+<meta content="images/logo.jpg" property="og:image"/>
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet">
+</link></head>
 <body>
-
 <header class="site-header">
-  <div class="header-inner">
-    <div class="brand">
-      <a href="index.html" class="brand-link" aria-label="Accueil">
-        <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
-      </a>
-    </div>
+<div class="header-inner">
+<div class="brand">
+<a aria-label="Accueil" class="brand-link" href="index.html">
+<img alt="Terra Occitana" class="brand-logo" src="images/logo.jpg"/>
+</a>
+</div>
+<nav class="menu" id="menu">
+  <a href="proprietaires-luxe3.html" style="font-size:0.8rem;">Proprio (Luxe)</a>
+  <a href="proprietaires-mix.html" style="font-size:0.8rem;">Proprio (Mix)</a>
+  
+  <a href="voyageurs.html">L'Expérience</a>
+  <a href="offre-sur-mesure.html">Étude de potentiel</a>
+  <a href="contact.html">Contact</a>
+</nav>
+<div aria-label="Choisir la langue" class="lang-switch">
+  <a aria-current="page" class="lang-link active" href="index.html" lang="fr"><span class="txt">FR</span></a>
+  <a class="lang-link" href="en/index.html"><span class="txt">EN</span></a>
+  <a class="lang-link" href="de/index.html"><span class="txt">DE</span></a>
+  <a class="lang-link" href="es/index.html"><span class="txt">ES</span></a>
+</div>
 
-    <nav class="menu" id="menu">
-      <a href="proprietaires.html">Propriétaires</a>
-      <a href="voyageurs.html">L'Expérience</a>
-      <a href="offre-sur-mesure.html">Étude de potentiel</a>
-      <a href="contact.html">Planifier un échange</a>
-    </nav>
+<!-- Overlay (nouveau) -->
+<div id="menuOverlay" class="menu-overlay" hidden></div>
 
-    <!-- Switch langue (même rendu que Contact : texte uniquement) -->
-    <div class="lang-switch" aria-label="Choisir la langue">
-      <a class="lang-link active" href="index.html" lang="fr" aria-current="page">
-        <span class="txt">FR</span>
-      </a>
-      <a class="lang-link" href="en/index.html" lang="en">
-        <span class="txt">EN</span>
-      </a>
-      <a class="lang-link" href="de/index.html" lang="de">
-        <span class="txt">DE</span>
-      </a>
-    </div>
+<!-- Burger premium (remplace ton bouton actuel) -->
+<button
+  id="burger"
+  class="burger"
+  type="button"
+  aria-label="Ouvrir le menu"
+  aria-controls="menu"
+  aria-expanded="false"
+>
+  <span></span><span></span><span></span>
+</button>
 
-    <button class="burger" id="burger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+</div>
 </header>
-
 <main id="accueil">
-
-  <!-- HERO -->
-  <section class="hero-banner">
-    <div class="hero-slider" data-hero-slider>
-      <div class="hero-slide is-active" style="background-image:url('images/hero-salagou.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('images/hero-littoral-mediterranee.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('images/hero-port-marseillan.jpg')"></div>
-      <div class="hero-overlay"></div>
-
-      <div class="container hero-content reveal">
-        <p class="hero-kicker-white">Vallée de l’Hérault • Littoral</p>
-
-        <h1 class="hero-headline">
+<section class="hero-banner">
+<div class="hero-slider" data-hero-slider="">
+<div class="hero-slide is-active" style="background-image:url('images/hero-salagou.jpg')"></div>
+<div class="hero-slide" style="background-image:url('images/hero-littoral-mediterranee.jpg')"></div>
+<div class="hero-slide" style="background-image:url('images/hero-port-marseillan.jpg')"></div>
+<div class="hero-overlay"></div>
+<div class="container hero-content reveal">
+<p class="hero-kicker-white">Vallée de l’Hérault • Littoral</p>
+<h1 class="hero-headline">
           Terra Occitana
           <span>
             Conciergerie familiale entre Vallée de l’Hérault et Littoral,
             nous privilégions une gestion raisonnée, organisée et autonome,
             pour des locations fluides et sans contrainte.
           </span>
-        </h1>
-
-        <div style="margin-top: 35px;">
-          <a href="contact.html" class="btn-primary">Planifier un échange (30 min)</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PARTENAIRE DE CONFIANCE -->
-  <section class="section bg-white">
-    <div class="container narrow reveal">
-      <h2>Un partenaire de confiance</h2>
-      <div class="separator"></div>
-      <p class="luxe-paragraph">
+</h1>
+<div style="margin-top:35px;">
+<a class="btn-primary" href="contact.html">Planifier un échange (30 min)</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section bg-white">
+<div class="container narrow reveal">
+<h2>Un partenaire de confiance</h2>
+<div class="separator"></div>
+<p class="luxe-paragraph">
         Chaque propriété a son histoire. Chaque propriétaire ses exigences.
         Loin des plateformes impersonnelles, nous assurons une continuité sereine,
         avec un interlocuteur unique, présent sur le terrain.
       </p>
-
-      <p class="luxe-paragraph" style="margin-top:-6px;">
-        Nous accompagnons volontairement un nombre limité de biens, afin de rester disponibles et présents sur le terrain.
+<p class="luxe-paragraph" style="margin-top:-6px;">
+        Nous accompagnons volontairement un nombre limité de biens,
+        afin de rester disponibles et présents sur le terrain.
       </p>
-
-      <p style="margin-top:24px; font-family:'Cormorant Garamond'; font-size:1.4rem; color:var(--terracotta); font-style:italic;">
+<p style="margin-top:24px;font-family:'Cormorant Garamond';font-size:1.4rem;color:var(--terracotta);font-style:italic;">
         « Votre tranquillité est notre signature. »
       </p>
-    </div>
-  </section>
-
-  <!-- HISTOIRE -->
-  <section class="section bg-cream">
-    <div class="container reveal">
-      <div style="text-align:center; margin-bottom:40px;">
-        <span class="header-kicker">Notre Histoire</span>
-        <h2>Une aventure familiale et locale</h2>
-        <div class="separator"></div>
-      </div>
-
-      <div class="duo-grid">
-        <div>
-          <h3>L’alliance de la rigueur et du cœur</h3>
-          <p class="luxe-paragraph" style="text-align:left;">
+</div>
+</section>
+<section class="section bg-cream">
+<div class="container reveal">
+<div style="text-align:center;margin-bottom:40px;">
+<span class="header-kicker">Notre Histoire</span>
+<h2>Une aventure familiale et locale</h2>
+<div class="separator"></div>
+</div>
+<div class="duo-grid">
+<div>
+<h3>L’alliance de la rigueur et du cœur</h3>
+<p class="luxe-paragraph" style="text-align:left;">
             Installés dans la région depuis plusieurs années, nous avons fait le choix
             d’une conciergerie à taille humaine. Nous accompagnons un nombre limité de biens,
             afin de préserver la qualité de service et le respect de chaque propriété.
           </p>
-          <p class="luxe-paragraph" style="text-align:left;">
-            <strong>Une structure familiale.</strong><br>
+<p class="luxe-paragraph" style="text-align:left;">
+<strong>Une structure familiale.</strong><br/>
             Ici, votre maison n’est jamais un numéro. Nous privilégions des process clairs,
             une organisation fluide et une relation directe avec chaque propriétaire.
           </p>
-          <div class="duo-signature">Les Fondateurs</div>
-        </div>
-
-        <div style="position: relative;">
-          <div style="position:absolute; top:15px; left:15px; width:100%; height:100%; border:1px solid var(--terracotta); z-index:1;"></div>
-          <div style="position:relative; z-index:2; width:100%; height:400px; overflow:hidden;">
-            <img src="images/duo-portrait.jpg" alt="Fondateurs Terra Occitana" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section bg-white">
-    <div class="container narrow reveal">
-      <h2>Un projet ? Une question ?</h2>
-      <div class="separator"></div>
-      <p class="luxe-paragraph">
+<div class="duo-signature">Les Fondateurs</div>
+</div>
+<div style="position:relative;">
+<div style="position:absolute;top:15px;left:15px;width:100%;height:100%;border:1px solid var(--terracotta);z-index:1;"></div>
+<div style="position:relative;z-index:2;width:100%;height:400px;overflow:hidden;">
+<img alt="Fondateurs Terra Occitana" src="images/duo-portrait.jpg" style="width:100%;height:100%;object-fit:cover;"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section bg-sand andalousie-encart">
+<div class="container narrow reveal">
+<p class="andalousie-text">
+        Terra Occitana déploie également son accompagnement en Andalousie,
+        au cœur de la Costa del Sol.
+      </p>
+<div style="margin-top:18px;">
+<a class="btn-secondary-olive andalousie-btn" href="es/espagne.html">
+          Découvrir l’Andalousie
+        </a>
+</div>
+</div>
+</section>
+<section class="section bg-white">
+<div class="container narrow reveal">
+<h2>Un projet ? Une question ?</h2>
+<div class="separator"></div>
+<p class="luxe-paragraph">
         Que votre bien soit situé dans les terres ou en bord de mer,
         nous prenons le temps d’échanger avec vous, personnellement.
       </p>
-      <div style="margin-top: 30px;">
-        <a href="contact.html" class="btn-primary">Planifier un échange (30 min)</a>
-      </div>
-    </div>
-  </section>
-
+<div style="margin-top:30px;">
+<a class="btn-primary" href="contact.html">Planifier un échange (30 min)</a>
+</div>
+</div>
+</section>
 </main>
-
 <footer>
   <div class="container footer-compact">
     <div class="footer-info">
@@ -158,19 +164,14 @@
         Une conciergerie humaine. Une organisation solide. À votre rythme.
       </div>
     </div>
-
     <div class="footer-links">
-      <a href="mentions-legales.html">Mentions Légales</a>
-      <span class="sep">•</span>
-      <a href="confidentialite.html">Confidentialité</a>
-      <span class="sep">•</span>
+      <a href="mentions-legales.html">Mentions Légales</a><span class="sep">•</span>
+      <a href="confidentialite.html">Confidentialité</a><span class="sep">•</span>
       <a href="cgv.html">CGV</a>
     </div>
-
     <div class="copyright">© 2025 — Terra Occitana</div>
   </div>
 </footer>
-
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
