@@ -337,21 +337,33 @@ footer {
 @media (max-width: 900px){
   .section { padding: var(--section-pad-mobile) 0; }
   .duo-grid, .piliers-grid { grid-template-columns: 1fr; gap: 40px; }
+  
   .menu{
-    position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
     background: var(--bg-white);
     flex-direction: column;
-    justify-content: center;
+    
+    /* --- CORRECTION ICI --- */
+    justify-content: flex-start; /* On aligne en haut au lieu de centrer */
+    padding-top: 110px;          /* On laisse de la place pour le header/logo */
+    padding-bottom: 40px;        /* Marge en bas */
+    overflow-y: auto;            /* Active le défilement si la liste est trop longue */
+    /* ---------------------- */
+
     align-items: center;
     transform: translateX(100%);
     transition: transform 0.4s ease;
     z-index: 40;
   }
+  
   .menu.is-open{ transform: translateX(0); }
   .burger{ display: block; z-index: 51; }
   .hero-banner { height: 70vh; min-height: auto; }
 }
-
 .menu a.active { color: var(--terracotta); }
 .menu a.active::after {
   content: "";
