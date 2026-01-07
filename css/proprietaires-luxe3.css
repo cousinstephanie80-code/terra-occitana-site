@@ -783,3 +783,103 @@ body {
   .collection-card { padding-right: 0; }
   .signature-box { padding: 30px 20px; border-left-width: 4px; }
 }
+/* =========================================
+   MODIFICATIONS DEMANDÉES (COULEURS & ESPACES)
+   ========================================= */
+
+/* 1. Changement de couleur des Titres en Vert Olive */
+/* Nous utilisons un vert olive élégant (#4b5f44) pour remplacer le noir/gris foncé */
+
+.hero-title,
+.frame-title,
+.collections-title,
+.circles-main-title,
+.signature-title,
+.cta-title {
+  color: #4b5f44 !important; /* Vert Olive soutenu */
+}
+
+/* Si vous trouvez celui-ci trop foncé, essayez #556b2f (plus clair) */
+
+
+/* 2. Augmentation de l'espace "Nos Collections" */
+/* Ajout d'une marge sous le bloc de texte introductif */
+
+.collections-head {
+  text-align: center;      /* S'assure que le titre reste centré */
+  margin-bottom: 80px;     /* Augmente l'espace avant les cartes (auparavant standard) */
+}
+
+/* Optionnel : Ajustement de la largeur du texte sous le titre collection pour faire plus propre */
+.collections-sub {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* =========================================
+   MODIFICATIONS ETAPE 2 : ALIGNEMENTS & CARTES
+   ========================================= */
+
+/* 1. Titre "Nos Collections" aligné à GAUCHE */
+.collections-head {
+  text-align: left !important;
+  margin-bottom: 60px;
+}
+.collections-sub {
+  margin-left: 0 !important;
+  max-width: 800px; /* Limite la largeur pour la lecture */
+  text-align: left;
+}
+
+
+/* 2. Suppression du mot "Collection" dans les cartes */
+.card-label {
+  display: none !important;
+}
+
+
+/* 3. Réorganisation des Entêtes de Cartes (Numéro + Titre côte à côte) */
+
+/* On annule la position relative/absolue qui créait la superposition */
+.card-header {
+  position: static !important;
+  height: auto !important;
+  display: flex;
+  align-items: baseline; /* Aligne le texte sur la ligne d'écriture */
+  gap: 15px; /* Espace entre le numéro et le titre */
+  margin-bottom: 25px;
+}
+
+/* Style du Numéro (01, 02, 03) */
+.card-number {
+  position: static !important; /* Plus de superposition */
+  font-size: 3.5rem !important; /* Taille ajustée pour aller avec le titre */
+  line-height: 1 !important;
+  color: #e4dccb; /* Beige doré (ou mettez var(--terracotta) si vous préférez) */
+}
+
+/* Style du Titre (Sérénité, Liberté...) */
+.card-title {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  margin: 0 !important;
+  font-size: 3rem !important;
+  line-height: 1 !important;
+  /* La couleur reste celle définie précédemment (Terracotta ou Vert Olive selon votre choix) */
+}
+
+/* Ajustement spécifique pour la grille (pour que la carte 3 prenne sa place normale) */
+.collections-grid {
+  /* Assure que les 3 cartes sont sur la même ligne ou grille standard */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 40px;
+}
+
+/* Responsive : sur mobile, on passe en 1 colonne */
+@media (max-width: 900px) {
+  .collections-grid {
+    grid-template-columns: 1fr;
+  }
+}
