@@ -4,48 +4,6 @@ title: Conciergerie à la Carte & Intendance — De St-André au Cap d'Agde
 ---
 <link rel="stylesheet" href="assets/css/proprietaires.css">
 
-<style>
-  .history-split-wrapper {
-    display: flex;
-    gap: 50px;
-    align-items: stretch; /* L'image prendra la même hauteur que le texte */
-    margin-top: 40px;
-  }
-  
-  .history-image-side {
-    flex: 1;
-    min-height: 300px;
-    position: relative;
-  }
-  
-  .history-image-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* L'image remplit le cadre sans être déformée */
-    border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  }
-  
-  .history-text-side {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centre le texte verticalement */
-  }
-
-  /* Version Mobile : On empile */
-  @media (max-width: 900px) {
-    .history-split-wrapper {
-      flex-direction: column;
-      gap: 30px;
-    }
-    .history-image-side {
-      height: 300px; /* Hauteur fixe sur mobile */
-    }
-  }
-</style>
-
-
 <section class="owners-hero">
   <div class="container">
     <span class="owners-kicker">Espace Propriétaires</span>
@@ -68,31 +26,19 @@ title: Conciergerie à la Carte & Intendance — De St-André au Cap d'Agde
 </section>
 
 <section class="owners-history">
-  <div class="container"> <div style="text-align: center;">
-        <h2>Notre histoire</h2>
-        <div class="separator"></div>
-    </div>
-    
-    <div class="history-split-wrapper">
-      
-      <div class="history-image-side">
-        <img src="{{ site.baseurl }}/assets/img/notre-histoire.jpg" alt="Notre Histoire Terra Occitana">
-      </div>
-      
-      <div class="history-text-side">
-        <div class="luxe-paragraph" style="text-align: left;">
-          <p style="margin-bottom: 20px;">
-            Terra Occitana est née d’une expérience vécue de la location saisonnière. Propriétaires nous-mêmes, nous connaissons les exigences du terrain et la responsabilité qu’implique la gestion d’un bien confié.
-          </p>
-          <p style="margin-bottom: 20px;">
-            Nous avons choisi une conciergerie à taille humaine, attentive et structurée, où chaque logement bénéficie d’un suivi soigné, d’une présence locale et d’un interlocuteur unique. L’essentiel guide chacune de nos actions : respect du lieu, qualité irréprochable et sérénité durable.
-          </p>
-          <p style="font-style: italic; color: var(--terracotta); font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-top: 30px; text-align:left;">
-            « Prendre soin de votre bien, naturellement. »
-          </p>
-        </div>
-      </div>
-
+  <div class="container narrow">
+    <h2>Notre histoire</h2>
+    <div class="separator"></div>
+    <div class="luxe-paragraph" style="text-align: left;">
+      <p style="margin-bottom: 20px;">
+        Terra Occitana est née d’une expérience vécue de la location saisonnière. Propriétaires nous-mêmes, nous connaissons les exigences du terrain et la responsabilité qu’implique la gestion d’un bien confié.
+      </p>
+      <p style="margin-bottom: 20px;">
+        Nous avons choisi une conciergerie à taille humaine, attentive et structurée, où chaque logement bénéficie d’un suivi soigné, d’une présence locale et d’un interlocuteur unique. L’essentiel guide chacune de nos actions : respect du lieu, qualité irréprochable et sérénité durable.
+      </p>
+      <p style="font-style: italic; color: var(--terracotta); font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-top: 30px; text-align:center;">
+        « Prendre soin de votre bien, naturellement. »
+      </p>
     </div>
   </div>
 </section>
