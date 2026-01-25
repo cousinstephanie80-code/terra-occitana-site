@@ -1,152 +1,133 @@
 ---
 layout: default_es
-title: Terra Occitana • Andalucía
-css_file: /assets/css/proprietaires.css
+title: Conserjería Costa del Sol • Benalmádena a Málaga — Terra Occitana
 ---
 
-<style>
-  /* 1. SLIDER (Fond) */
-  .hero-slider-container {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    z-index: 0; overflow: hidden; background: #333;
-  }
-  .hero-slide {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background-size: cover; background-position: center;
-    opacity: 0; animation: fadeSlide 18s infinite;
-  }
-  .hero-overlay-dark {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.35); /* Ombre légère pour lire le texte blanc */
-    z-index: 1;
-  }
-
-  /* Animation Slider */
-  @keyframes fadeSlide {
-    0% { opacity: 0; transform: scale(1); }
-    5% { opacity: 1; }
-    33% { opacity: 1; transform: scale(1.05); }
-    38% { opacity: 0; }
-    100% { opacity: 0; }
-  }
-  .hero-slide:nth-child(1) { animation-delay: 0s; }
-  .hero-slide:nth-child(2) { animation-delay: 6s; }
-  .hero-slide:nth-child(3) { animation-delay: 12s; }
-
-  /* 2. TEXTE BLANC FORCÉ (Important pour la lisibilité sur photos) */
-  .owners-hero .owners-title,
-  .owners-hero .owners-sub,
-  .owners-hero .owners-kicker {
-    color: #ffffff !important;
-    text-shadow: 0 2px 15px rgba(0,0,0,0.5); /* Ombre portée */
-  }
-  .owners-hero .owners-cta { position: relative; z-index: 10; }
-
-  /* 3. GRILLE HISTOIRE (Texte + Photo) */
-  .history-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
-  }
-  @media (max-width: 900px) {
-    .history-grid { grid-template-columns: 1fr; gap: 40px; }
-    .history-img { order: -1; margin-bottom: 20px; }
-  }
-  .history-img img {
-    width: 100%; border-radius: 4px;
-    box-shadow: 20px 20px 0 rgba(184,107,75,0.15);
-    display: block;
-  }
-</style>
-
-
-<section class="owners-hero">
-  
-  <div class="hero-slider-container">
-    <div class="hero-slide" style="background-image: url('{{ site.baseurl }}/assets/img/andalousie-1.jpg');"></div>
-    <div class="hero-slide" style="background-image: url('{{ site.baseurl }}/assets/img/andalousie-2.jpg');"></div>
-    <div class="hero-slide" style="background-image: url('{{ site.baseurl }}/assets/img/andalousie-3.jpg');"></div>
-    <div class="hero-overlay-dark"></div>
-  </div>
-
-  <div class="container" style="position: relative; z-index: 2;">
-    <span class="owners-kicker">Costa del Sol • Benalmádena</span>
+<section class="hero-banner">
+  <div class="hero-slider" data-hero-slider>
     
-    <h1 class="owners-title">
-      El arte de recibir,<br>
-      <span style="font-size: 0.8em; font-weight: 300;">bajo la luz del Sur</span>
-    </h1>
+    <div class="hero-slide is-active" style="background-image:url('{{ site.baseurl }}/assets/img/hero-espagne-1.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('{{ site.baseurl }}/assets/img/hero-espagne-2.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('{{ site.baseurl }}/assets/img/hero-espagne-3.jpg')"></div>
     
-    <p class="owners-sub">
-      Conserjería privada e intendencia de residencias secundarias.<br>
-      Cuidamos de su propiedad con la misma exigencia que si fuera la nuestra.
-    </p>
+    <div class="hero-overlay"></div>
     
-    <div class="owners-cta">
-      <a class="btn-primary" href="{{ site.baseurl }}/es/colecciones.html">Descubrir nuestras Colecciones</a>
+    <div class="container hero-content reveal">
+      <p class="hero-kicker-white">De Benalmádena a Málaga • Costa del Sol</p>
+      
+      <h1 class="hero-headline">
+        Conserjería Terra Occitana
+        <span>
+          Una gestión 100% familiar, transparente y organizada.
+          De Benalmádena a Málaga.
+        </span>
+      </h1>
+      
+      <div style="margin-top:35px;">
+        <a href="{{ site.baseurl }}/es/contacto.html" class="btn-primary">Hablar de mi propiedad (30 min)</a>
+      </div>
     </div>
   </div>
 </section>
 
+<section class="section bg-sand">
+  <div class="container narrow reveal">
+    <h2>Un socio de confianza</h2>
+    <div class="separator"></div>
+    <p class="luxe-paragraph">
+      Cada propiedad tiene su historia. Lejos de las plataformas impersonales, 
+      aseguramos una continuidad serena con un trato directo y humano.
+    </p>
+    <p class="luxe-paragraph" style="margin-top:-6px;">
+      Acompañamos voluntariamente un número limitado de propiedades 
+      para garantizar nuestra disponibilidad y una atención exclusiva en el terreno.
+    </p>
+    <p class="signature-quote">
+      « Su tranquilidad es nuestra firma. »
+    </p>
+  </div>
+</section>
 
-<section class="owners-history" style="background: #fff; padding: 100px 0;">
-  <div class="container">
-    <div class="history-grid">
-      
+<section class="section bg-ivory">
+  <div class="container reveal">
+    <div style="text-align:center; margin-bottom:40px;">
+      <span class="header-kicker">Nuestra Historia</span>
+      <h2>Una aventura familiar y local</h2>
+      <div class="separator"></div>
+    </div>
+    
+    <div class="duo-grid">
       <div>
-        <span class="owners-kicker" style="color:var(--terracotta);">Nuestra Historia</span>
-        <h2 style="font-family:'Cormorant Garamond'; color:var(--vin-olive); font-size:2.5rem; margin-bottom:20px; line-height:1.1;">
-          Una firma franco-andaluza
-        </h2>
-        <div class="separator" style="margin: 0 0 25px 0;"></div>
+        <h3>La alianza de nuestra experiencia francesa y la presencia local</h3>
+        <p class="luxe-paragraph text-left">
+          Terra Occitana es ante todo una historia de familia. Primero un dúo apasionado en Francia, 
+          donde construimos nuestro saber hacer basado en el rigor y la cercanía con nuestros propietarios.
+        </p>
+        <p class="luxe-paragraph text-left">
+          Para acompañarles en Andalucía, no era cuestión de cambiar nuestros valores. 
+          Simplemente hemos pasado el relevo a <strong>nuestra propia familia, residente todo el año en la Costa del Sol</strong>.
+        </p>
         
-        <div class="luxe-paragraph" style="text-align: left;">
-          <p style="margin-bottom: 20px;">
-            Terra Occitana nació de una convicción: la gestión de una propiedad no debería ser una carga, sino una tranquilidad.
-            Implantados en Benalmádena, aportamos nuestro rigor y nuestra cultura de la hospitalidad ("l'Art de Recevoir") 
-            al corazón de la Costa del Sol.
-          </p>
-          <p style="margin-bottom: 20px;">
-            Acompañamos a un número limitado de propietarios para garantizar una disponibilidad total 
-            y una calidad de servicio irreprochable.
-          </p>
-          <p style="font-weight: 500; color: var(--vin-olive); margin-top: 30px;">
-            Los fundadores
-          </p>
+        <h3 style="margin-top:30px;">Una sinergia única.</h3>
+        <p class="luxe-paragraph text-left">
+          Así se benefician de una sinergia única: la experiencia y el método de nuestro dúo en Francia, 
+          combinadas con la reactividad total de nuestro equipo familiar in situ. 
+          Es la garantía de una gestión autónoma, humana y perfectamente coordinada.
+        </p>
+        <div class="duo-signature">Los Fundadores & El Equipo Local</div>
+      </div>
+      
+      <div style="position:relative;">
+        <div style="position:absolute; top:15px; left:15px; width:100%; height:100%; border:1px solid var(--terracotta); z-index:1;"></div>
+        <div style="position:relative; z-index:2; width:100%; height:400px; overflow:hidden;">
+          <img src="{{ site.baseurl }}/assets/img/duo-portrait.jpg" alt="Fundadores Terra Occitana" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white andalousie-encart">
+  <div class="container reveal">
+    
+    <div class="andalousie-wrapper">
+      
+      <figure class="andalousie-visual">
+        <img src="{{ site.baseurl }}/assets/img/carte-herault.jpg" alt="Terra Occitana en Francia - Hérault" class="andalousie-map">
+        <figcaption class="license-credits">
+          <span style="font-size: 0.7rem; opacity: 0.6;">Occitanie • France</span>
+        </figcaption>
+      </figure>
+
+      <div class="andalousie-content">
+        <h3>También presentes en Francia</h3>
+        <p class="andalousie-text">
+          Terra Occitana nació en las tierras del Languedoc.
+          Paralelamente a nuestra actividad andaluza, estamos presentes en el departamento de Hérault, 
+          cubriendo un sector desde <strong>Saint-André-de-Sangonis hasta el Cap d'Agde y el Grau-d'Agde</strong>.
+        </p>
+        <div style="margin-top:18px;">
+          <a href="{{ site.baseurl }}/es/francia.html" class="btn-secondary-olive andalousie-btn">
+            Descubrir la Conserjería Francia
+          </a>
         </div>
       </div>
 
-      <div class="history-img">
-        <img src="{{ site.baseurl }}/assets/img/duo-portrait.jpg" alt="Fondateurs Terra Occitana">
-      </div>
-
     </div>
+
   </div>
 </section>
 
-
-<section class="owners-offers" style="background: var(--owners-ivory);">
-  <div class="container">
-    <div class="offers-head">
-      <h2 style="font-family:'Cormorant Garamond'; color:var(--vin-olive); font-size:2.2rem;">Nuestras Fórmulas</h2>
-    </div>
-
-    <div class="offers-grid" style="grid-template-columns: 1fr 1fr; gap: 40px; margin-top:40px;">
-      
-      <article class="offer-card">
-        <h3 class="offer-script" style="margin-top:0;">Libertad & Serenidad</h3>
-        <p style="margin-bottom: 20px;">
-          Para el alquiler vacacional. Desde la gestión de llaves hasta la experiencia completa (limpieza, lencería, acogida).
-        </p>
-        <a href="{{ site.baseurl }}/es/colecciones.html" style="text-decoration:underline; color:var(--terracotta);">Ver las fórmulas →</a>
-      </article>
-
-      <article class="offer-card">
-        <h3 class="offer-script" style="margin-top:0;">Intendencia Privada</h3>
-        <p style="margin-bottom: 20px;">
-          Para su residencia secundaria. Vigilancia regular, ventilación y preparación de la casa antes de su llegada.
-        </p>
-        <a href="{{ site.baseurl }}/es/colecciones.html" style="text-decoration:underline; color:var(--terracotta);">Descubrir la intendencia →</a>
-      </article>
-
+<section class="section bg-sand">
+  <div class="container narrow reveal">
+    <h2>¿Un proyecto? ¿Una pregunta?</h2>
+    <div class="separator"></div>
+    <p class="luxe-paragraph">
+      Ya sea para una residencia secundaria o una inversión de alquiler, 
+      nos tomamos el tiempo de intercambiar con usted personalmente para entender sus expectativas.
+    </p>
+    <div style="margin-top:30px; text-align:center;">
+      <a href="{{ site.baseurl }}/es/contacto.html" class="btn-primary">Contactar con nosotros</a>
     </div>
   </div>
 </section>
