@@ -1,189 +1,207 @@
 ---
 layout: default
-title: Conciergerie à la Carte & Intendance — De St-André au Cap d'Agde
+title: Nos Collections • Terra Occitana
 ---
-<link rel="stylesheet" href="assets/css/proprietaires.css">
 
-<section class="owners-hero">
+<style>
+  /* Conteneur principal pour le titre centré */
+  .history-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 60px; /* Espace au dessus du titre */
+  }
+
+  /* Le conteneur qui divise l'écran en deux */
+  .history-split-container {
+    display: flex;
+    align-items: stretch; /* CRUCIAL : Force l'image et le texte à avoir la même hauteur */
+    gap: 50px; /* Espace entre l'image et le texte */
+    margin-bottom: 80px;
+  }
+
+  /* Colonne de gauche : L'image */
+  .history-image-col {
+    flex: 1; /* Prend 50% de l'espace disponible */
+    min-height: 400px; /* Hauteur minimum pour que l'image existe */
+    position: relative;
+  }
+
+  /* L'image elle-même pour qu'elle remplisse son bloc sans être déformée */
+  .history-image-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image remplit le cadre quitte à être légèrement rognée sur les bords */
+    border-radius: 4px; /* Léger arrondi chic */
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* Colonne de droite : Le texte */
+  .history-text-col {
+    flex: 1; /* Prend les autres 50% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre le texte verticalement si l'image est très haute */
+    text-align: justify;
+  }
+  
+  .history-text-col p {
+      margin-bottom: 1.5em;
+      line-height: 1.7;
+  }
+
+  /* Signature */
+  .signature-block {
+    margin-top: 20px;
+    text-align: right; /* Signature alignée à droite du bloc texte */
+  }
+  .signature-name {
+    font-family: 'Mrs Saint Delafield', cursive;
+    font-size: 2.2rem;
+    color: var(--terracotta);
+    display: block;
+  }
+  .signature-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--vin-olive);
+    margin-top: -5px;
+    display: block;
+  }
+
+  /* --- RESPONSIVE (Mobile) --- */
+  @media (max-width: 900px) {
+    .history-split-container {
+      flex-direction: column; /* On empile sur mobile */
+      gap: 30px;
+    }
+    .history-image-col {
+      height: 300px; /* Hauteur fixe sur mobile pour l'image */
+    }
+    .history-text-col {
+      text-align: left; /* Texte aligné à gauche sur mobile pour la lisibilité */
+    }
+     .signature-block {
+        text-align: center; /* Signature centrée sur mobile */
+    }
+  }
+</style>
+
+
+<section class="page-header" style="background-image: url('{{ site.baseurl }}/assets/img/hero-collections.jpg');">
+  <div class="header-overlay">
+    <h1 class="page-title">Nos Collections</h1>
+    <p class="page-subtitle">Propriétaires & Voyageurs • L’Art de Vivre en Occitanie</p>
+  </div>
+</section>
+
+
+<section>
   <div class="container">
-    <span class="owners-kicker">Espace Propriétaires</span>
     
-    <h1 class="owners-title">
-      Conciergerie<br>
-      <span style="font-size: 0.8em; font-weight: 300;">&</span><br>
-      Intendance à la Carte
-    </h1>
-    
-    <p class="owners-sub">
-      Confier son bien, en toute sérénité.
-      Conciergerie familiale à taille humaine, nous accompagnons volontairement un nombre limité de propriétés
-      entre Vallée de l’Hérault et Littoral.
-    </p>
-    <div class="owners-cta">
-      <a class="btn-primary" href="{{ site.baseurl }}/contact.html">Planifier un échange</a>
+    <div class="history-header">
+      <h2>NOTRE HISTOIRE</h2>
+      <div class="separator"></div>
+    </div>
+
+    <div class="history-split-container">
+      
+      <div class="history-image-col">
+        <img src="{{ site.baseurl }}/assets/img/notre-histoire.jpeg" alt="Lucile, fondatrice de Terra Occitana">
+      </div>
+      
+      <div class="history-text-col">
+        <p>
+          Tout commence ici, entre les vignes dorées de l’Hérault et la lumière unique de la Méditerranée. 
+          Amoureuse de ma région et passionnée par l’hospitalité, j’ai fondé <strong>Terra Occitana</strong> 
+          avec une conviction : la gestion d’une propriété ne doit pas être une charge, mais une opportunité 
+          de créer des expériences inoubliables.
+        </p>
+        <p>
+          Après plusieurs années à observer les besoins des propriétaires souhaitant louer leur résidence 
+          secondaire sans les contraintes logistiques, j’ai imaginé un service sur-mesure. Une conciergerie 
+          qui allie <strong>rigueur hôtelière</strong> et <strong>chaleur humaine</strong>.
+        </p>
+        <p>
+          Aujourd’hui, Terra Occitana est le trait d’union entre des propriétaires sereins, assurés que leur 
+          bien est entre des mains expertes, et des voyageurs en quête d’authenticité, accueillis comme des 
+          invités de marque. C’est cette double promesse qui anime chacune de nos actions.
+        </p>
+
+        <div class="signature-block">
+          <span class="signature-name">Lucile</span>
+          <span class="signature-role">Fondatrice</span>
+        </div>
+      </div>
+      
     </div>
   </div>
 </section>
 
-<section class="owners-history">
-  <div class="container narrow">
-    <h2>Notre histoire</h2>
+
+<section class="services-grid-section">
+  <div class="container">
+    <h2 style="text-align: center;">NOS COLLECTIONS DE SERVICES</h2>
     <div class="separator"></div>
-    <div class="luxe-paragraph" style="text-align: left;">
-      <p style="margin-bottom: 20px;">
-        Terra Occitana est née d’une expérience vécue de la location saisonnière. Propriétaires nous-mêmes, nous connaissons les exigences du terrain et la responsabilité qu’implique la gestion d’un bien confié.
-      </p>
-      <p style="margin-bottom: 20px;">
-        Nous avons choisi une conciergerie à taille humaine, attentive et structurée, où chaque logement bénéficie d’un suivi soigné, d’une présence locale et d’un interlocuteur unique. L’essentiel guide chacune de nos actions : respect du lieu, qualité irréprochable et sérénité durable.
-      </p>
-      <p style="font-style: italic; color: var(--terracotta); font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-top: 30px; text-align:center;">
-        « Prendre soin de votre bien, naturellement. »
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="owners-offers">
-  <div class="container">
-    <div class="offers-head">
-      <h2>Nos Collections</h2>
-      <p>
-        Trois formules, trois besoins distincts : organiser la location, vous relayer sur le terrain,
-        ou veiller sur votre maison tout au long de l’année.
-      </p>
-    </div>
-    
-    <div class="offers-grid">
-      <article class="offer-card">
-        <div class="offer-number">01</div>
-        <h3 class="offer-script">Liberté</h3>
-        <div class="offer-body" style="text-align: center;">
-          <p style="margin-bottom: 15px; text-align: left; line-height: 1.4;">
-            Une gestion essentielle, réalisée avec exigence et élégance, pour garantir une expérience fluide et irréprochable à vos voyageurs.
-            Pensée pour les propriétaires souhaitant confier l’essentiel en toute sérénité.
-          </p>
-          <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.2;">
-            <li style="margin-bottom: 10px;">
-              <strong>Accueil soigné des voyageurs</strong><br>
-              <span style="font-size:0.85em; opacity:0.8; display:block; margin-top:2px;">avec une présence humaine et chaleureuse</span>
-            </li>
-            <li style="margin-bottom: 10px;">
-              <strong>Remise des clés en main propre</strong><br>
-              <span style="font-size:0.85em; opacity:0.8; display:block; margin-top:2px;">pour une entrée simple et sécurisée</span>
-            </li>
-            <li style="margin-bottom: 10px;">
-              <strong>Gestion du départ</strong><br>
-              <span style="font-size:0.85em; opacity:0.8; display:block; margin-top:2px;">récupération des clés en toute discrétion</span>
-            </li>
-          </ul>
-        </div>
-        <p class="offer-note" style="margin-top:15px; padding-top:10px; line-height:1.3;">
-          ✨ Un service fiable et haut de gamme, idéal pour offrir à vos voyageurs une première impression impeccable, tout en vous libérant des contraintes logistiques.
-        </p>
-      </article>
-
-      <article class="offer-card">
-        <div class="offer-number">02</div>
-        <h3 class="offer-script">Sérénité</h3>
-        <div class="offer-body" style="text-align: center;">
-          <p style="margin-bottom: 15px; text-align: left; line-height: 1.4;">
-            L’excellence au service de votre tranquillité. La Formule Sérénité a été conçue pour les propriétaires exigeants qui souhaitent offrir une expérience haut de gamme, tout en conservant un logement irréprochable.
-          </p>
-          <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.2;">
-            <li style="margin-bottom: 10px;">
-              <strong>Accueil et départ des voyageurs</strong><br>
-              <span style="font-size:0.85em; opacity:0.8; display:block; margin-top:2px;">avec remise et récupération des clés</span>
-            </li>
-            <li style="margin-bottom: 10px;">
-              <strong>Ménage professionnel</strong><br>
-              <span style="font-size:0.85em; opacity:0.8; display:block; margin-top:2px;">attention particulière aux finitions</span>
-            </li>
-            <li style="margin-bottom: 10px;">
-              <strong>État des lieux complet avec photos</strong><br>
-              <span style="font-size:0.85em; opacity:0.8; display:block; margin-top:2px;">pour un suivi précis et sécurisé</span>
-            </li>
-          </ul>
-        </div>
-        <p class="offer-note" style="margin-top:15px; padding-top:10px; line-height:1.3;">
-          ✨ Une prise en charge complète et premium, idéale pour garantir des séjours fluides, des avis positifs et une gestion sereine, même à distance.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="intendance-section">
-  <div class="container">
-    <div class="intendance-split-wrapper">
-      <div class="intendance-left-content">
-        <div class="offer-number">03</div>
-        <h3 class="offer-script" style="font-size:3rem; margin:0 0 20px 0; color:var(--vin-olive);">Intendance Privée</h3>
-        <p class="intendance-desc">
-          La tranquillité d’esprit, même en votre absence. 
-          Parce qu’une résidence secondaire mérite une attention régulière, nous assurons une veille technique rigoureuse tout au long de l'année.
-        </p>
-        <div style="margin-top:20px; width:50px; height:2px; background:var(--terracotta);"></div>
-      </div>
-      <div class="intendance-right-cards">
-        <div class="tier-box">
-          <div class="tier-name">Essentiel</div>
-          <ul class="tier-list" style="margin-top: 15px;">
-            <li>1 passage / mois</li>
-            <li>Vérifications générales</li>
-            <li>Gestion courrier</li>
-            <li>Alerte anomalie</li>
-          </ul>
-        </div>
-        <div class="tier-box featured">
-          <div class="tier-name">Confort</div>
-          <ul class="tier-list" style="margin-top: 15px;">
-            <li><strong>2 passages</strong> / mois</li>
-            <li>Suivi renforcé</li>
-            <li>Compte-rendu photos</li>
-            <li>Tarif préférentiel prépa</li>
-          </ul>
-        </div>
-        <div class="tier-box">
-          <div class="tier-name">Premium</div>
-          <ul class="tier-list" style="margin-top: 15px;">
-            <li><strong>Hebdomadaire</strong></li>
-            <li>(3 à 4 passages/mois)</li>
-            <li>Préparation incluse</li>
-            <li>Priorité absolue</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top:50px; text-align:center; font-size:0.9rem; opacity:0.8;">
-       Tarifs établis sur mesure après échange pour répondre précisément à vos besoins.
-    </div>
-  </div>
-</section>
-
-<section class="owners-exception">
-  <div class="container">
-    <div class="exception-card">
-      <span class="exception-kicker">Signature locale</span>
-      <h2 class="exception-title">Une attention particulière</h2>
-      <p class="exception-text">
-        Certains séjours marquent une vie. Grâce à notre ancrage local, 
-        nous accompagnons les grandes occasions — demande en mariage, anniversaire de mariage — 
-        avec une discrétion absolue et le sens du détail.
-      </p>
-      <div class="exception-note">
-        "Une conciergerie humaine. Une organisation solide. À votre rythme."
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="owners-final">
-  <div class="container">
-    <h2 class="final-title">Parlons de votre propriété</h2>
-    <p class="final-sub">
-      Une réponse personnelle, sans engagement.
-      Nous regardons votre situation et nous vous proposons un cadre d’accompagnement clair.
+    <p class="section-intro">
+      Des solutions pensées pour répondre précisément à vos besoins, que vous soyez propriétaire désireux de déléguer ou voyageur en quête d’un séjour parfait.
     </p>
-    <a class="btn-primary" href="{{ site.baseurl }}/contact.html">Planifier un échange</a>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="card-image" style="background-image: url('{{ site.baseurl }}/assets/img/service-proprio.jpg');"></div>
+        <div class="card-content">
+          <h3>Collection Propriétaires</h3>
+          <p class="card-subtitle">Sérénité & Revenus</p>
+          <p class="card-desc">
+            Déléguez la gestion locative de votre bien en toute confiance. Nous nous occupons de tout : de la création des annonces à l’accueil des voyageurs, en passant par l’intendance et le ménage professionnel.
+          </p>
+          <ul class="card-list">
+            <li>Création & Optimisation d'annonces</li>
+            <li>Gestion des réservations & communication</li>
+            <li>Accueil personnalisé & Check-out</li>
+            <li>Ménage & Blanchisserie hôtelière</li>
+            <li>Intendance & Maintenance</li>
+          </ul>
+          <a href="{{ site.baseurl }}/contact.html" class="btn-primary-terra">Demander un Devis</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="card-image" style="background-image: url('{{ site.baseurl }}/assets/img/service-voyageur.jpg');"></div>
+        <div class="card-content">
+          <h3>Collection Voyageurs</h3>
+          <p class="card-subtitle">Expériences & Souvenirs</p>
+          <p class="card-desc">
+            Vivez l’Occitanie autrement. Posez vos valises dans des lieux d’exception et profitez de nos services de conciergerie privée pour un séjour sur-mesure, authentique et sans fausse note.
+          </p>
+          <ul class="card-list">
+            <li>Sélection de propriétés de charme</li>
+            <li>Livret d'accueil digital & bonnes adresses</li>
+            <li>Assistance durant le séjour (WhatsApp)</li>
+            <li>Services à la carte (frigo plein, etc.)</li>
+            <li>Réservation d'activités locales</li>
+          </ul>
+          <a href="{{ site.baseurl }}/voyageurs.html" class="btn-secondary-olive">Découvrir l'Expérience</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final-section">
+  <div class="container cta-content">
+    <h2>Prêt à écrire votre histoire avec nous ?</h2>
+    <p>Que vous ayez une clé à confier ou une valise à poser, nous sommes là pour vous.</p>
+    <div class="cta-buttons">
+      <a href="{{ site.baseurl }}/contact.html" class="btn-primary-terra">Contacter Lucile</a>
+      <a href="https://wa.me/33672448865" class="btn-whatsapp-terra">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-right:8px; vertical-align: middle;">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        WhatsApp
+      </a>
+    </div>
   </div>
 </section>
