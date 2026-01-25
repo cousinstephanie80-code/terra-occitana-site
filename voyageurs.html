@@ -1,178 +1,110 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>L’Expérience • Terra Occitana</title>
-  <meta name="description" content="Expérience voyageurs : arrivée simple, séjour serein. Accueil fluide, propreté irréprochable, attention aux détails." />
-  
-  <meta name="robots" content="index,follow" />
-  <meta name="theme-color" content="#b86b4b" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Terra Occitana — Conciergerie Privée" />
-  <meta property="og:description" content="Conciergerie familiale entre Vallée de l’Hérault et Littoral." />
-  <meta property="og:image" content="images/logo.jpg" />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/voyageurs.page.css" />
-</head>
+---
+layout: default
+title: Vos Hôtes • Terra Occitana
+css_file: /assets/css/voyageurs.css
+---
 
-<body>
+<section class="experience-hero">
+  <div class="container">
+    <span class="experience-kicker">Vos Hôtes</span>
+    <h1 class="experience-title">Une arrivée simple. Un séjour serein.</h1>
+  </div>
+</section>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand">
-        <a href="index.html" class="brand-link">
-          <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
-        </a>
+<section class="intro-split">
+  <div class="container">
+    <div class="split-grid">
+      
+      <div class="split-image">
+        <img src="{{ site.baseurl }}/assets/img/vos-hotes.jpg" alt="Séjour serein Terra Occitana">
       </div>
 
-     <nav class="menu" id="menu">
-  <a href="proprietaires-luxe3.html">Propriétaires — Luxe</a>
-  <a href="proprietaires-mix.html">Propriétaires — Mix</a>
-
-  <a href="voyageurs.html">L’Expérience</a>
-  <a href="offre-sur-mesure.html">Étude de potentiel</a>
-  <a href="es/espagne.html">Andalousie</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-
-
-    <div aria-label="Choisir la langue" class="lang-switch">
-  <a aria-current="page" class="lang-link active" href="index.html" lang="fr"><span class="txt">FR</span></a>
-  <a class="lang-link" href="en/index.html"><span class="txt">EN</span></a>
-  <a class="lang-link" href="de/index.html"><span class="txt">DE</span></a>
-  <a class="lang-link" href="es/index.html"><span class="txt">ES</span></a>
-</div>
-
-<!-- Overlay (nouveau) -->
-<div id="menuOverlay" class="menu-overlay" hidden></div>
-
-<!-- Burger premium (remplace ton bouton actuel) -->
-<button
-  id="burger"
-  class="burger"
-  type="button"
-  aria-label="Ouvrir le menu"
-  aria-controls="menu"
-  aria-expanded="false"
->
-  <span></span><span></span><span></span>
-</button>
-
-  </header>
-
-  <main>
-    <section class="experience-hero">
-      <div class="container">
-        <span class="experience-kicker">Expérience voyageurs</span>
-        <h1 class="experience-title">Une arrivée simple. Un séjour serein.</h1>
-        <p class="experience-sub">
+      <div class="split-text">
+        <p class="experience-sub-split">
           Nous assurons un accueil fluide et une présence discrète tout au long du séjour,
-          dans le respect du lieu et de son usage. Sans surenchère, sans protocole figé —
-          simplement ce qu’il faut pour que tout se déroule naturellement.
+          dans le respect du lieu et de son usage. 
+        </p>
+        <p class="experience-sub-split">
+          Sans surenchère, sans protocole figé — simplement ce qu’il faut pour que tout se déroule naturellement.
         </p>
       </div>
-    </section>
 
-    <section class="experience-book">
-      <div class="container">
-        <div class="book-card reveal">
-          <div class="book-head">
-            <h2>Ce que nous veillons à préserver, à chaque séjour</h2>
-            <div class="book-sep"></div>
-            <p class="book-intro">
-              Une expérience réussie tient souvent à des détails simples : clarté, soin, continuité.
-              Nous privilégions une organisation calme et une présence mesurée, pour le confort des voyageurs
-              et la sérénité des propriétaires.
-            </p>
-          </div>
-
-          <div class="book-grid">
-            <article class="exp-item">
-              <h3 class="exp-title"><span class="exp-icon"></span> L’arrivée</h3>
-              <p class="exp-phrase">Une prise en charge claire, sans attente ni confusion.</p>
-              <ul class="exp-bullets">
-                <li>Accueil organisé avec ponctualité</li>
-                <li>Présentation simple du logement et de ses usages</li>
-              </ul>
-            </article>
-
-            <article class="exp-item">
-              <h3 class="exp-title"><span class="exp-icon"></span> Le séjour</h3>
-              <p class="exp-phrase">Un cadre soigné, entretenu avec régularité, pour un séjour sans accroc.</p>
-              <ul class="exp-bullets">
-                <li>Logement préparé avec attention</li>
-                <li>Présence discrète en cas de besoin</li>
-              </ul>
-            </article>
-
-            <article class="exp-item">
-              <h3 class="exp-title"><span class="exp-icon"></span> Le respect des lieux</h3>
-              <p class="exp-phrase">Chaque maison est considérée comme habitée à l’année.</p>
-              <ul class="exp-bullets">
-                <li>Vérifications visuelles essentielles</li>
-                <li>Signalement immédiat en cas d’anomalie</li>
-              </ul>
-            </article>
-
-            <article class="exp-item">
-              <h3 class="exp-title"><span class="exp-icon"></span> Le lien humain</h3>
-              <p class="exp-phrase">Une relation simple, cordiale, toujours respectueuse.</p>
-              <ul class="exp-bullets">
-                <li>Communication claire et apaisée</li>
-                <li>Disponibilité mesurée, jamais intrusive</li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="local-touch">
-            <p>
-              Et lorsque le séjour s’y prête, notre ancrage local permet aussi d’orienter vers des adresses de confiance
-              ou de faciliter certaines réservations, <em>toujours avec mesure</em>.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="experience-close">
-      <div class="container narrow reveal">
-        <h2 class="close-title">Accueillir, c’est aussi préserver.</h2>
-        <div class="separator"></div>
-        <p class="close-text">
-          Accueillir des voyageurs, c’est trouver l’équilibre entre confort et respect d’un lieu.
-          Nous veillons à cette continuité avec attention, calme et exigence, pour que chaque séjour se déroule sereinement,
-          et que chaque propriété conserve son âme.
-        </p>
-        <a href="contact.html" class="btn-primary">Planifier un échange (30 min)</a>
-        <div class="close-note">Une réponse simple, humaine. Sans engagement. À votre rythme.</div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-compact">
-      <div class="footer-info">
-        <strong>Terra Occitana</strong><br>
-        Conciergerie Privée & Intendance • Vallée de l’Hérault<br>
-        06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
-        <div style="margin-top:8px; font-style:italic; opacity:.78;">
-          Une conciergerie humaine. Une organisation solide. À votre rythme.
-        </div>
-      </div>
-      <div class="footer-links">
-        <a href="mentions-legales.html">Mentions Légales</a><span class="sep">•</span>
-        <a href="confidentialite.html">Confidentialité</a><span class="sep">•</span>
-        <a href="cgv.html">CGV</a>
-      </div>
-      <div class="copyright">© 2025 — Terra Occitana</div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="js/script.js"></script>
-</body>
-</html>
+
+<section class="experience-book">
+  <div class="container">
+    <div class="book-card reveal">
+      <div class="book-head">
+        <h2>Ce que nous veillons à préserver, à chaque séjour</h2>
+        <div class="book-sep"></div>
+        <p class="book-intro">
+          Une expérience réussie tient souvent à des détails simples : clarté, soin, continuité.
+          Nous privilégions une organisation calme et une présence mesurée, pour le confort des voyageurs
+          et la sérénité des propriétaires.
+        </p>
+      </div>
+
+      <div class="book-grid">
+        <article class="exp-item">
+          <h3 class="exp-title"><span class="exp-icon"></span> L’arrivée</h3>
+          <p class="exp-phrase">Une prise en charge claire, sans attente ni confusion.</p>
+          <ul class="exp-bullets">
+            <li>Accueil organisé avec ponctualité</li>
+            <li>Présentation simple du logement et de ses usages</li>
+          </ul>
+        </article>
+
+        <article class="exp-item">
+          <h3 class="exp-title"><span class="exp-icon"></span> Le séjour</h3>
+          <p class="exp-phrase">Un cadre soigné, entretenu avec régularité, pour un séjour sans accroc.</p>
+          <ul class="exp-bullets">
+            <li>Logement préparé avec attention</li>
+            <li>Présence discrète en cas de besoin</li>
+          </ul>
+        </article>
+
+        <article class="exp-item">
+          <h3 class="exp-title"><span class="exp-icon"></span> Le respect des lieux</h3>
+          <p class="exp-phrase">Chaque maison est considérée comme habitée à l’année.</p>
+          <ul class="exp-bullets">
+            <li>Vérifications visuelles essentielles</li>
+            <li>Signalement immédiat en cas d’anomalie</li>
+          </ul>
+        </article>
+
+        <article class="exp-item">
+          <h3 class="exp-title"><span class="exp-icon"></span> Le lien humain</h3>
+          <p class="exp-phrase">Une relation simple, cordiale, toujours respectueuse.</p>
+          <ul class="exp-bullets">
+            <li>Communication claire et apaisée</li>
+            <li>Disponibilité mesurée, jamais intrusive</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="local-touch">
+        <p>
+          Et lorsque le séjour s’y prête, notre ancrage local permet aussi d’orienter vers des adresses de confiance
+          ou de faciliter certaines réservations, <em>toujours avec mesure</em>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="experience-close">
+  <div class="container narrow reveal">
+    <h2 class="close-title">Accueillir, c’est aussi préserver.</h2>
+    <div class="separator"></div>
+    <p class="close-text">
+      Accueillir des voyageurs, c’est trouver l’équilibre entre confort et respect d’un lieu.
+      Nous veillons à cette continuité avec attention, calme et exigence, pour que chaque séjour se déroule sereinement,
+      et que chaque propriété conserve son âme.
+    </p>
+    <a href="{{ site.baseurl }}/contact.html" class="btn-primary">Planifier un échange</a>
+  </div>
+</section>

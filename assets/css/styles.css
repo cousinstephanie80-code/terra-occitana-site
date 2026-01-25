@@ -1,0 +1,336 @@
+/* ===============================
+   styles.css — VERSION COMPLÈTE & COMPACTE
+   Menu mobile simplifié + Espaces réduits
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
+
+:root{
+  /* ======================
+     PALETTE — SANS GRIS
+     Terracotta / Olive / Beige
+     ====================== */
+  --terracotta: #b86b4b;
+  --terracotta-dark: #a65d3d;
+  --terracotta-soft: #c98a6a;
+
+  --vin-olive: #556B2F;   /* Olive titres / accents */
+  --ink: #2e3f36;         /* Olive très foncé (texte principal) */
+  --gold: #d4af37;
+
+  --bg-white: #ffffff;
+  --bg-cream: #fffaf7;
+  --bg-sand:  #fdfcfb;
+  --bg-ivory: #f6f1ea;    /* Lin Chaud */
+
+  /* Alias */
+  --white: var(--bg-white);
+  --cream: var(--bg-cream);
+  --sand:  var(--bg-sand);
+
+  /* ESPACEMENTS RÉDUITS (COMPACT) */
+  --section-pad: 60px;        /* PC : réduit de 80 à 60 */
+  --section-pad-mobile: 30px; /* Mobile : réduit de 50 à 30 */
+
+  /* Lignes / bordures */
+  --line: rgba(184, 107, 75, 0.15);
+
+  /* Textes secondaires */
+  --text-soft: rgba(46,63,54,0.74);
+  --text-softer: rgba(46,63,54,0.60);
+
+  /* Ombres */
+  --shadow-soft: 0 12px 30px rgba(184,107,75,0.10);
+  --shadow-olive: 0 10px 25px rgba(46,63,54,0.06);
+
+  --radius: 14px;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-size: 16px;
+  background: var(--bg-sand);
+}
+
+img{ max-width:100%; display:block; }
+a{ color: inherit; text-decoration: none; transition: all .3s ease; }
+
+/* Focus premium */
+:where(a, button, input, textarea, select){ outline: none; }
+:where(a, button, input, textarea, select):focus-visible{
+  box-shadow: 0 0 0 3px rgba(184,107,75,0.25);
+  border-radius: 12px;
+}
+
+/* TYPOGRAPHIE */
+h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; }
+
+h1 {
+  font-weight: 600; line-height: 1.1; color: white;
+  font-size: clamp(2.5rem, 5vw, 4.5rem); margin: 0 0 1rem 0;
+}
+
+h2 {
+  font-weight: 500; color: var(--vin-olive); line-height: 1.2;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  margin: 0 0 10px 0; /* Marge réduite */
+  text-align: center;
+}
+
+h3 {
+  font-weight: 600; color: var(--terracotta);
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  margin: 0 0 10px 0;
+}
+
+h4 {
+  font-weight: 700; font-size: 1.35rem; margin: 0 0 0.5rem 0;
+  letter-spacing: 0.02em; color: var(--ink);
+}
+
+.header-kicker {
+  text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem;
+  color: var(--terracotta); font-weight: 600; margin-bottom: 5px; display: block;
+}
+
+.luxe-paragraph {
+  font-size: clamp(1rem, 1.1vw, 1.15rem);
+  color: var(--ink); opacity: 0.90; font-weight: 300;
+  margin-bottom: 1rem; /* Marge réduite */
+  max-width: 800px; margin-left: auto; margin-right: auto;
+  text-align: center; /* Par défaut centré pour Index */
+}
+.text-left { text-align: left; }
+
+.signature-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; color: var(--terracotta); font-style: italic;
+  text-align: center !important; display: block;
+  margin-top: 15px; margin-bottom: 10px;
+}
+
+.container{ max-width: 1100px; margin: auto; padding: 0 24px; }
+.narrow{ max-width: 700px; margin: auto; text-align: center; }
+
+/* SECTIONS & FONDS */
+.section { padding: var(--section-pad) 0; }
+.bg-white { background-color: var(--bg-white); }
+.bg-cream { background-color: var(--bg-cream); }
+.bg-sand  { background-color: var(--bg-sand); }
+.bg-ivory { background-color: var(--bg-ivory); }
+
+.separator {
+  width: 60px; height: 2px; background: var(--terracotta);
+  margin: 15px auto 25px auto; /* Marge réduite (était 20/40) */
+}
+
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* BOUTONS */
+.btn-primary, .btn-secondary, .btn-secondary-olive {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 12px 28px; border-radius: 2px;
+  font-family: 'Inter', sans-serif; font-weight: 500; font-size: 0.9rem;
+  letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary{
+  background: var(--terracotta); color: white; border: 1px solid var(--terracotta);
+  box-shadow: 0 14px 35px rgba(184,107,75,0.18);
+}
+.btn-primary:hover{
+  background: var(--terracotta-dark); border-color: var(--terracotta-dark);
+  transform: translateY(-1px);
+}
+
+.btn-secondary-olive {
+  border: 1px solid var(--vin-olive); color: var(--vin-olive); background: transparent;
+}
+.btn-secondary-olive:hover {
+  background-color: var(--vin-olive); color: #fff; transform: translateY(-1px);
+}
+
+/* ===============================
+   HEADER + MENU (DESKTOP)
+================================ */
+.site-header{
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255, 250, 247, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-olive);
+}
+
+.header-inner{
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 32px; max-width: 1400px; margin: 0 auto; height: 70px;
+}
+
+.brand-logo{ height: 50px; width: auto; }
+
+.menu{ display: flex; gap: 30px; align-items: center; }
+.menu a{
+  font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
+  font-weight: 500; color: var(--ink); padding: 5px 0;
+}
+.menu a:hover{ color: var(--terracotta); }
+.menu a.active { color: var(--terracotta); font-weight: 600; border-bottom: 1px solid var(--terracotta); }
+
+/* Burger caché desktop */
+.burger{ display: none !important; }
+
+/* LANGUES */
+.lang-switch{
+  display:flex; gap:8px; align-items:center;
+  margin-left: 14px; padding-left: 14px;
+  border-left: 1px solid rgba(184,107,75,0.18);
+}
+.lang-link{
+  display:inline-flex; align-items:center; gap:8px; padding: 6px 10px;
+  border-radius: 20px; border: 1px solid transparent;
+  font-size: .75rem; text-transform: uppercase; font-weight: 500;
+}
+.lang-link:hover{ background: #fff; color: var(--terracotta); }
+.lang-link.active{ background: var(--terracotta); color: white; pointer-events: none; }
+
+
+/* ===============================
+   HERO BANNER
+================================ */
+.hero-banner{ position: relative; height: 85vh; min-height: 550px; overflow: hidden; background: var(--ink); }
+.hero-slider, .hero-slide, .hero-overlay{ position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-slide{
+  background-size: cover; background-position: center;
+  opacity: 0; transition: opacity 1.5s ease;
+}
+.hero-slide.is-active{ opacity: 1; }
+.hero-overlay{ background: rgba(0,0,0,0.3); }
+
+.hero-content{
+  position: relative; z-index: 2; height: 100%;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; padding: 0 20px;
+}
+.hero-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  line-height: 1.1; font-weight: 500; margin-bottom: 30px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3); color: #fff;
+}
+.hero-headline span{
+  display: block; font-family: 'Inter', sans-serif; font-weight: 300;
+  font-size: clamp(1rem, 1.5vw, 1.25rem); margin-top: 20px; opacity: 0.96;
+  max-width: 800px; margin-left: auto; margin-right: auto;
+}
+.hero-kicker-white{
+  color: rgba(255,255,255,0.92); text-transform: uppercase;
+  letter-spacing: 0.15em; font-size: 0.8rem; margin-bottom: 20px;
+}
+
+/* ===============================
+   ELEMENTS SPECIFIQUES (Index)
+================================ */
+
+/* Duo Histoire */
+.duo-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  max-width: 1000px; margin: 0 auto; text-align: left;
+}
+.duo-signature {
+  margin-top: 20px; font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 2.5rem; color: var(--terracotta);
+}
+
+/* Andalousie 2 Colonnes */
+.andalousie-wrapper {
+  display: flex; align-items: center; justify-content: center;
+  gap: 40px; text-align: left; max-width: 950px; margin: 0 auto;
+}
+.andalousie-visual { flex: 0 0 280px; margin: 0; width: 100%; }
+.andalousie-map {
+  width: 100%; height: auto; border: 1px solid rgba(184,107,75,0.15);
+  border-radius: 4px; display: block;
+}
+.andalousie-content {
+  flex: 1; display: flex; flex-direction: column; align-items: flex-start;
+}
+.license-credits {
+  font-size: 0.65rem; color: #999; font-style: italic; margin-top: 6px;
+  text-align: center; font-family: 'Inter', sans-serif; opacity: 0.8;
+}
+.license-credits a { color: inherit; text-decoration: none; border-bottom: 1px dotted #ccc; }
+
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  background: var(--bg-cream); border-top: 1px solid var(--line);
+  padding: 30px 0; text-align: center; font-size: 0.9rem;
+}
+.footer-compact { display: flex; flex-direction: column; gap: 15px; }
+.footer-info strong { color: var(--vin-olive); font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; }
+.footer-links a { color: var(--vin-olive); text-transform: uppercase; margin: 0 6px; font-size: 0.8rem; }
+
+
+/* ===============================
+   RESPONSIVE — MOBILE
+================================ */
+
+@media (max-width: 900px){
+  
+  /* Sections plus compactes */
+  .section { padding: var(--section-pad-mobile) 0; }
+  
+  .hero-banner { height: 75vh; }
+  
+  /* Header : 2 lignes */
+  .header-inner{
+    height: auto; padding: 15px;
+    flex-direction: column; gap: 12px;
+  }
+  .brand { width: 100%; position: relative; } /* Logo à gauche */
+  .brand-logo{ height: 45px; }
+
+  /* Langues à droite du logo */
+  .lang-switch{
+    position: absolute; top: 0; right: 0;
+    border: none; margin: 0; padding: 0;
+  }
+
+  /* Menu boutons en dessous */
+  .menu{
+    width: 100%; display: flex; overflow-x: auto;
+    gap: 8px; padding-bottom: 5px;
+    scrollbar-width: none;
+  }
+  .menu::-webkit-scrollbar { display: none; }
+  
+  .menu a{
+    flex: 0 0 auto;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(184,107,75,0.2);
+    padding: 8px 14px; border-radius: 50px;
+    font-size: 0.75rem; white-space: nowrap; text-align: center;
+  }
+  .menu a.active{
+    background: var(--terracotta); color: white; border-color: var(--terracotta);
+  }
+
+  /* Grilles sur 1 colonne */
+  .duo-grid { grid-template-columns: 1fr; gap: 30px; }
+  
+  /* Andalousie Mobile : Empilé */
+  .andalousie-wrapper { flex-direction: column; text-align: center; gap: 25px; }
+  .andalousie-content { align-items: center; }
+  .andalousie-visual { flex: auto; max-width: 300px; margin: 0 auto; }
+}

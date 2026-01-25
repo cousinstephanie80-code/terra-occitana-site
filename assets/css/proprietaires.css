@@ -1,0 +1,131 @@
+/* =======================================================
+   assets/css/proprietaires.css
+   Style spécifique : Page "Nos Collections"
+   ======================================================= */
+
+:root{
+  --owners-ivory: #f6f1ea;
+  --owners-paper: #fffaf7;
+  --owners-sand:  #fdfcfb;
+  --owners-gold-1: rgba(212,175,55,0.85);
+  --owners-gold-2: rgba(212,175,55,0.35);
+  --owners-shadow: 0 16px 50px rgba(46,63,54,0.08);
+  --owners-shadow-soft: 0 10px 35px rgba(46,63,54,0.06);
+}
+
+/* --- CORRECTION TITRE INVISIBLE --- */
+h1.owners-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--vin-olive) !important; /* Force la couleur VERTE */
+  text-shadow: none !important;       /* Enlève l'ombre blanche */
+  font-weight: 600;
+  font-size: clamp(2.4rem, 5vw, 4.1rem);
+  line-height: 1.2;
+  margin: 0 0 18px 0;
+}
+
+/* Le reste du design (Cartes, etc.) */
+.owners-hero {
+  position: relative;
+  padding: 100px 0 50px;
+  background: radial-gradient(1200px 500px at 50% -50px, rgba(184,107,75,0.18) 0%, rgba(184,107,75,0) 60%),
+              linear-gradient(180deg, #ffffff 0%, var(--owners-ivory) 60%, #ffffff 100%);
+  overflow: hidden; text-align: center;
+}
+.owners-hero::before {
+  content:""; position:absolute; inset:-60px -60px auto -60px; height: 240px;
+  background: linear-gradient(90deg, transparent, rgba(212,175,55,0.10), transparent);
+  transform: rotate(-6deg); pointer-events:none; opacity:.9;
+}
+.owners-kicker {
+  display: inline-block; text-transform: uppercase; letter-spacing: .22em;
+  font-size: .78rem; font-weight: 600; color: var(--terracotta); margin-bottom: 20px;
+}
+.owners-sub {
+  max-width: 840px; margin: 0 auto; font-size: clamp(1rem, 1.2vw, 1.15rem);
+  opacity: .86; font-weight: 300; line-height: 1.7;
+}
+.owners-cta { margin-top: 34px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+/* Sections */
+.owners-history { padding: 50px 0; background: #fff; }
+.owners-offers { padding: 50px 0 60px; background: var(--owners-sand); }
+.owners-exception { padding: 50px 0; background: var(--owners-sand); }
+.owners-final { padding: 60px 0; text-align: center; background: radial-gradient(at top, rgba(184,107,75,0.14), transparent 70%); }
+
+/* Cartes Collections */
+.offers-head { text-align: center; max-width: 900px; margin: 0 auto 40px auto; }
+.offers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; align-items: stretch; max-width: 960px; margin: 0 auto; }
+.offer-card {
+  background: #ffffff; border: 1px solid rgba(184,107,75,0.14);
+  box-shadow: var(--owners-shadow); padding: 42px 34px 36px;
+  position: relative; overflow: hidden;
+}
+.offer-card::before {
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 3px;
+  background: linear-gradient(180deg, rgba(184,107,75,0.95), rgba(184,107,75,0.25));
+}
+.offer-number {
+  font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 3.8rem;
+  line-height: 1; margin: 0 0 8px 0;
+  background: linear-gradient(135deg, var(--owners-gold-2), rgba(212,175,55,0.85));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.offer-script {
+  font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(2.2rem, 2.4vw, 2.7rem);
+  color: var(--terracotta); margin: 0 0 18px 0; font-weight: 400; line-height: 1;
+}
+.offer-note {
+  margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(184,107,75,0.12);
+  font-size: 0.95rem; opacity: .78; line-height: 1.7; font-style: italic;
+}
+
+/* Intendance */
+.intendance-section { background: var(--owners-paper); padding: 60px 0; border-top: 1px solid rgba(184,107,75,0.15); }
+.intendance-split-wrapper { display: grid; grid-template-columns: 1fr 1.6fr; gap: 50px; max-width: 1100px; margin: 0 auto 50px auto; align-items: center; }
+.intendance-left-content { padding-right: 20px; }
+.intendance-desc { font-weight: 300; opacity: .85; line-height: 1.8; font-size: 1.05rem; margin-top: 20px; }
+.intendance-right-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+
+.tier-box {
+  background: #fff; padding: 30px 15px; text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.03); position: relative; border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.03); transition: transform 0.3s ease;
+}
+.tier-box:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(184,107,75,0.08); }
+.tier-box.featured { background: #fffaf7; border: 1px solid rgba(184,107,75,0.25); }
+.tier-box.featured::before {
+  content: "Signature"; font-family: 'Mrs Saint Delafield', cursive;
+  position: absolute; top: -12px; right: 10px; color: var(--terracotta); font-size: 1.4rem;
+}
+.tier-name { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--vin-olive); margin-bottom: 5px; }
+.tier-list { list-style: none; padding: 0; margin: 0; text-align: center; }
+.tier-list li { margin-bottom: 6px; font-size: 0.85rem; opacity: 0.85; line-height: 1.4; }
+
+/* Exception & Final */
+.exception-card {
+  max-width: 980px; margin: 0 auto; background: #ffffff;
+  border: 1px solid rgba(184,107,75,0.14); box-shadow: var(--owners-shadow-soft);
+  padding: 44px; text-align: center; position: relative;
+}
+.exception-card::before {
+  content:""; position:absolute; inset: 0 auto 0 0; width: 3px;
+  background: linear-gradient(180deg, rgba(184,107,75,0.95), rgba(184,107,75,0.25));
+}
+.final-title { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--vin-olive); }
+.final-sub { max-width: 800px; margin: 0 auto 30px; opacity: 0.85; }
+
+/* RESPONSIVE */
+@media (max-width: 980px){
+  .offers-grid { grid-template-columns: 1fr; max-width: 500px; }
+  .intendance-split-wrapper { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+  .intendance-left-content { padding-right: 0; }
+  .intendance-right-cards { gap: 10px; }
+  
+  .owners-hero { padding-bottom: 30px; }
+  .owners-history, .owners-offers, .intendance-section, .owners-exception { padding: 30px 0; }
+  .exception-card { padding: 30px 20px; }
+}
+@media (max-width: 600px){
+  .intendance-right-cards { grid-template-columns: 1fr; }
+}

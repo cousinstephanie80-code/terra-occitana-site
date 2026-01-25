@@ -1,197 +1,128 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>Conciergerie de St-André-de-Sangonis au Cap d'Agde — Terra Occitana</title>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta name="description" content="Conciergerie familiale et gestion locative rayonnant de Saint-André-de-Sangonis au Cap d'Agde. Gestion soignée, présence locale et antenne en Andalousie.">
-  
-  <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#b86b4b">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Terra Occitana — Conciergerie Privée">
-  <meta property="og:description" content="Conciergerie familiale de Saint-André-de-Sangonis au Cap d'Agde.">
-  <meta property="og:image" content="images/logo.jpg">
+---
+layout: default
+title: Conciergerie Hérault • St-André-de-Sangonis au Cap d'Agde — Terra Occitana
+---
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand">
-        <a href="index.html" class="brand-link" aria-label="Accueil">
-          <img src="images/logo.jpg" alt="Terra Occitana" class="brand-logo">
-        </a>
-      </div>
-
-      <nav id="menu" class="menu">
-        <a href="proprietaires-luxe3.html">Propriétaires — Luxe</a>
-        <a href="proprietaires-mix.html">Propriétaires — Mix</a>
-        <a href="voyageurs.html">L’Expérience</a>
-        <a href="offre-sur-mesure.html">Étude de potentiel</a>
-        <a href="es/espagne.html">Andalousie</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <div class="lang-switch" aria-label="Choisir la langue">
-        <a href="index.html" class="lang-link active" aria-current="page" lang="fr"><span class="txt">FR</span></a>
-        <a href="en/index.html" class="lang-link"><span class="txt">EN</span></a>
-        <a href="de/index.html" class="lang-link"><span class="txt">DE</span></a>
-        <a href="es/index.html" class="lang-link"><span class="txt">ES</span></a>
-      </div>
-
-      <div id="menuOverlay" class="menu-overlay" hidden></div>
-
-      <button 
-        class="burger" 
-        type="button" 
-        aria-label="Ouvrir le menu" 
-        aria-controls="menu"
-        aria-expanded="false"
-        id="burger"
-      >
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main id="accueil">
+<section class="hero-banner">
+  <div class="hero-slider" data-hero-slider>
+    <div class="hero-slide is-active" style="background-image:url('{{ site.baseurl }}/assets/img/hero-salagou.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('{{ site.baseurl }}/assets/img/hero-littoral-mediterranee.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('{{ site.baseurl }}/assets/img/hero-port-marseillan.jpg')"></div>
     
-    <section class="hero-banner">
-      <div class="hero-slider" data-hero-slider>
-        <div class="hero-slide is-active" style="background-image:url('images/hero-salagou.jpg')"></div>
-        <div class="hero-slide" style="background-image:url('images/hero-littoral-mediterranee.jpg')"></div>
-        <div class="hero-slide" style="background-image:url('images/hero-port-marseillan.jpg')"></div>
+    <div class="hero-overlay"></div>
+    
+    <div class="container hero-content reveal">
+      <p class="hero-kicker-white">De St-André-de-Sangonis au Cap d'Agde • Andalousie</p>
+      
+      <h1 class="hero-headline">
+        Conciergerie Terra Occitana
+        <span>
+          Conciergerie familiale rayonnant dans l'Hérault, de Saint-André-de-Sangonis au Cap d'Agde.
+          Nous privilégions une gestion raisonnée, organisée et autonome,
+          pour des locations fluides et sans contrainte.
+        </span>
+      </h1>
+      
+      <div style="margin-top:35px;">
+        <a href="{{ site.baseurl }}/contact.html" class="btn-primary">Planifier un échange (30 min)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand">
+  <div class="container narrow reveal">
+    <h2>Un partenaire de confiance</h2>
+    <div class="separator"></div>
+    <p class="luxe-paragraph">
+      Chaque propriété a son histoire. Chaque propriétaire ses exigences. 
+      Loin des plateformes impersonnelles, nous assurons une continuité sereine, 
+      avec un interlocuteur unique, présent sur le terrain dans l'Hérault.
+    </p>
+    <p class="luxe-paragraph" style="margin-top:-6px;">
+      Nous accompagnons volontairement un nombre limité de biens, 
+      afin de rester disponibles et présents sur le terrain.
+    </p>
+    <p class="signature-quote">
+      « Votre tranquillité est notre signature. »
+    </p>
+  </div>
+</section>
+
+<section class="section bg-ivory">
+  <div class="container reveal">
+    <div style="text-align:center; margin-bottom:40px;">
+      <span class="header-kicker">Notre Histoire</span>
+      <h2>Une aventure familiale et locale</h2>
+      <div class="separator"></div>
+    </div>
+    
+    <div class="duo-grid">
+      <div>
+        <h3>L’alliance de la rigueur et du cœur</h3>
+        <p class="luxe-paragraph text-left">
+          Installés depuis plus de 10 ans dans l’Hérault, au cœur de notre territoire, et propriétaires de plusieurs biens en Occitanie, nous avons fait le choix d’une conciergerie à taille humaine.
+          Nous accompagnons volontairement un nombre limité de biens dans le département de l’Hérault, afin de garantir un service rigoureux, personnalisé, et respectueux de chaque propriété.
+          Forts de cette expertise, nous avons également ouvert une antenne en Andalousie. Les biens situés en Espagne sont suivis par une équipe dédiée sur place, assurant une gestion autonome, réactive et parfaitement adaptée aux spécificités du marché andalou.
+        </p>
         
-        <div class="hero-overlay"></div>
-        
-        <div class="container hero-content reveal">
-          <p class="hero-kicker-white">De St-André-de-Sangonis au Cap d'Agde • Andalousie</p>
-          
-          <h1 class="hero-headline">
-            Conciergerie Terra Occitana
-            <span>
-              Conciergerie familiale rayonnant de Saint-André-de-Sangonis au Cap d'Agde,
-              nous privilégions une gestion raisonnée, organisée et autonome,
-              pour des locations fluides et sans contrainte.
-            </span>
-          </h1>
-          
-          <div style="margin-top:35px;">
-            <a href="contact.html" class="btn-primary">Planifier un échange (30 min)</a>
-          </div>
+        <h3 style="margin-top:30px;">Une structure familiale.</h3>
+        <p class="luxe-paragraph text-left">
+          Ici, votre maison n’est jamais un numéro. Nous privilégions des process clairs, 
+          une organisation fluide et une relation directe avec chaque propriétaire.
+        </p>
+        <div class="duo-signature">Les Fondateurs</div>
+      </div>
+      
+      <div style="position:relative;">
+        <div style="position:absolute; top:15px; left:15px; width:100%; height:100%; border:1px solid var(--terracotta); z-index:1;"></div>
+        <div style="position:relative; z-index:2; width:100%; height:400px; overflow:hidden;">
+          <img src="{{ site.baseurl }}/assets/img/duo-portrait.jpg" alt="Fondateurs Terra Occitana Conciergerie Hérault" style="width:100%; height:100%; object-fit:cover;">
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="section bg-white">
-      <div class="container narrow reveal">
-        <h2>Un partenaire de confiance</h2>
-        <div class="separator"></div>
-        <p class="luxe-paragraph">
-          Chaque propriété a son histoire. Chaque propriétaire ses exigences. 
-          Loin des plateformes impersonnelles, nous assurons une continuité sereine, 
-          avec un interlocuteur unique, présent sur le terrain.
-        </p>
-        <p class="luxe-paragraph" style="margin-top:-6px;">
-          Nous accompagnons volontairement un nombre limité de biens, 
-          afin de rester disponibles et présents sur le terrain.
-        </p>
-        <p style="margin-top:24px; font-family:'Cormorant Garamond'; font-size:1.4rem; color:var(--terracotta); font-style:italic;">
-          « Votre tranquillité est notre signature. »
-        </p>
-      </div>
-    </section>
+<section class="section bg-white andalousie-encart">
+  <div class="container reveal">
+    
+    <div class="andalousie-wrapper">
+      
+      <figure class="andalousie-visual">
+        <img src="{{ site.baseurl }}/assets/img/carte-andalousie.jpg" alt="Carte de l'Andalousie et Costa del Sol" class="andalousie-map">
+        <figcaption class="license-credits">
+          <a href="http://www.freepik.com" target="_blank" rel="noopener">Designed by Freepik</a>
+        </figcaption>
+      </figure>
 
-    <section class="section bg-cream">
-      <div class="container reveal">
-        <div style="text-align:center; margin-bottom:40px;">
-          <span class="header-kicker">Notre Histoire</span>
-          <h2>Une aventure familiale et locale</h2>
-          <div class="separator"></div>
-        </div>
-        
-        <div class="duo-grid">
-          <div>
-            <h3>L’alliance de la rigueur et du cœur</h3>
-            <p class="luxe-paragraph" style="text-align:left;">
-              Installés dans la région depuis plusieurs années, nous avons fait le choix 
-              d’une conciergerie à taille humaine. Nous accompagnons un nombre limité de biens, 
-              afin de préserver la qualité de service et le respect de chaque propriété.
-            </p>
-            <p class="luxe-paragraph" style="text-align:left;">
-              <strong>Une structure familiale.</strong><br>
-              Ici, votre maison n’est jamais un numéro. Nous privilégions des process clairs, 
-              une organisation fluide et une relation directe avec chaque propriétaire.
-            </p>
-            <div class="duo-signature">Les Fondateurs</div>
-          </div>
-          
-          <div style="position:relative;">
-            <div style="position:absolute; top:15px; left:15px; width:100%; height:100%; border:1px solid var(--terracotta); z-index:1;"></div>
-            <div style="position:relative; z-index:2; width:100%; height:400px; overflow:hidden;">
-              <img src="images/duo-portrait.jpg" alt="Fondateurs Terra Occitana" style="width:100%; height:100%; object-fit:cover;">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section bg-sand andalousie-encart">
-      <div class="container narrow reveal">
+      <div class="andalousie-content">
         <p class="andalousie-text">
           Terra Occitana déploie également son accompagnement en Andalousie, 
           au cœur de la Costa del Sol.
         </p>
         <div style="margin-top:18px;">
-          <a href="es/espagne.html" class="btn-secondary-olive andalousie-btn">
+          <a href="{{ site.baseurl }}/es/espagne.html" class="btn-secondary-olive andalousie-btn">
             Découvrir l’Andalousie
           </a>
         </div>
       </div>
-    </section>
 
-    <section class="section bg-white">
-      <div class="container narrow reveal">
-        <h2>Un projet ? Une question ?</h2>
-        <div class="separator"></div>
-        <p class="luxe-paragraph">
-          Que votre bien soit situé dans les terres (Saint-André, Gignac...) ou en bord de mer (Agde, Marseillan...), 
-          nous prenons le temps d’échanger avec vous, personnellement.
-        </p>
-        <div style="margin-top:30px;">
-          <a href="contact.html" class="btn-primary">Planifier un échange (30 min)</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container footer-compact">
-      <div class="footer-info">
-        <strong>Terra Occitana</strong><br>
-        Conciergerie Privée & Intendance<br>
-        06 72 44 88 65 • conciergerie.terraoccitana@gmail.com
-        <div style="margin-top:8px; font-style:italic; opacity:.78;">
-          Une conciergerie humaine. Une organisation solide. À votre rythme.
-        </div>
-      </div>
-      <div class="footer-links">
-        <a href="mentions-legales.html">Mentions Légales</a><span class="sep">•</span>
-        <a href="confidentialite.html">Confidentialité</a><span class="sep">•</span>
-        <a href="cgv.html">CGV</a>
-      </div>
-      <div class="copyright">© 2025 — Terra Occitana</div>
     </div>
-  </footer>
 
-  <script src="js/script.js"></script>
-</body>
-</html>
+  </div>
+</section>
+
+<section class="section bg-sand">
+  <div class="container narrow reveal">
+    <h2>Un projet ? Une question ?</h2>
+    <div class="separator"></div>
+    <p class="luxe-paragraph">
+      Que votre bien soit situé dans les terres (Saint-André, Gignac...) ou en bord de mer (Agde, Marseillan...), 
+      nous prenons le temps d’échanger avec vous, personnellement.
+    </p>
+    <div style="margin-top:30px; text-align:center;">
+      <a href="{{ site.baseurl }}/contact.html" class="btn-primary">Planifier un échange (30 min)</a>
+    </div>
+  </div>
+</section>
